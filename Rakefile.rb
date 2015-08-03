@@ -34,6 +34,7 @@ task :post do
   slug = title.gsub(' ', '-').gsub(/[^\w-]/, '')
   begin
     date = (ENV['date'] ? Time.parse(ENV['date']) : Time.now).strftime('%Y-%m-%d')
+    now = Time.now.strftime('%Y-%m-%d %H:%M:%S')
   rescue => e
     puts "Error - date format must be YYYY-MM-DD!"
     exit -1
@@ -48,7 +49,7 @@ task :post do
     post.puts "layout: post"
     post.puts "title: #{title.gsub(/-/,' ')}"
     post.puts "category: "
-    post.puts "date: #{date}"
+    post.puts "date: #{now}"
     post.puts "---"
   end
 end

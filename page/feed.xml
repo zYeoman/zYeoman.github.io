@@ -3,10 +3,10 @@
   <channel>
     <title>RSS - Mickir's Blog</title>
     <description>Mickir's Blog - 有很多这样的时刻。你惊心动魄，而世界一无所知。你翻山越岭，而天地寂静无声。人生说到底，是一场一个人的战争。</description>
-    <link>http://mickir.tk</link>
-    <atom:link href="http://mickir.tk/page/feed.xml" rel="self" type="application/rss+xml" />
-    <pubDate>Mon, 03 Aug 2015 21:56:11 +0800</pubDate>
-    <lastBuildDate>Mon, 03 Aug 2015 21:56:11 +0800</lastBuildDate>
+    <link>http://mickir.ml</link>
+    <atom:link href="http://mickir.ml/page/feed.xml" rel="self" type="application/rss+xml" />
+    <pubDate>Tue, 04 Aug 2015 02:41:22 +0800</pubDate>
+    <lastBuildDate>Tue, 04 Aug 2015 02:41:22 +0800</lastBuildDate>
     <generator>Yeoman Zhuang</generator>
     
       <item>
@@ -20,24 +20,28 @@
 &lt;p&gt;总之经过很多折腾以后终于成功了&lt;/p&gt;
 &lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-text&quot; data-lang=&quot;text&quot;&gt;markdown: redcarpet
 redcarpet:
-  extensions: [&amp;quot;no_intra_emphasis&amp;quot;, &amp;quot;fenced_code_blocks&amp;quot;, &amp;quot;autolink&amp;quot;, &amp;quot;strikethrough&amp;quot;, &amp;quot;superscript&amp;quot;, &amp;quot;with_toc_data&amp;quot;, &amp;quot;tables&amp;quot;, &amp;quot;strikethrough&amp;quot;]
+  extensions: [&amp;quot;no_intra_emphasis&amp;quot;, &amp;quot;fenced_code_blocks&amp;quot;, &amp;quot;autolink&amp;quot;, &amp;quot;strikethrough&amp;quot;, &amp;quot;with_toc_data&amp;quot;, &amp;quot;tables&amp;quot;, &amp;quot;underline&amp;quot;, &amp;quot;lax_spacing&amp;quot;, &amp;quot;footnotes&amp;quot;]
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 &lt;h2 id=&quot;修复数学公式问题&quot;&gt;修复数学公式问题&lt;/h2&gt;
 
 &lt;p&gt;Theme里自带的是&lt;code&gt;[]&lt;/code&gt;来表示行内公式，这可不行。应该把&lt;code&gt;life.html&lt;/code&gt; &lt;code&gt;blog.html&lt;/code&gt;里改成这样子&lt;/p&gt;
 &lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-html&quot; data-lang=&quot;html&quot;&gt;&lt;span class=&quot;nt&quot;&gt;&amp;lt;script &lt;/span&gt;&lt;span class=&quot;na&quot;&gt;src=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;quot;http://cdn.bootcss.com/mathjax/2.4.0/MathJax.js?config=TeX-AMS-MML_HTMLorMML&amp;quot;&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;&amp;gt;&amp;lt;/script&amp;gt;&amp;lt;script&amp;gt;&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;MathJax&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;Hub&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;Config&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;({&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;tex2jax&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;inlineMath&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;[[&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;&amp;#39;$&amp;#39;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;&amp;#39;$&amp;#39;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]],&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;displayMath&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;[[&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;&amp;#39;$$&amp;#39;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;&amp;#39;$$&amp;#39;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]],&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;processEscapes&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;kc&quot;&gt;true&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;}});&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;&amp;lt;/script&amp;gt;&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;!-- more --&gt;
+
 &lt;hr&gt;
 
-&lt;p&gt;reference
-&lt;a href=&quot;http://soranoiseki.com/blog/2015/01/11/post/&quot;&gt;BLOG&lt;/a&gt;
-&lt;a href=&quot;http://jiangtao92.github.io/jekyll%20%E5%8D%9A%E5%AE%A2%E6%9E%84%E5%BB%BA%E7%AC%94%E8%AE%B0/2014/01/23/markdownredcarpet/&quot;&gt;各种字符串的解释&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;reference&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;http://soranoiseki.com/blog/2015/01/11/post/&quot;&gt;BLOG&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;http://jiangtao92.github.io/jekyll%20%E5%8D%9A%E5%AE%A2%E6%9E%84%E5%BB%BA%E7%AC%94%E8%AE%B0/2014/01/23/markdownredcarpet/&quot;&gt;各种字符串的解释&lt;/a&gt;&lt;/p&gt;
 
 &lt;p&gt;&lt;a href=&quot;http://docs.mathjax.org/en/latest/options/tex2jax.html&quot;&gt;tex2jax&lt;/a&gt;&lt;/p&gt;
 </description>
         <pubDate>Tue, 04 Aug 2015 04:00:00 +0800</pubDate>
-        <link>http://mickir.tk/blog/2015/08/04/Fix-Highlight-Bug.html</link>
-        <guid isPermaLink="true">http://mickir.tk/blog/2015/08/04/Fix-Highlight-Bug.html</guid>
+        <link>http://mickir.ml/blog/2015/08/04/Fix-Highlight-Bug.html</link>
+        <guid isPermaLink="true">http://mickir.ml/blog/2015/08/04/Fix-Highlight-Bug.html</guid>
         
         <category>jekyll</category>
         
@@ -63,7 +67,7 @@ redcarpet:
 
 &lt;p&gt;&lt;em&gt;斜体&lt;/em&gt;  &lt;strong&gt;粗体&lt;/strong&gt;&lt;/p&gt;
 
-&lt;p&gt;&lt;em&gt;斜体&lt;/em&gt;  &lt;strong&gt;粗体&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;&lt;u&gt;斜体&lt;/u&gt;  &lt;strong&gt;粗体&lt;/strong&gt;&lt;/p&gt;
 
 &lt;p&gt;&lt;del&gt;还有&lt;/del&gt;&lt;/p&gt;
 
@@ -92,16 +96,29 @@ $$\delta \times$$&lt;/p&gt;
 &lt;span class=&quot;k&quot;&gt;def&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;test&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;():&lt;/span&gt;
     &lt;span class=&quot;k&quot;&gt;print&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;quot;Hello,World&amp;quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;!-- more --&gt;
+
 &lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-python&quot; data-lang=&quot;python&quot;&gt;&lt;span class=&quot;k&quot;&gt;def&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;foo&lt;/span&gt;
   &lt;span class=&quot;n&quot;&gt;puts&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&amp;#39;foo&amp;#39;&lt;/span&gt;
 &lt;span class=&quot;n&quot;&gt;end&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 &lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-matlab&quot; data-lang=&quot;matlab&quot;&gt;&lt;span class=&quot;c&quot;&gt;% 测试代码高亮&lt;/span&gt;
 &lt;span class=&quot;k&quot;&gt;function&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;foo &lt;span class=&quot;p&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;bar&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;()&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;&lt;/span&gt;
 &lt;span class=&quot;k&quot;&gt;return&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;</description>
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;div class=&quot;footnotes&quot;&gt;
+&lt;hr&gt;
+&lt;ol&gt;
+
+&lt;li id=&quot;fn1&quot;&gt;
+&lt;p&gt;hehe&amp;nbsp;&lt;a href=&quot;#fnref1&quot; rev=&quot;footnote&quot;&gt;&amp;#8617;&lt;/a&gt;&lt;/p&gt;
+&lt;/li&gt;
+
+&lt;/ol&gt;
+&lt;/div&gt;
+</description>
         <pubDate>Mon, 03 Aug 2015 23:00:00 +0800</pubDate>
-        <link>http://mickir.tk/blog/2015/08/03/Test-My-Blog.html</link>
-        <guid isPermaLink="true">http://mickir.tk/blog/2015/08/03/Test-My-Blog.html</guid>
+        <link>http://mickir.ml/blog/2015/08/03/Test-My-Blog.html</link>
+        <guid isPermaLink="true">http://mickir.ml/blog/2015/08/03/Test-My-Blog.html</guid>
         
         <category>test</category>
         
@@ -114,6 +131,8 @@ $$\delta \times$$&lt;/p&gt;
 &lt;p&gt;&lt;del&gt;教程类的就不整理了&lt;/del&gt; &lt;/p&gt;
 
 &lt;p&gt;还是整理教程吧，新打开的标签页实在太多。。。&lt;/p&gt;
+
+&lt;!-- more --&gt;
 
 &lt;h2 id=&quot;教程&quot;&gt;教程&lt;/h2&gt;
 
@@ -217,8 +236,8 @@ $$\delta \times$$&lt;/p&gt;
 &lt;/ul&gt;
 </description>
         <pubDate>Sat, 20 Jun 2015 01:41:00 +0800</pubDate>
-        <link>http://mickir.tk/blog/2015/06/20/bookmark.html</link>
-        <guid isPermaLink="true">http://mickir.tk/blog/2015/06/20/bookmark.html</guid>
+        <link>http://mickir.ml/blog/2015/06/20/bookmark.html</link>
+        <guid isPermaLink="true">http://mickir.ml/blog/2015/06/20/bookmark.html</guid>
         
       </item>
     

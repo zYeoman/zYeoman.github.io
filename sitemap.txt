@@ -1,13 +1,13 @@
 
-http://mickir.tk/page/timing.html
-http://mickir.tk/sitemap.txt
-http://mickir.tk/page/read.html
-http://mickir.tk/index.html
-http://mickir.tk/page/feed.xml
-http://mickir.tk/page/category.html
-http://mickir.tk/page/about.html
-http://mickir.tk/404.html
+http://mickir.ml/page/timing.html
+http://mickir.ml/sitemap.txt
+http://mickir.ml/page/read.html
+http://mickir.ml/index.html
+http://mickir.ml/page/feed.xml
+http://mickir.ml/page/category.html
+http://mickir.ml/page/about.html
+http://mickir.ml/404.html
 
-http://mickir.tk/blog/2015/08/04/Fix-Highlight-Bug.html
-http://mickir.tk/blog/2015/08/03/Test-My-Blog.html
-http://mickir.tk/blog/2015/06/20/bookmark.html
+http://mickir.ml/blog/2015/08/04/Fix-Highlight-Bug.html
+http://mickir.ml/blog/2015/08/03/Test-My-Blog.html
+http://mickir.ml/blog/2015/06/20/bookmark.html

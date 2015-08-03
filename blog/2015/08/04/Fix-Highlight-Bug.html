@@ -7,7 +7,7 @@
   <meta name="author" content="Yeoman Zhuang">
   <meta name="keywords" content="修复Jekyll里Markdown代码高亮问题, Mickir's Blog, Yeoman Zhuang">
   <title>修复Jekyll里Markdown代码高亮问题 - Mickir's Blog</title>
-  <link rel="canonical" href="http://mickir.tk/blog/2015/08/04/Fix-Highlight-Bug.html">
+  <link rel="canonical" href="http://mickir.ml/blog/2015/08/04/Fix-Highlight-Bug.html">
   <link rel="icon" href="/res/img/favicon.ico" type="image/x-icon">
   <link rel="shortcut icon" href="/res/img/favicon.ico" type="image/x-icon">
   <link rel="stylesheet" href="/res/css/public.css">
@@ -80,18 +80,22 @@
 <p>总之经过很多折腾以后终于成功了</p>
 <div class="highlight"><pre><code class="language-text" data-lang="text">markdown: redcarpet
 redcarpet:
-  extensions: [&quot;no_intra_emphasis&quot;, &quot;fenced_code_blocks&quot;, &quot;autolink&quot;, &quot;strikethrough&quot;, &quot;superscript&quot;, &quot;with_toc_data&quot;, &quot;tables&quot;, &quot;strikethrough&quot;]
+  extensions: [&quot;no_intra_emphasis&quot;, &quot;fenced_code_blocks&quot;, &quot;autolink&quot;, &quot;strikethrough&quot;, &quot;with_toc_data&quot;, &quot;tables&quot;, &quot;underline&quot;, &quot;lax_spacing&quot;, &quot;footnotes&quot;]
 </code></pre></div>
 <h2 id="修复数学公式问题">修复数学公式问题</h2>
 
 <p>Theme里自带的是<code>[]</code>来表示行内公式，这可不行。应该把<code>life.html</code> <code>blog.html</code>里改成这样子</p>
 <div class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;script </span><span class="na">src=</span><span class="s">&quot;http://cdn.bootcss.com/mathjax/2.4.0/MathJax.js?config=TeX-AMS-MML_HTMLorMML&quot;</span><span class="nt">&gt;&lt;/script&gt;&lt;script&gt;</span><span class="nx">MathJax</span><span class="p">.</span><span class="nx">Hub</span><span class="p">.</span><span class="nx">Config</span><span class="p">({</span><span class="nx">tex2jax</span><span class="o">:</span><span class="p">{</span><span class="nx">inlineMath</span><span class="o">:</span> <span class="p">[[</span><span class="s1">&#39;$&#39;</span><span class="p">,</span><span class="s1">&#39;$&#39;</span><span class="p">]],</span><span class="nx">displayMath</span><span class="o">:</span> <span class="p">[[</span><span class="s1">&#39;$$&#39;</span><span class="p">,</span><span class="s1">&#39;$$&#39;</span><span class="p">]],</span><span class="nx">processEscapes</span><span class="o">:</span> <span class="kc">true</span><span class="p">}});</span><span class="nt">&lt;/script&gt;</span>
 </code></pre></div>
+<!-- more -->
+
 <hr>
 
-<p>reference
-<a href="http://soranoiseki.com/blog/2015/01/11/post/">BLOG</a>
-<a href="http://jiangtao92.github.io/jekyll%20%E5%8D%9A%E5%AE%A2%E6%9E%84%E5%BB%BA%E7%AC%94%E8%AE%B0/2014/01/23/markdownredcarpet/">各种字符串的解释</a></p>
+<p>reference</p>
+
+<p><a href="http://soranoiseki.com/blog/2015/01/11/post/">BLOG</a></p>
+
+<p><a href="http://jiangtao92.github.io/jekyll%20%E5%8D%9A%E5%AE%A2%E6%9E%84%E5%BB%BA%E7%AC%94%E8%AE%B0/2014/01/23/markdownredcarpet/">各种字符串的解释</a></p>
 
 <p><a href="http://docs.mathjax.org/en/latest/options/tex2jax.html">tex2jax</a></p>
 
@@ -115,9 +119,9 @@ redcarpet:
 <style>#ds-reset .ds-avatar, #ds-reset .ds-avatar img{border-radius:50%;}</style>
 <script type="text/javascript">var duoshuoQuery = {short_name:"mickir"};(function(){var ds = document.createElement('script');ds.type = 'text/javascript';ds.async = true;ds.src = '/res/js/embed.js';ds.charset = 'UTF-8';(document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(ds);})();</script>
 <div class="comments">
-  <div class="ds-thread" data-title="修复Jekyll里Markdown代码高亮问题" data-thread-key="/blog/2015/08/04/Fix-Highlight-Bug" data-url="http://mickir.tk/blog/2015/08/04/Fix-Highlight-Bug.html"></div>
+  <div class="ds-thread" data-title="修复Jekyll里Markdown代码高亮问题" data-thread-key="/blog/2015/08/04/Fix-Highlight-Bug" data-url="http://mickir.ml/blog/2015/08/04/Fix-Highlight-Bug.html"></div>
 </div>
-    <footer>Copyright&nbsp;&copy;&nbsp;2015 <a href="http://mickir.tk">Mickir's Blog</a><br/><i class="fa fa-cogs" style="color:blueviolet;">&nbsp;</i>Powered by <a href="http://jekyllrb.com/" target="_blank">Jekyll</a></footer>
+    <footer>Copyright&nbsp;&copy;&nbsp;2015 <a href="http://mickir.ml">Mickir's Blog</a><br/><i class="fa fa-cogs" style="color:blueviolet;">&nbsp;</i>Powered by <a href="http://jekyllrb.com/" target="_blank">Jekyll</a></footer>
     </div>
   </div>    
   <div id="top"><a id="rocket" href="javascript:;" title="返回顶部"><i></i></a></div>
