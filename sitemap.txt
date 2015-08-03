@@ -1,12 +1,13 @@
 
-http://yeoman.gq/page/timing.html
-http://yeoman.gq/sitemap.txt
-http://yeoman.gq/page/read.html
-http://yeoman.gq/index.html
-http://yeoman.gq/page/feed.xml
-http://yeoman.gq/page/category.html
-http://yeoman.gq/page/about.html
-http://yeoman.gq/404.html
+http://mickir.tk/page/timing.html
+http://mickir.tk/sitemap.txt
+http://mickir.tk/page/read.html
+http://mickir.tk/index.html
+http://mickir.tk/page/feed.xml
+http://mickir.tk/page/category.html
+http://mickir.tk/page/about.html
+http://mickir.tk/404.html
 
-http://yeoman.gq/blog/2015/08/03/Test-My-Blog.html
-http://yeoman.gq/blog/2015/06/20/bookmark.html
+http://mickir.tk/blog/2015/08/04/Fix-Highlight-Bug.html
+http://mickir.tk/blog/2015/08/03/Test-My-Blog.html
+http://mickir.tk/blog/2015/06/20/bookmark.html
