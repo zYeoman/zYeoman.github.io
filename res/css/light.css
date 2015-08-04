@@ -20,7 +20,8 @@ body {
 	overflow:auto;
 }
 h1,.post-main h2,h3 {
-	font-weight:lighter;
+		font-weight:bold;
+	/*font-weight:lighter;*/
 }
 h1,h2,h3,h4,h5,h6 {
 	letter-spacing:2px;
@@ -73,7 +74,7 @@ td {
 	border:1px solid #ddd;
 }
 #blog {
-	font-family:"Microsoft YaHei",SimHei,"Ubuntu Mono",Ubuntu,"Ubuntu Light",Arial,"STHeiti",Corbel,sans-serif;
+	font-family:Consolas,"Microsoft YaHei",SimHei,"Ubuntu Mono",Ubuntu,"Ubuntu Light",Arial,"STHeiti",Corbel,sans-serif;
 }
 a {
 	color:#0090d3;

@@ -5,9 +5,184 @@
     <description>Yeoman Zhuang - 有很多这样的时刻。你惊心动魄，而世界一无所知。你翻山越岭，而天地寂静无声。人生说到底，是一场一个人的战争。</description>
     <link>http://mickir.ml</link>
     <atom:link href="http://mickir.ml/page/feed.xml" rel="self" type="application/rss+xml" />
-    <pubDate>Tue, 04 Aug 2015 03:03:18 +0800</pubDate>
-    <lastBuildDate>Tue, 04 Aug 2015 03:03:18 +0800</lastBuildDate>
+    <pubDate>Wed, 05 Aug 2015 01:48:29 +0800</pubDate>
+    <lastBuildDate>Wed, 05 Aug 2015 01:48:29 +0800</lastBuildDate>
     <generator>Yeoman Zhuang</generator>
+    
+      <item>
+        <title>快捷方式、符号链接、硬链接与软链接——win/linux</title>
+        <description>&lt;h2 id=&quot;含义&quot;&gt;含义&lt;/h2&gt;
+
+&lt;h3 id=&quot;快捷方式&quot;&gt;快捷方式&lt;/h3&gt;
+
+&lt;p&gt;仅仅是一个二进制文件或者是文本文件，存储有快捷方式目标的地址(文件地址或者网络地址)&lt;/p&gt;
+
+&lt;h3 id=&quot;符号连接&quot;&gt;符号连接&lt;/h3&gt;
+
+&lt;p&gt;也是保存的地址，在linux中符号连接等同于软链接，在windows中符号链接也与软链接类似，不同点是符号链接支持相对路径并且文件夹和文件都支持，同时不会像快捷方式那样跳转。&lt;/p&gt;
+
+&lt;h3 id=&quot;硬链接和软链接&quot;&gt;硬链接和软链接&lt;/h3&gt;
+
+&lt;p&gt;硬链接与软链接都可以理解成原文件的一个镜像，在应用层看来是一样的。同时，修改源文件的时候都会同步修改链接的文件，因此，当你需要做文件镜像时候，或者同一个文件存到不同位置又需要同步变化的时候，就不需要每次更改以后重新复制一遍了。&lt;/p&gt;
+
+&lt;!-- more --&gt;
+
+&lt;h4 id=&quot;不同点&quot;&gt;不同点&lt;/h4&gt;
+
+&lt;p&gt;硬链接指向的是文件系统中的节点(inode)，而软链接指向的是文件系统的路径(path)，这就造成了两者根本的不同，也是造成两者各种不同的原因。&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;硬链接是与路径无关的，硬链接的文件共用文件系统中的节点，因此除了创建硬链接时，硬链接是没有源文件与目标文件的区别的。软链接是与路径相关的，因此如果源文件移动了以后软链接就不能用了，这点就类似windows里的快捷方式了，但是与快捷方式又不同。在linux和windows中的快捷方式(.desktop/.lnk)都仅仅是文本文件或者二进制文件而已，而软链接以后的文件在应用层是与源文件完全相同的。&lt;/li&gt;
+&lt;li&gt;同样由于与路径的关系，硬链接只能连接文件，而软链接可以连接文件或者文件夹。&lt;/li&gt;
+&lt;li&gt;硬链接只能在同一个文件系统内链接，软链接不受文件系统的约束&lt;/li&gt;
+&lt;li&gt;在linux中，硬链接只能有超级用户建立。&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&quot;windows&quot;&gt;Windows&lt;/h2&gt;
+
+&lt;h3 id=&quot;快捷方式&quot;&gt;快捷方式&lt;/h3&gt;
+
+&lt;p&gt;直接右键发送到。命令行比较难，大多都是写vbs脚本等等实现。&lt;/p&gt;
+
+&lt;h3 id=&quot;符号链接&quot;&gt;符号链接&lt;/h3&gt;
+
+&lt;ul&gt;
+&lt;li&gt;命令&lt;/li&gt;
+&lt;/ul&gt;
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-text&quot; data-lang=&quot;text&quot;&gt;创建符号链接。
+
+MKLINK [[/D] | [/H] | [/J]] Link Target
+
+        /D      创建目录符号链接。默认为文件
+                符号链接。
+        /H      创建硬链接，而不是符号链接。
+        /J      创建目录联接。
+        Link    指定新的符号链接名称。
+        Target  指定新链接引用的路径
+                (相对或绝对)。
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;h3 id=&quot;硬链接&quot;&gt;硬链接&lt;/h3&gt;
+
+&lt;p&gt;在Windows建立硬链接是只适用于NTFS文件系统的，使用命令&lt;code&gt;fsutil hardlink&lt;/code&gt;&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;命令语法，例子是把&lt;code&gt;bar.txt&lt;/code&gt; 硬链接上 &lt;code&gt;foo.txt&lt;/code&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-text&quot; data-lang=&quot;text&quot;&gt;D:\user\user&amp;gt;fsutil hardlink create
+用法 : fsutil hardlink create &amp;lt;new filename&amp;gt; &amp;lt;existing filename&amp;gt;
+例如 : fsutil hardlink create c:\foo.txt c:\bar.txt
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;ul&gt;
+&lt;li&gt;API 函数&lt;/li&gt;
+&lt;/ul&gt;
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-c#&quot; data-lang=&quot;c#&quot;&gt;&lt;span class=&quot;n&quot;&gt;BOOL&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;CreateHardLink&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;
+     &lt;span class=&quot;n&quot;&gt;LPCTSTR&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;lpFileName&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;
+     &lt;span class=&quot;n&quot;&gt;LPCTSTR&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;lpExistingFileName&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;
+     &lt;span class=&quot;n&quot;&gt;LPSECURITY_ATTRIBUTES&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;lpSecurityAttributes&lt;/span&gt;
+&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;适用于win2000及以上版本系统，最后一个参数保留，必须为&lt;code&gt;NULL&lt;/code&gt;&lt;/p&gt;
+
+&lt;h3 id=&quot;软链接&quot;&gt;软链接&lt;/h3&gt;
+
+&lt;p&gt;在NTFS中的软链接，微软叫做junction，但是windows中建立软链接没有现成的命令，可以从&lt;a href=&quot;http://www.microsoft.com/technet/sysinternals/FileAndDisk/Junction.mspx&quot;&gt;microsoft官网&lt;/a&gt;下载junction.exe并放到&lt;code&gt;C://Windows/System32/&lt;/code&gt;文件夹中进行扩展，但是这里的软链接只能连接文件夹&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;junction命令语法，其中例子是把windows文件夹链接上link文件夹&lt;/li&gt;
+&lt;/ul&gt;
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-text&quot; data-lang=&quot;text&quot;&gt;D:\user\user&amp;gt;junction
+
+Junction v1.06 - Windows junction creator and reparse point viewer
+Copyright (C) 2000-2010 Mark Russinovich
+Sysinternals - www.sysinternals.com
+
+The first usage is for displaying reparse point information, the
+second usage is for creating a junction point, and the last for
+deleting a junction point:
+usage: junction [-s] [-q] &amp;lt;file or directory&amp;gt;
+       -q     Don&amp;#39;t print error messages (quiet)
+       -s     Recurse subdirectories
+
+usage: junction &amp;lt;junction directory&amp;gt; &amp;lt;junction target/existing&amp;gt;
+       example: junction d:\link c:\windows
+
+usage: junction -d &amp;lt;junction directory&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;ul&gt;
+&lt;li&gt;API函数&lt;/li&gt;
+&lt;/ul&gt;
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-c#&quot; data-lang=&quot;c#&quot;&gt;&lt;span class=&quot;n&quot;&gt;BOOL&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;WINAPI&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;CreateSymbolicLink&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;
+   &lt;span class=&quot;n&quot;&gt;__in&lt;/span&gt;   &lt;span class=&quot;n&quot;&gt;LPCWSTR&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;lpSymlinkFileName&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;
+   &lt;span class=&quot;n&quot;&gt;__in&lt;/span&gt;   &lt;span class=&quot;n&quot;&gt;LPCWSTR&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;lpTargetFileName&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;
+   &lt;span class=&quot;n&quot;&gt;__in&lt;/span&gt;   &lt;span class=&quot;n&quot;&gt;DWORD&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;dwFlags&lt;/span&gt;
+&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;参数：&lt;/p&gt;
+
+&lt;p&gt;lpSymlinkFileName 要创建的符号链接名称.&lt;/p&gt;
+
+&lt;p&gt;lpTargetFileName 符号链接所对应目标的名称.&lt;/p&gt;
+
+&lt;p&gt;dwFlags 标识目标是文件还是目录. 取值0x0 代表是文件，SYMBOLIC_LINK_FLAG_DIRECTORY或0x1 代表是目录&lt;/p&gt;
+
+&lt;p&gt;这个要VISTA以上版本才支持。&lt;/p&gt;
+
+&lt;h3 id=&quot;其他方法&quot;&gt;其他方法&lt;/h3&gt;
+
+&lt;p&gt;使用Cygwin或者mingw中的ln&lt;/p&gt;
+
+&lt;h2 id=&quot;linux&quot;&gt;Linux&lt;/h2&gt;
+
+&lt;h3 id=&quot;快捷方式&quot;&gt;快捷方式&lt;/h3&gt;
+
+&lt;p&gt;快捷方式比较烦。在桌面上就是一个&lt;code&gt;.desktop&lt;/code&gt;文件。一般格式为&lt;/p&gt;
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-ini&quot; data-lang=&quot;ini&quot;&gt;&lt;span class=&quot;k&quot;&gt;[Desktop Entry]&lt;/span&gt;
+&lt;span class=&quot;na&quot;&gt;Encoding&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;UTF-8&lt;/span&gt;
+&lt;span class=&quot;na&quot;&gt;Version&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;1.0                                     #version of an app.&lt;/span&gt;
+&lt;span class=&quot;na&quot;&gt;Name[en_US]&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;yEd                                 #name of an app.&lt;/span&gt;
+&lt;span class=&quot;na&quot;&gt;GenericName&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;GUI Port Scanner                    #longer name of an app.&lt;/span&gt;
+&lt;span class=&quot;na&quot;&gt;Exec&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;java -jar /opt/yed-3.11.1/yed.jar          #command used to launch an app.&lt;/span&gt;
+&lt;span class=&quot;na&quot;&gt;Terminal&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;false                                  #whether an app requires to be run in a terminal&lt;/span&gt;
+&lt;span class=&quot;na&quot;&gt;Icon[en_US]&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;/opt/yed-3.11.1/icons/yicon32.png   #location of icon file.&lt;/span&gt;
+&lt;span class=&quot;na&quot;&gt;Type&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;Application                                #type&lt;/span&gt;
+&lt;span class=&quot;na&quot;&gt;Categories&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;Application;Network;Security;        #categories in which this app should be listed.&lt;/span&gt;
+&lt;span class=&quot;na&quot;&gt;Comment[en_US]&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;yEd Graph Editor                 #comment which appears as a tooltip.&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;更快速的命令行方法在&lt;code&gt;GNOME&lt;/code&gt; &lt;code&gt;KDE&lt;/code&gt; &lt;code&gt;xfce&lt;/code&gt; &lt;code&gt;Cinnamon&lt;/code&gt; &lt;code&gt;LXDE&lt;/code&gt;中都不同，详见&lt;a href=&quot;https://linux.cn/article-2289-1.html&quot;&gt;此处&lt;/a&gt;&lt;/p&gt;
+
+&lt;h3 id=&quot;软硬链接与符号链接&quot;&gt;软硬链接与符号链接&lt;/h3&gt;
+
+&lt;p&gt;在linux里软硬连接就很简单了，都是使用&lt;code&gt;ln&lt;/code&gt;命令 ，其中硬链接是&lt;code&gt;ln&lt;/code&gt;软链接是&lt;code&gt;ln -s&lt;/code&gt;&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;语法&lt;/li&gt;
+&lt;/ul&gt;
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;ln &lt;span class=&quot;o&quot;&gt;[&lt;/span&gt;options&lt;span class=&quot;o&quot;&gt;]&lt;/span&gt; existingfile newfile  
+ln&lt;span class=&quot;o&quot;&gt;[&lt;/span&gt;options&lt;span class=&quot;o&quot;&gt;]&lt;/span&gt; existingfile-list directory   
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;hr&gt;
+
+&lt;h3 id=&quot;reference&quot;&gt;Reference&lt;/h3&gt;
+
+&lt;p&gt;&lt;a href=&quot;http://cai555.iteye.com/blog/480231&quot;&gt;windows中对应linux的ln命令&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;http://blog.csdn.net/hairetz/article/details/4168296&quot;&gt;关于硬链接和软链接（符号链接）的区别&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://blog.alphatr.com/windows-mklink.html&quot;&gt;Windows 的快捷方式，符号链接，软链接和硬链接&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;http://www.ibm.com/developerworks/cn/linux/l-lpic1-v3-104-6/index.html&quot;&gt;学习 Linux，101: 创建和更改硬链接和符号链接&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://linux.cn/article-2289-1.html&quot;&gt;如何在Linux的桌面上创建快捷方式或启动器&lt;/a&gt;&lt;/p&gt;
+</description>
+        <pubDate>Wed, 05 Aug 2015 06:20:14 +0800</pubDate>
+        <link>http://mickir.ml/blog/2015/08/05/fsutil-hardlink-junction-and-ln.html</link>
+        <guid isPermaLink="true">http://mickir.ml/blog/2015/08/05/fsutil-hardlink-junction-and-ln.html</guid>
+        
+        <category>windows</category>
+        
+        <category>linux</category>
+        
+      </item>
     
       <item>
         <title>修复Jekyll里Markdown代码高亮问题</title>

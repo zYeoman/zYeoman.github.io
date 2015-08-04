@@ -59,6 +59,47 @@
 <div class="posts">
   <section class="post">
     <header class="post-header">
+      <h1 class="post-title"><a href="/blog/2015/08/05/fsutil-hardlink-junction-and-ln.html">快捷方式、符号链接、硬链接与软链接——win/linux</a></h1>
+      <p class="post-meta">
+        <i class="fa fa-calendar"></i>
+        2015年08月05日
+        <i class="space"></i>
+        
+        <i class="fa fa-tags"></i>
+        <a class="post-category" href="/page/category.html#windows">windows</a>
+        
+        <i class="fa fa-tags"></i>
+        <a class="post-category" href="/page/category.html#linux">linux</a>
+        
+        
+        <a class="post-category" href="/page/category.html#"></a>
+        
+      </p>
+    </header>
+    <div class="post-main">
+      <h2 id="含义">含义</h2>
+
+<h3 id="快捷方式">快捷方式</h3>
+
+<p>仅仅是一个二进制文件或者是文本文件，存储有快捷方式目标的地址(文件地址或者网络地址)</p>
+
+<h3 id="符号连接">符号连接</h3>
+
+<p>也是保存的地址，在linux中符号连接等同于软链接，在windows中符号链接也与软链接类似，不同点是符号链接支持相对路径并且文件夹和文件都支持，同时不会像快捷方式那样跳转。</p>
+
+<h3 id="硬链接和软链接">硬链接和软链接</h3>
+
+<p>硬链接与软链接都可以理解成原文件的一个镜像，在应用层看来是一样的。同时，修改源文件的时候都会同步修改链接的文件，因此，当你需要做文件镜像时候，或者同一个文件存到不同位置又需要同步变化的时候，就不需要每次更改以后重新复制一遍了。</p>
+
+
+      <div class="readall"><a href="/blog/2015/08/05/fsutil-hardlink-junction-and-ln.html" id="post-readall">阅读全文&nbsp;<i class="fa fa-chevron-right"></i></a></div>
+    </div>
+  </section>
+</div>
+
+<div class="posts">
+  <section class="post">
+    <header class="post-header">
       <h1 class="post-title"><a href="/blog/2015/08/04/Fix-Highlight-Bug.html">修复Jekyll里Markdown代码高亮问题</a></h1>
       <p class="post-meta">
         <i class="fa fa-calendar"></i>

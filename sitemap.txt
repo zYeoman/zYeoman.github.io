@@ -8,6 +8,7 @@ http://mickir.ml/page/category.html
 http://mickir.ml/page/about.html
 http://mickir.ml/404.html
 
+http://mickir.ml/blog/2015/08/05/fsutil-hardlink-junction-and-ln.html
 http://mickir.ml/blog/2015/08/04/Fix-Highlight-Bug.html
 http://mickir.ml/blog/2015/08/03/Test-My-Blog.html
 http://mickir.ml/blog/2015/06/20/bookmark.html
