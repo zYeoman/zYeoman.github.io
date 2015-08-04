@@ -94,6 +94,11 @@ a:link {
 	bottom:0;
 	left:0;
 }
+.toc{
+	position:fixed;
+	right: 0;
+	top:15%;
+}
 .profilepic {
 	margin-top:12%;
 }

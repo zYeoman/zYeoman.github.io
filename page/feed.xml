@@ -5,8 +5,8 @@
     <description>Yeoman Zhuang - 有很多这样的时刻。你惊心动魄，而世界一无所知。你翻山越岭，而天地寂静无声。人生说到底，是一场一个人的战争。</description>
     <link>http://mickir.ml</link>
     <atom:link href="http://mickir.ml/page/feed.xml" rel="self" type="application/rss+xml" />
-    <pubDate>Wed, 05 Aug 2015 01:48:29 +0800</pubDate>
-    <lastBuildDate>Wed, 05 Aug 2015 01:48:29 +0800</lastBuildDate>
+    <pubDate>Wed, 05 Aug 2015 04:11:51 +0800</pubDate>
+    <lastBuildDate>Wed, 05 Aug 2015 04:11:51 +0800</lastBuildDate>
     <generator>Yeoman Zhuang</generator>
     
       <item>
@@ -162,7 +162,7 @@ ln&lt;span class=&quot;o&quot;&gt;[&lt;/span&gt;options&lt;span class=&quot;o&qu
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 &lt;hr&gt;
 
-&lt;h3 id=&quot;reference&quot;&gt;Reference&lt;/h3&gt;
+&lt;h2 id=&quot;reference&quot;&gt;Reference&lt;/h2&gt;
 
 &lt;p&gt;&lt;a href=&quot;http://cai555.iteye.com/blog/480231&quot;&gt;windows中对应linux的ln命令&lt;/a&gt;&lt;/p&gt;
 
@@ -231,7 +231,7 @@ redcarpet:
 &lt;h2 id=&quot;使用了jekyll-light主题。&quot;&gt;使用了&lt;a href=&quot;https://github.com/pexcn/Jekyll-Light&quot;&gt;Jekyll Light&lt;/a&gt;主题。&lt;/h2&gt;
 
 &lt;ul&gt;
-&lt;li&gt;测试列表1&lt;/li&gt;
+&lt;li&gt;测试列表1&lt;a href=&quot;hehe&quot;&gt;^1&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;测试列表2&lt;/li&gt;
 &lt;/ul&gt;
 
@@ -279,18 +279,7 @@ $$\delta \times$$&lt;/p&gt;
 &lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-matlab&quot; data-lang=&quot;matlab&quot;&gt;&lt;span class=&quot;c&quot;&gt;% 测试代码高亮&lt;/span&gt;
 &lt;span class=&quot;k&quot;&gt;function&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;foo &lt;span class=&quot;p&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;bar&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;()&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;&lt;/span&gt;
 &lt;span class=&quot;k&quot;&gt;return&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-&lt;div class=&quot;footnotes&quot;&gt;
-&lt;hr&gt;
-&lt;ol&gt;
-
-&lt;li id=&quot;fn1&quot;&gt;
-&lt;p&gt;hehe&amp;nbsp;&lt;a href=&quot;#fnref1&quot; rev=&quot;footnote&quot;&gt;&amp;#8617;&lt;/a&gt;&lt;/p&gt;
-&lt;/li&gt;
-
-&lt;/ol&gt;
-&lt;/div&gt;
-</description>
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;</description>
         <pubDate>Mon, 03 Aug 2015 23:00:00 +0800</pubDate>
         <link>http://mickir.ml/blog/2015/08/03/Test-My-Blog.html</link>
         <guid isPermaLink="true">http://mickir.ml/blog/2015/08/03/Test-My-Blog.html</guid>
