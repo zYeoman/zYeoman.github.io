@@ -1,0 +1,29 @@
+# Build settings
+highlighter: pygments
+permalink: blog/:year/:month/:day/:title.html
+paginate: 6
+paginate_path: page/:num
+
+markdown: redcarpet
+redcarpet:
+  extensions: ["no_intra_emphasis", "fenced_code_blocks", "autolink", "strikethrough", "with_toc_data", "tables", "underline", "lax_spacing", "html_toc"]
+
+
+# Site settings
+blog:
+  name: Yeoman Zhuang
+  title: Mickir's Blog
+  description: 有很多这样的时刻。你惊心动魄，而世界一无所知。你翻山越岭，而天地寂静无声。人生说到底，是一场一个人的战争。
+  url: "http://mickir.ml" # the base hostname & protocol for your site
+  duoshuo: mickir
+  qiniu: http://7xkunb.com1.z0.glb.clouddn.com                  # 七牛云地址
+  tongji: 030d137055b3efca4921b91be1694cc4
+author:
+  name: Yeoman Zhuang                                    # 作者名称
+  email: zyeoman@163.com
+  weibo: http://weibo.com/mickir # 微博地址
+  github: http://github.com/zyeoman                        # GitHub地址
+  logo: http://7xkunb.com1.z0.glb.clouddn.com/头1.jpg       # logo地址
+  douban:
+    name: zyeoman
+    key: 0fc62a1f31c5c1d22f527e5d95514576

@@ -1,3 +1,7 @@
+---
+layout: null
+---
+
 <!DOCTYPE HTML>
 <html>
 <head>
@@ -6,15 +10,7 @@
   <link rel="shortcut icon" href="/res/img/favicon.ico" type="image/x-icon">
   <title>找不到页面了...</title>
   <link rel="stylesheet" href="/res/css/404.css">
-  <script>
-  var _hmt = _hmt || [];
-  (function() {
-    var hm = document.createElement("script");
-    hm.src = "//hm.baidu.com/hm.js?030d137055b3efca4921b91be1694cc4";
-    var s = document.getElementsByTagName("script")[0];
-    s.parentNode.insertBefore(hm, s);
-  })();
-</script>
+  {% include tongji.html %}
 </head>
 <body>
   <div id="container">
@@ -33,7 +29,7 @@
   function testTime() {
     view.innerHTML = t + " 秒后跳转至首页...";
     if(t == 0) {
-      location="http://mickir.ml";
+      location="{{ site.blog.url }}";
     }
     t--;
   }

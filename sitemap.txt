@@ -1,14 +1,8 @@
-
-http://mickir.ml/page/timing.html
-http://mickir.ml/sitemap.txt
-http://mickir.ml/page/read.html
-http://mickir.ml/index.html
-http://mickir.ml/page/feed.xml
-http://mickir.ml/page/category.html
-http://mickir.ml/page/about.html
-http://mickir.ml/404.html
-
-http://mickir.ml/blog/2015/08/05/fsutil-hardlink-junction-and-ln.html
-http://mickir.ml/blog/2015/08/04/Fix-Highlight-Bug.html
-http://mickir.ml/blog/2015/08/03/Test-My-Blog.html
-http://mickir.ml/blog/2015/06/20/bookmark.html
+---
+title: sitemap.txt
+permalink: sitemap.txt
+---
+{% for page in site.pages reversed %}
+{{ site.blog.url }}{{ page.url }}{% endfor %}
+{% for post in site.posts %}
+{{ site.blog.url }}{{ post.url }}{% endfor %}

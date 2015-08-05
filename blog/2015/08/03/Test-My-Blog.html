@@ -13,7 +13,7 @@
   <link rel="stylesheet" href="/res/css/public.css">
   <link rel="stylesheet" href="/res/css/light.css">
   <script src="/res/js/light.js"></script>
-  
+  <script src="/res/js/toc.js" ></script>
   <script>
   var _hmt = _hmt || [];
   (function() {
@@ -56,9 +56,10 @@
   </div>
 </div>
 
-    
     <div class="main">
-    <header class="post-header">
+        <div id="toc" class="toc">
+    </div>
+<header class="post-header">
   <h1 class="post-title"><a href="/blog/2015/08/03/Test-My-Blog.html">测试</a></h2>
   <p class="post-meta">
     <i class="fa fa-calendar"></i>
@@ -157,6 +158,6 @@ $$\delta \times$$</p>
   </div>    
   <div id="top"><a id="rocket" href="javascript:;" title="返回顶部"><i></i></a></div>
   <script src="http://cdn.bootcss.com/mathjax/2.4.0/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script><script>MathJax.Hub.Config({tex2jax:{inlineMath: [['$','$']],displayMath: [['$$','$$']],processEscapes: true}});</script>
-  
+  <script type="text/javascript">$(document).ready(function() {$('#toc').toc();}); </script>
 </body>
 </html>
