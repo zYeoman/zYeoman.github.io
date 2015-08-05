@@ -94,7 +94,7 @@ a:link {
 	bottom:0;
 	left:0;
 }
-.toc{
+#toc{
 	position:fixed;
 	right: 0;
 	top:15%;
