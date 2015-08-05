@@ -47,7 +47,7 @@
 
     var level = get_level(headers[0]),
       this_level,
-      html = settings.title + " <"+settings.listType+" class='nav nav-pills nav-stacked'>";
+      html = settings.title + " <"+settings.listType+">";
     headers.on('click', function() {
       if (!settings.noBackToTopLinks) {
         window.location.hash = this.id;

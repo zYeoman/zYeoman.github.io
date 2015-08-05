@@ -100,6 +100,9 @@ a:link {
 	top:15%;
 	width:15%;
 }
+#toc li{
+	list-style: outside none none;
+}
 .profilepic {
 	margin-top:12%;
 }
