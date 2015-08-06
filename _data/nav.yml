@@ -1,7 +1,3 @@
-- href: /index.html
-  icon: fa fa-home
-  title: 主页
-
 - href: /page/timing.html
   icon: fa fa-clock-o
   title: 时间轴
