@@ -16,10 +16,10 @@ date: 2015-08-06 21:37:55
 
 仔细想一下就会发现，是把每一个字母的ascii值加2处理了，同时对密文处理实验后，发现其实`yz`映射成了`ab`。
 
-## `translate`和`maketrans`函数
+## translate和maketrans函数
 
 * `string.translate(s, table[, deletechars])`或者`str.translate(table[, deletechars])`
-    - 在字符串中删除所有在`deletechars`中的字符，并把剩下的字符按照`table`[^1]内的映射关系进行映射
+    - 在字符串中删除所有在`deletechars`中的字符，并把剩下的字符按照`table`[^1](#1)内的映射关系进行映射
 * `string.maketrans(from,to)`
     - 生成`translate()`函数所需的`table`，注意`from`和`to`必须一样长。
 
@@ -33,4 +33,5 @@ print(s.translate(table))
 
 其中的`string.ascii_lowercase`是`'abcdefghijklmnopqrstuvwxyz'`，同样的也有`string.ascii_letters` `string.ascii_uppercase` `string.digits`等等，详细内容见[官方文档](https://docs.python.org/2/library/string.html)
 
-[^1]: 一个256字符长度的字符串，应该就是128个ASCII码值加上它的映射
+######^1
+ 一个256字符长度的字符串，应该就是128个ASCII码值加上它的映射
