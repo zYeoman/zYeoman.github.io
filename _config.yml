@@ -1,6 +1,6 @@
 # Build settings
 highlighter: pygments
-permalink: blog/:year/:month/:day/:title.html
+permalink: blog/:year/:month/:title.html
 paginate: 6
 paginate_path: page/:num
 
