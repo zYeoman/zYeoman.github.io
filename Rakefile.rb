@@ -52,6 +52,7 @@ task :post do
     post.puts "date: #{now}"
     post.puts "---"
   end
+  system('subl '+filename)
 end
 
 # Usage: rake life title="Post Name"
@@ -70,6 +71,7 @@ task :life do
     post.puts "title: #{title.gsub(/-/,' ')}"
     post.puts "---"
   end
+  system('subl '+filename)
 end
 
 # Usage: rake page title="Page Name"
@@ -88,4 +90,5 @@ task :page do
     post.puts "title: #{title.gsub(/-/,' ')}"
     post.puts "---"
   end
+  system('subl '+filename)
 end
