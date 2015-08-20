@@ -3,6 +3,8 @@ highlighter: pygments
 permalink: blog/:year/:month/:title.html
 paginate: 6
 paginate_path: page/:num
+exclude: [LICENSE, CNAME, README.md, .gitignore, Rakefile.rb]
+
 
 markdown: redcarpet
 redcarpet:
