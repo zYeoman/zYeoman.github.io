@@ -55,11 +55,11 @@ task :post do
   system('subl '+filename)
 end
 
-# Usage: rake life title="Post Name"
+# Usage: rake life [title="Post Name"]
 desc "Begin a new life-post in #{CONFIG['life']}"
 task :life do
   abort("rake aborted: '#{CONFIG['life']}' directory not found.") unless FileTest.directory?(CONFIG['life'])
-  title = ENV["title"] || "New-Life"
+  title = ENV["title"] || Time.now.strftime('%Y-%m-%d')
   filename = File.join(CONFIG['life'], "#{title.gsub(/ /,'-').gsub(/[^\w-]/, '')}.#{CONFIG['post_ext']}")
   if File.exist?(filename)
     abort("rake aborted!") if ask("#{filename} already exists. Do you want to overwrite?", ['y', 'n']) == 'n'
