@@ -10,6 +10,9 @@ markdown: redcarpet
 redcarpet:
   extensions: ["no_intra_emphasis", "fenced_code_blocks", "autolink", "strikethrough", "with_toc_data", "tables", "underline", "lax_spacing", "html_toc"]
 
+# timezone
+timezone: CN
+
 # life collections
 collections:
   life:
