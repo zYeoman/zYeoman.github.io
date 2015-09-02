@@ -15,6 +15,9 @@
 </head>
 <body>
   <div class="main">
+  <div class='backhome'><a href="/index.html"  style=" text-decoration: none; color: #444;" >
+    <i class="fa fa-home fa-fw"></i>&nbsp;返回主页</a>
+  </div>
     <div class="title">{{ page.title }}</div>
     {% if page.meta != false %}<div class="post-info"><i class="fa fa-clock-o"></i>&nbsp;{{ page.date | date: "%Y" }}-{{ page.date | date: "%m" }}-{{ page.date | date: "%d" }}</div>{% endif %}
     <div class="content">

@@ -58,9 +58,9 @@ end
 # Usage: rake life [title="Post Name"]
 desc "Begin a new life-post in #{CONFIG['life']}"
 task :life do
-  abort("rake aborted: '#{CONFIG['life']}' directory not found.") unless FileTest.directory?(CONFIG['life'])
-  title = ENV["title"] || Time.now.strftime('%Y-%m-%d')
-  filename = File.join(CONFIG['life'], "#{title.gsub(/ /,'-').gsub(/[^\w-]/, '')}.#{CONFIG['post_ext']}")
+  abort("rake aborted: '#{CONFIG['post']}' directory not found.") unless FileTest.directory?(CONFIG['post'])
+  title = ENV["title"] || Time.now.strftime('%Y-%m-%d-%H-%M-%S')
+  filename = File.join(CONFIG['post'], "#{title.gsub(/ /,'-').gsub(/[^\w-]/, '')}.#{CONFIG['post_ext']}")
   if File.exist?(filename)
     abort("rake aborted!") if ask("#{filename} already exists. Do you want to overwrite?", ['y', 'n']) == 'n'
   end
@@ -68,7 +68,7 @@ task :life do
   open(filename, 'w') do |post|
     post.puts "---"
     post.puts "layout: life"
-    post.puts "title: #{title.gsub(/-/,' ')}"
+    post.puts "title: 今天干了什么呢？"
     post.puts "---"
   end
   system('subl '+filename)

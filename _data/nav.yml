@@ -7,7 +7,7 @@
   title: 分类
 
 - href: /page/life.html
-  icon: fa fa-tags
+  icon: fa fa-book
   title: 生活
 # ///这里的图标修改///
 - href: /page/timing.html
