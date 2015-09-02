@@ -2,13 +2,17 @@
   icon: fa fa-home
   title: 主页
 
-- href: /page/timing.html
-  icon: fa fa-clock-o
-  title: 时间轴
-
 - href: /page/category.html
   icon: fa fa-tags
   title: 分类
+
+- href: /page/life.html
+  icon: fa fa-tags
+  title: 生活
+# ///这里的图标修改///
+- href: /page/timing.html
+  icon: fa fa-clock-o
+  title: 时间轴
 
 - href: /page/about.html
   icon: fa fa-paper-plane-o
