@@ -4,13 +4,18 @@ title: 生活
 ---
 
 <div>
-{% for post in site.life reverse %}
+{% capture day %}0{% endcapture %}
+{% capture month %}0{% endcapture %}
+{% for post in site.life %}
 {% capture y %}{{post.date | date:"%Y"}}{% endcapture %}
 {% if year != y %}{% assign year = y %}<h1 class="year">{{ post.date | date: "%Y" }}</h1>{% endif %}
 <div class="life">
   <div class="link">
   {% capture d %}{{post.date | date:"%d"}}{% endcapture %}
-  {% if day != y %}{% assign day = y %}
+  {% capture m %}{{post.date | date:"%m"}}{% endcapture %}
+  {% if day != d or month != m %}
+  {% assign day = d %}
+  {% assign month = m %}
   <time class="time" style="color:#009000;">{{ post.date | date: "%m" }}-{{ post.date | date: "%d" }}</time>
   {% else %}
   &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
