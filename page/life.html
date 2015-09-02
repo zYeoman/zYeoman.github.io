@@ -3,18 +3,22 @@ layout: blog
 title: 生活
 ---
 
-<!-- <link rel="stylesheet" href="/res/css/page.css"> -->
 <div>
-{% for post in site.posts reverse %}
-{% if post.layout == 'life' %}
+{% for post in site.life reverse %}
 {% capture y %}{{post.date | date:"%Y"}}{% endcapture %}
 {% if year != y %}{% assign year = y %}<h1 class="year">{{ post.date | date: "%Y" }}</h1>{% endif %}
 <div class="life">
-  <time class="time">{{ post.date | date: "%m" }}-{{ post.date | date: "%d" }}</time>
-  <div class="link"><a href="{{ post.url }}">{{post.title}}</a></div>
+  <div class="link">
+  {% capture d %}{{post.date | date:"%d"}}{% endcapture %}
+  {% if day != y %}{% assign day = y %}
+  <time class="time" style="color:#009000;">{{ post.date | date: "%m" }}-{{ post.date | date: "%d" }}</time>
+  {% else %}
+  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+  {% endif %}
+  <a href="{{ post.url }}">{{post.title}}</a>
+  </div>
   <div class="point-time "></div>
 </div>
-{% endif %}
 {% endfor %}
 </div>
 <br/>

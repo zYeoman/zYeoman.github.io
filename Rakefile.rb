@@ -8,7 +8,7 @@ CONFIG = {
   'layouts' => File.join(SOURCE, "_layouts"),
   'post' => File.join(SOURCE, "_posts"),
   'page' => File.join(SOURCE, "page"),
-  'life' => File.join(SOURCE, "life"),
+  'life' => File.join(SOURCE, "_life"),
   'post_ext' => "md",
 }
 
@@ -58,17 +58,25 @@ end
 # Usage: rake life [title="Post Name"]
 desc "Begin a new life-post in #{CONFIG['life']}"
 task :life do
-  abort("rake aborted: '#{CONFIG['post']}' directory not found.") unless FileTest.directory?(CONFIG['post'])
+  abort("rake aborted: '#{CONFIG['life']}' directory not found.") unless FileTest.directory?(CONFIG['life'])
   title = ENV["title"] || Time.now.strftime('%Y-%m-%d-%H-%M-%S')
-  filename = File.join(CONFIG['post'], "#{title.gsub(/ /,'-').gsub(/[^\w-]/, '')}.#{CONFIG['post_ext']}")
+  filename = File.join(CONFIG['life'], "#{title.gsub(/ /,'-').gsub(/[^\w-]/, '')}.#{CONFIG['post_ext']}")
   if File.exist?(filename)
     abort("rake aborted!") if ask("#{filename} already exists. Do you want to overwrite?", ['y', 'n']) == 'n'
+  end
+  begin
+    date = (ENV['date'] ? Time.parse(ENV['date']) : Time.now).strftime('%Y-%m-%d')
+    now = Time.now.strftime('%Y-%m-%d %H:%M:%S')
+  rescue => e
+    puts "Error - date format must be YYYY-MM-DD!"
+    exit -1
   end
   puts "Creating new life-post: #{filename}"
   open(filename, 'w') do |post|
     post.puts "---"
     post.puts "layout: life"
     post.puts "title: 今天干了什么呢？"
+    post.puts "date: #{now}"
     post.puts "---"
   end
   system('subl '+filename)
