@@ -6,7 +6,7 @@ title: 生活
 <div>
 {% capture day %}0{% endcapture %}
 {% capture month %}0{% endcapture %}
-{% for post in site.life %}
+{% for post in site.life reverse %}
 {% capture y %}{{post.date | date:"%Y"}}{% endcapture %}
 {% if year != y %}{% assign year = y %}<h1 class="year">{{ post.date | date: "%Y" }}</h1>{% endif %}
 <div class="life">
