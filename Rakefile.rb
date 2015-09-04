@@ -64,7 +64,7 @@ task :life do
   if File.exist?(filename)
     system('subl '+filename)
   else
-    date = Time.now.strftime('%Y-%m-%d')
+    date = Time.now.strftime('%Y-%m-%d %H:%M:%S')
     puts "Creating new life-post: #{filename}"
     open(filename, 'w') do |post|
       post.puts "---"
