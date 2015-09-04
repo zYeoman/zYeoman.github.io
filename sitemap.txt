@@ -6,3 +6,5 @@ permalink: sitemap.txt
 {{ site.blog.url }}{{ page.url }}{% endfor %}
 {% for post in site.posts %}
 {{ site.blog.url }}{{ post.url }}{% endfor %}
+{% for post in site.life %}
+{{ site.blog.url }}{{ post.url }}{% endfor %}
