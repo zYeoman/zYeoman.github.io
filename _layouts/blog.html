@@ -32,6 +32,24 @@
   {% endif %}
   {% if page.post == true %}
   <script type="text/javascript">$(document).ready(function() {$('#toc').toc();}); </script>
+  <style type="text/css">#toc{transition:all 0.5s;} </style>
+
+  <script type="text/javascript">
+  $(window).scroll(function(){
+    var tops=$(window).scrollTop();           //当前屏幕最上端到网页最上端距离
+    var hof_toc=$("#toc").outerHeight();      //toc 的高度
+    var hof_main=$(".post-main").outerHeight()//main 的高度
+    var top1=$(".post-main").offset().top;    //post-main (内容)的与顶端的距离
+    // 三种情况
+    // 最顶端的时候和内容等高
+    // 下拉以后和浏览器最高点等高
+    // 这两种情况都是margin-top等于
+    // 拉到内容结束后下端和内容结束后等高
+    if(tops <= top1) {$("#toc").css("margin-top",top1)}
+    else if(tops >= top1+hof_main-hof_toc) {$("#toc").css("margin-top",top1+hof_main-hof_toc)}
+    else{$("#toc").css("margin-top",tops)}
+  });
+  </script>
   {% endif %}
 </body>
 </html>
