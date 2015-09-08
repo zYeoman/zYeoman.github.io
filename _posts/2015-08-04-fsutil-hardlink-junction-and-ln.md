@@ -5,6 +5,45 @@ categories: windows linux
 date: 2015-08-04 22:20:14
 ---
 
+## 15-9-6更新
+使用MKLINK将为windows系统盘瘦身
+
+`C:/windows/Installer`是一个和`C:/windows/winSxS`同样可怕的文件夹，在我的固态硬盘上，它的体积达到了10GB，然而都是些没有什么卵用的安装文件。因此可以使用链接的方式把它挪到HDD里。
+
+<!-- more -->
+
+具体步骤如下
+
+* Make sure no installations are running on your machine (there's probably a formal way to do this, but I'm not sure how).
+* Copy using Windows explorer C:\Windows\Installer to another disk, e.g., D:\C_DRIVE\Windows\Installer -- note: Windows\Installer is a system folder and thus invisible in Windows 8.1. You have to tweak your account to make it visible to use Explorer to make the copy. Google will help you find out how to do that.
+* Make a backup copy of C:\Windows\Installer
+* Type the following commands in a `cmd.exe` window running as Administrator:
+
+```
+rmdir /s /q C:\Windows\Installer
+mklink /D C:\Windows\Installer D:\C_DRIVE\Windows\Installer
+```
+
+------
+
+* 确认在你的电脑上没有正在安装的软件（似乎不会有什么影响）
+* 使用资源管理器把`C:\Windows\Installer`复制到别的硬盘上，例如`D:\C_DRIVE\Windows\Installer`。注意，`Windows\Installer`是一个系统文件夹，你需要在文件夹选项里关闭隐藏关键系统文件的选项。如果不知道怎么做或者总也找不到它，你可以google一下。
+* 为`C:\Windows\Installer`做一个备份
+* 管理员模式运行`cmd`（`win+x` `a`），键入以下命令并运行
+
+```
+rmdir /s /q C:\Windows\Installer
+mklink /D C:\Windows\Installer D:\C_DRIVE\Windows\Installer
+```
+
+-----
+
+我已经这么做了，希望真的像帖子里说的那样吧。
+
+来自[StackExchange](http://superuser.com/questions/707767/how-can-i-to-free-up-drive-space-from-the-windows-installer-folder-without-killi#)
+以及参考[Kavoir](http://www.kavoir.com/2012/07/how-to-free-up-c-drive-disk-space-in-windows-7-easy.html)
+
+
 ## 含义 
 
 ### 快捷方式 
@@ -16,7 +55,7 @@ date: 2015-08-04 22:20:14
 ### 硬链接和软链接
 
 硬链接与软链接都可以理解成原文件的一个镜像，在应用层看来是一样的。同时，修改源文件的时候都会同步修改链接的文件，因此，当你需要做文件镜像时候，或者同一个文件存到不同位置又需要同步变化的时候，就不需要每次更改以后重新复制一遍了。
-<!-- more -->
+
 #### 不同点
 
 硬链接指向的是文件系统中的节点(inode)，而软链接指向的是文件系统的路径(path)，这就造成了两者根本的不同，也是造成两者各种不同的原因。

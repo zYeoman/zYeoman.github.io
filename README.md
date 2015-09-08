@@ -9,7 +9,7 @@ Mickir's Blog
 
     * ~~life日记功能，显示简单的日记轴~~
     * ~~自己写一个js代码实现Scrollapy效果，具体参考Bootstrap。js代码参考[自动言语机](http://roomcar.leanote.com/cate/leanotetest)~~
-    * 搜索框实现，参考这个[模板](https://github.com/liberize/liberize.github.com)（[教程](http://liberize.me/tech/jekyll-static-blog-search.html)）
+    * 搜索框实现，参考这个[模板](https://github.com/liberize/liberize.github.com)（停止开源）（[教程](http://liberize.me/tech/jekyll-static-blog-search.html)）(可是找不到放搜索框的地方啊~~~)
 
 * BUGs
     - ~~笔记本屏幕中左半栏显示不全，应该有智能化的显示模式~~
