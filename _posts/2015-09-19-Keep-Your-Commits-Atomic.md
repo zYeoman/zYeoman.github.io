@@ -1,7 +1,7 @@
 ---
 layout: post
 title: 原子化你的commits
-category: git 翻译
+categories: git 翻译
 date: 2015-09-19 17:05:46
 ---
 
