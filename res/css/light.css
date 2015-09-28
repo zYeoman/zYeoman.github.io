@@ -188,6 +188,7 @@ a:link {
 	-webkit-transition:color 0.3s;
 	-moz-transition:color 0.3s;
 	-o-transition:color 0.3s;
+	display: block;
 }
 #nav ul li a:hover {
 	color:yellow;
