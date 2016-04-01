@@ -9,4 +9,14 @@ date: 2016-03-30 23:15:10
 
 <!-- more -->
 
+## 1. Ctrl+Shift+C 选取元素
 
+左上角单击然后就可以在页面中选取元素了!!
+
+![调试](http://7xkunb.com1.z0.glb.clouddn.com/markdown/1459538345047.png)
+
+## 2. JavaScript单步运行与断点
+
+待续
+
+## 3. 网络选项卡查看Post与Get方法内容
