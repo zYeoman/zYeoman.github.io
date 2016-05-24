@@ -1,7 +1,7 @@
 ---
 layout: post
 title: 快捷方式、符号链接、硬链接与软链接——win/linux
-categories: windows linux
+categories: 学习
 date: 2015-08-04 22:20:14
 ---
 
@@ -44,9 +44,9 @@ mklink /D C:\Windows\Installer D:\C_DRIVE\Windows\Installer
 以及参考[Kavoir](http://www.kavoir.com/2012/07/how-to-free-up-c-drive-disk-space-in-windows-7-easy.html)
 
 
-## 含义 
+## 含义
 
-### 快捷方式 
+### 快捷方式
 仅仅是一个二进制文件或者是文本文件，存储有快捷方式目标的地址(文件地址或者网络地址)
 
 ### 符号连接
@@ -89,7 +89,7 @@ MKLINK [[/D] | [/H] | [/J]] Link Target
 ```
 
 
-### 硬链接 
+### 硬链接
 在Windows建立硬链接是只适用于NTFS文件系统的，使用命令` fsutil hardlink`
 
 * 命令语法，例子是把`bar.txt` 硬链接上 `foo.txt`
@@ -189,12 +189,12 @@ Comment[en_US]=yEd Graph Editor                 #comment which appears as a tool
 * 语法
 
 ```bash
-ln [options] existingfile newfile  
-ln[options] existingfile-list directory   
+ln [options] existingfile newfile
+ln[options] existingfile-list directory
 ```
 
 ----
-## Reference 
+## Reference
 
 [windows中对应linux的ln命令](http://cai555.iteye.com/blog/480231)
 

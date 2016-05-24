@@ -1,7 +1,7 @@
 ---
 layout: post
 title: DMA in zedboard
-category:
+category: 工具
 date: 2015-12-20 23:39:34
 ---
 

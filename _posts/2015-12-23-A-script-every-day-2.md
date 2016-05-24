@@ -1,7 +1,7 @@
 ---
 layout: post
 title: 每天一个脚本——以管理员身份运行
-categories: 脚本 奇技淫巧 cmd
+category: 脚本
 date: 2015-12-23 23:21:50
 ---
 

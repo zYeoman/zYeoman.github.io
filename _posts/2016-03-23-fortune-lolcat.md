@@ -1,7 +1,7 @@
 ---
 layout: post
 title: fortune|lolcat -s 64
-category: 奇技淫巧
+category: 脚本
 date: 2016-03-23 18:38:30
 ---
 

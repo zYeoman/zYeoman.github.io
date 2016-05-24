@@ -2,7 +2,7 @@
 layout: post
 title: 测试
 math: true
-category: test
+category: 杂项
 date: 2015-08-03 15:00:00
 ---
 
@@ -35,7 +35,7 @@ $$E = mc^2$$
 
 ```python
 import os
-import path 
+import path
 def test():
     print("Hello,World")
 ```

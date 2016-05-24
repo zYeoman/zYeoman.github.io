@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Python string类中的 translate与maketrans函数
-category: Python
+title: 【Python】 string类中的 translate与maketrans函数
+category: 学习
 date: 2015-08-06 21:37:55
 ---
 
@@ -12,7 +12,7 @@ date: 2015-08-06 21:37:55
 在[level 1](http://www.pythonchallenge.com/pc/def/map.html)中，题目是字符串密码，很简单的一种加密方式，提示是
 > K->M
 > O->Q
-> E->G 
+> E->G
 
 仔细想一下就会发现，是把每一个字母的ascii值加2处理了，同时对密文处理实验后，发现其实`yz`映射成了`ab`。
 

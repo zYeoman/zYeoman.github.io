@@ -1,7 +1,7 @@
 ---
 layout: post
 title: 由Bing输入法导致的Bug们
-categories: Bug Win10
+category: Bug
 date: 2015-11-20 12:09:12
 ---
 

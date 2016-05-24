@@ -1,7 +1,7 @@
 ---
 layout: post
-title: 奇技淫巧之浏览器变身编辑器(转载)
-categories: 奇技淫巧 URL 转载
+title: 奇技淫巧之浏览器变身编辑器【转载】
+category: 奇技淫巧
 date: 2015-09-05 11:38:10
 ---
 
@@ -48,7 +48,7 @@ data:text/html, &lt;style type="text/css"&gt;.e{position:absolute;top:0;right:0;
 
 效果出众，最重要的是支持多种语言想用其它的语言的话，仅仅需要把`ace/mode/python`用下面的换掉即可：
 
-```html 
+```html
 Markdown -&gt; `ace/mode/markdown`
 Python -&gt; `ace/mode/ruby`
 C/C++ -&gt; `ace/mode/c_cpp`
@@ -56,32 +56,32 @@ Javscript -&gt; `ace/mode/javascript`
 Java -&gt; `ace/mode/java`
 Scala- -&gt; `ace/mode/scala`
 CoffeeScript -&gt; `ace/mode/coffee`
-and 
-css, html, php, latex, 
-tex, sh, sql, lua, clojure, dart, typescript, go, groovy, json, jsp, less, lisp, 
+and
+css, html, php, latex,
+tex, sh, sql, lua, clojure, dart, typescript, go, groovy, json, jsp, less, lisp,
 lucene, perl, powershell, scss, textile, xml, yaml, xquery, liquid, diff and many more...
 ```
 
 更碉堡的是，主题也可以换的，仅仅把`ace/theme/monokai`用下面的换掉即可
 
-```html 
+```html
 Eclipse -&gt; ace/theme/eclipse
 GitHub -&gt; ace/theme/github
 TextMate -&gt; ace/theme/textmate
-and 
-ambiance, dawn, chaos, chrome, dreamweaver, xcode, vibrant_ink, solarized_dark, solarized_light, tomorrow, tomorrow_night, tomorrow_night_blue, 
+and
+ambiance, dawn, chaos, chrome, dreamweaver, xcode, vibrant_ink, solarized_dark, solarized_light, tomorrow, tomorrow_night, tomorrow_night_blue,
 twilight, tomorrow_night_eighties, pastel_on_dark and many more..
 ```
 
 如果你想用Markdown的话用下面的代码即可
 
-```html 
+```html
 data:text/html,&lt;style type="text/css"&gt;.e{position:absolute;top:0;right:50%;bottom:0;left:0;} .c{position:absolute;overflow:auto;top:0;right:0;bottom:0;left:50%;}&lt;/style&gt;&lt;div class="e" id="editor"&gt;&lt;/div&gt;&lt;div class="c"&gt;&lt;/div&gt;&lt;script src="http://d1n0x3qji82z53.cloudfront.net/src-min-noconflict/ace.js" type="text/javascript" charset="utf-8"&gt;&lt;/script&gt;&lt;script src="http://cdnjs.cloudflare.com/ajax/libs/showdown/0.3.1/showdown.min.js"&gt;&lt;/script&gt;&lt;script&gt; function showResult(e){consoleEl.innerHTML=e}var e=ace.edit("editor");e.setTheme("ace/theme/monokai");e.getSession().setMode("ace/mode/markdown");var consoleEl=document.getElementsByClassName("c")[0];var converter=new Showdown.converter;e.commands.addCommand({name:"markdown",bindKey:{win:"Ctrl-M",mac:"Command-M"},exec:function(t){var n=e.getSession().getMode().$id;if(n=="ace/mode/markdown"){showResult(converter.makeHtml(t.getValue()))}},readOnly:true})&lt;/script&gt;
 ```
 
 还有一个比较好玩的，是一个在编辑过程中会变色的，大家可以试试：
 
-```html 
+```html
 data:text/html, &lt;html&gt;&lt;head&gt;&lt;link href='http://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css'&gt;&lt;style type="text/css"&gt; html { font-family: "Open Sans" } * { -webkit-transition: all linear 1s; }&lt;/style&gt;&lt;script&gt;window.onload=function(){var e=false;var t=0;setInterval(function(){if(!e){t=Math.round(Math.max(0,t-Math.max(t/3,1)))}var n=(255-t*2).toString(16);document.body.style.backgroundColor="#ff"+n+""+n},1e3);var n=null;document.onkeydown=function(){t=Math.min(128,t+2);e=true;clearTimeout(n);n=setTimeout(function(){e=false},1500)}}&lt;/script&gt;&lt;/head&gt;&lt;body contenteditable style="font-size:2rem;line-height:1.4;max-width:60rem;margin:0 auto;padding:4rem;"&gt;
 ```
 

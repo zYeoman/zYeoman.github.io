@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Windows下也要有sudo
-category: 奇技淫巧
+category: 脚本
 date: 2015-12-22 18:36:44
 ---
 

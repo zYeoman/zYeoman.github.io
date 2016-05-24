@@ -1,33 +1,48 @@
+# highlighter: pygments
+# Site settings
+title: Mickir's Blog
+email: yeo@mickir.me
+description: > #Mickir Blog
+baseurl: "" # the subpath of your site, e.g. /blog/
+url: "http://www.mickir.me" # the base hostname & protocol for your site
+github_username:  zYeoman
+
 # Build settings
-highlighter: pygments
-permalink: blog/:year/:month/:title.html
-paginate: 6
-paginate_path: page/:num
+#markdown: kramdown
+permalink: /blog/:year/:month/:title.html   #博文的固定链接
+paginate: 10                                #分页时每页博文数量
+author:                                     #自定义常亮
+  name: 庄永文
+  email: zhuangyw.thu@gmail.com
+  link: http://mickir.xyz/
+  weibo: http://weibo.com/mickir
+  github: http://github.com/zYeoman
+title: Mickir'sBlog                             #自定义常量
+
+locals:                                     #自定义常量
+  tags: 标签
+  about: 关于
+active: 技术                                 #自定义常量
+subscribe_rss: /pages/atom.xml              #订阅地址
+# markdown: kramdown                         #markdown解释器
+
 exclude: [LICENSE, CNAME, README.md, .gitignore, Rakefile.rb]
 gems: [jekyll-paginate]
 
+avatar: /head.jpg
+
+
+timezone: CN
 
 markdown: redcarpet
 redcarpet:
   extensions: ["no_intra_emphasis", "fenced_code_blocks", "autolink", "strikethrough", "with_toc_data", "tables", "underline", "lax_spacing", "html_toc"]
 
-# timezone
-timezone: CN
 
-# life collections
-collections:
-  life:
-    output: true
+# google analytics 设置
+#ga:
+#  id:
+#  url:
+#
 
-# Site settings
-blog:
-  name: Yeoman Zhuang
-  title: Mickir's Blog
-  description: 有很多这样的时刻。你惊心动魄，而世界一无所知。你翻山越岭，而天地寂静无声。人生说到底，是一场一个人的战争。
-  url: "http://mickir.xyz" # the base hostname & protocol for your site
-  duoshuo: mickir
-author:
-  name: Yeoman Zhuang                                    # 作者名称
-  email: zyeoman@163.com
-  weibo: http://weibo.com/mickir # 微博地址
-  github: http://github.com/zyeoman                        # GitHub地址
+# baidu analytics 设置

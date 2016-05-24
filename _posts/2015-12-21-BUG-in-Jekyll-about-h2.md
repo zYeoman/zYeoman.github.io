@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Jekyll四个中文字符的BUG
-category: Jekyll
+category: Bug
 date: 2015-12-21 23:52:16
 ---
 

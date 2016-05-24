@@ -1,7 +1,7 @@
 ---
 layout: post
 title: 一天一个脚本——使用7z批量解压和压缩
-category: 奇技淫巧
+category: 脚本
 date: 2015-12-26 17:20:42
 ---
 

@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Xilinx SDK找不到gpio.h
-category: Zedboard
+title: 【FPGA】Xilinx SDK找不到gpio.h
+category: 学习
 date: 2015-11-11 00:08:23
 ---
 

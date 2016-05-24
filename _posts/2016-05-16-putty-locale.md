@@ -1,7 +1,7 @@
 ---
 layout: post
 title: putty中文乱码
-category: 
+category: Bug
 date: 2016-05-16 22:26:12
 ---
 试过了网上找的一切方法.
@@ -11,7 +11,7 @@ date: 2016-05-16 22:26:12
 
 最终的解决方案是
 
-重新生成locale 
+重新生成locale
 
 ```sh
 $ sudo locale-gen "zh_CN.UTF-8"

@@ -1,7 +1,7 @@
 ---
 layout: post
 title: DOS 重命名
-category: 奇技淫巧
+category: 脚本
 date: 2016-01-12 00:29:21
 ---
 

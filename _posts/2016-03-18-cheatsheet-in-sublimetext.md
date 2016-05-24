@@ -1,7 +1,7 @@
 ---
 layout: post
 title: SublimeText3里的Cheatsheets(TODO!)
-category: 插件
+category: 工具
 date: 2016-03-18 20:45:43
 ---
 

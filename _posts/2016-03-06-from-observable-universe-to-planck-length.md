@@ -1,7 +1,7 @@
 ---
 layout: post
 title: 从普朗克长度到可见宇宙
-category: 科普
+category: 杂项
 date: 2016-03-06 20:20:59
 ---
 

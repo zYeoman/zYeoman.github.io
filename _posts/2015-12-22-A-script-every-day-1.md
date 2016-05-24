@@ -1,7 +1,7 @@
 ---
 layout: post
 title: 每天一个脚本——快速打开文件
-categories: 脚本 奇技淫巧 Autohotkey
+categories: 脚本
 date: 2015-12-22 16:03:33
 ---
 

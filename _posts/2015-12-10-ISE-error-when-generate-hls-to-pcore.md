@@ -1,7 +1,7 @@
 ---
 layout: post
 title: A solution of Cannot find ISE in the PATH variable or it's an unsupported version.
-category: FPGA
+category: 学习
 date: 2015-12-10 12:48:43
 ---
 

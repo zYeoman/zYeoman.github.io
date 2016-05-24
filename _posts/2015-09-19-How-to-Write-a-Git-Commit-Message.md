@@ -1,7 +1,7 @@
 ---
 layout: post
-title: 怎样优雅地Git Commit
-categories: git 翻译
+title: 【翻译】怎样优雅地Git Commit
+category: 学习
 date: 2015-09-19 10:34:16
 ---
 
@@ -94,7 +94,7 @@ Fix type in introduction to user guide
 
 如果在命令行commit的话，你可以很简单地用`git commit`的`-m`选项
 
-```sh 
+```sh
 $ git commit -m"Fix typo in introduction to user guide"
 ```
 
@@ -165,7 +165,7 @@ GitHub的UI会在你的提交超过50字符的时候显示warning。并且会用
 因此尽可能少于50字符并且不要多于69字符。
 
 
-### 3. 大写标题行 
+### 3. 大写标题行
 很简单。
 
 ### 4. 不用句号结束标题
@@ -238,7 +238,7 @@ Date:   Fri Aug 1 22:57:55 2014 +0200
 
 未来的维护人员（有可能是你）会感谢你的！
 
-## Tips 
+## Tips
 
 ### 抛开IDE，爱上命令行
 已经有git命令了，拥抱命令行吧！Git已经不可思议地强了；IDE同样强大但是两者是不一样的。我每天用IDE(IntelliJ IDEA)和其他可扩展的编辑器(Eclipse)，但是我没有见过比（一旦知道了）命令行强大和简单的整合了Git的IDE。
@@ -249,7 +249,7 @@ Date:   Fri Aug 1 22:57:55 2014 +0200
 
 记住无论你是用Bash还是Z-shell，都有自动补全。
 
-### 阅读Pro Git 
+### 阅读Pro Git
 [Pro Git](http://git-scm.com/book)是一本免费的优秀的Git书籍。（有中文版）
 
 -----

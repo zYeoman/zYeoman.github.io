@@ -1,7 +1,7 @@
 ---
 layout: post
 title: 记录科学上网的心得
-categories: 奇技淫巧 实用工具
+category: 工具
 date: 2015-12-23 16:50:17
 ---
 
