@@ -1,5 +1,5 @@
 ---
-layout: posts
+layout: post
 title: Python sys.argv 数目不对
 category: Bug
 date: 2016-05-24 23:25:23
