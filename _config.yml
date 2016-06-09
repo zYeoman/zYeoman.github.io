@@ -8,7 +8,6 @@ url: "http://www.mickir.me" # the base hostname & protocol for your site
 github_username:  zYeoman
 
 # Build settings
-#markdown: kramdown
 permalink: /blog/:year/:month/:title.html   #博文的固定链接
 author:                                     #自定义常亮
   name: 庄永文
@@ -23,7 +22,6 @@ locals:                                     #自定义常量
   about: 关于
 active: 技术                                 #自定义常量
 subscribe_rss: /pages/atom.xml              #订阅地址
-# markdown: kramdown                         #markdown解释器
 
 exclude: [LICENSE, CNAME, README.md, .gitignore, Rakefile.rb]
 gems: [jekyll-paginate]
@@ -38,10 +36,3 @@ redcarpet:
   extensions: ["no_intra_emphasis", "fenced_code_blocks", "autolink", "strikethrough", "with_toc_data", "tables", "underline", "lax_spacing", "html_toc"]
 
 
-# google analytics 设置
-#ga:
-#  id:
-#  url:
-#
-
-# baidu analytics 设置
