@@ -10,7 +10,6 @@ github_username:  zYeoman
 # Build settings
 #markdown: kramdown
 permalink: /blog/:year/:month/:title.html   #博文的固定链接
-paginate: 10                                #分页时每页博文数量
 author:                                     #自定义常亮
   name: 庄永文
   email: zhuangyw.thu@gmail.com
