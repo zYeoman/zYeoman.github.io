@@ -7,9 +7,17 @@ date: 2016-04-16 13:25:34
 
 <!-- more -->
 
+## 工具
+
+```shell
+sudo apt-get install git zsh tmux vim python-dev python-pip
+sh -c "$(curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
+curl https://j.mp/spf13-vim3 -L > spf13-vim.sh && sh spf13-vim.sh
+```
+
 ## 网络
 
-### 登陆
+### 登录
 
 ```shell
 git clone https://github.com/zYeoman/thu.git
@@ -28,7 +36,9 @@ vi /etc/modprobe.d/ipv6.conf
 注释掉alias net-pf-10 off
 开启alias ipv6 on
 
+```shell
 reboot
+```
 
 ### 发送IP
 
@@ -127,7 +137,14 @@ sslocal -c config.json
 ### Proxychains
 
 ```shell
-sudo apt-get install proxychains
+# sudo apt-get install proxychains
+# 上面是proxychains3
+git clone https://github.com/rofl0r/proxychains-ng
+cd proxychains-ng
+./configure --prefix=/usr --sysconfdir=/etc
+make
+sudo make install
+sudo make install-conf
 alias p=proxychains4
 vi /etc/proxychains.conf
 ```
@@ -148,10 +165,3 @@ pip install requests qrcode lxml requests_toolbelt coloredlogs
 git clone https://github.com/Urinx/WeixinBot
 ```
 
-## 工具
-
-```shell
-sudo apt-get install git zsh tmux vim
-sh -c "$(curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
-curl https://j.mp/spf13-vim3 -L > spf13-vim.sh && sh spf13-vim.sh
-```
