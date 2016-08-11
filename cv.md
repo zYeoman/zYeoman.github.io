@@ -1,5 +1,5 @@
 ---
-layout: life
+layout: post
 title: 简历
 date: 2016-03-30 23:15:10
 ---
