@@ -124,7 +124,7 @@ function afterPjax() {
         url: '/assets/js/embed.js',
         dataType: 'script',
         cache: true,
-        sucess: function(data, textStatus){
+        complete: function(data, textStatus){
             DUOSHUO.EmbedThread($(".ds-thread"));
         }
       });
