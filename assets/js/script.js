@@ -116,23 +116,17 @@ function afterPjax() {
     });
   });
 
-  // Lazy Loading Disqus
-  // http://jsfiddle.net/dragoncrew/SHGwe/1/
-  var ds_loaded = false,
-      top = $('#disqus_thread').offset().top;
-  window.disqus_shortname = $('#disqus_thread').attr('name');
+  // Lazy Loading Duoshuo
 
-  function check() {
-    if ( !ds_loaded && container.scrollTop() + container.height() > top ) {
+    duoshuoQuery = {short_name:"mickir"};
       $.ajax({
         type: 'GET',
-        url: 'http://' + disqus_shortname + '.disqus.com/embed.js',
+        url: '/assets/js/embed.js',
         dataType: 'script',
-        cache: true
+        cache: true,
+        sucess: function(data, textStatus){
+            DUOSHUO.EmbedThread($(".ds-thread"));
+        }
       });
-      ds_loaded = true;
-    }
-  }check();
-  container.scroll(check);
 }afterPjax();
 
