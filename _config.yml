@@ -6,7 +6,7 @@ description: MyBlog
 baseurl: "" # the subpath of your site, e.g. /blog/
 url: "http://www.mickir.me" # the base hostname & protocol for your site
 github_username:  zYeoman
-favicon: "favicon.ico"
+favicon: "/favicon.ico"
 
 # Build settings
 permalink: /blog/:year/:month/:title.html   #博文的固定链接
