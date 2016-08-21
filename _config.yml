@@ -1,8 +1,8 @@
 # highlighter: pygments
 # Site settings
-title: Mickir
+title: 无里取闹
 email: yeo@mickir.me
-description: MyBlog
+description: 谁能如愿以偿
 baseurl: "" # the subpath of your site, e.g. /blog/
 url: "http://www.mickir.me" # the base hostname & protocol for your site
 github_username:  zYeoman
