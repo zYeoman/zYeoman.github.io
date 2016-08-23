@@ -119,6 +119,7 @@ function afterPjax() {
   // Lazy Loading Duoshuo
 
     duoshuoQuery = {short_name:"mickir"};
+    $("#ds-notify").remove();
     if($('#ds-reset').length == 0){
       $.ajax({
         type: 'GET',
@@ -126,7 +127,7 @@ function afterPjax() {
         dataType: 'script',
         cache: true,
         complete: function(data, textStatus){
-            DUOSHUO.EmbedThread($(".ds-thread"));
+          DUOSHUO.EmbedThread($(".ds-thread"));
         }
       });
     }
