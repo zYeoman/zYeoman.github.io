@@ -1,6 +1,7 @@
 ---
-layout: index
+layout: post
 title: Welcome
+id: mickir-index
 ---
 ### 关于我
 
