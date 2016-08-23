@@ -1,7 +1,7 @@
 ---
 layout: post
 title: 【Python】 import bug——Can't import *
-category: 学习
+category: 知识库
 date: 2015-08-07 20:02:42
 ---
 

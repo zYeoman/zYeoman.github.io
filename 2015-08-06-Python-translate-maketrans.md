@@ -1,7 +1,7 @@
 ---
 layout: post
 title: 【Python】 string类中的 translate与maketrans函数
-category: 学习
+category: 知识库
 date: 2015-08-06 21:37:55
 ---
 

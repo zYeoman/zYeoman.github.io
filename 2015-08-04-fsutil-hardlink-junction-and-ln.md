@@ -1,7 +1,7 @@
 ---
 layout: post
 title: 快捷方式、符号链接、硬链接与软链接——win/linux
-categories: 学习
+category: 知识库
 date: 2015-08-04 22:20:14
 ---
 

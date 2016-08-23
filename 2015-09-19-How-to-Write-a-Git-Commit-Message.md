@@ -1,7 +1,7 @@
 ---
 layout: post
 title: 【翻译】怎样优雅地Git Commit
-category: 学习
+category: 知识库
 date: 2015-09-19 10:34:16
 ---
 
