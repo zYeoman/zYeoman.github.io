@@ -4,5 +4,21 @@
 <script src="/assets/js/jquery.pjax.js"></script>
 <script src="/assets/js/nprogress.js"></script>
 <script src="/assets/js/searchbox.js"></script>
+<script src="http://cdn.bootcss.com/mathjax/2.4.0/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
 <script src="/assets/js/script.js"></script>
-<script src="http://cdn.bootcss.com/mathjax/2.4.0/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script><script>MathJax.Hub.Config({tex2jax:{inlineMath: [['$','$']],displayMath: [['$$','$$']],processEscapes: true}});</script>
+<script type="text/x-mathjax-config">
+  MathJax.Hub.Config({
+    tex2jax: {
+      inlineMath: [['$','$'], ['\\(','\\)'] ],
+      displayMath: [['$$', '$$']],
+      processEscapes: true
+    }
+  });
+</script>
+<script type="text/x-mathjax-config">
+    MathJax.Hub.Config({
+      tex2jax: {
+        skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']
+      }
+    });
+</script>

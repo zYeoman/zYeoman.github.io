@@ -116,8 +116,8 @@ function afterPjax() {
     });
   });
 
+MathJax.Hub.Queue(["Typeset",MathJax.Hub]);
   // Lazy Loading Duoshuo
-
     duoshuoQuery = {short_name:"mickir"};
     $("#ds-notify").remove();
     if($('#ds-reset').length == 0){
