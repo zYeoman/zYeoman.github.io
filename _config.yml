@@ -24,7 +24,6 @@ active: 技术                                 #自定义常量
 subscribe_rss: /pages/atom.xml              #订阅地址
 
 exclude: [LICENSE, CNAME, README.md, .gitignore, Rakefile.rb]
-gems: [jekyll-paginate]
 
 avatar: /head.jpg
 
