@@ -29,3 +29,5 @@ avatar: /head.jpg
 
 timezone: CN
 
+gems:
+      - jemoji
