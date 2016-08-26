@@ -644,9 +644,9 @@ iframe {
   box-sizing: content-box; }
 
 #copyright {
-  margin-top: -2em;
-  padding-top: 1em;
-  font-size: .9em;
+  margin-top: -32px;
+  padding-top: 12px;
+  font-size: 9px;
   text-align: center;
   color: #BCC1C4;
   border-top: 2px solid rgba(229, 232, 236, 0.5); }
