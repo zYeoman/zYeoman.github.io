@@ -1,8 +1,8 @@
 # highlighter: pygments
 # Site settings
-title: 无里取闹
+title: Mickir的魔法笔记
 email: yeo@mickir.me
-description: 谁能如愿以偿
+description: 每一个魔法师都要有一本魔法笔记!
 baseurl: "" # the subpath of your site, e.g. /blog/
 url: "http://www.mickir.me" # the base hostname & protocol for your site
 github_username:  zYeoman
