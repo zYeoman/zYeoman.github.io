@@ -1,5 +1,5 @@
 ---
-layout: post
+layout: life
 title: 【深夜惊奇】我也曾热烈地爱过啊
 category: 乱弹
 date: 2016-09-02
