@@ -14,7 +14,7 @@ date: 2016-03-30 23:15:10
 
 - 庄永文/男/1994
 - 本科在读/清华大学/电子工程系
-- Blog: http://mickir.xyz
+- Blog: http://mickir.me
 - Github: https://github.com/zyeoman
 
 ---
@@ -26,7 +26,7 @@ date: 2016-03-30 23:15:10
 - 奖励:
     - 第十四届全国大学生机器人大赛: 华北赛区一等奖， 全国二等奖
     - 基于无人机的空地协同系统: 清华大学挑战杯三等奖
-    - 智能家居系统: 清华大学第五届学生创新工程能力竞速一等奖
+    - 智能家居系统: 清华大学第五届学生创新工程能力竞赛一等奖
 - 硬件: 从画图到制版, 从竞速小车到智能家居. 用过51、Arduino、cc2530、fpga、zedboard等等开发板。
     - 51: 电子设计大赛比赛用小车
     - Arduino: 环境监控系统、无人机开源飞控(MultiWii)的配置与使用
@@ -35,11 +35,10 @@ date: 2016-03-30 23:15:10
     - Zedboard: 片上Arm运行Linux与FPGA加速图像处理
 - 软件: 从c、c++到python、Matlab，从Windows,cmd到Linux, zsh， 折腾一直在继续.
     - c、c++: 图书管理系统等，音频处理等等
-    - python: 小脚本, 使用pandas进行数据处理, pyopencv处理图像
+    - python: 小脚本, 使用pandas进行数据处理, opencv处理图像
     - Matlab: 基于随机森林的视频自动分类系统
     - Autohotkey: 用来方便生活
 
-- Web: 研究中...
 
 
 ---
