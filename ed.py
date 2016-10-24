@@ -80,8 +80,7 @@ if __name__ == '__main__':
         answer = input('Rename {}?[y/N] '.format(file_name))
         if answer in 'yY':
             new_name = input('Input newname: ')
-            now = datetime.datetime.now().strftime('%Y-%m-%d')
-            new_name = now + '-{}.md'.format(new_name.replace(' ','-'))
+            new_name = file_name[:10] + '-{}.md'.format(new_name.replace(' ','-'))
             os.rename(file_name, new_name)
     else:
         file_name = determ_file(argv)
