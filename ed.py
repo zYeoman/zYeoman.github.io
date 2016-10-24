@@ -31,9 +31,7 @@ def add(argv):
     'date: %Y-%m-%d\n'
     '---\n'
 
-
     now = datetime.datetime.now()
-
     date = now.strftime('%Y-%m-%d')
 
     filename = date + '-{}.md'.format('-'.join(argv))
@@ -63,7 +61,6 @@ def determ_file(pattern):
     return edit_files[index]
 
 # TODO 正则表达式支持
-# TODO 自动修改日期
 if __name__ == '__main__':
     argv = sys.argv[1:]
     if len(argv) == 0 or '-h' in argv:
@@ -84,4 +81,7 @@ if __name__ == '__main__':
             os.rename(file_name, new_name)
     else:
         file_name = determ_file(argv)
+        now = datetime.datetime.now()
+        date = now.strftime('%Y-%m-%d')
+        os.system("sed -i '5s/[0-9]*-[0-9]*-[0-9]*/{}/' ".format(date) + file_name)
         os.system('vim ' + file_name)
