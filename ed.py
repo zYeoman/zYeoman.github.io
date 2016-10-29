@@ -83,5 +83,5 @@ if __name__ == '__main__':
         file_name = determ_file(argv)
         now = datetime.datetime.now()
         date = now.strftime('%Y-%m-%d')
-        os.system("sed -i '5s/[0-9]*-[0-9]*-[0-9]*/{}/' ".format(date) + file_name)
+        os.system("sed -b -i '5s/[0-9]*-[0-9]*-[0-9]*/{}/' ".format(date) + file_name)
         os.system('vim ' + file_name)
