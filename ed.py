@@ -18,10 +18,11 @@ def help_msg():
       PATTERN       Default: Edit file with PATTERN in name
 
     optional arguments:
+      -v, v, view file without change
       -h, h, show this help message and exit
-      -r, r, Remove file with PATTERN in name
-      -R, R, Rename file with PATTERN in name
-      -a, a, Add file
+      -r, r, remove file with PATTERN in name
+      -R, R, rename file with PATTERN in name
+      -a, a, add file
     ''')
 def add(argv):
     head = '---\n'
@@ -79,9 +80,13 @@ if __name__ == '__main__':
             new_name = input('Input newname: ')
             new_name = file_name[:10] + '-{}.md'.format(new_name.replace(' ','-'))
             os.rename(file_name, new_name)
+    elif '-v' in argv or 'v'==argv[0]:
+        file_name = determ_file(argv[1:])
+        os.system('vim -M ' + file_name)
     else:
         file_name = determ_file(argv)
         now = datetime.datetime.now()
         date = now.strftime('%Y-%m-%d')
-        os.system("sed -b -i '5s/[0-9]*-[0-9]*-[0-9]*/{}/' ".format(date) + file_name)
+        sed_msg = "sed -b -i '5s/[0-9]*-[0-9]*-[0-9]*/{}/' "
+        os.system(sed_msg.format(date) + file_name)
         os.system('vim ' + file_name)
