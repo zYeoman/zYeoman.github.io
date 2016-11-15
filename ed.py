@@ -10,7 +10,8 @@ import glob
 import datetime
 
 def help_msg():
-    print('''usage: ed.py [-h] [-r] [-R] [-a] PATTERN
+    print('''
+    usage: ed.py [-h] [-r] [-R] [-a] PATTERN
 
     Edit file whose name contain provide string.
 
