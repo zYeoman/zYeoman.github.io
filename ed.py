@@ -18,6 +18,7 @@ def help_msg():
       PATTERN       Default: Edit file with PATTERN in name
 
     optional arguments:
+      -t, t, touch file change its time
       -v, v, view file without change
       -h, h, show this help message and exit
       -r, r, remove file with PATTERN in name
@@ -61,6 +62,13 @@ def determ_file(pattern):
             index = 0
     return edit_files[index]
 
+def touch(file_name):
+    now = datetime.datetime.now()
+    date = now.strftime('%Y-%m-%d')
+    sed_msg = "sed -b -i '5s/[0-9]*-[0-9]*-[0-9]*/{}/' "
+    os.system(sed_msg.format(date) + file_name)
+
+
 # TODO 正则表达式支持
 if __name__ == '__main__':
     argv = sys.argv[1:]
@@ -83,10 +91,10 @@ if __name__ == '__main__':
     elif '-v' in argv or 'v'==argv[0]:
         file_name = determ_file(argv[1:])
         os.system('vim -M ' + file_name)
+    elif '-t' in argv or 't'==argv[0]:
+        file_name = determ_file(argv[1:])
+        touch(file_name)
     else:
         file_name = determ_file(argv)
-        now = datetime.datetime.now()
-        date = now.strftime('%Y-%m-%d')
-        sed_msg = "sed -b -i '5s/[0-9]*-[0-9]*-[0-9]*/{}/' "
-        os.system(sed_msg.format(date) + file_name)
+        touch(file_name)
         os.system('vim ' + file_name)
