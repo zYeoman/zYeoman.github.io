@@ -19,9 +19,10 @@ def help_msg():
       PATTERN       Default: Edit file with PATTERN in name
 
     optional arguments:
+      -h, h, show this help message and exit
+      -o, o, output filename
       -t, t, touch file change its time
       -v, v, view file without change
-      -h, h, show this help message and exit
       -r, r, remove file with PATTERN in name
       -R, R, rename file with PATTERN in name
       -a, a, add file
@@ -95,6 +96,9 @@ if __name__ == '__main__':
     elif '-t' in argv or 't'==argv[0]:
         file_name = determ_file(argv[1:])
         touch(file_name)
+    elif '-o' in argv or 'o'==argv[0]:
+        file_name = determ_file(argv[1:])
+        print(file_name)
     else:
         file_name = determ_file(argv)
         touch(file_name)
