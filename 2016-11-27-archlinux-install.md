@@ -76,9 +76,9 @@ visudo
 pacman -S openssh
 systemctl start sshd
 
-# 如果重启后没有网络
-ip link set eth0 up
-dhcpcd eth0
+# 自动启动dhcpcd和sshd
+systemctl enable dhcpcd
+systemctl enable sshd
 
 # 重启
 exit
