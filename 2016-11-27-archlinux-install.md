@@ -80,6 +80,14 @@ systemctl start sshd
 systemctl enable dhcpcd
 systemctl enable sshd
 
+# 忘记分swap分区了
+dd if=/dev/zero of=/swapfile bs=1M count=1024
+chmod 600 /swapfile
+mkswap /swapfile
+swapon /swapfile
+vi /etc/fstab
+## Add line: /swapfile none swap defaults 0 0
+
 # 重启
 exit
 umount -R /mnt
