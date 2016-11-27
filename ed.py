@@ -28,12 +28,12 @@ def help_msg():
       -a, a, add file
     ''')
 def add(argv):
-    head = '---\n'
-    'layout: {}\n'
-    'title: title\n'
-    'category:\n'
-    'date: %Y-%m-%d\n'
-    '---\n'
+    head = ''.join(['---\n',
+    'layout: {}\n',
+    'title: title\n',
+    'category:\n',
+    'date: %Y-%m-%d\n',
+    '---\n'])
 
     now = datetime.datetime.now()
     date = now.strftime('%Y-%m-%d')
@@ -62,7 +62,11 @@ def determ_file(pattern):
             index = int(index)
         else:
             index = 0
-    return edit_files[index]
+        return edit_files[index]
+    elif len(edit_files) == 1:
+        return edit_files[index]
+    else:
+        return None
 
 def touch(file_name):
     now = datetime.datetime.now()
@@ -101,5 +105,8 @@ if __name__ == '__main__':
         print(file_name)
     else:
         file_name = determ_file(argv)
-        touch(file_name)
-        os.system('vim ' + file_name)
+        if file_name is not None:
+            touch(file_name)
+            os.system('vim ' + file_name)
+        else:
+            add(argv)
