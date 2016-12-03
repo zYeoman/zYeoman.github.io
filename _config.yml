@@ -31,3 +31,4 @@ timezone: CN
 
 gems:
       - jemoji
+      - jekyll-gist
