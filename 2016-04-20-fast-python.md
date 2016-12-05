@@ -1,8 +1,8 @@
 ---
 layout: post
 title: fast python
-category: 常用
-date: 2016-04-20 14:39:11
+category: 奇技淫巧
+date: 2016-12-06 14:39:11
 ---
 
 ## 时间格式
