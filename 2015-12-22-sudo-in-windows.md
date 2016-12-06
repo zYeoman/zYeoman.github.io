@@ -1,8 +1,8 @@
 ---
 layout: post
 title: Windows下也要有sudo
-category: 脚本
-date: 2015-12-22 18:36:44
+category: 奇技淫巧
+date: 2016-12-06 18:36:44
 ---
 
 sudo是个好东西，身为一个软粉，当然要在cmd下用上sudo啦!
