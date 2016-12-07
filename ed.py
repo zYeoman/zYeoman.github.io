@@ -47,11 +47,14 @@ def add(argv):
 
     os.system('vim '+filename)
 
-def determ_file(pattern):
+def determ_file(pattern, case=False):
     '''Determine which file to edit'''
     files = glob.glob('*.md')
 
-    edit_files = list(filter(lambda x: all(p in x for p in pattern), files))
+    if not case:
+        pattern = [p.lower() for p in pattern]
+
+    edit_files = list(filter(lambda x: all(p in x.lower() for p in pattern), files))
     index = 0
 
     if len(edit_files) > 1:
