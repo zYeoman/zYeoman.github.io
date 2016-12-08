@@ -2,7 +2,7 @@
 layout: post
 title: Archlinux 安装记录
 category: 知识库
-date: 2016-11-27
+date: 2016-12-08
 ---
 
 突然想起来windows还有一个叫Hyper-V的虚拟化工具，然后就决定装一个Archlinux试一试。毕竟网上Archlinux吹好多的。
@@ -96,3 +96,14 @@ reboot
 
 ## 其他
 还没有装图形界面。和普通Linux没有多大差别，到现在为止。
+
+### 安装shadowsocks
+```sh
+sudo pacman -S shadowsocks
+# There is an example at /etc/shadowsocks/example.json
+vim /etc/shadowsocks/config.json
+# Use filename of the json file. Set autostart.
+sudo systemctl enable shadowsocks@config
+# Show log.
+journalctl -u shadowsocks@vps.service
+```
