@@ -31,7 +31,7 @@ def add(argv):
     head = ''.join(['---\n',
     'layout: {}\n',
     'title: title\n',
-    'category:\n',
+    'category: 工具 杂项 知识库 奇技淫巧 乱弹\n',
     'date: %Y-%m-%d\n',
     '---\n'])
 
