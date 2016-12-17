@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "【jekyll】修复Jekyll里Markdown代码高亮问题"
-category: 工具
+category: 知识库
 date: 2015-08-03 20:00:00
 ---
 

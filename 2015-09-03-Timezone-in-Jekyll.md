@@ -1,7 +1,7 @@
 ---
 layout: post
 title: 【Jekyll】日期显示不对问题
-category: 工具
+category: 知识库
 date: 2015-09-03 15:23:19
 ---
 
