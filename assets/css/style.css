@@ -452,7 +452,7 @@ h3 {
     text-decoration: underline; }
 #post__content img {
   max-width: 100%;
-  max-height: 500px; }
+  }
 
 strong {
   font-weight: 600; }
