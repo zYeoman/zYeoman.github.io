@@ -2,7 +2,7 @@
 layout: post
 title: SimplestNote开发记录
 category: 知识库
-date: 2016-12-16
+date: 2016-12-31
 ---
 
 [github](https://github.com/zYeoman/SimplestNote)
@@ -15,6 +15,12 @@ date: 2016-12-16
 
 ## 进展
 需要实现的功能不多，基本上就是数据库文件创建、表创建、查找、删除以及内容显示而已。
+
+### 更新
+* 返回、退出自动添加input内内容。通过实现EditText类并重写`onBackPressed`函数实现。
+* 删除两个Activity，只留下一个主要的。一个输入框下面直接是ListView
+* 删除FloatingActionButton。添加只需软键盘“下一项”即可，删除可以使用setting的功能。
+* 增加分享到功能。
 
 ### 新建项目
 打开android studio，新建项目，新建空白项目。
