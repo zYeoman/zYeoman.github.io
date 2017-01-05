@@ -2,7 +2,7 @@
 layout: post
 title: SimplestNote开发记录
 category: 知识库
-date: 2016-12-31
+date: 2017-01-06
 ---
 
 [github](https://github.com/zYeoman/SimplestNote)
@@ -21,6 +21,7 @@ date: 2016-12-31
 * 删除两个Activity，只留下一个主要的。一个输入框下面直接是ListView
 * 删除FloatingActionButton。添加只需软键盘“下一项”即可，删除可以使用setting的功能。
 * 增加分享到功能。
+* 使用onWindowFocusChanged函数和Timer来实现打开后自动弹出IME软键盘的功能。
 
 ### 新建项目
 打开android studio，新建项目，新建空白项目。
