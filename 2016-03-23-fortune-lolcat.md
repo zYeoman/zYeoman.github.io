@@ -2,13 +2,14 @@
 layout: post
 title: fortune|lolcat -s 64
 category: 奇技淫巧
-date: 2016-12-06 18:38:30
+date: 2017-01-06 18:38:30
 ---
 
 每天一句格言警句。
 
 <!-- more -->
 2016-03-29 Update:
+
 * 中文: `sudo apt-get install fortune-zh`
 * 中文cowsay: [fortune](http://fosschef.com/2011/01/trick-of-fortune-for-linux-mint/)
 修改`/usr/games/cowsay`
