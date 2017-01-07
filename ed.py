@@ -54,7 +54,7 @@ def determ_file(pattern, case=False):
     if not case:
         pattern = [p.lower() for p in pattern]
 
-    edit_files = list(filter(lambda x: all(p in x.lower() for p in pattern), files))
+    edit_files = list(filter(lambda x: all(p in x[10:].lower() for p in pattern), files))
     index = 0
 
     if len(edit_files) > 1:
