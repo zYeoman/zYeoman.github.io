@@ -51,10 +51,23 @@ def determ_file(pattern, case=False):
     '''Determine which file to edit'''
     files = glob.glob('*.md')
 
+    def filt(string, pattern):
+        """For files filter
+        :string: String to search
+        :pattern: Search pattern
+        :returns: Bool if all pattern in string
+        """
+        return all(p in string for p in pattern)
+
     if not case:
         pattern = [p.lower() for p in pattern]
+        edit_files = list(filter(lambda x: filt(x[10:].lower(), pattern), files))
+    else:
+        edit_files = list(filter(lambda x: filt(x[10:], pattern), files))
 
-    edit_files = list(filter(lambda x: all(p in x[10:].lower() for p in pattern), files))
+    if len(edit_files) == 0:
+        edit_files = list(filter(lambda x: filt(x, pattern), files))
+
     index = 0
 
     if len(edit_files) > 1:
