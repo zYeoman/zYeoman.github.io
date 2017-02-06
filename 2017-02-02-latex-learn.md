@@ -2,19 +2,17 @@
 layout: post
 title: Latex Learn
 category: 知识库
-date: 2017-02-02
+date: 2017-02-06
 ---
-
-<!-- LATEX_Learn.md -->
-# $\LaTeX$ 学习笔记
-Tags : LaTex 学习
 
 [TOC]
 
-
 ## 第一章：基本知识
+
 ### 1.1&1.2 历史和介绍
+
 ### 1.3 源文件
+
 #### 1.3.1 空白
 
 * 制表符和空格等价
@@ -49,7 +47,8 @@ latex test.tex
 xdvi test.dvi
 ```
 
-##
+---------------
+
 [CTAN](http://www.ctan.org)
 [ftp](ftp://www.ctan.org)
 
