@@ -1,22 +1,22 @@
 ---
 layout: post
 title: 测试
-math: true
 category: 杂项
-date: 2015-08-03 15:00:00
+date: 2017-02-08
+math: true
 ---
 
 [TOC]
 
 这是一个测试页面
 
-## 使用了[Jekyll Light](https://github.com/pexcn/Jekyll-Light)主题。
+## 使用了 [Jekyll Light](https://github.com/pexcn/Jekyll-Light) 主题。
 
-* 测试列表1[^1]
-* 测试列表2
+* 测试列表 1[^1]
+* 测试列表 2
 
-1. 测试有序列表1
-2. 测试有序列表2
+1. 测试有序列表 1
+2. 测试有序列表 2
 
 *斜体*  **粗体**
 
@@ -29,7 +29,7 @@ $$\delta \times$$
 
 $$E = mc^2$$
 
-|标题1|标题2|标题3|标题4|
+|标题 1|标题 2|标题 3|标题 4|
 |---|:---|:---:|---:|
 |默认对齐|左对齐|居中对齐|右对齐|
 
