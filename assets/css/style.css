@@ -417,12 +417,10 @@ h1, h2, h3, h4, h5, h6 {
 
 h2{
     font-size: 24px;
-    background-color: rgba(96, 125, 139, 0.04)
 }
 h3 {
     font-size: 20px;
     line-height: 1.5;
-    background-color: rgba(255, 240, 245, 0.48);
 }
 #post__title {
   margin: 0;
