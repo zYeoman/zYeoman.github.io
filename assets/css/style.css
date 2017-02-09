@@ -430,7 +430,7 @@ h3 {
 #post__content > p, #post__content > ul, #post__content > ol {
   /*margin-top: 1.5em;*/
   /*margin-bottom: 1.5em; */
-    color: #666;
+    color: #555;
     font-size: 16px;
     margin-bottom: 1.3em;
     line-height: 1.7em;
@@ -1017,13 +1017,12 @@ pre > code {
 
 /* Inline code */
 :not(pre) > code {
-  padding: .25em .5em .1em;
-  color: black;
-  font: .85em Consolas, Monaco, 'Andale Mono', monospace;
-  background: #fafafa;
-  border: 1px solid #e5e8ec;
-  border-radius: .25em;
-  vertical-align: 2px; }
+  padding: 2px 4px;
+  word-break: break-all;
+  color: #555;
+  background: #eee;
+  border-radius: 4px;
+  font: .85em Consolas, Monaco, 'Andale Mono', monospace; }
 
 .highlight .c {
   color: #586e75; }
