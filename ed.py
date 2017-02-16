@@ -33,16 +33,28 @@ def help_msg():
 
 def add(argv):
     """Add new file"""
+    categories = ['工具', '杂项', '知识库', '奇技淫巧', '乱弹']
     head = '---\nlayout: {}\n' \
         'title: title\n' \
-        'category: 工具 杂项 知识库 奇技淫巧 乱弹\n' \
+        'category: {}\n' \
         'date: %Y-%m-%d\n---\n'
 
     now = datetime.datetime.now()
     date = now.strftime('%Y-%m-%d')
 
     filename = date + '-{}.md'.format('-'.join(argv))
-    head = head.format('post')
+
+    for num, category in enumerate(categories):
+        print('{}: {}'.format(num, category))
+
+    index = input('Please select a category[0]: ')
+
+    if index != '':
+        index = int(index)
+    else:
+        index = 0
+
+    head = head.format('post', categories[index])
 
     if not os.path.exists(filename):
         with open(filename, 'w') as file_write:
