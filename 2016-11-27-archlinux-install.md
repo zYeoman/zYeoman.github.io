@@ -2,7 +2,7 @@
 layout: post
 title: Archlinux 安装记录
 category: 知识库
-date: 2017-01-20
+date: 2017-02-19
 ---
 
 突然想起来 windows 还有一个叫 Hyper-V 的虚拟化工具，然后就决定装一个 Archlinux 试一试。毕竟网上 Archlinux 吹好多的。
@@ -96,6 +96,12 @@ reboot
 
 ## 其他
 还没有装图形界面。和普通 Linux 没有多大差别，到现在为止。
+
+### 联网
+```sh
+wifi-menu
+elink
+```
 
 ### 安装 shadowsocks
 ```sh
