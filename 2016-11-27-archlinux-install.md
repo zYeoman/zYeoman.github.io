@@ -2,7 +2,7 @@
 layout: post
 title: Archlinux 安装记录
 category: 知识库
-date: 2017-02-19
+date: 2017-02-20
 ---
 
 突然想起来 windows 还有一个叫 Hyper-V 的虚拟化工具，然后就决定装一个 Archlinux 试一试。毕竟网上 Archlinux 吹好多的。
@@ -33,7 +33,7 @@ mount /dev/sda1 /mnt
 
 # 安装
 ## 选择镜像
-vi /etc/pacman.d/mirrorlist
+vim /etc/pacman.d/mirrorlist
 ### uncomment tsinghua mirror
 ## 安装
 pacstrap /mnt
@@ -51,7 +51,7 @@ vi /etc/locale.gen
 locale-gen
 echo LANG=en_US.UTF-8 > /etc/locale.conf
 ## 主机名
-echo matrix > /etc/matrix
+echo matrix > /etc/hostname
 ## 网络没配置
 ## Root 密码
 passwd
@@ -97,10 +97,58 @@ reboot
 ## 其他
 还没有装图形界面。和普通 Linux 没有多大差别，到现在为止。
 
+### 错误处理
+```sh
+# error:signature from * is unknown trust
+pacman -Sy archlinux-keyring
+```
+
+### 与Windows共存
+首先进入GRUB页面（即启动项选择页面按c），执行
+```
+grub> ls -l # Get Windows boot 分区
+grub> set root (hd0,msdos1) # For example
+grub> chainloader +1 # Pass control to Windows boot loader
+grub> boot
+```
+
+知道了Windows的启动分区以后就可以修改GRUB启动设置了。
+
+```
+# /boot/grub/grub.cfg
+
+### BEGIN /etc/grub.d/30...###
+menuentry 'Windows' {
+    insmod part_msdos
+    insmod ntfs
+    set root='(hd0,msdos1)'
+    chainloader +1
+}
+### END ....  ###
+```
+
 ### 联网
 ```sh
+# 静态ip
+ip a add 166.111.*.*/24 dev eth0
+# 静态网关
+ip r add default via 166.111.*.*
+# 静态dns
+vim /etc/resolv.conf
+## Add line:nameserver 8.8.8.8
 wifi-menu
-elink
+elinks
+```
+
+### yaourt
+```sh
+# 添加archlinuxcn库
+vim /etc/pacman.conf
+## Add:
+## [archlinuxcn]
+## Server = http://mirrors.tuna.tsinghua.edu.cn/archlinuxcn/$arch
+pacman -Syu archlinuxcn-keyring
+pacman -S yaourt
 ```
 
 ### 安装 shadowsocks
@@ -112,6 +160,16 @@ vim /etc/shadowsocks/config.json
 sudo systemctl enable shadowsocks@config
 # Show log.
 journalctl -u shadowsocks@vps.service
+```
+
+### 时间设置
+```sh
+# Network time servers
+sudo pacman -S ntp
+sudo systemctl enable ntpd
+
+timedatectl set-local-rtc 0
+# or: timedatectl set-local-rtc 0
 ```
 
 ### 无外网连接
