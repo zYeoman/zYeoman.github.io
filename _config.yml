@@ -9,7 +9,7 @@ github_username:  zYeoman
 favicon: "/favicon.ico"
 
 # Build settings
-permalink: /blog/:year/:month/:title.html   #博文的固定链接
+permalink: /blog/:title.html   #博文的固定链接
 author:                                     #自定义常亮
   name: 庄永文
   email: zhuangyw.thu@gmail.com
