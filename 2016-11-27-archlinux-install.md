@@ -2,7 +2,7 @@
 layout: post
 title: Archlinux 安装记录
 category: 知识库
-date: 2017-02-20
+date: 2017-02-25
 ---
 
 突然想起来 windows 还有一个叫 Hyper-V 的虚拟化工具，然后就决定装一个 Archlinux 试一试。毕竟网上 Archlinux 吹好多的。
@@ -164,12 +164,13 @@ journalctl -u shadowsocks@vps.service
 
 ### 时间设置
 ```sh
-# Network time servers
-sudo pacman -S ntp
-sudo systemctl enable ntpd
+## Network time servers
+# sudo pacman -S ntp
+# sudo systemctl enable ntpd
 
 timedatectl set-local-rtc 0
 # or: timedatectl set-local-rtc 0
+timedatectl set-ntp 1
 ```
 
 ### 无外网连接
