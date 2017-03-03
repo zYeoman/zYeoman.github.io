@@ -2,7 +2,7 @@
 layout: post
 title: Archlinux 安装记录
 category: 知识库
-date: 2017-02-25
+date: 2017-02-28
 ---
 
 突然想起来 windows 还有一个叫 Hyper-V 的虚拟化工具，然后就决定装一个 Archlinux 试一试。毕竟网上 Archlinux 吹好多的。
@@ -136,6 +136,8 @@ ip r add default via 166.111.*.*
 # 静态dns
 vim /etc/resolv.conf
 ## Add line:nameserver 8.8.8.8
+# 临时禁用ipv6
+echo 1>/proc/sys/net/ipv6/conf/<interface-name>/disable_ipv6
 wifi-menu
 elinks
 ```
