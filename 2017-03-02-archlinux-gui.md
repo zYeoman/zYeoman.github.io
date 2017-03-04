@@ -2,12 +2,14 @@
 layout: post
 title: Archlinux on real PC
 category: 知识库
-date: 2017-03-02
+date: 2017-03-04
 ---
 
 在 Windows 里的虚拟机装了 archlinux，到了实验室开始正式使用实体机上的 archlinux，使用 i3 作为窗口管理器，遇到了很多坑。
 
 ## 与 Windows 共存
+
+### MBR
 首先进入 GRUB 页面（即启动项选择页面按 c），执行
 ```
 grub> ls -l # Get Windows boot 分区
@@ -30,6 +32,46 @@ menuentry 'Windows' {
 }
 ### END ....  ###
 ```
+
+### UEFI
+相比于MBR，UEFI整整难上了一个等级。也遇到了不少的坑。我的安装方式是直接空白磁盘安装Win10解决UEFI分区等问题，然后再安装archlinux做grub多重启动。
+
+注意必须在BIOS里把Secure Boot给关掉！
+
+安装时候选择 `UEFI ***` 的选项。不然会出现`UEFI varible not found`问题。
+
+```sh
+arch-chroot /mnt /bin/bash
+mkdir /boot/efi
+# EFI 分区在/dev/sda2
+mount /dev/sda2 /boot/efi
+grub-install --target=x86_64-efi --efi-directory=/boot/efi --bootloader-id=arch_grub --boot-directory=/boot/efi/EFI --recheck
+cp /boot/efi/EFI/arch_grub/grubx64.efi /boot/efi/shellx64.efi
+grub-mkconfig -o <boot-directory>/grub/grub.cfg
+# Windows
+grub-probe --target=fs_uuid /boot/efi/EFI/Microsoft/Boot/bootmgfw.efi
+# Output: 1ce5-7f28
+grub-probe --target=hints_string /boot/efi/EFI/Microsoft/Boot/bootmgfw.efi
+# Output: --hint-bios=hd0,gpt1 --hint-efi=hd0,gpt1 --hint-baremetal=ahci0,gpt1
+# Add this code to /boot/efi/EFI/grub/grub.cfg
+# menuentry "Microsoft Windows x86_64 UEFI-GPT" {
+#    insmod part_gpt
+#    insmod fat
+#    insmod search_fs_uuid
+#    insmod chain
+#    search --fs-uuid --no-floppy --set=root --hint-bios=hd0,gpt1 --hint-efi=hd0,gpt1 --hint-baremetal=ahci0,gpt1 1ce5-7f28
+#    chainloader /efi/Microsoft/Boot/bootmgfw.efi
+# }
+```
+
+## 网络
+使用`wifi-menu`连接无线网络。连接以后会自动产生配置文件。
+
+```sh
+systemctl enable netctl-auto@<interface>.service
+```
+
+配置自动联网。
 
 ## 窗口管理器
 使用 i3 作为窗口管理器。
