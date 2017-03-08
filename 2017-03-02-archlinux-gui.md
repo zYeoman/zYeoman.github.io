@@ -2,7 +2,7 @@
 layout: post
 title: Archlinux on real PC
 category: 知识库
-date: 2017-03-04
+date: 2017-03-07
 ---
 
 在 Windows 里的虚拟机装了 archlinux，到了实验室开始正式使用实体机上的 archlinux，使用 i3 作为窗口管理器，遇到了很多坑。
@@ -73,8 +73,21 @@ systemctl enable netctl-auto@<interface>.service
 
 配置自动联网。
 
+螺母楼网络很诡异，使用dhcpcd会只获得ipv6地址，并且ipv6速度大约就是几KB/s，另外使用dhclient可以获得ipv4的地址，但是如果禁用dhcpcd自启动，改为手动启动貌似速度就快了？为什么啊！！！
+
+### 可能的网络问题
+
+* router设置问题：没有router或者router不对导致ipv6速度非常慢
+* 没有获取到ip
+* DNS配置问题
+* 玄学：罗姆楼的网络主要依靠玄学，打开dhclient/dhcpcd/NetworkManager试试吧。
+* 现在螺母楼已经不给我的电脑ipv6地址了，no router。不知道为什么。
+
 ## 窗口管理器
 使用 i3 作为窗口管理器。
+
+### 多显示器
+`sudo pacman -S arandr` 使用 arandr 图形化配置显示器相对位置。
 
 ### 安装
 ```sh
