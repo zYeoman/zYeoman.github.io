@@ -22,7 +22,7 @@ locals:                                     #自定义常量
   tags: 标签
   about: 关于
 active: 技术                                 #自定义常量
-subscribe_rss: /pages/atom.xml              #订阅地址
+subscribe_rss: /pages/rss.xml              #订阅地址
 
 exclude: [LICENSE, CNAME, README.md, .gitignore, Rakefile.rb]
 
