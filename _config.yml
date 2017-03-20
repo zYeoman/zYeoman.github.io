@@ -1,10 +1,11 @@
 # highlighter: pygments
 # Site settings
 title: Mickir的魔法笔记
-email: yeo@mickir.me
+email: zyeoman@163.com
 description: 每一个魔法师都要有一本魔法笔记!
 baseurl: "" # the subpath of your site, e.g. /blog/
-url: "http://www.mickir.me" # the base hostname & protocol for your site
+url: "https://mickir.me" # the base hostname & protocol for your site
+enforce_ssl: mickir.me
 github_username:  zYeoman
 favicon: "/favicon.ico"
 
@@ -13,9 +14,9 @@ permalink: /blog/:title.html   #博文的固定链接
 author:                                     #自定义常亮
   name: 庄永文
   email: zhuangyw.thu@gmail.com
-  link: http://mickir.me/
+  link: https://mickir.me/
   weibo: http://weibo.com/mickir
-  github: http://github.com/zYeoman
+  github: https://github.com/zYeoman
 
 locals:                                     #自定义常量
   tags: 标签

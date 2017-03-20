@@ -549,6 +549,22 @@ function(e, t, s) {
 				return e.url
 			},
 			avatarUrl: function(e) {
+                if (document.location.protocol == "https:") {
+                    if (e.avatar_url) {
+                        e.avatar_url = e.avatar_url.replace(/^http\:\/\//, "https://");
+                        e.avatar_url = e.avatar_url.replace(/himg\.bdimg\.com/, "nzriuc44h.qnssl.com");
+                        e.avatar_url = e.avatar_url.replace(/ds\.cdncache\.org/, "nzrisok3d.qnssl.com");
+                        e.avatar_url = e.avatar_url.replace(/img\.kaixin001\.com\.cn/, "nzrktdox3.qnssl.com");
+                        e.avatar_url = e.avatar_url.replace(/img\d+\.douban\.com/, "img1.doubanio.com");
+                        e.avatar_url = e.avatar_url.replace(/app\.qlogo\.cn/, "nzvcelvwu.qnssl.com");
+                        e.avatar_url = e.avatar_url.replace(/wx\.qlogo\.cn/, "nzwsf9aei.qnssl.com");
+                        e.avatar_url = e.avatar_url.replace(/tp\d+\.sinaimg\.cn/, "odfhb4m72.qnssl.com");
+                        e.avatar_url = e.avatar_url.replace('img.t.sinajs.cn', "nznlz6ohs.qnssl.com");
+                        e.avatar_url = e.avatar_url.replace('0.gravatar.com/avatar', "cdn.v2ex.com/gravatar");
+                    } else {
+                        rt.data.default_avatar_url = rt.data.default_avatar_url.replace(/^http\:\/\//, "https://");
+                    }
+                }
 				return e.avatar_url || rt.data.default_avatar_url
 			},
 			loginUrl: function(e, t) {
@@ -677,34 +693,34 @@ function(e, t, s) {
 			var matched;
 			var subfix = "";
 			while (matched = s.message.match(/\$\s*<img[^\>]*?title=\"\[\s*:(a|b|c|d|e|f|g|h|i|j|k|l|m|n|o|p|q|r|s|t|u|v|w|x):\s*\]\"[^\>]*?class=\"ds\-smiley\"[^\>]*?>/)) {
-				s.message = s.message.replace(matched[0], "<img src=\"http://labcdn.qiniudn.com/sm/QQ2016/" + matched[1].trim() + ".jpg\" class=\"biaoqing qq\" no-zoom />")
+				s.message = s.message.replace(matched[0], "<img src=\"/assets/sm/QQ2016/" + matched[1].trim() + ".jpg\" class=\"biaoqing qq\" no-zoom />")
 			}
 			while (matched = s.message.match(/\$\[\s*:(a|b|c|d|e|f|g|h|i|j|k|l|m|n|o|p|q|r|s|t|u|v|w|x):\s*\]/)) {
-				s.message = s.message.replace(matched[0], "<img src=\"http://labcdn.qiniudn.com/sm/QQ2016/" + matched[1] + ".jpg\" class=\"biaoqing qq\" no-zoom />")
+				s.message = s.message.replace(matched[0], "<img src=\"/assets/sm/QQ2016/" + matched[1] + ".jpg\" class=\"biaoqing qq\" no-zoom />")
 			}
 			while (matched = s.message.match(/\#\s*<img[^\>]*?title=\"\[\s*(aru\_\d{1,3})\s*\]\"[^\>]*?class=\"ds\-smiley\"[^\>]*?>/)) {
-				s.message = s.message.replace(matched[0], "<img src=\"http://labcdn.qiniudn.com/sm/ARU/" + matched[1].trim() + ".png\" class=\"biaoqing aru\" no-zoom />")
+				s.message = s.message.replace(matched[0], "<img src=\"/assets/sm/ARU/" + matched[1].trim() + ".png\" class=\"biaoqing aru\" no-zoom />")
 			}
 			while (matched = s.message.match(/\#\[\s*(aru\_\d{1,3})\s*\]/)) {
-				s.message = s.message.replace(matched[0], "<img src=\"http://labcdn.qiniudn.com/sm/ARU/" + matched[1] + ".png\" class=\"biaoqing aru\" no-zoom />")
+				s.message = s.message.replace(matched[0], "<img src=\"/assets/sm/ARU/" + matched[1] + ".png\" class=\"biaoqing aru\" no-zoom />")
 			}
 			while (matched = s.message.match(/\#\s*<img[^\>]*?title=\"\[\s*(dog\d{1,2}|aini|aoteman|baibai|beishang|bishi|bizui|chanzui|chijing|dahaqi|dalian|ding|doge|feizao|ganmao|geili|guzhang|haha.|haixiu|hehe|heixian|heng|huaxin|hufen|jiong|jiyan|keai|kelian|ku|kun|landelini|lei|meng|miao|nanhaier|nu|numa|nvhaier|qian|qinqin|shayan|shengbing|shenma|shenshou|shiwang|shuai|shuijiao|sikao|taikaixin|touxiao|tu|tuzi|v5|wabishi|weiqu|xi|xiaoku|xiongmao|xixi|xu|yinxian|yiwen|youhengheng|yun|zhi|zhuakuang|zhutou|zuiyou|zuohengheng)\s*\]\"[^\>]*?class=\"ds\-smiley\"[^\>]*?>/)) {
-				s.message = s.message.replace(matched[0], "<img src=\"http://labcdn.qiniudn.com/sm/Doge/" + matched[1].trim() + ".png\" class=\"biaoqing doge\" no-zoom />")
+				s.message = s.message.replace(matched[0], "<img src=\"/assets/sm/Doge/" + matched[1].trim() + ".png\" class=\"biaoqing doge\" no-zoom />")
 			}
 			while (matched = s.message.match(/\#\[\s*(dog\d{1,2}|aini|aoteman|baibai|beishang|bishi|bizui|chanzui|chijing|dahaqi|dalian|ding|doge|feizao|ganmao|geili|guzhang|haha.|haixiu|hehe|heixian|heng|huaxin|hufen|jiong|jiyan|keai|kelian|ku|kun|landelini|lei|meng|miao|nanhaier|nu|numa|nvhaier|qian|qinqin|shayan|shengbing|shenma|shenshou|shiwang|shuai|shuijiao|sikao|taikaixin|touxiao|tu|tuzi|v5|wabishi|weiqu|xi|xiaoku|xiongmao|xixi|xu|yinxian|yiwen|youhengheng|yun|zhi|zhuakuang|zhutou|zuiyou|zuohengheng)\s*\]/)) {
-				s.message = s.message.replace(matched[0], "<img src=\"http://labcdn.qiniudn.com/sm/Doge/" + matched[1] + ".png\" class=\"biaoqing doge\" no-zoom />")
+				s.message = s.message.replace(matched[0], "<img src=\"/assets/sm/Doge/" + matched[1] + ".png\" class=\"biaoqing doge\" no-zoom />")
 			}
 			if (window.devicePixelRatio != undefined && window.devicePixelRatio >= 1.49) {
 				subfix = "@2x"
 			}
 			while (matched = s.message.match(/\#\s*<img[^\>]*?title=\"\[\s*(呵呵|啊|鄙视|不高兴|彩虹|茶杯|大拇指|灯泡|乖|哈哈|汗|黑线|呼|花心|滑稽|惊哭|惊讶|开心|酷|狂汗|泪|冷|礼物|玫瑰|勉强|怒|喷|钱|钱币|弱|生气|胜利|睡觉|太开心|吐|吐舌|委屈|笑眼|咦|疑问|阴险|音乐|真棒|haha)\s*\]\"[^\>]*?class=\"ds\-smiley\"[^\>]*?>/)) {
-				s.message = s.message.replace(matched[0], "<img src=\"http://labcdn.qiniudn.com/sm/paopao/" + matched[1].trim() + subfix + ".png\" class=\"biaoqing paopao\" no-zoom />")
+				s.message = s.message.replace(matched[0], "<img src=\"/assets/sm/paopao/" + matched[1].trim() + subfix + ".png\" class=\"biaoqing paopao\" no-zoom />")
 			}
 			while (matched = s.message.match(/\#\[\s*(呵呵|啊|鄙视|不高兴|彩虹|茶杯|大拇指|灯泡|乖|哈哈|汗|黑线|呼|花心|滑稽|惊哭|惊讶|开心|酷|狂汗|泪|冷|礼物|玫瑰|勉强|怒|喷|钱|钱币|弱|生气|胜利|睡觉|太开心|吐|吐舌|委屈|笑眼|咦|疑问|阴险|音乐|真棒|haha)\s*\]/)) {
-				s.message = s.message.replace(matched[0], "<img src=\"http://labcdn.qiniudn.com/sm/paopao/" + matched[1] + subfix + ".png\" class=\"biaoqing paopao\" no-zoom />")
+				s.message = s.message.replace(matched[0], "<img src=\"/assets/sm/paopao/" + matched[1] + subfix + ".png\" class=\"biaoqing paopao\" no-zoom />")
 			}
-			s.message = s.message.replace(/http:\/\/static\.duoshuo\.com\//g, "http://static.duoshuo.com/");
-			s.message = s.message.replace(/http:\/\/img\.t\.sinajs\.cn\//g, "http://img.t.sinajs.cn/");
+			s.message = s.message.replace(/https:\/\/static\.duoshuo\.com\//g, "https://static.duoshuo.com/");
+			s.message = s.message.replace(/https:\/\/img\.t\.sinajs\.cn\//g, "https://img.t.sinajs.cn/");
 			if (t += '<li class="ds-post" data-post-id="' + s.post_id + '"><div class="ds-post-self" data-post-id="' + s.post_id + '" data-thread-id="' + s.thread_id + '" data-root-id="' + s.root_id + '" data-source="' + s.source + '"><div class="ds-avatar"', r.user_id && (t += ' data-user-id="' + r.user_id + '"'), t += ">" + et.avatar(r), S.sourceName[s.source] && (t += et.serviceIcon(s.source)), t += '</div><div class="ds-comment-body"><div class="ds-comment-header">', r.url ? (t += '<a class="ds-user-name ds-highlight" data-qqt-account="' + (r.qqt_account || "") + '" href="' + u(r.url) + '" ', r.user_id && (t += " onclick=\"this.href='" + a() + "/user-url/?user_id=" + r.user_id + "';\""), t += ' rel="nofollow" target="_blank"', r.user_id && (t += ' data-user-id="' + r.user_id + '"'), t += ">" + u(r.name) + "</a>") : (t += '<span class="ds-user-name"', r.user_id && (t += ' data-user-id="' + r.user_id + '"'), t += ' data-qqt-account="' + (r.qqt_account || "") + '">' + u(r.name) + "</span>"), t += "</div>", 1 == i.max_depth && i.show_context && s.parents.length) {
 				t += '<ol id="ds-ctx">';
 				var n = lt.getJSON(s.parents);
@@ -1625,23 +1641,23 @@ function(e, t, s) {
 				},
 				reset: function(e) {
 					function t(t, s) {
-						var i = 0 === e.indexOf("微博") ? "http://img.t.sinajs.cn/t35/style/images/common/face/ext/normal/" + s.replace("_org", "_thumb") : S.STATIC_URL + "/images/smilies/" + s;
-						i = i.replace(/http:\/\/img\.t\.sinajs\.cn\//g, "http://img.t.sinajs.cn/");
+						var i = 0 === e.indexOf("微博") ? "https://img.t.sinajs.cn/t35/style/images/common/face/ext/normal/" + s.replace("_org", "_thumb") : S.STATIC_URL + "/images/smilies/" + s;
+						i = i.replace(/https:\/\/img\.t\.sinajs\.cn\//g, "https://img.t.sinajs.cn/");
 						if (0 === e.indexOf("滑稽")) {
 							var subfix = "";
 							if (window.devicePixelRatio != undefined && window.devicePixelRatio >= 1.49) {
 								subfix = "@2x"
 							}
-							i = "http://labcdn.qiniudn.com/sm/paopao/" + s + subfix + ".png"
+							i = "/assets/sm/paopao/" + s + subfix + ".png"
 						}  else if (0 === e.indexOf("阿鲁")) {
-							i = "http://labcdn.qiniudn.com/sm/ARU/" + s + ".png"
+							i = "/assets/sm/ARU/" + s + ".png"
 						} else if (0 === e.indexOf("微博")) {
-							i = "http://labcdn.qiniudn.com/sm/Doge/" + s + ".png"
+							i = "/assets/sm/Doge/" + s + ".png"
 						}
 						if (0 === e.indexOf("颜文字")) {
 							a += '<li style="width:auto;margin:0 7px;"><span class="yan" title="' + t + '" height=22 >' + t + '</span></li>'
 						}else if (0 === e.indexOf("斗图")) {
-							a += '<li style="width:auto; height:60px; margin:2px;"><img src="http://labcdn.qiniudn.com/sm/QQ2016/' + s + '.jpg" height="60" title="$[:' + s + ':]" /></li>'
+							a += '<li style="width:auto; height:60px; margin:2px;"><img src="/assets/sm/QQ2016/' + s + '.jpg" height="60" title="$[:' + s + ':]" /></li>'
 						} else {
 							"WordPress" === e && (t = " " + t + " "), a += '<li style="width:auto; height:40px; margin:0 7px;"><img src="' + i + '" title="' + _(t) + '" height=30 /></li>'
 						}
