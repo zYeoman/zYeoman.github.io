@@ -32,20 +32,23 @@ $('#tags__ul li').each(function(index){
 // If sidebar has class 'mobile', hide it after clicking.
 $('.pl__all').on('click', function() {
   $(this).addClass('active').siblings().removeClass('active');
-  if (sidebar.hasClass('mobile')) {
+  // if (sidebar.hasClass('mobile')) {
     $('#sidebar, #pjax, #icon-arrow').addClass('fullscreen');
-  }
+    $("#toc").removeClass('hidden');
+  // }
 });
 
 // Enable fullscreen.
 $('#js-fullscreen').on('click', function() {
   if (button.hasClass('fullscreen')) {
+    $("#toc").addClass('hidden');
     sidebar.removeClass('fullscreen');
     button.removeClass('fullscreen');
     content.delay(300).queue(function(){
       $(this).removeClass('fullscreen').dequeue();
     });
   } else {
+    $("#toc").removeClass('hidden');
     sidebar.addClass('fullscreen');
     button.addClass('fullscreen');
     content.delay(200).queue(function(){
@@ -84,7 +87,7 @@ function afterPjax() {
   // Generate post TOC for h1 h2 and h3
   var toc = $('#post__toc-ul');
   // Empty TOC and generate an entry for h1
-  toc.empty().append('<li class="post__toc-li post__toc-h1"><a href="#post__title" class="js-anchor-link">' + $('#post__title').text() + '</a></li>');
+  toc.empty();
 
   // Generate entries for h2 and h3
   $('#post__content').children('h2,h3').each(function() {
@@ -100,9 +103,9 @@ function afterPjax() {
     });
 
     if ($(this).prop("tagName") == 'H2') {
-      toc.append('<li class="post__toc-li post__toc-h2"><a href="#' + $(this).attr('id') + '" class="js-anchor-link">' + $(this).text() + '</a></li>');
+      toc.append('<li class="toc_h2"><a href="#' + $(this).attr('id') + '" class="js-anchor-link">' + $(this).text() + '</a></li>');
     } else {
-      toc.append('<li class="post__toc-li post__toc-h3"><a href="#' + $(this).attr('id') + '" class="js-anchor-link">' + $(this).text() + '</a></li>');
+      $('#post__toc-ul li.toc_h2').last().append('<ul><li class="toc_h3"><a href="#' + $(this).attr('id') + '" class="js-anchor-link">' + $(this).text() + '</a></li></ul>');
     }
   });
 
@@ -116,7 +119,18 @@ function afterPjax() {
     });
   });
 
-MathJax.Hub.Queue(["Typeset",MathJax.Hub]);
+  // Scrolling highlight
+  $("#post").scroll(function() {
+          $(":header").each(function() {
+          if($(window).scrollTop() + $(window).height()/3 >= $(this).offset().top) {
+              var id = $(this).attr('id');
+              $('a').parent().removeClass('active');
+              $('a[href="#'+ id +'"]').parent().addClass('active');
+          }
+      });
+  });
+
+  MathJax.Hub.Queue(["Typeset",MathJax.Hub]);
   // Lazy Loading Duoshuo
     duoshuoQuery = {short_name:"mickir"};
     $("#ds-notify").remove();
