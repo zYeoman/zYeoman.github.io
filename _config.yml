@@ -18,6 +18,11 @@ author:                                     #自定义常量
   weibo: http://weibo.com/mickir
   github: https://github.com/zYeoman
 
+leancloud:
+  enable: true
+  app_id: xYnmPhrQu3YUQ28Ywk2qEfIp-gzGzoHsz
+  app_key: ijsCplpAyUiEzXD36KkOFwHU
+
 locals:                                     #自定义常量
   tags: 标签
   about: 关于

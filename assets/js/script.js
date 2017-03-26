@@ -10,6 +10,47 @@ if ($(window).width() <= 1280) {
   $('#sidebar').addClass('mobile')
 }
 
+function addCount(Counter) {
+	var Counter = AV.Object.extend("Counter");
+    url = $(".leancloud_visitors").attr('id').trim();
+    title = $(".leancloud_visitors").attr('data-flag-title').trim();
+	var query = new AV.Query(Counter);
+	query.equalTo("url", url);
+	query.find({
+		success: function(results) {
+			if (results.length > 0) {
+				var counter = results[0];
+				counter.fetchWhenSave(true);
+				counter.increment("time");
+				counter.save(null, {
+					success: function(counter) {
+						$(".leancloud-visitors-count").text(counter.get('time'));
+					},
+					error: function(counter, error) {
+						console.log('Failed to save Visitor num, with error message: ' + error.message);
+					}
+				});
+			} else {
+				var newcounter = new Counter();
+				newcounter.set("title", title);
+				newcounter.set("url", url);
+				newcounter.set("time", 1);
+				newcounter.save(null, {
+					success: function(newcounter) {
+					    console.log("newcounter.get('time')="+newcounter.get('time'));
+						$(".leancloud-visitors-count").text(newcounter.get('time'));
+					},
+					error: function(newcounter, error) {
+						console.log('Failed to create');
+					}
+				});
+			}
+		},
+		error: function(error) {
+			console.log('Error:' + error.code + " " + error.message);
+		}
+	});
+}
 // Variables
 var sidebar    = $('#sidebar'),
     container  = $('#post'),
@@ -84,6 +125,13 @@ function afterPjax() {
   // Open links in new tab
   $('#post__content a').attr('target','_blank');
 
+    // post read count
+    $(function() {
+        var Counter = AV.Object.extend("Counter");
+        if ($('.leancloud_visitors').length == 1) {
+            addCount(Counter);
+        }
+    });
   // Generate post TOC for h1 h2 and h3
   var toc = $('#post__toc-ul');
   // Empty TOC and generate an entry for h1
