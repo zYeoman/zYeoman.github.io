@@ -10,7 +10,15 @@ layout: base
                 <i class="fa fa-calendar-o"></i>
             </span>
             <span>发表于</span>
-            <time datetime="{{page.date}}" pubdate="{{page.date}}">{{ page.date| date: "%Y-%m-%d" }}</time>
+            <time datetime="{{page.create}}">{{ page.create| date: "%Y-%m-%d" }}</time>
+        </span>
+        <span class="post__date">
+            &nbsp; | &nbsp;
+            <span class="post-meta-item-icon">
+                <i class="fa fa-pencil"></i>
+            </span>
+            <span>修改于</span>
+            <time datetime="{{page.date}}">{{ page.date| date: "%Y-%m-%d" }}</time>
         </span>
         <span class="post-category">
             &nbsp; | &nbsp;
