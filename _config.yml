@@ -11,7 +11,7 @@ favicon: "/favicon.ico"
 
 # Build settings
 permalink: /blog/:title.html   #博文的固定链接
-author:                                     #自定义常亮
+author:                                     #自定义常量
   name: 庄永文
   email: zhuangyw.thu@gmail.com
   link: https://mickir.me/
@@ -27,7 +27,7 @@ exclude: [LICENSE, CNAME, README.md, .gitignore, Rakefile.rb]
 
 avatar: /head.jpg
 
-timezone: CN
+timezone: Asia/Shanghai
 
 gems:
       - jemoji
