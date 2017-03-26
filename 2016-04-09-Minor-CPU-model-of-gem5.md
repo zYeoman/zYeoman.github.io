@@ -3,6 +3,7 @@ layout: post
 title: gem5 Minor CPU model 简介
 category: 知识库
 date: 2016-04-09 12:54:41
+create: 2016-04-09
 ---
 
 ## What is Minor

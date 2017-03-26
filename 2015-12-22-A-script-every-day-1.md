@@ -3,6 +3,7 @@ layout: post
 title: 每天一个脚本——快速打开文件
 categories: 奇技淫巧
 date: 2016-12-06 16:03:33
+create: 2015-12-22
 ---
 
 从今天开始，每天更新一个脚本。Autohotkey的或者Python的。

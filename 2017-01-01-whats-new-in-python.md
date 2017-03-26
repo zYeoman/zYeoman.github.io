@@ -3,6 +3,7 @@ layout: post
 title: 中文版 What's New In Python
 category: 知识库
 date: 2017-01-01
+create: 2017-01-01
 ---
 
 # What's New In Python 3.6

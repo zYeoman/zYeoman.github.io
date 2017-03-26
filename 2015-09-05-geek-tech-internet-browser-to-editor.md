@@ -3,6 +3,7 @@ layout: post
 title: 奇技淫巧之浏览器变身编辑器【转载】
 category: 奇技淫巧
 date: 2015-09-05 11:38:10
+create: 2015-09-05
 ---
 
 注：转自Textarea[奇技淫巧之浏览器秒秒钟变编辑器](https://www.textarea.com/voidy/qijiyinqiao-zhi-liulanqi-miao-miaozhong-bian-bianjiqi-79/)

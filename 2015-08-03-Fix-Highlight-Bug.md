@@ -3,6 +3,7 @@ layout: post
 title: "【jekyll】修复 Jekyll 里 Markdown 代码高亮问题"
 category: 知识库
 date: 2017-02-08
+create: 2015-08-03
 ---
 
 ## 修复代码高亮问题

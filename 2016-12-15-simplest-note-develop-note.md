@@ -3,6 +3,7 @@ layout: post
 title: SimplestNote 开发记录
 category: 知识库
 date: 2017-02-18
+create: 2016-12-15
 ---
 
 [github](https://github.com/zYeoman/SimplestNote)

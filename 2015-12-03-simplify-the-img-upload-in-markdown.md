@@ -3,6 +3,7 @@ layout: post
 title: 简化markdown中的贴图流程
 category: 奇技淫巧
 date: 2015-12-03 01:53:57
+create: 2015-12-03
 ---
 
 方法主要来自[这里](http://tianweishu.com/2015/10/16/simplify-the-img-upload-in-markdown/)

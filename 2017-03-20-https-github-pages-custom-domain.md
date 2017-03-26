@@ -3,6 +3,7 @@ layout: post
 title: Github Pages 自定义域名启用 https
 category: 知识库
 date: 2017-03-20
+create: 2017-03-20
 ---
 
 [来源](https://sheharyar.me/blog/free-ssl-for-github-pages-with-custom-domains/)

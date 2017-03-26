@@ -3,6 +3,7 @@ layout: post
 title: Python sys.argv 数目不对
 category: Bug
 date: 2016-05-24 23:25:23
+create: 2016-05-24
 ---
 
 Windows 命令行可以直接写`test.py`运行python脚本，这本来是很好用的，但是使用时发现`sys.argv`永远只有脚本本身的路径

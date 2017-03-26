@@ -3,6 +3,7 @@ layout: post
 title: 【Jekyll】日期显示不对问题
 category: 知识库
 date: 2015-09-03 15:23:19
+create: 2015-09-03
 ---
 
 `Jekyll`默认时间是格林尼治时间，或者说是`GMT`时间(Greenwich Mean Time，格林尼治平时)，然后生成的时候又会本地化一次变成`UTC`(Universal Time Coordinated，协调世界时)。

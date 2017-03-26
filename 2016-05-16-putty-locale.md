@@ -3,6 +3,7 @@ layout: post
 title: putty中文乱码
 category: Bug
 date: 2016-05-16 22:26:12
+create: 2016-05-16
 ---
 试过了网上找的一切方法.
 

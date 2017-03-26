@@ -3,6 +3,7 @@ layout: post
 title: Shell 启动欢迎辞
 category: 奇技淫巧
 date: 2017-02-16
+create: 2016-03-23
 ---
 
 ## 天气

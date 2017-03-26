@@ -3,6 +3,7 @@ layout: post
 title: VMWare虚拟机转换成VirtualBox虚拟机 
 category: 奇技淫巧
 date: 2016-05-16 19:42:34
+create: 2016-05-16
 ---
 
 终于忍不了用了很久的VMWare了, 于是毅然决定改到VirtualBox的门下!(也不知道为什么忍不了...)

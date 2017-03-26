@@ -3,6 +3,7 @@ layout: post
 title: 【Python】 import bug——Can't import *
 category: 知识库
 date: 2015-08-07 20:02:42
+create: 2015-08-07
 ---
 
 还是没有系统学习过Python的原因，对于`import`还是有不清楚的地方，比如说会默认首先从当前文件夹import然后再到`PYTHONLIB`文件夹。

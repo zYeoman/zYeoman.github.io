@@ -3,6 +3,7 @@ layout: post
 title: Windows和linux的自动启动
 category: 杂项
 date: 2016-05-27 22:02:18
+create: 2016-05-27
 ---
 
 ## Windows的自动启动

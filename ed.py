@@ -37,7 +37,8 @@ def add(argv):
     head = '---\nlayout: {}\n' \
         'title: title\n' \
         'category: {}\n' \
-        'date: %Y-%m-%d\n---\n'
+        'date: %Y-%m-%d\n' \
+        'create: %Y-%m-%d %H:%M:%S\n---\n'
 
     now = datetime.datetime.now()
     date = now.strftime('%Y-%m-%d')

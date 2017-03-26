@@ -3,6 +3,7 @@ layout: post
 title: C 标准库学习·一·assert.h
 category: 知识库
 date: 2017-01-28
+create: 2017-01-25
 ---
 
 嵌入式里基本用的是标准 C。而且感觉自己对于 C 的库只知道`stdio.h`和`stdlib.h`很不好，因此开始学习 C 标准库。

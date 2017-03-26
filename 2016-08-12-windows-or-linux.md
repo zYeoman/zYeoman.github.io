@@ -3,6 +3,7 @@ layout: post
 title: Windows|Linux
 category: 乱弹
 date: 2016-08-12
+create: 2016-08-12
 ---
 
 作为一个自认的软粉，以及开源工具爱好者，以及爱折腾的人，我的主力系统一直是Windows，但是却总是忍不住想要Linux。

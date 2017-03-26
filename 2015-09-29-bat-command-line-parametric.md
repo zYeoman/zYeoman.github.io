@@ -3,6 +3,7 @@ layout: post
 title: 快捷新建blog post的方法
 categories: 知识库
 date: 2016-12-17
+create: 2015-09-29
 ---
 
     2016-12-17修改

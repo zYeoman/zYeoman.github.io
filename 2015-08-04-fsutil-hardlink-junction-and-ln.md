@@ -3,6 +3,7 @@ layout: post
 title: 快捷方式、符号链接、硬链接与软链接——win/linux
 category: 知识库
 date: 2015-08-04 22:20:14
+create: 2015-08-04
 ---
 
 ## 15-9-6更新

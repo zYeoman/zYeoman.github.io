@@ -3,6 +3,7 @@ layout: post
 title: 【Python】 string类中的 translate与maketrans函数
 category: 知识库
 date: 2015-08-06 21:37:55
+create: 2015-08-06
 ---
 
 这两个函数是在[Python Challenge level 1](http://www.pythonchallenge.com/pc/def/map.html)中用到的，主要功能是对字符串的映射，真是没想到python还有这样的函数。。。

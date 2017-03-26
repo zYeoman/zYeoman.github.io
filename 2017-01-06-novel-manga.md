@@ -3,6 +3,7 @@ layout: life
 title: 看过的小说与漫画
 category: 乱弹
 date: 2017-01-15
+create: 2017-01-06
 ---
 
 ## 轻小说

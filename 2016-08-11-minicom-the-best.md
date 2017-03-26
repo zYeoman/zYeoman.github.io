@@ -3,6 +3,7 @@ layout: post
 title: Is minicom the **best** friendly serial communication program???
 category: 乱弹
 date: 2016-08-11
+create: 2016-08-11
 ---
 
 说道linux的UART工具，最好的就是minicom。。。但是和windows相比，这就是赤裸裸的矮子里面拔高个啊！！！！！！！真是受不了啊这个minicom，应该说果然是linux的风格么？！还是命令行的工具就只能这么难用！！！

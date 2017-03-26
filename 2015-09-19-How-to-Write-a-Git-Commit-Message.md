@@ -3,6 +3,7 @@ layout: post
 title: 【翻译】怎样优雅地Git Commit
 category: 知识库
 date: 2015-09-19 10:34:16
+create: 2015-09-19
 ---
 
 ![haha](http://imgs.xkcd.com/comics/git_commit.png)

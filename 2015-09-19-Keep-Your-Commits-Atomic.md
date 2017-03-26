@@ -3,6 +3,7 @@ layout: post
 title: 【翻译】原子化你的commits
 category: 知识库
 date: 2015-09-19 17:05:46
+create: 2015-09-19
 ---
 
 ![atomic](http://www.freshconsulting.com/wp-content/uploads/cover-atomic-coding.jpg)

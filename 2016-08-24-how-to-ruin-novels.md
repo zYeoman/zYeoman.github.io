@@ -3,6 +3,7 @@ layout: post
 title: 如何毁掉一本小说
 category: 乱弹
 date: 2016-08-24
+create: 2016-08-24
 ---
 
 ### 神级造物主

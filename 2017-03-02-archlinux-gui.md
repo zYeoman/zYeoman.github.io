@@ -3,6 +3,7 @@ layout: post
 title: Archlinux on real PC
 category: 知识库
 date: 2017-03-07
+create: 2017-03-02
 ---
 
 在 Windows 里的虚拟机装了 archlinux，到了实验室开始正式使用实体机上的 archlinux，使用 i3 作为窗口管理器，遇到了很多坑。

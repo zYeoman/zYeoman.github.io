@@ -3,6 +3,7 @@ layout: post
 title: gem5 tutorials
 category: 知识库
 date: 2016-04-07 15:08:55
+create: 2016-04-07
 ---
 
 ## gem5介绍

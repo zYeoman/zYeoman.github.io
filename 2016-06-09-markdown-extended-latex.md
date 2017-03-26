@@ -3,6 +3,7 @@ layout: post
 title: 【sublime】markdown extended 增加 math支持
 category: 杂项
 date: 2016-06-01 13:02:22
+create: 2016-06-09
 ---
 
 
