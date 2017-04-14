@@ -8,6 +8,10 @@ import os
 import sys
 import glob
 import datetime
+import locale
+
+# Windows下'locale' codec error
+locale.setlocale(locale.LC_CTYPE, 'chinese')
 
 
 def help_msg():
@@ -59,6 +63,7 @@ def add(argv):
 
     if not os.path.exists(filename):
         with open(filename, 'w') as file_write:
+            now.strftime(head)
             file_write.write(now.strftime(head))
 
     os.system('vim ' + filename)
