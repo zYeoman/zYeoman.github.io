@@ -7,11 +7,8 @@ Edit file whose name contain provide string.
 import os
 import sys
 import glob
+import codecs
 import datetime
-import locale
-
-# Windows下'locale' codec error
-locale.setlocale(locale.LC_CTYPE, 'chinese')
 
 
 def help_msg():
@@ -59,12 +56,9 @@ def add(argv):
     else:
         index = 0
 
-    head = head.format('post', categories[index])
-
     if not os.path.exists(filename):
-        with open(filename, 'w') as file_write:
-            now.strftime(head)
-            file_write.write(now.strftime(head))
+        with codecs.open(filename, 'w', 'utf-8') as file_write:
+            file_write.write(now.strftime(head).format('post', categories[index]))
 
     os.system('vim ' + filename)
 
