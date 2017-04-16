@@ -177,6 +177,7 @@ function afterPjax() {
           }
       });
   });
+  $("#post__content img").popImg();
 
   MathJax.Hub.Queue(["Typeset",MathJax.Hub]);
   // Lazy Loading Duoshuo
