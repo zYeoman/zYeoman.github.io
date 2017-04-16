@@ -34,8 +34,6 @@ Review 工具。
 
 ## URLs
 * http://apis.io/ 搜索 API 工具
-* http://devdocs.io/ 各种语言的文档
-* http://overapi.com/ 各种语言 CheatSheet
 
 ## vim
 
