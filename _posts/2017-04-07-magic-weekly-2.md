@@ -2,7 +2,7 @@
 layout: post
 title: 周刊魔法道具与咒语：第 II 辑
 category: 知识库
-date: 2017-04-07
+date: 2017-04-17
 create: 2017-04-07 19:06:28
 ---
 
@@ -17,6 +17,8 @@ create: 2017-04-07 19:06:28
 * [srez](https://github.com/david-gpu/srez)：超分辨率算法。
 * [geoplotlib](https://github.com/andrea-cuttone/geoplotlib)：地图绘制库。
 * [altify](https://github.com/ParhamP/altify)：利用深度神经网络进行图片自动标注。
+* [polyglot](http://polyglot.readthedocs.io/en/latest/)：一个语言库，包括识别语言、单词造句、词法分析等等工具。
+* [SymPy](http://docs.sympy.org/latest/index.htmlhttp://docs.sympy.org/latest/index.html)：一个 Python 符号计算工具。
 
 ## Git
 
