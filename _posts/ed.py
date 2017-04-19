@@ -58,7 +58,8 @@ def add(argv):
 
     if not os.path.exists(filename):
         with codecs.open(filename, 'w', 'utf-8') as file_write:
-            file_write.write(now.strftime(head).format('post', categories[index]))
+            file_write.write(now.strftime(head).format('post',
+                                                       categories[index]))
 
     os.system('vim ' + filename)
 
