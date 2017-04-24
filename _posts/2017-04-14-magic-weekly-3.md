@@ -2,7 +2,7 @@
 layout: post
 title: 周刊魔法道具与咒语：第 III 辑—github
 category: 知识库
-date: 2017-04-16
+date: 2017-04-24
 create: 2017-04-14 22:54:08
 ---
 
@@ -34,19 +34,6 @@ Review 工具。
 
 ## URLs
 * http://apis.io/ 搜索 API 工具
-
-## vim
-
-### 自动安装 vim-plug
-```vim
-let vimplug_path=expand('~/.vim/autoload/plug.vim')
-if !filereadable(vimplug_path)
-    echo "Installing vim-plug"
-    echo ""
-    silent !curl -fLo ~/.vim/autoload/plug.vim --create-dirs
-        \ https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
-endif
-```
 
 ## tmux
 
