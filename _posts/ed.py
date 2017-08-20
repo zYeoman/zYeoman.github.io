@@ -36,7 +36,7 @@ def add(argv):
     """Add new file"""
     categories = ['工具', '杂项', '知识库', '奇技淫巧', '乱弹']
     head = '---\nlayout: {}\n' \
-        'title: title\n' \
+        'title: {}\n' \
         'category: {}\n' \
         'date: %Y-%m-%d\n' \
         'create: %Y-%m-%d %H:%M:%S\n---\n'
@@ -56,9 +56,12 @@ def add(argv):
     else:
         index = 0
 
+    title = input('Input title: ')
+
     if not os.path.exists(filename):
         with codecs.open(filename, 'w', 'utf-8') as file_write:
             file_write.write(now.strftime(head).format('post',
+                                                       title,
                                                        categories[index]))
 
     os.system('vim ' + filename)
