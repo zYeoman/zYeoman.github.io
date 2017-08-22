@@ -37,3 +37,7 @@ timezone: Asia/Shanghai
 gems:
       - jemoji
       - jekyll-gist
+
+markdown: kramdown
+kramdown:
+  hard_wrap:  true
