@@ -2,7 +2,7 @@
 layout: post
 title: Archlinux on real PC
 category: 知识库
-date: 2017-03-07
+date: 2017-08-23
 create: 2017-03-02
 ---
 
@@ -35,16 +35,16 @@ menuentry 'Windows' {
 ```
 
 ### UEFI
-相比于MBR，UEFI整整难上了一个等级。也遇到了不少的坑。我的安装方式是直接空白磁盘安装Win10解决UEFI分区等问题，然后再安装archlinux做grub多重启动。
+相比于 MBR，UEFI 整整难上了一个等级。也遇到了不少的坑。我的安装方式是直接空白磁盘安装 Win10 解决 UEFI 分区等问题，然后再安装 archlinux 做 grub 多重启动。
 
-注意必须在BIOS里把Secure Boot给关掉！
+注意必须在 BIOS 里把 Secure Boot 给关掉！
 
 安装时候选择 `UEFI ***` 的选项。不然会出现`UEFI varible not found`问题。
 
 ```sh
 arch-chroot /mnt /bin/bash
 mkdir /boot/efi
-# EFI 分区在/dev/sda2
+# EFI 分区在 /dev/sda2
 mount /dev/sda2 /boot/efi
 grub-install --target=x86_64-efi --efi-directory=/boot/efi --bootloader-id=arch_grub --boot-directory=/boot/efi/EFI --recheck
 cp /boot/efi/EFI/arch_grub/grubx64.efi /boot/efi/shellx64.efi
@@ -74,15 +74,28 @@ systemctl enable netctl-auto@<interface>.service
 
 配置自动联网。
 
-螺母楼网络很诡异，使用dhcpcd会只获得ipv6地址，并且ipv6速度大约就是几KB/s，另外使用dhclient可以获得ipv4的地址，但是如果禁用dhcpcd自启动，改为手动启动貌似速度就快了？为什么啊！！！
+配置螺母楼 ipv6
+
+```sh
+#!/bin/bash
+REMOTE_IP6="2402:f000:1:1501:200:5efe"
+REMOTE_IP4="166.111.21.1"
+
+IFACE4=`ip route show|grep default|sed -e 's/^default.*dev \([^ ]\+\).*$/\1/'`
+IP4=`ip addr show dev $IFACE4 | grep -m 1 'inet\ ' | sed -e 's/^.*inet \([^ \\]\+\)\/.*$/\1/'`
+
+sudo ip tunnel del sit1  # 删除已经创建的设备，若没有则忽略
+sudo ip tunnel add sit1 mode sit remote $REMOTE_IP4 local $IP4
+sudo ip link set dev sit1 up
+sudo ip -6 addr add $REMOTE_IP6:$IP4/64 dev sit1
+sudo ip -6 route add default via $REMOTE_IP6:$REMOTE_IP4 dev sit1
+````
 
 ### 可能的网络问题
 
-* router设置问题：没有router或者router不对导致ipv6速度非常慢
-* 没有获取到ip
-* DNS配置问题
-* 玄学：罗姆楼的网络主要依靠玄学，打开dhclient/dhcpcd/NetworkManager试试吧。
-* 现在螺母楼已经不给我的电脑ipv6地址了，no router。不知道为什么。
+* router 设置问题：没有 router 或者 router 不对导致 ipv6 速度非常慢
+* 没有获取到 ip
+* DNS 配置问题
 
 ## 窗口管理器
 使用 i3 作为窗口管理器。
