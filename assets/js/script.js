@@ -180,5 +180,8 @@ function afterPjax() {
   $("#post__content img").popImg();
 
   MathJax.Hub.Queue(["Typeset",MathJax.Hub]);
+  $(document.links).filter(function() {
+      return this.hostname != window.location.hostname;
+  }).attr('target', '_blank');
 }afterPjax();
 
