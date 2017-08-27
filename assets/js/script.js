@@ -180,19 +180,5 @@ function afterPjax() {
   $("#post__content img").popImg();
 
   MathJax.Hub.Queue(["Typeset",MathJax.Hub]);
-  // Lazy Loading Duoshuo
-    duoshuoQuery = {short_name:"mickir"};
-    $("#ds-notify").remove();
-    if($('#ds-reset').length == 0 && $('.ds-thread').length > 0){
-      $.ajax({
-        type: 'GET',
-        url: '/assets/js/embed.js',
-        dataType: 'script',
-        cache: true,
-        complete: function(data, textStatus){
-          DUOSHUO.EmbedThread($(".ds-thread"));
-        }
-      });
-    }
 }afterPjax();
 
