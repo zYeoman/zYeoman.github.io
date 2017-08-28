@@ -1,3 +1,6 @@
+---
+layout: null
+---
 
 /*!--------------------------------*\
    3-Jekyll Theme
@@ -102,6 +105,15 @@ $('#mobile-avatar').on('click', function(){
   $('#sidebar, #pjax, #icon-arrow').addClass('fullscreen');
 });
 
+{% if site.disqus_shortname %}
+    (function() { // DON'T EDIT BELOW THIS LINE
+    var d = document, s = d.createElement('script');
+    s.src = 'https://{{ site.disqus_shortname }}.disqus.com/embed.js';
+    s.setAttribute('data-timestamp', +new Date());
+    (d.head || d.body).appendChild(s);
+    })();
+{% endif %}
+
 // Pjax
 $(document).pjax('#avatar, #mobile-avatar, .pl__all', '#pjax', { fragment: '#pjax', timeout: 10000 });
 $(document).on({
@@ -178,5 +190,14 @@ function afterPjax() {
   $("#post__content img").popImg();
 
   MathJax.Hub.Queue(["Typeset",MathJax.Hub]);
+
+    {% if site.disqus_shortname %}
+      if(typeof DISQUS != "undefined") {
+          DISQUS.reset({
+              reload: true,
+              config: disqus_config,
+          });
+      }
+    {% endif %}
 }afterPjax();
 
