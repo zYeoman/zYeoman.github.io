@@ -107,13 +107,11 @@ $(document).pjax('#avatar, #mobile-avatar, .pl__all', '#pjax', { fragment: '#pja
 $(document).on({
   'pjax:click': function() {
     content.removeClass('fadeIn').addClass('fadeOut');
-    NProgress.start();
   },
   'pjax:start': function() {
     content.css({'opacity':0});
   },
   'pjax:end': function() {
-    NProgress.done();
     container.scrollTop(0);
     content.css({'opacity':1}).removeClass('fadeOut').addClass('fadeIn');
     afterPjax();
