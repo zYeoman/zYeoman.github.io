@@ -92,7 +92,9 @@ $('#js-fullscreen').on('click', function() {
       $(this).removeClass('fullscreen').dequeue();
     });
   } else {
-    $("#toc").removeClass('hidden');
+    if ($('#post__toc-ul').children().length > 0) {
+      $("#toc").removeClass('hidden');
+    };
     sidebar.addClass('fullscreen');
     button.addClass('fullscreen');
     content.delay(200).queue(function(){
