@@ -169,6 +169,10 @@ function afterPjax() {
   else {
     $("#toc").addClass('hidden');
   }
+  $("#post__content > p").each(function(){
+    html = $(this).html();
+    $(this).html(html.split("<br>").join("</p><p>"))
+  })
   // Smooth scrolling
   $('.js-anchor-link').on('click', function() {
     var target = $(this.hash);
