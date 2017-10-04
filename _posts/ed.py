@@ -5,6 +5,7 @@ Edit file whose name contain provide string.
 '''
 
 import os
+import re
 import sys
 import glob
 import codecs
@@ -67,26 +68,12 @@ def add(argv):
     os.system('vim ' + filename)
 
 
-def determ_file(pattern, case=False):
+def determ_file(patterns, case=re.I):
     '''Determine which file to edit'''
     files = glob.glob('*.md')
+    pattern = '.*'.join(patterns)
 
-    def filt(string, pattern, case):
-        """For files filter
-        :string: String to search
-        :pattern: Search pattern
-        :case: Whether case sensitive
-        :returns: Bool if all pattern in string
-        """
-        if case:
-            return all(p in string for p in pattern)
-        else:
-            return all(p.lower() in string.lower() for p in pattern)
-
-    edit_files = list(filter(lambda x: filt(x[10:], pattern, case), files))
-
-    if len(edit_files) == 0:
-        edit_files = list(filter(lambda x: filt(x, pattern, case), files))
+    edit_files = list(filter(lambda x: re.findall(pattern, x, case), files))
 
     index = 0
 
@@ -115,7 +102,7 @@ def touch(file_name):
 
 def main(argv):
     """Main function"""
-    if len(argv) == 0 or '-h' in argv:
+    if not argv or '-h' in argv:
         help_msg()
     elif argv[0] == 'a':
         add(argv[1:])
