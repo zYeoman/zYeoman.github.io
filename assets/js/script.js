@@ -76,8 +76,9 @@ $('#tags__ul li').each(function(index){
 // If sidebar has class 'mobile', hide it after clicking.
 $('.pl__all').on('click', function() {
   $(this).addClass('active').siblings().removeClass('active');
-  // if (sidebar.hasClass('mobile')) {
-  // }
+  if (sidebar.hasClass('mobile')) {
+      $('#sidebar, #pjax, #icon-arrow').addClass('fullscreen');
+  }
 });
 
 // Enable fullscreen.
