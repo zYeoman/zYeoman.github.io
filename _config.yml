@@ -23,8 +23,6 @@ leancloud:
   app_id: xYnmPhrQu3YUQ28Ywk2qEfIp-gzGzoHsz
   app_key: ijsCplpAyUiEzXD36KkOFwHU
 
-disqus_shortname: mickirde-mo-fa-bi-ji
-
 locals:                                     #自定义常量
   tags: 标签
   about: 关于

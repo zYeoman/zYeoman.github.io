@@ -12,6 +12,8 @@ layout: null
 if ($(window).width() <= 1280) {
   $('#sidebar').addClass('mobile')
 }
+AV.initialize("{{site.leancloud.app_id}}", "{{site.leancloud.app_key}}");
+var valine = new Valine();
 
 function addCount(Counter) {
     var Counter = AV.Object.extend("Counter");
@@ -77,7 +79,7 @@ $('#tags__ul li').each(function(index){
 $('.pl__all').on('click', function() {
   $(this).addClass('active').siblings().removeClass('active');
   if (sidebar.hasClass('mobile')) {
-      $('#sidebar, #pjax, #icon-arrow').addClass('fullscreen');
+      $('#sidebar, #pjax, #js-fullscreen').addClass('fullscreen');
   }
 });
 
@@ -102,14 +104,6 @@ $('#mobile-avatar').on('click', function(){
   $('#sidebar, #pjax, #icon-arrow').addClass('fullscreen');
 });
 
-{% if site.disqus_shortname %}
-    (function() { // DON'T EDIT BELOW THIS LINE
-    var d = document, s = d.createElement('script');
-    s.src = 'https://{{ site.disqus_shortname }}.disqus.com/embed.js';
-    s.setAttribute('data-timestamp', +new Date());
-    (d.head || d.body).appendChild(s);
-    })();
-{% endif %}
 
 // Pjax
 $(document).pjax('#avatar, #mobile-avatar, .pl__all', '#pjax', { fragment: '#pjax', timeout: 10000 });
@@ -138,6 +132,17 @@ function afterPjax() {
         if ($('.leancloud_visitors').length == 1) {
             addCount(Counter);
         }
+    });
+
+    valine.init({
+        el: '#comment' ,
+        notify:false,
+        verify:false,
+        appId: '{{site.leancloud.app_id}}',
+        appKey: '{{site.leancloud.app_key}}',
+        placeholder: 'LONG MAY THE SUN SHINE!',
+        path:window.location.pathname,
+        avatar:'retro'
     });
   // Generate post TOC for h1 h2 and h3
   var toc = $('#post__toc-ul');
@@ -198,13 +203,5 @@ function afterPjax() {
 
   MathJax.Hub.Queue(["Typeset",MathJax.Hub]);
 
-    {% if site.disqus_shortname %}
-      if(typeof DISQUS != "undefined") {
-          DISQUS.reset({
-              reload: true,
-              config: disqus_config,
-          });
-      }
-    {% endif %}
 }afterPjax();
 
