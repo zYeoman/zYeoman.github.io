@@ -411,9 +411,15 @@ table tr:nth-child(2n):hover {
     #post {
       font-size: 14px; } }
 
+  @media screen and (min-width: 1560px) {
+    #post {
+      padding-right: 20em;
+    }
+  }
+
 #pjax {
   height: 100%;
-  padding: 0 50px 30px; }
+  padding: 0 1em 30px; }
   #pjax.fadeIn {
     -webkit-animation: fadeIn .3s;
     -moz-animation: fadeIn .3s;

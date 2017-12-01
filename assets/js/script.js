@@ -58,7 +58,7 @@ function addCount(Counter) {
 var sidebar    = $('#sidebar'),
     container  = $('#post'),
     content    = $('#pjax'),
-    button     = $('#icon-arrow');
+    button     = $('#js-fullscreen');
 
 // Tags switcher
 var clickHandler = function(id) {
@@ -82,7 +82,7 @@ $('.pl__all').on('click', function() {
 });
 
 // Enable fullscreen.
-$('#js-fullscreen').on('click', function() {
+button.on('click', function() {
   if (button.hasClass('fullscreen')) {
     sidebar.removeClass('fullscreen');
     button.removeClass('fullscreen');
