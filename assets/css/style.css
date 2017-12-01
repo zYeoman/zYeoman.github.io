@@ -3,23 +3,6 @@
    @author Peiwen Lu (P233)
    https://github.com/P233/3-Ghost
 \*---------------------------------*/
-/*---------------------------------*\
-   Fonts
-\*---------------------------------*/
-@font-face {
-  font-family: "fontello";
-  src: url("../font/fontello.eot");
-  src: url("../font/fontello.eot#iefix") format("embedded-opentype"), url("../font/fontello.woff") format("woff"), url("../font/fontello.ttf") format("truetype"), url("../font/fontello.svg#fontello") format("svg");
-  font-weight: normal;
-  font-style: normal; }
-
-.fontello {
-  font-family: "fontello";
-  speak: none;
-  font-variant: normal;
-  text-transform: none;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale; }
 
 /*---------------------------------*\
    Base
@@ -81,6 +64,41 @@ a {
     #sidebar {
       width: 100%; } }
 
+table {
+    width: 100%; /*表格宽度*/
+    border: 1px solid #bbb; /*表格外边框设置*/
+    margin: 15px auto; /*外边距*/
+    border-collapse: collapse; /*使用单一线条的边框*/
+    empty-cells: show; /*单元格无内容依旧绘制边框*/
+}
+
+table th,
+table td {
+  max-width: 15em; /*表格最大宽度，避免表格过宽*/
+  height: 35px; /*统一每一行的默认高度*/
+    border: 1px solid #bbb; /*表格外边框设置*/
+  padding: 0 10px; /*内边距*/
+  }
+
+table th {
+    font-weight: bold; /*加粗*/
+    text-align: center !important; /*内容居中，加上 !important 避免被 Markdown 样式覆盖*/
+    background: rgba(158,188,226,0.3); /*背景色*/
+}
+
+table td:nth-child(1) {
+    white-space: nowrap;
+}
+
+table tbody tr:nth-child(2n) {
+    background: rgba(158,188,226,0.12);
+}
+table tr:hover {
+    background: #efefef;
+}
+table tr:nth-child(2n):hover {
+    background: #efefef;
+}
 /*---------------------------------*\
    Tags
 \*---------------------------------*/
@@ -131,41 +149,6 @@ a {
   border-bottom: 1px solid #525965;
   list-style: none; }
 
-table {
-    width: 100%; /*表格宽度*/
-    border: 1px solid #bbb; /*表格外边框设置*/
-    margin: 15px auto; /*外边距*/
-    border-collapse: collapse; /*使用单一线条的边框*/
-    empty-cells: show; /*单元格无内容依旧绘制边框*/
-}
-
-table th,
-table td {
-  max-width: 15em; /*表格最大宽度，避免表格过宽*/
-  height: 35px; /*统一每一行的默认高度*/
-    border: 1px solid #bbb; /*表格外边框设置*/
-  padding: 0 10px; /*内边距*/
-  }
-
-table th {
-    font-weight: bold; /*加粗*/
-    text-align: center !important; /*内容居中，加上 !important 避免被 Markdown 样式覆盖*/
-    background: rgba(158,188,226,0.3); /*背景色*/
-}
-
-table td:nth-child(1) {
-    white-space: nowrap;
-}
-
-table tbody tr:nth-child(2n) {
-    background: rgba(158,188,226,0.12);
-}
-table tr:hover {
-    background: #efefef;
-}
-table tr:nth-child(2n):hover {
-    background: #efefef;
-}
 
 .tags__li {
   padding: 12px 35px 9px;
@@ -220,23 +203,6 @@ table tr:nth-child(2n):hover {
     text-align: center;
     border-top: 1px solid #525965;
     float: left; }
-
-#icon-email {
-  /*border-right: 1px solid #626262; */}
-  #icon-email:before {
-    content: "\e800"; }
-
-#icon-feed {
-  border-right: 1px solid #626262; }
-  #icon-feed:before {
-    content: "\e802"; }
-
-#icon-github {
-    border-right: 1px solid #626262; }
-#icon-github:before {
-    content: "\e805"; }
-
-
 
 .tags-btn {
   color: #a6a6a7;
@@ -640,10 +606,6 @@ iframe {
   padding-left: calc(1.3em - 3px);
 }
 
-#toc ul li.active>a {
-  font-weight: 700;
-}
-
 
 /* heading level: 2 (hidden only when there are too many headings)  */
 
@@ -706,74 +668,6 @@ iframe {
   -o-animation: flash .6s;
   animation: flash .6s; }
 
-#post__share {
-  height: 21px;
-  margin-top: 2.5em;
-  margin-bottom: 19px;
-  border-bottom: 2px solid rgba(229, 232, 236, 0.5);
-  position: relative; }
-  #post__share > .fontello{
-    display: block;
-    width: 40px;
-    height: 40px;
-    color: #7d8b99;
-    font-size: 20px;
-    text-align: center;
-    line-height: 36px;
-    background: white;
-    border: 2px solid rgba(229, 232, 236, 0.5);
-    box-shadow: 0 0 7px 7px transparent;
-    border-radius: 50%;
-    position: absolute;
-    left: 50%;
-    -webkit-transition: color .35s, box-shadow .35s;
-    -moz-transition: color .35s, box-shadow .35s;
-    -ms-transition: color .35s, box-shadow .35s;
-    -o-transition: color .35s, box-shadow .35s;
-    transition: color .35s, box-shadow .35s; }
-    #post__share > .fontello:hover {
-      box-shadow: 0 0 0 2px rgba(125, 139, 153, 0.15); }
-
-    .share-info{
-        text-align: center;
-        top: 7px;
-        left: 179px;
-        position: relative;
-        color: rgb(133, 176, 255);
-        font-size: 10px;
-        /* display: none; */
-        z-index: 1;
-        display: inline;
-    }
-
-
-#icon-twitter {
-  margin-left: -90px; }
-  #icon-twitter:hover {
-    color: #4099ff; }
-  #icon-twitter:before {
-    content: "\e807"; }
-
-#icon-cc {
-  margin-left: -20px; }
-  #icon-cc:hover {
-    color: #f8ce5e; }
-  #icon-cc:before {
-    content: "\e805"; }
-
-#icon-weibo {
-  margin-left: 50px; }
-  #icon-weibo:hover {
-    color: #d40220; }
-  #icon-weibo:before {
-    content: "\e808"; }
-
-#disqus_thread {
-  padding: 30px 0;
-  -webkit-box-sizing: content-box;
-  -moz-box-sizing: content-box;
-  box-sizing: content-box; }
-
 #copyright {
   margin-top: -32px;
   padding-top: 12px;
@@ -785,6 +679,28 @@ iframe {
     color: #2eb695; }
     #copyright > a:hover {
       text-decoration: underline; }
+
+.nowrap {
+  white-space: nowrap;
+}
+
+.article_copyright {
+  padding: 5px 30px;
+  margin-bottom: 20px;
+  margin-left: auto;
+  margin-right: auto;
+  max-width: 750px;
+  background-color: #83b3c1;
+  border-radius: 8px;
+  font-weight: 700;
+  line-height: 1.2;
+  color: #444;
+  font-size: 16px;
+}
+
+.article_copyright>p {
+  margin:0;
+}
 
 /*---------------------------------*\
    Fullscreen Style
@@ -807,11 +723,11 @@ iframe {
   max-width: 1000px;
   margin: 0 auto; }
 
-#js-fullscreen, #nprogress .spinner-icon {
+#js-fullscreen {
   width: 40px;
   height: 40px; }
 
-#js-fullscreen, #nprogress .spinner {
+#js-fullscreen {
   top: 12px;
   right: 20px; }
 
@@ -847,34 +763,6 @@ iframe {
       top: 0;
       right: 0;
       border-radius: 0; } }
-
-#icon-arrow {
-  padding: 10px;
-  -webkit-transform: rotate(0deg);
-  -moz-transform: rotate(0deg);
-  -ms-transform: rotate(0deg);
-  -o-transform: rotate(0deg);
-  transform: rotate(0deg);
-  -webkit-transition: -webkit-transform 0.5s cubic-bezier(0.77, 0, 0.175, 1);
-  -moz-transition: -moz-transform 0.5s cubic-bezier(0.77, 0, 0.175, 1);
-  -ms-transition: -ms-transform 0.5s cubic-bezier(0.77, 0, 0.175, 1);
-  -o-transition: -o-transform 0.5s cubic-bezier(0.77, 0, 0.175, 1);
-  transition: transform 0.5s cubic-bezier(0.77, 0, 0.175, 1);
-  display: block; }
-  #icon-arrow:before {
-    content: "\e806";
-    margin-left: -1px;
-    font-size: 20px;
-    line-height: 1; }
-  #icon-arrow.fullscreen {
-    -webkit-transform: rotate(180deg);
-    -moz-transform: rotate(180deg);
-    -ms-transform: rotate(180deg);
-    -o-transform: rotate(180deg);
-    transform: rotate(180deg); }
-  @media screen and (max-width: 585px) {
-    #icon-arrow {
-      padding: 15px; } }
 
 /*---------------------------------*\
    Vendors
@@ -1048,57 +936,6 @@ iframe {
 
   to {
     transform: rotate(359deg); } }
-
-/* Make clicks pass-through */
-/* Modified by Peiwen Lu @ 06 Nov 2013 */
-#nprogress {
-  pointer-events: none;
-  -webkit-pointer-events: none; }
-
-#nprogress .bar {
-  background: #f8645a;
-  position: fixed;
-  z-index: 100;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 2px; }
-
-/* Fancy blur effect */
-#nprogress .peg {
-  display: block;
-  position: absolute;
-  right: 0px;
-  width: 100px;
-  height: 100%;
-  box-shadow: 0 0 10px #f8645a, 0 0 5px #f8645a;
-  opacity: 1.0;
-  -webkit-transform: rotate(3deg) translate(0px, -4px);
-  -moz-transform: rotate(3deg) translate(0px, -4px);
-  -ms-transform: rotate(3deg) translate(0px, -4px);
-  -o-transform: rotate(3deg) translate(0px, -4px);
-  transform: rotate(3deg) translate(0px, -4px); }
-
-/* Remove these to get rid of the spinner */
-#nprogress .spinner {
-  display: block;
-  position: fixed;
-  z-index: 100; }
-  @media screen and (max-width: 585px) {
-    #nprogress .spinner {
-      top: 5px;
-      right: 5px; } }
-
-#nprogress .spinner-icon {
-  border: solid 2px transparent;
-  border-top-color: #f8645a;
-  border-left-color: #f8645a;
-  border-radius: 50%;
-  -webkit-animation: spin 400ms linear infinite;
-  -moz-animation: spin 400ms linear infinite;
-  -ms-animation: spin 400ms linear infinite;
-  -o-animation: spin 400ms linear infinite;
-  animation: spin 400ms linear infinite; }
 
 /*!-------------------------------------
  * Syntax Colours

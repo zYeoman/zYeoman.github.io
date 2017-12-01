@@ -1,0 +1,12 @@
+<div class="article_copyright">
+    <p><span class="nowrap">文章标题:</span>{{ page.title }}</p>
+    <p><span class="nowrap">文章字数:</span><span class="post-count">{{ content | strip_html | strip_newlines | size }}</span></p>
+    <p><span class="nowrap">本文作者:</span><a href="javascript:void(0)" title="{{ site.author.name }}">{{ site.author.name }}</a></p>
+    <p><span class="nowrap">发布时间:</span>{{ page.create| date: "%Y-%m-%d" }}</p>
+    <p><span class="nowrap">最后更新:</span>{{ page.date| date: "%Y-%m-%d" }}</p>
+    <p><span class="nowrap">原始链接:</span><a class="post-url" href="{{ page.url }}" title="{{ page.title }}">{{ site.url }}{{ page.url }}</a>
+    </p>
+    <p>
+        <span class="nowrap">版权声明:</span><i class="fa fa-creative-commons" aria-hidden="true"></i> <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/" title="CC BY-NC-SA 4.0 International" target = "_blank">"署名-非商用-相同方式共享 4.0"</a> 转载请保留原文链接及作者。
+    </p>
+</div>

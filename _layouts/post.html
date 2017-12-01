@@ -13,7 +13,7 @@ layout: base
             <time datetime="{{page.create}}">{{ page.create| date: "%Y-%m-%d" }}</time>
         </span>
         <span class="post__date">
-            &nbsp; | &nbsp;
+             |
             <span class="post-meta-item-icon">
                 <i class="fa fa-pencil"></i>
             </span>
@@ -21,19 +21,20 @@ layout: base
             <time datetime="{{page.date}}">{{ page.date| date: "%Y-%m-%d" }}</time>
         </span>
         <span class="post-category">
-            &nbsp; | &nbsp;
+             |
             <span class="post-meta-item-icon">
                 <i class="fa fa-folder-o"></i>
             </span>
             <span class="post-meta-item-text">分类于 {{page.category}}</span>
         </span>
-        <span id="{{page.url}}" class="leancloud_visitors" data-flag-title="{{page.title}}">
-            &nbsp; | &nbsp;
+        <span class="post-read">
+
+            <span id="busuanzi_container_page_pv">
+             |
             <span class="post-meta-item-icon">
                 <i class="fa fa-eye"></i>
+            </span>阅读次数 <span id="busuanzi_value_page_pv"><i class="fa fa-spinner fa-spin"></i></span>
             </span>
-            <span class="post-meta-item-text">阅读次数 </span>
-            <span class="leancloud-visitors-count"></span>
         </span>
      </div>
     {{ content }}
@@ -45,6 +46,8 @@ layout: base
 </article>
 <!-- end #post__content -->
 
-{% include share.html %}
-{% include disqus.html %}
+<hr>
+
+{% include article_copyright.html %}
+{% include comment.html %}
 
