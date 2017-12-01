@@ -7,9 +7,10 @@ create: 2015-08-03
 math: true
 ---
 
-[TOC]
-
 这是一个测试页面
+
+- TOC
+{:toc}
 
 ## 使用了 [Jekyll Light](https://github.com/pexcn/Jekyll-Light) 主题。
 
@@ -25,7 +26,9 @@ _斜体_  __粗体__
 
 ~~还有~~
 
-公式 $\lambda a_1$
+## 第二行标题
+
+公式 $$\lambda a_1$$
 $$\delta \times$$
 
 $$E = mc^2$$

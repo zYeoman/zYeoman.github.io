@@ -41,3 +41,4 @@ gems:
 markdown: kramdown
 kramdown:
   hard_wrap:  true
+  parse_block_html: true

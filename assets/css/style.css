@@ -31,6 +31,14 @@ a {
   transition: color .35s; }
 
 /*---------------------------------*\
+   General Class CSS
+\*---------------------------------*/
+
+.hidden {
+  display: none;
+}
+
+/*---------------------------------*\
    Sidebar => Tags & Posts List
 \*---------------------------------*/
 #sidebar {
@@ -491,7 +499,7 @@ iframe {
 
 /* container */
 
-#toc {
+#markdown-toc {
   position: fixed;
   right: 5em;
   top: 2em;
@@ -515,16 +523,16 @@ iframe {
   will-change: transform, max-width;
   transition: max-width 0.3s;
   }
-  @media screen and (max-width: 1280px) {
-    #toc {
+  @media screen and (max-width: 1560px) {
+    #markdown-toc {
       display: none;
-    } }
+    }
+    #markdown-toc.fullscreen{
+      display: block;
+      } }
 
-#toc.hidden {
-  display: none;
-}
 
-#toc .handle {
+#markdown-toc .handle {
   -webkit-user-select: none;
   user-select: none;
   position: absolute;
@@ -544,26 +552,26 @@ iframe {
   transition: opacity 0.3s;
 }
 
-#toc:hover .handle {
+#markdown-toc:hover .handle {
   max-width: 33vw;
   opacity: 1;
 }
 
-#toc .handle:hover,
-#toc .handle:active {
+#markdown-toc .handle:hover,
+#markdown-toc .handle:active {
   cursor: move;
 }
 
 /* all headings  */
 
-#toc ul,
-#toc li {
+#markdown-toc ul,
+#markdown-toc li {
   list-style: none;
   padding-left: 0;
   display: block;
 }
 
-#toc a {
+#markdown-toc a {
   text-decoration: none;
   color: gray;
   display: block;
@@ -575,32 +583,41 @@ iframe {
   white-space: nowrap;
 }
 
-#toc a:hover,
-#toc a:active {
+#markdown-toc a:hover,
+#markdown-toc a:active {
   border-left-color: rgba(86, 61, 124, 0.5);
   color: #563d7c;
 }
 
-#toc li.active>a {
+#markdown-toc li.active>a {
   border-left-color: #563d7c;
+  font-weight: 700;
   color: #563d7c;
+  border-left-width: 3px;
+  border-left-style: solid;
+  padding-left: calc(0.3em - 3px);
 }
 
 
 /* heading level: 1 */
 
-#toc ul {
+#markdown-toc ul {
   line-height: 2;
 }
 
-#toc ul a {
+#markdown-toc li a {
+  font-size: 1em;
+  padding-left: 0.3em;
+}
+
+#markdown-toc ul a {
   font-size: 1em;
   padding-left: 1.3em;
 }
 
-#toc ul a:hover,
-#toc ul a:active,
-#toc ul li.active>a {
+#markdown-toc ul a:hover,
+#markdown-toc ul a:active,
+#markdown-toc ul li.active>a {
   border-left-width: 3px;
   border-left-style: solid;
   padding-left: calc(1.3em - 3px);
@@ -609,26 +626,26 @@ iframe {
 
 /* heading level: 2 (hidden only when there are too many headings)  */
 
-#toc ul ul {
+#markdown-toc ul ul {
   line-height: 1.8;
 }
 
-#toc.lengthy ul ul {
+#markdown-toc.lengthy ul ul {
   display: none;
 }
 
-#toc.lengthy ul li.active>ul {
+#markdown-toc.lengthy ul li.active>ul {
   display: block;
 }
 
-#toc ul ul a {
+#markdown-toc ul ul a {
   font-size: 1em;
   padding-left: 2.7em;
 }
 
-#toc ul ul a:hover,
-#toc ul ul a:active,
-#toc ul ul li.active>a {
+#markdown-toc ul ul a:hover,
+#markdown-toc ul ul a:active,
+#markdown-toc ul ul li.active>a {
   border-left-width: 2px;
   border-left-style: solid;
   padding-left: calc(2.7em - 2px);
@@ -638,23 +655,23 @@ iframe {
 
 /* heading level: 3 (hidden unless parent is active) */
 
-#toc ul ul ul {
+#markdown-toc ul ul ul {
   line-height: 1.7;
   display: none;
 }
 
-#toc ul ul li.active>ul {
+#markdown-toc ul ul li.active>ul {
   display: block;
 }
 
-#toc ul ul ul a {
+#markdown-toc ul ul ul a {
   font-size: 1em;
   padding-left: 4em;
 }
 
-#toc ul ul ul a:hover,
-#toc ul ul ul a:active,
-#toc ul ul ul li.active>a {
+#markdown-toc ul ul ul a:hover,
+#markdown-toc ul ul ul a:active,
+#markdown-toc ul ul ul li.active>a {
   border-left-width: 1px;
   border-left-style: solid;
   padding-left: calc(4em - 1px);

@@ -52,6 +52,7 @@ button.on('click', function() {
   } else {
     sidebar.addClass('fullscreen');
     button.addClass('fullscreen');
+    $("#markdown-toc").addClass('fullscreen');
     content.delay(200).queue(function(){
       $(this).addClass('fullscreen').dequeue();
     });
@@ -95,37 +96,7 @@ function afterPjax() {
         path:window.location.pathname,
         avatar:'retro'
     });
-  // Generate post TOC for h1 h2 and h3
-  var toc = $('#post__toc-ul');
-  // Empty TOC and generate an entry for h1
-  toc.empty();
 
-  // Generate entries for h2 and h3
-  $('#post__content').children('h2,h3').each(function() {
-    // Generate random ID for each heading
-    $(this).attr('id', function() {
-      var ID = "",
-          alphabet = "abcdefghijklmnopqrstuvwxyz";
-
-      for(var i=0; i < 5; i++) {
-        ID += alphabet.charAt(Math.floor(Math.random() * alphabet.length));
-      }
-      return ID;
-    });
-
-    if ($(this).prop("tagName") == 'H2') {
-      toc.append('<li class="toc_h2"><a href="#' + $(this).attr('id') + '" class="js-anchor-link">' + $(this).text() + '</a></li>');
-    } else {
-      $('#post__toc-ul li.toc_h2').last().append('<ul><li class="toc_h3"><a href="#' + $(this).attr('id') + '" class="js-anchor-link">' + $(this).text() + '</a></li></ul>');
-    }
-  });
-
-  if ($('#post__toc-ul').children().length > 0) {
-    $("#toc").removeClass('hidden');
-  }
-  else {
-    $("#toc").addClass('hidden');
-  }
   $("#post__content > p").each(function(){
     html = $(this).html();
     $(this).html(html.split("<br>").join("</p><p>"))
