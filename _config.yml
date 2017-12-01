@@ -12,7 +12,7 @@ favicon: "/favicon.ico"
 # Build settings
 permalink: /blog/:title.html   #博文的固定链接
 author:                                     #自定义常量
-  name: 庄永文
+  name: Mickir
   email: zhuangyw.thu@gmail.com
   link: https://mickir.me/
   weibo: http://weibo.com/mickir
