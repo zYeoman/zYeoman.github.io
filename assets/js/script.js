@@ -84,6 +84,7 @@ $(document).on({
 function afterPjax() {
   // Open links in new tab
   $('#post__content a').attr('target','_blank');
+  $('a[href^="#"]').attr('target','');
 
     $.getScript("//dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js");
     valine.init({
@@ -102,7 +103,7 @@ function afterPjax() {
     $(this).html(html.split("<br>").join("</p><p>"))
   })
   // Smooth scrolling
-  $('.js-anchor-link').on('click', function() {
+  $('#markdown-toc a').on('click', function() {
     var target = $(this.hash);
     container.animate({scrollTop: target.offset().top + container.scrollTop() - 70}, 500, function() {
       target.addClass('flash').delay(700).queue(function() {
