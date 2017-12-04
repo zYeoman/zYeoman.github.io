@@ -1,0 +1,113 @@
+/* ==========================================================================
+   Variables
+   ========================================================================== */
+
+/*
+   Typography
+   ========================================================================== */
+
+$doc-font-size                : 16px !default;
+
+/* paragraph indention */
+$paragraph-indent             : false !default; // true, false (default)
+$indent-var                   : 1.3em !default;
+
+/* system typefaces */
+$serif                        : Georgia, Times, serif !default;
+$post-font                    : -apple-system, BlinkMacSystemFont, "Roboto", "Segoe UI", "Helvetica Neue", "Lucida Grande", Arial, Kai, "Kaiti SC", KaiTi, BiauKai, 楷体, 楷体_GB2312, serif;
+$sans-serif                   : -apple-system, BlinkMacSystemFont, "Roboto", "Segoe UI", "Helvetica Neue", "Lucida Grande", Arial, sans-serif !default;
+$monospace                    : Monaco, Consolas, "Lucida Console", monospace !default;
+
+/* sans serif typefaces */
+$sans-serif-narrow            : $sans-serif !default;
+$helvetica                    : Helvetica, "Helvetica Neue", Arial, sans-serif !default;
+
+/* serif typefaces */
+$georgia                      : Georgia, serif !default;
+$times                        : Times, serif !default;
+$bodoni                       : "Bodoni MT", serif !default;
+$calisto                      : "Calisto MT", serif !default;
+$garamond                     : Garamond, serif !default;
+
+$global-font-family           : $sans-serif !default;
+$header-font-family           : $sans-serif !default;
+$caption-font-family          : $serif !default;
+
+/* type scale */
+$type-size-1                  : 2em !default;      // ~32px
+$type-size-2                  : 1.5em !default;    // ~24px
+$type-size-3                  : 1.25em !default;   // ~20px
+$type-size-4                  : 1em !default;      // ~16px
+$type-size-5                  : 0.75em !default;   // ~12px
+$type-size-6                  : 0.6875em !default; // ~11px
+$type-size-7                  : 0.625em !default;  // ~10px
+
+
+/*
+   Colors
+   ========================================================================== */
+
+$gray                         : #7a8288 !default;
+$dark-gray                    : mix(#000, $gray, 40%) !default;
+$darker-gray                  : mix(#000, $gray, 80%) !default;
+$light-gray                   : mix(#fff, $gray, 50%) !default;
+$lighter-gray                 : mix(#fff, $gray, 80%) !default;
+
+$background-color             : #fff !default;
+$code-background-color        : #fafafa !default;
+$code-background-color-dark   : $light-gray !default;
+$text-color                   : $dark-gray !default;
+$muted-text-color             : mix(#fff, $text-color, 35%) !default;
+$border-color                 : $lighter-gray !default;
+$form-background-color        : $lighter-gray !default;
+$footer-background-color      : $lighter-gray !default;
+
+$post-list-color              : #64717f !default;
+
+$primary-color                : #999999 !default;
+$success-color                : #62c462 !default;
+$warning-color                : #f89406 !default;
+$danger-color                 : #ee5f5b !default;
+$info-color                   : #52adc8 !default;
+
+/* links */
+$link-color                   : #ff7800 !default;
+$link-color-hover             : #f03 !default;
+$link-color-active            : $info-color;
+
+/*
+   Breakpoints
+   ========================================================================== */
+
+$small                        : 37.5em !default;
+$medium                       : 42em !default;
+$medium-wide                  : 50em !default;
+$large                        : 64em !default;
+$x-large                      : 85em !default;
+
+@mixin breakpoint($point) {
+   @if $point == desktop {
+     @media (min-width: $x-large) { @content ; }
+   }
+   @else if $point == laptop {
+     @media (min-width: $large) and (max-width: $x-large) { @content ; }
+   }
+    @else if $point == tablet {
+     @media (min-width: $medium-wide) and (max-width: $large) { @content ; }
+   }
+   @else if $point == phablet {
+     @media (min-width: $small) and (max-width: $medium-wide)  { @content ; }
+   }
+   @else if $point == mobileonly {
+     @media (max-width: $small)  { @content ; }
+   }
+   @else if $point == nodesktop {
+     @media (max-width: $x-large) { @content ; }
+   }
+}
+/*
+   Other
+   ========================================================================== */
+
+$border-radius                : 4px !default;
+$global-transition            : all 0.2s ease-in-out !default;

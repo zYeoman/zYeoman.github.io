@@ -1,0 +1,77 @@
+
+/*---------------------------------*\
+   Post
+\*---------------------------------*/
+#post {
+  height: 100%;
+  background: white;
+  overflow-x: hidden;
+  overflow-y: auto;
+  font-family: $post-font;
+  -webkit-overflow-scrolling: touch;
+  color: $darker-gray;
+  font-size: 16px;
+  font-weight: normal;
+  line-height: 1.7;
+}
+
+#pjax {
+  height: 100%;
+  padding: 0 1em 30px;
+  &.fadeIn {
+    -webkit-animation: fadeIn .5s;
+    -moz-animation: fadeIn .5s;
+    -ms-animation: fadeIn .5s;
+    -o-animation: fadeIn .5s;
+    animation: fadeIn .5s;
+  }
+  &.fadeOut {
+    -webkit-animation: fadeOut .3s;
+    -moz-animation: fadeOut .3s;
+    -ms-animation: fadeOut .3s;
+    -o-animation: fadeOut .3s;
+    animation: fadeOut .3s;
+  }
+  @include breakpoint(desktop) {
+      max-width: 75%;
+  }
+  @include breakpoint(nodesktop) {
+      max-width: 1000px;
+      margin: 0 auto;
+  }
+}
+
+.post__meta {
+    color: #999;
+    font-size: $type-size-5;
+    margin-bottom: 2em;
+}
+
+#post__title {
+  margin: 0;
+  padding-top: 1.1em;
+  font-size: $type-size-1;
+}
+
+#post__content > ol > li {
+  margin: .5em 0;
+}
+#post__content li > p {
+  margin: 0;
+}
+#post__content img {
+  max-width: 100%;
+}
+#post__content > p {
+  text-indent: 2em;
+  margin:0;
+}
+
+
+.flash {
+  -webkit-animation: flash .6s;
+  -moz-animation: flash .6s;
+  -ms-animation: flash .6s;
+  -o-animation: flash .6s;
+  animation: flash .6s;
+}

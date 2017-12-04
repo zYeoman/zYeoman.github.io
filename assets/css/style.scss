@@ -1,0 +1,25 @@
+---
+# This is a scss script!
+---
+
+
+/*!--------------------------------*\
+   3-Ghost Theme
+   @author Peiwen Lu (P233)
+   https://github.com/P233/3-Ghost
+   @modified Yongwen Zhuang (zYeoman)
+   https://github.com/zYeoman;
+\*---------------------------------*/
+// Import variables
+@import "variables";
+@import "base";
+@import "tables";
+@import "sidebar";
+@import "page";
+@import "navigation";
+@import "footer";
+@import "fullscreen";
+@import "animations";
+@import "syntax";
+@import "utilities";
+@import "print";

@@ -1,0 +1,52 @@
+/* ==========================================================================
+   TABLES
+   ========================================================================== */
+
+/* table */
+
+table {
+  width: 100%;
+  border: 1px solid #bbb;
+  margin: 15px auto;
+  border-collapse: collapse;
+  empty-cells: show;
+
+  th, td {
+    max-width: 15em;
+    height: 35px;
+    border: 1px solid #bbb;
+    padding: 0 10px;
+  }
+
+  th {
+    font-weight: bold;
+    padding: 0.5em;
+    text-align: center !important;
+    background: rgba(158,188,226,0.3);
+  }
+
+  td:nth-child(1) {
+    white-space: nowrap;
+  }
+
+  tbody tr:nth-child(2n) {
+    background: rgba(158,188,226,0.12);
+  }
+
+  tr:hover {
+    background: #efefef;
+  }
+  tr:nth-child(2n):hover {
+    background: #efefef;
+  }
+  
+  td {
+    padding: 0.5em;
+  }
+
+  tr,
+  td,
+  th {
+    vertical-align: middle;
+  }
+}

@@ -1,0 +1,222 @@
+/* ==========================================================================
+   BASE ELEMENTS
+   ========================================================================== */
+
+* {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+html, body {
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  font: $sans-serif;
+  -webkit-font-smoothing: subpixel-antialiased;
+  -webkit-text-size-adjust: none;
+  overflow: hidden;
+}
+
+a {
+  color: $link-color;
+  text-decoration: none;
+  word-break: break-all;
+  transition: color .35s;
+  &:hover {
+    color: $link-color-hover;
+  }
+  &.active {
+    color: $link-color-hover;
+  }
+}
+
+h1, h2, h3, h4, h5, h6 {
+  /*font-weight: 400;*/
+    /*margin: 10px 0;*/
+    font-family: inherit;
+    font-weight: bold;
+    color: inherit;
+    text-rendering: optimizelegibility;
+}
+
+h1 {
+  font-size: $type-size-1;
+}
+
+h2{
+    font-size: $type-size-2;
+}
+h3 {
+    font-size: $type-size-3;
+    line-height: 1.5;
+}
+
+h4 {
+    font-size: $type-size-4;
+    line-height: 1.5;
+}
+
+strong {
+  font-weight: 600; }
+/* blockquotes */
+
+blockquote {
+  margin: 1.5em 0 1.5em 2em;
+  padding-left: .5em;
+  padding-right: .5em;
+  font-style: italic;
+  border-left: 0.25em solid $border-color;
+
+  p {
+    color: $primary-color;
+  }
+
+  cite {
+    font-style: italic;
+
+    &:before {
+      content: "\2014";
+      padding-right: 5px;
+    }
+  }
+  @include breakpoint(mobileonly) {
+    margin-left: 0;
+  }
+}
+
+kbd {
+  padding: .2em .3em .1em;
+  font-size: .75em;
+  font-family: Consolas, Monaco, 'Andale Mono', monospace;
+  background: white;
+  background: -webkit-linear-gradient(left, #f6f4f4, white, #f6f4f4);
+  background: -moz-linear-gradient(left, #f6f4f4, white, #f6f4f4);
+  background: -ms-linear-gradient(left, #f6f4f4, white, #f6f4f4);
+  background: -o-linear-gradient(left, #f6f4f4, white, #f6f4f4);
+  background: linear-gradient(left, #f6f4f4, white, #f6f4f4);
+  border-color: #fbfaf9 #f0eeed #e1dfdf;
+  border-width: .25em .3em .4em;
+  border-style: solid;
+  border-radius: .25em;
+  vertical-align: .3em; }
+
+iframe {
+  margin-top: 1.5em;
+  @include breakpoint(mobileonly) {
+    height: 260px;
+  }
+}
+
+/* code */
+
+tt, code, kbd, samp, pre {
+  font-family: $monospace;
+}
+
+
+p {
+  margin-bottom: 1.3em;
+}
+
+/* reduce orphans and widows when printing */
+
+p, pre, blockquote, ul, ol, dl, figure, table, fieldset {
+  orphans: 3;
+  widows: 3;
+}
+
+/* abbreviations */
+
+abbr[title],
+abbr[data-original-title] {
+  text-decoration: none;
+  cursor: help;
+  border-bottom: 1px dotted $text-color;
+}
+
+/*
+   Media and embeds
+   ========================================================================== */
+
+/* Figures and images */
+
+figure {
+  display: -webkit-box;
+  display: flex;
+  -webkit-box-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: start;
+          align-items: flex-start;
+  flex-wrap: wrap;
+  margin: 2em 0;
+
+  img,
+  iframe,
+  .fluid-width-video-wrapper {
+    margin-bottom: 1em;
+  }
+
+  img {
+    width: 100%;
+    border-radius: $border-radius;
+    -webkit-transition: $global-transition;
+    transition: $global-transition;
+  }
+
+  > a {
+    display: block;
+  }
+
+  &.half {
+    > a,
+    > img {
+      @include breakpoint($small) {
+        width: calc(50% - 0.5em);
+      }
+    }
+
+    figcaption {
+      width: 100%;
+    }
+  }
+
+  &.third {
+    > a,
+    > img {
+      @include breakpoint($small) {
+        width: calc(33.3333% - 0.5em);
+      }
+    }
+
+    figcaption {
+      width: 100%;
+    }
+  }
+}
+
+/* Figure captions */
+
+figcaption {
+  margin-bottom: 0.5em;
+  color: $muted-text-color;
+  font-family: $caption-font-family;
+  font-size: $type-size-6;
+
+  a {
+    -webkit-transition: $global-transition;
+    transition: $global-transition;
+
+    &:hover {
+      color: $link-color-hover;
+    }
+  }
+}
+
+
+/* Fix IE9 SVG bug */
+
+svg:not(:root) {
+  overflow: hidden;
+}
+

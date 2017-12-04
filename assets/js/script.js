@@ -21,23 +21,19 @@ var sidebar    = $('#sidebar'),
     button     = $('#js-fullscreen');
 
 // Tags switcher
-var clickHandler = function(id) {
-  return function() {
-    $(this).addClass('active').siblings().removeClass('active');
-    $('.pl__all').hide();
-    $('.' + id).delay(50).fadeIn(350);
-  }
-};
-
-$('#tags__ul li').each(function(index){
-  $('#' + $(this).attr('id')).on('click', clickHandler($(this).attr('id')));
+$('#tags-ul').on('click','li',function(event){
+  $(this).addClass('active').siblings().removeClass('active');
+  $('.pl-all').hide();
+  $('.' + $(this).attr('id')).delay(50).fadeIn(350);
 });
 
 // If sidebar has class 'mobile', hide it after clicking.
-$('.pl__all').on('click', function() {
+$('.pl-all').on('click', function() {
   $(this).addClass('active').siblings().removeClass('active');
   if (sidebar.hasClass('mobile')) {
-      $('#sidebar, #pjax, #js-fullscreen').addClass('fullscreen');
+    sidebar.addClass('fullscreen');
+    button.addClass('fullscreen');
+    content.addClass('fullscreen');
   }
 });
 
@@ -52,7 +48,6 @@ button.on('click', function() {
   } else {
     sidebar.addClass('fullscreen');
     button.addClass('fullscreen');
-    $("#markdown-toc").addClass('fullscreen');
     content.delay(200).queue(function(){
       $(this).addClass('fullscreen').dequeue();
     });
@@ -60,12 +55,37 @@ button.on('click', function() {
 });
 
 $('#mobile-avatar').on('click', function(){
-  $('#sidebar, #pjax, #icon-arrow').addClass('fullscreen');
+    sidebar.addClass('fullscreen');
+    button.addClass('fullscreen');
+    content.addClass('fullscreen');
 });
 
+//Search Box
+/**
+ * Created by zteliuyw on 15/5/28.
+ */
+$(function(){
+    //搜索框文字变化时间
+    $("#search-input").keyup(function(){
+        //$("#s-box").hide("slow");
+        var text = $("#search-input").val().toLowerCase();
+        //console.log(text);
+        if(text =="" || text==undefined){
+            $("#pl-container").find('a').show();
+        }else{
+            $("#pl-container").find('a').hide();
+            $(".pl-title").each(function(){
+                var htmlstr = $(this).html().toLowerCase();
+                if(htmlstr.indexOf(text) != -1){
+                    $(this).parent().show();
+                }
+            })
+        }
+    })
+})
 
 // Pjax
-$(document).pjax('#avatar, #mobile-avatar, .pl__all', '#pjax', { fragment: '#pjax', timeout: 10000 });
+$(document).pjax('#avatar, #mobile-avatar, .pl-all', '#pjax', { fragment: '#pjax', timeout: 10000 });
 $(document).on({
   'pjax:click': function() {
     content.removeClass('fadeIn').addClass('fadeOut');
@@ -86,24 +106,20 @@ function afterPjax() {
   $('#post__content a').attr('target','_blank');
   $('a[href^="#"]').attr('target','');
 
-    $.getScript("//dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js");
-    valine.init({
-        el: '#comment' ,
-        notify:false,
-        verify:false,
-        appId: '{{site.leancloud.app_id}}',
-        appKey: '{{site.leancloud.app_key}}',
-        placeholder: 'LONG MAY THE SUN SHINE!',
-        path:window.location.pathname,
-        avatar:'retro'
-    });
+  $.getScript("//dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js");
+  valine.init({
+      el: '#comment' ,
+      notify:false,
+      verify:false,
+      appId: '{{site.leancloud.app_id}}',
+      appKey: '{{site.leancloud.app_key}}',
+      placeholder: 'LONG MAY THE SUN SHINE!',
+      path:window.location.pathname,
+      avatar:'retro'
+  });
 
-  $("#post__content > p").each(function(){
-    html = $(this).html();
-    $(this).html(html.split("<br>").join("</p><p>"))
-  })
   // Smooth scrolling
-  $('#markdown-toc a').on('click', function() {
+  $('#markdown-toc').on('click', 'a', function() {
     var target = $(this.hash);
     container.animate({scrollTop: target.offset().top + container.scrollTop() - 70}, 500, function() {
       target.addClass('flash').delay(700).queue(function() {
@@ -118,7 +134,7 @@ function afterPjax() {
           if($(window).scrollTop() + $(window).height()/3 >= $(this).offset().top) {
               var id = $(this).attr('id');
               $('a').parent().removeClass('active');
-              $('a[href="#'+ id +'"]').parent().addClass('active');
+              $('a[href="#'+ id +'"]').parent().addClass('active').parent().parent().addClass('active');
           }
       });
   });

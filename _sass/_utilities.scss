@@ -1,0 +1,168 @@
+/* ==========================================================================
+   UTILITY CLASSES
+   ========================================================================== */
+
+/*
+   Visibility
+   ========================================================================== */
+
+/* http://www.456bereastreet.com/archive/200711/screen_readers_sometimes_ignore_displaynone/ */
+
+.hidden {
+  display: none;
+  visibility: hidden;
+}
+
+/* for preloading images */
+
+.load {
+  display: none;
+}
+
+.transparent {
+  opacity: 0;
+}
+
+/*
+   Type
+   ========================================================================== */
+
+.text-left {
+  text-align: left;
+}
+
+.text-center {
+  text-align: center;
+}
+
+.text-right {
+  text-align: right;
+}
+
+.text-justify {
+  text-align: justify;
+}
+
+.text-nowrap {
+  white-space: nowrap;
+}
+
+
+/*
+   Alignment
+   ========================================================================== */
+
+/* clearfix */
+
+.cf { clear: both; }
+
+.wrapper {
+  margin-left: auto;
+  margin-right: auto;
+  width: 100%;
+}
+
+
+/*
+   Images
+   ========================================================================== */
+
+/* image align left */
+
+.align-left {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+
+  @include breakpoint(desktop) {
+    float: left;
+    margin-right: 1em;
+  }
+}
+
+/* image align right */
+
+.align-right {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+
+  @include breakpoint(desktop) {
+    float: right;
+    margin-left: 1em;
+  }
+}
+
+/* image align center */
+
+.align-center {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* file page content container */
+
+.full {
+  @include breakpoint($large) {
+    // margin-right: -1 * span(2.5 of 12) !important;
+  }
+}
+
+/*
+   Footnotes
+   ========================================================================== */
+
+.footnote {
+  color: mix(#fff, $gray, 25%);
+  text-decoration: none;
+}
+
+.footnotes {
+  color: mix(#fff, $gray, 25%);
+
+  ol, li, p {
+    margin-bottom: 0;
+    font-size: $type-size-6;
+  }
+}
+
+a.reversefootnote {
+  color: $gray;
+  text-decoration: none;
+
+  &:hover {
+    text-decoration: underline;
+  }
+}
+
+/*
+   Responsive Video Embed
+   ========================================================================== */
+
+.responsive-video-container {
+  position: relative;
+  margin-bottom: 1em;
+  padding-bottom: 56.25%;
+  height: 0;
+  overflow: hidden;
+  max-width: 100%;
+
+  iframe,
+  object,
+  embed {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+  }
+}
+
+// full screen video fixes
+:-webkit-full-screen-ancestor {
+   .masthead,
+   .page__footer {
+    position: static;
+  }
+}
