@@ -12,7 +12,7 @@ math: true
 - TOC
 {:toc}
 
-## 使用了 [Jekyll Light](https://github.com/pexcn/Jekyll-Light) 主题。
+## 使用了 Jekyll Light 主题。
 
 * 测试列表 1[^1]
 * 测试列表 2
