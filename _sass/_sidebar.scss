@@ -69,6 +69,7 @@ nav.tags {
   background-size: 100px 100px;
   overflow: hidden;
   display: block;
+  transition: all 0.5s;
   &:hover {
     box-shadow: 0 0 10px 4px #000;
   }
