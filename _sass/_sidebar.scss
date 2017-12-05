@@ -301,13 +301,22 @@ li.tags {
   width: .75em;
   height: .75em;
   margin-right: 5px;
+  margin-top: 5px;
+  float: left;
   background: #9aa4af;
   border: 2px solid #9aa4af;
   border-radius: 50%;
   display: inline-block;
-  transition: border-color .35s; }
+  transition: border-color .35s;
+}
+
+.pl-title {
+  max-width: calc(100% - 6em);
+  display: inline-block;
+}
 
 .pl-date {
   color: #9aa4af;
   font-size: 14px;
-  float: right; }
+  float: right;
+}
