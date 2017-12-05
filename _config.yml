@@ -34,7 +34,7 @@ avatar: /head.jpg
 
 timezone: Asia/Shanghai
 
-gems:
+plugins:
       - jemoji
       - jekyll-gist
 
