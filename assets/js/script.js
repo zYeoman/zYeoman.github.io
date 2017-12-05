@@ -8,56 +8,56 @@ layout: null
    https://github.com/P233/3-Jekyll
 \*---------------------------------*/
 
-// Detect window size, if less than 1280px add class 'mobile' to sidebar therefore it will be auto hide when trigger the pjax request in small screen devices.
+// Detect window size, if less than 1280px add class "mobile" to sidebar therefore it will be auto hide when trigger the pjax request in small screen devices.
 if ($(window).width() <= 1280) {
-  $('#sidebar').addClass('mobile')
+  $("#sidebar").addClass("mobile");
 }
 var valine = new Valine();
 
 // Variables
-var sidebar    = $('#sidebar'),
-    container  = $('#post'),
-    content    = $('#pjax'),
-    button     = $('#js-fullscreen');
+var sidebar    = $("#sidebar"),
+    container  = $("#post"),
+    content    = $("#pjax"),
+    button     = $("#js-fullscreen");
 
 // Tags switcher
-$('#tags-ul').on('click','li',function(event){
-  $(this).addClass('active').siblings().removeClass('active');
-  $('.pl-all').hide();
-  $('.' + $(this).attr('id')).delay(50).fadeIn(350);
+$("#tags-ul").on("click","li",function(event){
+  $(this).addClass("active").siblings().removeClass("active");
+  $(".pl-all").hide();
+  $("." + $(this).attr("id")).delay(50).fadeIn(350);
 });
 
-// If sidebar has class 'mobile', hide it after clicking.
-$('.pl-all').on('click', function() {
-  $(this).addClass('active').siblings().removeClass('active');
-  if (sidebar.hasClass('mobile')) {
-    sidebar.addClass('fullscreen');
-    button.addClass('fullscreen');
-    content.addClass('fullscreen');
+// If sidebar has class "mobile", hide it after clicking.
+$(".pl-all").on("click", function() {
+  $(this).addClass("active").siblings().removeClass("active");
+  if (sidebar.hasClass("mobile")) {
+    sidebar.addClass("fullscreen");
+    button.addClass("fullscreen");
+    content.addClass("fullscreen");
   }
 });
 
 // Enable fullscreen.
-button.on('click', function() {
-  if (button.hasClass('fullscreen')) {
-    sidebar.removeClass('fullscreen');
-    button.removeClass('fullscreen');
+button.on("click", function() {
+  if (button.hasClass("fullscreen")) {
+    sidebar.removeClass("fullscreen");
+    button.removeClass("fullscreen");
     content.delay(300).queue(function(){
-      $(this).removeClass('fullscreen').dequeue();
+      $(this).removeClass("fullscreen").dequeue();
     });
   } else {
-    sidebar.addClass('fullscreen');
-    button.addClass('fullscreen');
+    sidebar.addClass("fullscreen");
+    button.addClass("fullscreen");
     content.delay(200).queue(function(){
-      $(this).addClass('fullscreen').dequeue();
+      $(this).addClass("fullscreen").dequeue();
     });
   }
 });
 
-$('#mobile-avatar').on('click', function(){
-    sidebar.addClass('fullscreen');
-    button.addClass('fullscreen');
-    content.addClass('fullscreen');
+$("#mobile-avatar").on("click", function(){
+    sidebar.addClass("fullscreen");
+    button.addClass("fullscreen");
+    content.addClass("fullscreen");
 });
 
 //Search Box
@@ -71,31 +71,31 @@ $(function(){
         var text = $("#search-input").val().toLowerCase();
         //console.log(text);
         if(text =="" || text==undefined){
-            $("#pl-container").find('a').show();
+            $("#pl-container").find("a").show();
         }else{
-            $("#pl-container").find('a').hide();
+            $("#pl-container").find("a").hide();
             $(".pl-title").each(function(){
                 var htmlstr = $(this).html().toLowerCase();
                 if(htmlstr.indexOf(text) != -1){
                     $(this).parent().show();
                 }
-            })
+            });
         }
-    })
-})
+    });
+});
 
 // Pjax
-$(document).pjax('#avatar, #mobile-avatar, .pl-all', '#pjax', { fragment: '#pjax', timeout: 10000 });
+$(document).pjax("#avatar, #mobile-avatar, .pl-all", "#pjax", { fragment: "#pjax", timeout: 10000 });
 $(document).on({
-  'pjax:click': function() {
-    content.removeClass('fadeIn').addClass('fadeOut');
+  "pjax:click": function() {
+    content.removeClass("fadeIn").addClass("fadeOut");
   },
-  'pjax:start': function() {
-    content.css({'opacity':0});
+  "pjax:start": function() {
+    content.css({"opacity":0});
   },
-  'pjax:end': function() {
+  "pjax:end": function() {
     container.scrollTop(0);
-    content.css({'opacity':1}).removeClass('fadeOut').addClass('fadeIn');
+    content.css({"opacity":1}).removeClass("fadeOut").addClass("fadeIn");
     afterPjax();
   }
 });
@@ -103,27 +103,27 @@ $(document).on({
 // Re-run scripts for post content after pjax
 function afterPjax() {
   // Open links in new tab
-  $('#post__content a').attr('target','_blank');
-  $('a[href^="#"]').attr('target','');
+  $("#post__content a").attr("target","_blank");
+  $("a[href^='#']").attr("target","");
 
   $.getScript("//dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js");
   valine.init({
-      el: '#comment' ,
+      el: "#comment" ,
       notify:false,
       verify:false,
-      appId: '{{site.leancloud.app_id}}',
-      appKey: '{{site.leancloud.app_key}}',
-      placeholder: 'LONG MAY THE SUN SHINE!',
+      appId: "{{site.leancloud.app_id}}",
+      appKey: "{{site.leancloud.app_key}}",
+      placeholder: "LONG MAY THE SUN SHINE!",
       path:window.location.pathname,
-      avatar:'retro'
+      avatar:"retro"
   });
 
   // Smooth scrolling
-  $('#markdown-toc').on('click', 'a', function() {
+  $("#markdown-toc").on("click", "a", function() {
     var target = $(this.hash);
     container.animate({scrollTop: target.offset().top + container.scrollTop() - 70}, 500, function() {
-      target.addClass('flash').delay(700).queue(function() {
-        $(this).removeClass('flash').dequeue();
+      target.addClass("flash").delay(700).queue(function() {
+        $(this).removeClass("flash").dequeue();
       });
     });
   });
@@ -132,9 +132,9 @@ function afterPjax() {
   $("#post").scroll(function() {
           $(":header").each(function() {
           if($(window).scrollTop() + $(window).height()/3 >= $(this).offset().top) {
-              var id = $(this).attr('id');
-              $('a').parent().removeClass('active');
-              $('a[href="#'+ id +'"]').parent().addClass('active').parent().parent().addClass('active');
+              var id = $(this).attr("id");
+              $("a").parent().removeClass("active");
+              $("a[href='#"+id+"']").parent().addClass("active").parent().parent().addClass("active");
           }
       });
   });
