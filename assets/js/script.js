@@ -103,7 +103,7 @@ $(document).on({
 // Re-run scripts for post content after pjax
 function afterPjax() {
   // Open links in new tab
-  $("#post__content").find("a").not("#markdown-toc a").attr({"rel":"noopener", "target":"_blank"});
+  $("#post__content").find("a").not("#markdown-toc a").not("[href^='#']").attr({"rel":"noopener", "target":"_blank"});
 
   $.getScript("//dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js");
 
