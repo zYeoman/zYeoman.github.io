@@ -39,6 +39,17 @@ Notice信息
 Notice警告
 {: .notice--warning}
 
+![头像](https://i.loli.net/2017/12/05/5a265e00ae562.jpg '头像')
+{: .align-right}
+
+以及图片，和图片靠右摆放的语法。
+
+:sparkles: jemoji 支持
+
+@zYeoman : jekyll-mentions 测试
+
+
+
 ## 第二行标题
 
 公式 $$\lambda a_1$$

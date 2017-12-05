@@ -23,20 +23,21 @@ leancloud:
   app_id: xYnmPhrQu3YUQ28Ywk2qEfIp-gzGzoHsz
   app_key: ijsCplpAyUiEzXD36KkOFwHU
 
-locals:                                     #自定义常量
-  tags: 标签
-  about: 关于
-active: 技术                                 #自定义常量
-
 exclude: [LICENSE, CNAME, README.md, .gitignore, Rakefile.rb]
 
 avatar: /head.jpg
 
 timezone: Asia/Shanghai
+og:
+  locale: zh_CN
 
 plugins:
-      - jemoji
-      - jekyll-gist
+    - jemoji
+    - jekyll-seo-tag
+    - jekyll-gist
+    - jekyll-mentions
+    - jekyll-relative-links
+    - jekyll-sitemap
 
 markdown: kramdown
 kramdown:

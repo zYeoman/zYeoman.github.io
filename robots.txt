@@ -1,3 +1,3 @@
 User-Agent: *
 
-Sitemap: https://mickir.me/sitemap.txt
+Sitemap: https://mickir.me/sitemap.xml
