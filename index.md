@@ -17,4 +17,4 @@ id: mickir-index
 
 如果有问题可以直接评论，或是给我发邮件。除此之外可以通过 RSS 订阅 blog 的更新，点击下面两个图标即可。如果觉得写的不错，就给我点个赞或是 [github 上 follow](https://github.com/zYeoman/)。谢谢大家的支持。
 
-<script type="text/javascript" id="clustrmaps" src="//cdn.clustrmaps.com/map_v2.js?d=4Cpy3qR7-NKoHkVTSjIP54YfevQ6BS1dRrQlUz3lIUE&cl=ffffff&w=a"></script>
+<script async type="text/javascript" id="clustrmaps" src="//cdn.clustrmaps.com/map_v2.js?d=4Cpy3qR7-NKoHkVTSjIP54YfevQ6BS1dRrQlUz3lIUE&cl=ffffff&w=a"></script>
