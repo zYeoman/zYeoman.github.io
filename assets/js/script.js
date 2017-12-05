@@ -106,16 +106,6 @@ function afterPjax() {
   $("#post__content").find("a").not("#markdown-toc a").attr({"rel":"noopener", "target":"_blank"});
 
   $.getScript("//dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js");
-  valine.init({
-      el: "#comment" ,
-      notify:false,
-      verify:false,
-      appId: "{{site.leancloud.app_id}}",
-      appKey: "{{site.leancloud.app_key}}",
-      placeholder: "LONG MAY THE SUN SHINE!",
-      path:window.location.pathname,
-      avatar:"retro"
-  });
 
   // Smooth scrolling
   $("#markdown-toc").on("click", "a", function() {
@@ -141,5 +131,15 @@ function afterPjax() {
 
   MathJax.Hub.Queue(["Typeset",MathJax.Hub]);
 
+  valine.init({
+      el: "#comment" ,
+      notify:false,
+      verify:false,
+      appId: "{{site.leancloud.app_id}}",
+      appKey: "{{site.leancloud.app_key}}",
+      placeholder: "LONG MAY THE SUN SHINE!",
+      path:window.location.pathname,
+      avatar:"retro"
+  });
 }afterPjax();
 
