@@ -1,6 +1,6 @@
 <aside id="sidebar" class="sidebar">
   <nav class="tags">
-    <a href="/index.html" id="avatar" class="avatar" style="background-image:url({{ site.avatar }})"></a>
+    <a href="/index.html" id="avatar" class="avatar" aria-hidden="true" style="background-image:url({{ site.avatar }})"></a>
 
     <ul id="tags-ul" class="tags">
       <li id="pl-all" class="tags tags-btn active">所有文章</li>
@@ -10,15 +10,15 @@
     </ul>
 
     <div class="tags-bottom">
-      <a href="{{ site.author.github }}" class="tags-btn fontello" target="_blank"><i class="fa fa-github-alt" aria-hidden="true"></i></a>
+      <a href="{{ site.author.github }}" class="tags-btn fontello" target="_blank"  rel="noopener"><i class="fa fa-github-alt" aria-hidden="true"></i></a>
       <a href="/pages/rss.xml" class="tags-btn fontello" target="_blank"><i class="fa fa-rss" aria-hidden="true"></i></a>
       <a href="mailto:{{ site.author.email }}" class="tags-btn fontello"><i class="fa fa-envelope-o" aria-hidden="true"></i></a>
     </div>
   </nav> <!-- end .tags -->
 
   <div id="posts-list">
-    <form action="" id="search-form">
-      <a href="/index.html" id="mobile-avatar" style="background-image:url({{ site.avatar }})"></a>
+    <form action="" id="search-form" aria-label="search">
+      <a href="/index.html" id="mobile-avatar" aria-hidden="true" style="background-image:url({{ site.avatar }}) "></a>
       <!-- NOTE: input field is disabled by default -->
       <input id="search-input" type="text" placeholder="Search..." >
     </form>
