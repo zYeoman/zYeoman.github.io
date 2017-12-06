@@ -28,13 +28,10 @@ exclude: [LICENSE, CNAME, README.md, .gitignore, Rakefile.rb]
 avatar: /head.jpg
 
 timezone: Asia/Shanghai
-og:
-  locale: zh_CN
 
 plugins:
     - jemoji
     - jekyll-seo-tag
-    - jekyll-gist
     - jekyll-relative-links
     - jekyll-sitemap
 
