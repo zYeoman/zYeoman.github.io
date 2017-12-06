@@ -35,7 +35,6 @@ plugins:
     - jemoji
     - jekyll-seo-tag
     - jekyll-gist
-    - jekyll-mentions
     - jekyll-relative-links
     - jekyll-sitemap
 
