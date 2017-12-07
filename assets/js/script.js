@@ -117,6 +117,11 @@ function afterPjax() {
     });
   });
 
+  $("#markdown-toc").find("a").each(function() {
+      href = $(this).attr('href');
+      $(this).attr('href', decodeURIComponent(href));
+  });
+
   // Scrolling highlight
   $("#post").scroll(function() {
           $(":header").each(function() {
