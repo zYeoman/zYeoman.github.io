@@ -31,6 +31,7 @@ timezone: Asia/Shanghai
 
 plugins:
     - jemoji
+    - jekyll-mentions
     - jekyll-seo-tag
     - jekyll-relative-links
     - jekyll-sitemap
