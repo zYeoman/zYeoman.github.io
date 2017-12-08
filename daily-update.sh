@@ -11,6 +11,7 @@
 
 # Push to zYeoman.github.io
 cd "$(dirname "$(readlink -f "$0")")" || exit
+git pull
 git add .
 git commit -m ":pencil: daily update at $(date -Idate)"
 proxychains git push
