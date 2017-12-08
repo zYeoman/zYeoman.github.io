@@ -1,7 +1,7 @@
 ---
 category: 工具
 create: '2017-12-08 22:58:00'
-date: '2017-12-08'
+date: '2017-12-08T17:02:27.096Z'
 layout: post
 published: false
 tags:
@@ -86,4 +86,20 @@ title: 'Jekyll Editor Hack记录'
 在`new`函数里添加我需要的`create`字段，在`dump`函数里存储时重新生成`date`（修改时间）字段。
 
 ## 主题修改
-现在的主题还算不错其实，
+现在的主题还算不错其实。剩下的主要是工具栏添加了一个切换两栏模式的按钮(参见[Editor.md](https://pandao.github.io/editor.md/))，其次是添加了单栏模式的一些CSS。
+
+```css
+<style type="text/css">
+.CodeMirror-scroll {
+    padding-bottom: 40em;
+    margin: auto;
+    max-width: 1000px;
+}
+.CodeMirror-scroll::-webkit-scrollbar {
+    display: none;
+}
+
+.CodeMirror-gutters {
+    background-color: unset;
+}
+</style>
