@@ -45,7 +45,7 @@ def add(argv):
     now = datetime.datetime.now()
     date = now.strftime('%Y-%m-%d')
 
-    filename = date + '-{}.md'.format('-'.join(argv))
+    filename = '_posts' + os.path.sep + date + '-{}.md'.format('-'.join(argv))
 
     for num, category in enumerate(categories):
         print('{}: {}'.format(num, category))
@@ -65,12 +65,12 @@ def add(argv):
                                                        title,
                                                        categories[index]))
 
-    os.system('vim ' + filename)
+    os.system('vim "' + filename + '"')
 
 
 def determ_file(patterns, case=re.I):
     '''Determine which file to edit'''
-    files = glob.glob('*.md')
+    files = glob.glob('_posts' + os.path.sep + '*.md')
     pattern = '.*'.join(patterns)
 
     edit_files = list(filter(lambda x: re.findall(pattern, x, case), files))
@@ -85,9 +85,9 @@ def determ_file(patterns, case=re.I):
             index = int(index)
         else:
             index = 0
-        return edit_files[index]
+        return '"' + edit_files[index] + '"'
     elif len(edit_files) == 1:
-        return edit_files[index]
+        return '"' + edit_files[index] + '"'
     else:
         return None
 
@@ -96,8 +96,8 @@ def touch(file_name):
     """Change file edit date to now"""
     now = datetime.datetime.now()
     date = now.strftime('%Y-%m-%d')
-    sed_msg = "sed -b -i '5s/[0-9]*-[0-9]*-[0-9]*/{}/' "
-    os.system(sed_msg.format(date) + file_name)
+    sed_msg = "sed -b -i 's/^date:.*[0-9]*-[0-9]*-[0-9]*.*/date: %s/' "
+    os.system(sed_msg % date + file_name)
 
 
 def main(argv):
