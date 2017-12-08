@@ -5,6 +5,7 @@ tags:
   - Jekyll
   - 编辑器
 date: '2017-12-08T17:02:36.690Z'
+create: '2017-12-08T10:02:36.690Z'
 category: 工具
 ---
 找到一个很好用的Jekyll Blog编辑工具，[Jekyll Editor](https://chrome.google.com/webstore/detail/jekyll-editor/dfdkgbhjmllemfblfoohhehdigokocme)。虽然好用，但是有几点不喜欢的地方，因此试图去Hack一下修改掉不喜欢的部分。:smile:
