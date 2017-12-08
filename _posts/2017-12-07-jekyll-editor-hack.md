@@ -1,6 +1,6 @@
 ---
 create: '2017-12-08 22:58:00'
-date: '2017-12-08'
+date: 2017-12-08
 layout: post
 published: false
 tags:
