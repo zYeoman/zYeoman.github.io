@@ -103,7 +103,8 @@ $(document).on({
 // Re-run scripts for post content after pjax
 function afterPjax() {
   // Open links in new tab
-  $("#post__content").find("a").not("#markdown-toc a").not("[href^='#']").attr({"rel":"noopener", "target":"_blank"});
+  $("#post__content").find("a").not("#markdown-toc a").not("[href^='#']").not("[href^='/']").attr({"rel":"noopener", "target":"_blank"});
+  $(document).pjax("[href^='/']", "#pjax", { fragment: "#pjax", timeout: 10000 });
 
   $.getScript("//dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js");
 
