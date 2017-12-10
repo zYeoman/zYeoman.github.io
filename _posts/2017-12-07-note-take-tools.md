@@ -1,7 +1,7 @@
 ---
 category: 工具
 create: '2017-12-07 13:34:17'
-date: '2017-12-10T06:03:48.294Z'
+date: '2017-12-10T06:38:30.645Z'
 layout: post
 tags:
   - 工具
@@ -18,7 +18,6 @@ title: 记笔记工具试用
 {: toc}
 
 ## Evernote类
-
 所谓Evernote类即很像evernote的一类记笔记工具，包括Evernote、OneNote、为知笔记、有道云笔记、LeanNote等等。这一类工具的特点都是大而全，基本包括了所有你需要的记笔记的需求。一大缺点就是无法定制，一些让人不爽快的地方也只能任由他让人不爽了。
 
 我不用这一类的工具的一个原因是：收集资料太方便了。对，因为随便剪辑个网页是如此的方便，所以，就像Steam库存里那一堆吃灰的游戏一样，这些剪贴下来的网页也将会永久性地躺在笔记集里吃灰。:joy:
@@ -34,11 +33,12 @@ title: 记笔记工具试用
 * RedNoteBook：Linux风格的工具，所以丑啊。
 
 ## Markdown类
-
 所谓Markdown类，其实就是支持或者仅仅支持Markdown的一类笔记记录工具的集合。
 
 当然，有很多这样的工具实质上仅仅是Markdown编辑器而已，至于其他的可能需要Jekyll或者别的工具来展示。
 
+* Jekyll-Editor：自动读取`<username>.github.io`repo里的`_posts`文件夹进行编辑的Chrome应用。如果没有1、读取不出之前创建的文件；2、新建文件的YAML无法自定义；这两个问题的话现在应该就是主力工具了。经过一定的[魔改](/blog/jekyll-editor-hack.html)以后解决了这两个问题。
+* Typora：目前正在用的。所见即所得的Markdown编辑器（独一家），而且支持主题定制！只需要修改CSS就行了，真是可喜可贺可喜可贺。
 * Sublime Text：编辑器，用来写Markdown但是没有一个很方便的实时预览是很难受的。
 * VScode & Atom：编辑器，用nodejs写的那种，有预览，但是个人对nodejs写的东西有洁癖。
 * vim：编辑器！某些情况很好用，但是很多情况不是很方便，例如插图什么的。
@@ -46,22 +46,19 @@ title: 记笔记工具试用
 * SimpleNote：整体很好看，但是因为不能换主题和字体而抛弃了它。[#274](https://github.com/Automattic/simplenote-electron/issues/274) Github上的讨论。（中文宋体太丑了）
 * Turtl：据说是加密版EverNote，但是我的Win10上显示错误。
 * Yu Writer：一个专门的Markdown编辑工具，但是设计上有点奇怪。同样不支持主题定制，同样中文字体不是我想要的。不过可以通过Hack方法修改一下主题。
-* Typora：目前正在用的。所见即所得的Markdown编辑器（独一家），而且支持主题定制！只需要修改CSS就行了，真是可喜可贺可喜可贺。、
 * 马克飞象：用于印象笔记的Markdown Chrome应用，曾经的主力，用来导出PDF写报告用的。现在看依然非常不错。
-* Jekyll-Editor：自动读取`<username>.github.io`repo里的`_posts`文件夹进行编辑的Chrome应用。如果没有1、读取不出之前创建的文件；2、新建文件的YAML无法自定义；这两个问题的话现在应该就是主力工具了。
-* http://prose.io/：嗯，和Jekyll-Editor差不多，不过不是本地工具；也没有分栏预览。
+* [prose.io](http://prose.io/)：嗯，和Jekyll-Editor差不多，不过不是本地工具；也没有分栏预览。
 * CMD Markdown：之前用过很长时间，挺好用的。但是文件之间的关系不清晰，和Jekyll存在`_post`里的markdown文件没什么区别。又不能处理本地文件，只好放弃了。
 * BoostNote：说是适合程序员的Note工具，但是可惜的是不能编辑本地文件，或者说只能编辑他文件库里的东西。
+* 小书匠：功能貌似很多，但是其实和上面的差不多。
+* [Madoko](https://www.madoko.net/editor.html)：Microsoft Research出品，能直接导出类似论文排版的PDF，但是对中文支持需要一定的修改。
 
 ## Wiki类
-
 * Cherrytree：丑！（Linux软件的特色）
 * Zim：Python写的全平台wiki工具。丑。自己的一套语法。
 * WikidPad：维基方式记笔记的工具。比较丑。
 
-
 ## Google Keep类
-
 GoogleKeep类即一堆类似Google Keep的仅仅只能做小笔记整理的工具。
 
 * Google Keep：偶尔用一下
@@ -71,4 +68,4 @@ GoogleKeep类即一堆类似Google Keep的仅仅只能做小笔记整理的工�
 
 ## 总结
 
-目前用的是Typora作为主要编辑器，vim用作修修补补，自己写了一个脚本新建Blog，Onenote负责剪辑网页内容等（突发奇想貌似可以用ditto之类的工具来剪辑网页内容）。如果Jekyll-Editor可以修复那两个问题的话可能就是用它作为主力了。
+目前用的是Typora作为主要编辑器，vim用作修修补补，使用[魔改](/blog/jekyll-editor-hack.html)后的Jekyll Editor修改Blog，Onenote负责剪辑网页内容等（突发奇想貌似可以用ditto之类的工具来剪辑网页内容）。
