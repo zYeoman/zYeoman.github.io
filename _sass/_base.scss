@@ -31,6 +31,15 @@ a {
   }
 }
 
+img {
+  max-width: 100%;
+  display: block;
+  margin: auto;
+  &.emoji {
+    display: unset;
+  }
+}
+
 h1, h2, h3, h4, h5, h6 {
   /*font-weight: 400;*/
     /*margin: 10px 0;*/
@@ -84,22 +93,6 @@ blockquote {
     margin-left: 0;
   }
 }
-
-kbd {
-  padding: .2em .3em .1em;
-  font-size: .75em;
-  font-family: Consolas, Monaco, 'Andale Mono', monospace;
-  background: white;
-  background: -webkit-linear-gradient(left, #f6f4f4, white, #f6f4f4);
-  background: -moz-linear-gradient(left, #f6f4f4, white, #f6f4f4);
-  background: -ms-linear-gradient(left, #f6f4f4, white, #f6f4f4);
-  background: -o-linear-gradient(left, #f6f4f4, white, #f6f4f4);
-  background: linear-gradient(left, #f6f4f4, white, #f6f4f4);
-  border-color: #fbfaf9 #f0eeed #e1dfdf;
-  border-width: .25em .3em .4em;
-  border-style: solid;
-  border-radius: .25em;
-  vertical-align: .3em; }
 
 iframe {
   margin-top: 1.5em;
