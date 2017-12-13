@@ -5,14 +5,14 @@ category: 知识库
 tags:
   - 学习
   - Matlab
-date: 2017-12-12 21:20
+date: 2017-12-13 17:33:41
 create: 2017-12-12 16:08:44
 ref: https://www.mathworks.com/videos/introduction-to-simulink-82514.html
 ---
 
-
-
 Matlab 仿真工具Simulink是一个非常好用的仿真工具箱。
+
+![信号处理](https://i.loli.net/2017/12/13/5a30f30a222ba.gif)
 
 ## Simulink是什么
 
