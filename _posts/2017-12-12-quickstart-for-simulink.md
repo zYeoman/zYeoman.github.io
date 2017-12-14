@@ -1,9 +1,8 @@
 ---
 layout: post
 title: Simulink快速入门
-category: 知识库
+category: 学习
 tags:
-  - 学习
   - Matlab
 date: 2017-12-13 17:33:41
 create: 2017-12-12 16:08:44
