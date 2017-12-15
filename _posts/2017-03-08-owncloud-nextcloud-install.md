@@ -2,7 +2,7 @@
 layout: post
 title: nextcloud 安装
 category: 知识库
-date: 2017-09-16
+date: 2017-12-15 23:30:56 +0800
 create: 2017-03-08
 ---
 
@@ -122,4 +122,20 @@ my-nextcloud-site.com {
 注意运行此 Caddy 的用户需要是 http:http，修改`/etc/php/php-fpm.d/www.conf`里的`listen.owner` `listen.group`和`listen.mode`，否则打开上述网页的时候会出现`502 bad gateway`的错误。
 
 ### 安装
+
 打开 Caddyfile 里设置的网址，填写设置即可。
+
+### SSL手动配置
+
+貌似校园网把80端口给屏蔽了还是怎么了，总之Caddy自动更新证书的功能失效了，只能手动使用`certbot`更新了。
+
+```sh
+# 安装certbot
+sudo pip install certbot
+# 使用DNS方式添加
+certbot -d your.domain.com --manual --preferred-challenges dns certonly
+# 这种方式会要求你添加一个TXT类型的DNS record，等待生效后就行了
+# 证书位置在/etc/letsencrypt/live/your.domain.com/fullchain.pem和privekey.pem
+```
+
+获得证书后，稍微修改一下`Caddyfile`即可。在域名那里置顶端口`:443`，大括号里面添加`tls /etc/letsencrypt/live/your.domain.com/fullchain.pem /etc/letsencrypt/live/your.domain.com/privkey.pem`。
