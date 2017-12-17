@@ -11,6 +11,7 @@ favicon: "/favicon.ico"
 
 # Build settings
 permalink: /blog/:title.html   #博文的固定链接
+paginate: 10
 author:                                     #自定义常量
   name: Mickir
   email: zhuangyw.thu@gmail.com
@@ -30,6 +31,7 @@ avatar: /head.jpg
 timezone: Asia/Shanghai
 
 plugins:
+    - jekyll-paginate
     - jemoji
     - jekyll-mentions
     - jekyll-seo-tag

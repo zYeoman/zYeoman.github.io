@@ -1,0 +1,15 @@
+---
+layout: base
+---
+
+<article>
+<h1>Tags</h1>
+
+{% for tag in site.tags %}
+<h2 id="{{ tag[0] }}">{{ tag[0] }}</h2>
+{% assign posts = tag | last %}
+    {% for post in posts %}
+        <li><a href="{{ post.url }}">{{ post.title }}</a></li>
+    {% endfor %}
+{% endfor %}
+</article>

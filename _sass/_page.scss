@@ -4,7 +4,7 @@
 \*---------------------------------*/
 #post {
   height: 100%;
-  background: white;
+  background: rgba(250, 250, 250, 0.95);
   overflow-x: hidden;
   overflow-y: auto;
   font-family: $post-font;
@@ -44,7 +44,6 @@
 .post__meta {
     color: #999;
     font-size: $type-size-5;
-    margin-bottom: 2em;
 }
 
 #post__title {

@@ -1,0 +1,103 @@
+.post {
+  width: 100%;
+  max-width: 100%;
+  margin-top: 1.5em;
+  background: white;
+  border-left: 5px solid darkgray;
+  display: flex;
+  flex-direction: row;
+  align-items: stretch;
+  min-height: 11rem;
+  border-radius: 10px;
+  overflow: hidden;
+  transition: all .3s ease;
+  box-shadow: 0 1px 1px 0 rgba(31, 35, 46, .15);
+  &:hover {
+    transform: translate(0px, -2px);
+    box-shadow: 0 15px 45px -10px rgba(10, 16, 34, .2);
+  }
+
+  .post-content {
+    padding: 1rem;
+    width: 100%;
+    .post-date {
+      font-size: 12px;
+      color: #999;
+    }
+    .post-title {
+      margin: 0 0 10px;
+      font-size: 30px;
+      font-weight: 400;
+      a {
+        font-family: 'PT Serif', serif;
+        text-decoration: none;
+        color: $info-color;
+      }
+    }
+    p {
+      margin-top: 0;
+    }
+  }
+}
+
+.pagination {
+  display: inline-block;
+  margin: 20px 0;
+  a {
+    color: black;
+    float: left;
+    padding: 8px 16px;
+    border: 1px solid lightgray;
+    text-decoration: none;
+    &.active {
+      background: lightgreen;
+    }
+    &:hover {
+      background: lightblue;
+    }
+  }
+}
+
+#page-nav {
+  text-align: center;
+}
+.post-tags {
+    color: #fff;
+    font-size: 13px;
+    font-weight: 600;
+    display: inline-block;
+    margin: 4px 8px 0 0;
+    padding: 0 15px;
+    -webkit-transition-duration: .4s;
+    transition-duration: .4s;
+    letter-spacing: 0;
+    &::before {
+      content: "# ";
+    }
+    &:nth-child(1n) {
+      border: 1px solid DodgerBlue;
+      border-radius: 15px;
+      background: DodgerBlue;
+    }
+    &:nth-child(2n) {
+      border: 1px solid Orange;
+      border-radius: 15px;
+      background: Orange;
+    }
+    &:nth-child(3n) {
+      border: 1px solid LimeGreen;
+      border-radius: 15px;
+      background: LimeGreen;
+    }
+    &:nth-child(4n) {
+      border: 1px solid Tomato;
+      border-radius: 15px;
+      background: Tomato;
+    }
+    &:hover {
+      color: $darker-gray;
+      border: 1px solid gray;
+      outline-style: none;
+      background: gray;
+    }
+}

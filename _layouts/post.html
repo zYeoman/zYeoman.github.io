@@ -7,7 +7,7 @@ layout: base
      <div class="post__meta">
         <span class="post__date">
             <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
+                <i class="fa fa-calendar-o" aria-hidden="true"></i>
             </span>
             <span>发表于</span>
             <time datetime="{{page.create}}">{{ page.create| date: "%Y-%m-%d" }}</time>
@@ -15,7 +15,7 @@ layout: base
         <span class="post__date">
              |
             <span class="post-meta-item-icon">
-                <i class="fa fa-pencil"></i>
+                <i class="fa fa-pencil" aria-hidden="true"></i>
             </span>
             <span>修改于</span>
             <time datetime="{{page.date}}">{{ page.date| date: "%Y-%m-%d" }}</time>
@@ -23,7 +23,7 @@ layout: base
         <span class="post-category">
              |
             <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
+                <i class="fa fa-folder-o" aria-hidden="true"></i>
             </span>
             <span class="post-meta-item-text">分类于 {{page.category}}</span>
         </span>
@@ -32,12 +32,17 @@ layout: base
             <span id="busuanzi_container_page_pv">
              |
             <span class="post-meta-item-icon">
-                <i class="fa fa-eye"></i>
+                <i class="fa fa-eye" aria-hidden="true"></i>
             </span>阅读次数 <span id="busuanzi_value_page_pv"><i class="fa fa-spinner fa-spin"></i></span>
             </span>
         </span>
      </div>
     {{ content }}
+    <div class="tag-container">
+    {% for tag in page.tags %}
+        <a class="post-tags" href="/tag.html#{{ tag }}">{{ tag }}</a>
+    {% endfor %}
+    </div>
     <div class="declare">
         <div>
             <hr>
