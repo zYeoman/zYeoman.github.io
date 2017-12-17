@@ -20,6 +20,13 @@ var sidebar    = $("#sidebar"),
     content    = $("#pjax"),
     button     = $("#js-fullscreen");
 
+$.expr[':'].external = function(obj){
+    return !obj.href.match(/^mailto\:/)
+           && (obj.hostname != location.hostname)
+           && !obj.href.match(/^javascript\:/)
+           && !obj.href.match(/^$/)
+};
+
 // Tags switcher
 $("#tags-ul").on("click","li",function(event){
   $(this).addClass("active").siblings().removeClass("active");
@@ -103,7 +110,8 @@ $(document).on({
 // Re-run scripts for post content after pjax
 function afterPjax() {
   // Open links in new tab
-  $("#post__content").find("a").not("#markdown-toc a").not("[href^='#']").not("[href^='/']").attr({"rel":"noopener", "target":"_blank"});
+    // https://stackoverflow.com/questions/12041935/how-to-automatically-add-target-blank-to-external-links-only
+  $("a:external").attr({"rel":"noopener", "target":"_blank"});
   $(document).pjax("[href^='/']", "#pjax", { fragment: "#pjax", timeout: 10000 });
 
   $.getScript("//dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js");
