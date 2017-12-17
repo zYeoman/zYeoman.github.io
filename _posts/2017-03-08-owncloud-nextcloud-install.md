@@ -2,22 +2,17 @@
 layout: post
 title: nextcloud 安装
 category: 知识库
-date: 2017-12-15 23:30:56 +0800
+date: 2017-12-17 16:43 +0800
 create: 2017-03-08
 ---
 
-## Archlinux 安装 nextcloud
-
-```
-主要参考[安装 owncloud with nginx](https://blog.eldajani.net/arch-linux-owncloud-with-nginx/)
+采用 nextcloud+caddy+php+sql 的方案。
+> 主要参考[安装 owncloud with nginx](https://blog.eldajani.net/arch-linux-owncloud-with-nginx/)
 
 `open_basedir = /srv/http/:/home/:/tmp/:/usr/share/pear/:/usr/share/webapps/:/etc/webapps/`
 [解决方案](https://bbs.archlinux.org/viewtopic.php?id=176382)
-```
 
-采用 nextcloud+caddy+php+sql 的方案。
-
-### 安装 php-fpm
+## 安装 php-fpm
 
 直接使用`pacman`安装即可，主要需要安装
 
@@ -68,64 +63,18 @@ mysql> \q
 ### 配置 Caddy
 来自 [caddyserver examples](https://github.com/caddyserver/examples/blob/master/nextcloud/Caddyfile)
 
-```
-my-nextcloud-site.com {
+<script context="inline" src="https://gist.github.com/zYeoman/b74295eed7e631886b5ce092388bc16a.js"></script>
 
-    root   /var/www/nextcloud
-    log    /var/log/nextcloud_access.log
-    errors /var/log/nextcloud_errors.log
-
-    fastcgi / 127.0.0.1:9000 php {
-        env PATH /bin
-    }
-
-    rewrite {
-        r ^/index.php/.*$
-        to /index.php?{query}
-    }
-
-    # client support (e.g. os x calendar / contacts)
-    redir /.well-known/carddav /remote.php/carddav 301
-    redir /.well-known/caldav /remote.php/caldav 301
-
-    # remove trailing / as it causes errors with php-fpm
-    rewrite {
-        r ^/remote.php/(webdav|caldav|carddav|dav)(\/?)$
-        to /remote.php/{1}
-    }
-
-    rewrite {
-        r ^/remote.php/(webdav|caldav|carddav|dav)/(.+?)(\/?)$
-        to /remote.php/{1}/{2}
-    }
-
-    rewrite {
-        r ^/public.php/(.+?)(\/?)$
-        to /public.php/(.+?)(\/?)$
-    }
-
-    # .htaccess / data / config / ... shouldn't be accessible from outside
-    status 403 {
-        /.htacces
-        /data
-        /config
-        /db_structure
-        /.xml
-        /README
-    }
-
-    header / Strict-Transport-Security "max-age=31536000;"
-
-}
-```
+没有看到代码请[刷新]()
+{: .notice}
 
 注意运行此 Caddy 的用户需要是 http:http，修改`/etc/php/php-fpm.d/www.conf`里的`listen.owner` `listen.group`和`listen.mode`，否则打开上述网页的时候会出现`502 bad gateway`的错误。
 
-### 安装
+## 安装
 
 打开 Caddyfile 里设置的网址，填写设置即可。
 
-### SSL手动配置
+## SSL手动配置
 
 貌似校园网把80端口给屏蔽了还是怎么了，总之Caddy自动更新证书的功能失效了，只能手动使用`certbot`更新了。
 
@@ -139,3 +88,4 @@ certbot -d your.domain.com --manual --preferred-challenges dns certonly
 ```
 
 获得证书后，稍微修改一下`Caddyfile`即可。在域名那里置顶端口`:443`，大括号里面添加`tls /etc/letsencrypt/live/your.domain.com/fullchain.pem /etc/letsencrypt/live/your.domain.com/privkey.pem`。
+
