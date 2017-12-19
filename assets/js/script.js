@@ -155,5 +155,11 @@ function afterPjax() {
       path:window.location.pathname,
       avatar:"retro"
   });
+  var url = window.location.toString();
+  var id = decodeURIComponent(url).split('#');
+  if (id.length>1) {
+    var target = $("#"+id[1]);
+    container.delay(700).animate({scrollTop: target.offset().top + container.scrollTop() - 70}, 500, function() { });
+  }
 }afterPjax();
 
