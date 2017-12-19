@@ -1,7 +1,12 @@
 ---
 layout: post
 title: Github Pages 自定义域名启用 https
-category: 知识库
+category: 器
+tags:
+  - 原创
+  - github
+  - https
+  - 记录
 date: 2017-03-20
 create: 2017-03-20
 ---

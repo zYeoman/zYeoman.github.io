@@ -1,7 +1,10 @@
 ---
 layout: post
 title: 由Bing输入法导致的Bug们
-category: Bug
+category: 用
+tags:
+  - 原创
+  - bug
 date: 2015-11-20 12:09:12
 create: 2015-11-20
 ---

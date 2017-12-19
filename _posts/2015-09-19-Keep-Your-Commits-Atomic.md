@@ -1,14 +1,15 @@
 ---
 layout: post
-title: 【翻译】原子化你的commits
-category: 知识库
-date: 2015-09-19 17:05:46
+title: 原子化你的commits
+category: 用
+tags:
+  - 翻译
+  - git
+date: 2015-09-19 17:05:46 +0800
 create: 2015-09-19
 ---
 
 ![atomic](http://www.freshconsulting.com/wp-content/uploads/cover-atomic-coding.jpg)
-
-<!-- more -->
 
 源码管理是开发者们最好的朋友。在分布式世界，分享代码、跟踪改变、出现问题后退回的能力是不可缺少的。
 

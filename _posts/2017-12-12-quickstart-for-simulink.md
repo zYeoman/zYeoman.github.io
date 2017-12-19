@@ -1,9 +1,10 @@
 ---
 layout: post
 title: Simulink快速入门
-category: 学习
+category: 用
 tags:
-  - Matlab
+  - 转载
+  - matlab
 date: 2017-12-13 17:33:41 +0800
 create: 2017-12-12 16:08:44 +0800
 ref: https://www.mathworks.com/videos/introduction-to-simulink-82514.html

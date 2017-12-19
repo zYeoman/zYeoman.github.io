@@ -1,7 +1,9 @@
 ---
 layout: post
-title: 【深夜惊奇】我也曾热烈地爱过啊
-category: 乱弹
+title: 我也曾热烈地爱过啊
+category: 杂
+tags:
+  - 深夜惊奇
 date: 2016-09-02
 create: 2016-09-02
 ---

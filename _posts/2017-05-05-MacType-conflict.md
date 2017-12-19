@@ -1,7 +1,11 @@
 ---
 layout: post
 title: MacType 有冲突的软件
-category: 工具
+category: 用
+tags:
+  - 原创
+  - mactype
+  - bug
 date: 2017-05-05
 create: 2017-05-05 17:20:59
 ---

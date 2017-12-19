@@ -1,7 +1,10 @@
 ---
 layout: post
 title: Seed点词翻译Api之剽窃之旅
-category: 知识库
+category: 器
+tags:
+  - 原创
+  - api
 date: 2016-03-10 11:05:55
 create: 2016-03-10
 ---

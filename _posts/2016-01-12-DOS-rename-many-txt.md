@@ -1,7 +1,10 @@
 ---
 layout: post
 title: DOS 重命名
-category: 奇技淫巧
+category: 法
+tags:
+  - 原创
+  - 奇技淫巧
 date: 2016-12-06 00:29:21
 create: 2016-01-12
 ---

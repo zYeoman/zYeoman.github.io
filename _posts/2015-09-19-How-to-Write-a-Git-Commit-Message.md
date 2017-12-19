@@ -1,16 +1,18 @@
 ---
 layout: post
-title: 【翻译】怎样优雅地Git Commit
-category: 知识库
-date: 2015-09-19 10:34:16
+title: 怎样优雅地Git Commit
+category: 用
+tags:
+  - 翻译
+  - git
+date: 2015-09-19 10:34:16 +0800
 create: 2015-09-19
 ---
 
 ![haha](http://imgs.xkcd.com/comics/git_commit.png)
 
-<!-- more -->
-
 ## 简介：为什么要有好的 Commit Messages
+
 随机打开一个Git Repo的log记录，它的Commit Messages可能就（或多或少地）像翔一样。例如我（原作者）之前的一个[项目](https://github.com/spring-projects/spring-framework/commits/e5f4b49?author=cbeams)
 
 ```sh

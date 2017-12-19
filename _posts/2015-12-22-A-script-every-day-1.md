@@ -1,7 +1,11 @@
 ---
 layout: post
 title: 每天一个脚本——快速打开文件
-categories: 奇技淫巧
+categories: 器
+tags:
+  - 原创
+  - autohotkey
+  - 脚本
 date: 2016-12-06 16:03:33
 create: 2015-12-22
 ---
@@ -10,7 +14,8 @@ create: 2015-12-22
 
 ## 用Sublime等编辑器快速打开资源管理器里的文件
 
-<!-- more -->
+现在总是使用sublime，这个脚本已经弃用了。
+{: .notice}
 
 准备`Ctrl+o` `Ctrl+s`使用sublime text 打开选中的文件，`Ctrl+o` `Ctrl+v`使用Gvim打开选中文件。
 

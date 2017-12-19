@@ -1,7 +1,9 @@
 ---
 layout: post
 title: 三国杀大逃杀模式
-category: 乱弹
+category: 杂
+tags:
+  - 点子
 date: 2017-09-19
 create: 2017-09-19 11:26:10
 ---

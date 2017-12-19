@@ -1,7 +1,10 @@
 ---
 layout: post
 title: PEP257：文档字符串约定
-category: 知识库
+category: 理
+tags:
+  - 翻译
+  - python
 date: 2017-01-23
 create: 2017-01-22
 ---

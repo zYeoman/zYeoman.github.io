@@ -1,7 +1,10 @@
 ---
 layout: post
 title: Xilinx Vivado 使用
-category: 学习
+category: 用
+tags:
+  - 列表
+  - xilinx
 date: 2017-12-15 23:06 +0800
 create: 2017-12-15 16:53:22 +0800
 ---

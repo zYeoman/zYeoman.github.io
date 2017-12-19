@@ -1,7 +1,11 @@
 ---
 layout: post
 title: Archlinux 安装记录
-category: 知识库
+category: 法
+tags:
+  - 原创
+  - arch
+  - 记录
 date: 2017-03-02
 create: 2016-11-27
 ---

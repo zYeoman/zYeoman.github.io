@@ -1,7 +1,10 @@
 ---
 layout: post
 title: Python sys.argv 数目不对
-category: Bug
+category: 用
+tags:
+  - 原创
+  - bug
 date: 2016-05-24 23:25:23
 create: 2016-05-24
 ---

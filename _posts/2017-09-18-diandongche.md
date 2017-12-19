@@ -1,7 +1,9 @@
 ---
 layout: post
 title: 电动车禁令的是非
-category: 乱弹
+category: 杂
+tags:
+  - 吐槽
 date: 2017-09-21
 create: 2017-09-18 18:40:38
 ---

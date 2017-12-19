@@ -1,7 +1,11 @@
 ---
 layout: post
 title: Windows|Linux
-category: 乱弹
+category: 杂
+tags:
+  - 吐槽
+  - linux
+  - windows
 date: 2016-08-12
 create: 2016-08-12
 ---

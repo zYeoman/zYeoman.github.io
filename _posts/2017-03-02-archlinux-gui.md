@@ -1,7 +1,11 @@
 ---
 layout: post
 title: Archlinux on real PC
-category: 知识库
+category: 器
+tags:
+  - 原创
+  - arch
+  - 记录
 date: 2017-08-23
 create: 2017-03-02
 ---
@@ -89,7 +93,7 @@ sudo ip tunnel add sit1 mode sit remote $REMOTE_IP4 local $IP4
 sudo ip link set dev sit1 up
 sudo ip -6 addr add $REMOTE_IP6:$IP4/64 dev sit1
 sudo ip -6 route add default via $REMOTE_IP6:$REMOTE_IP4 dev sit1
-````
+​````
 
 ### 可能的网络问题
 
@@ -104,7 +108,7 @@ sudo ip -6 route add default via $REMOTE_IP6:$REMOTE_IP4 dev sit1
 `sudo pacman -S arandr` 使用 arandr 图形化配置显示器相对位置。
 
 ### 安装
-```sh
+​```sh
 yaourt -S i3-gaps i3lock i3status compton dmenu feh py3status xterm xorg xorg-xinit
 ```
 

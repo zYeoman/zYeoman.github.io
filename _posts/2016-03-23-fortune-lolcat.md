@@ -1,7 +1,10 @@
 ---
 layout: post
 title: Shell 启动欢迎辞
-category: 奇技淫巧
+category: 用
+tags:
+  - 原创
+  - shell
 date: 2017-02-16
 create: 2016-03-23
 ---
@@ -44,7 +47,7 @@ Weather for City: Beijing, China
 
 * 中文：`sudo apt-get install fortune-zh`
 * 中文 cowsay: [fortune](http://fosschef.com/2011/01/trick-of-fortune-for-linux-mint/)
-修改`/usr/games/cowsay`
+  修改`/usr/games/cowsay`
 
 ```perl
 sub construct_balloon {

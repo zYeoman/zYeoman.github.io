@@ -1,15 +1,18 @@
 ---
 layout: post
 title: 【Python】 import bug——Can't import *
-category: 知识库
-date: 2015-08-07 20:02:42
+category: 用
+tags:
+  - 原创
+  - python
+  - bug
+date: 2015-08-07 20:02:42 +0800
 create: 2015-08-07
 ---
 
 还是没有系统学习过Python的原因，对于`import`还是有不清楚的地方，比如说会默认首先从当前文件夹import然后再到`PYTHONLIB`文件夹。
 
 下面就是一个因此导致的BUG。
-<!-- more -->
 
 今天看了一下Python的一个Web框架，Flask（[1](http://python.jobbole.com/81396/)）。于是按照里面写的写了一个`Hello World`的程序如下：
 

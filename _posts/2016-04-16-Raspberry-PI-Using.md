@@ -1,7 +1,11 @@
 ---
 layout: post
 title: Raspberry PI Using
-category: 工具
+category: 器
+tags:
+  - 原创
+  - 配置
+  - linux
 date: 2016-04-16 13:25:34
 create: 2016-04-16
 ---

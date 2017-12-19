@@ -1,53 +1,20 @@
 ---
 layout: post
 title: 快捷方式、符号链接、硬链接与软链接——win/linux
-category: 知识库
-date: 2015-08-04 22:20:14
+category: 理
+tags:
+  - 原创
+  - windows
+  - linux
+  - 链接
+date: 2015-08-04 22:20:14 +0800
 create: 2015-08-04
 ---
-
-## 15-9-6更新
-使用MKLINK将为windows系统盘瘦身
-
-`C:/windows/Installer`是一个和`C:/windows/winSxS`同样可怕的文件夹，在我的固态硬盘上，它的体积达到了10GB，然而都是些没有什么卵用的安装文件。因此可以使用链接的方式把它挪到HDD里。
-
-<!-- more -->
-
-具体步骤如下
-
-* Make sure no installations are running on your machine (there's probably a formal way to do this, but I'm not sure how).
-* Copy using Windows explorer C:\Windows\Installer to another disk, e.g., D:\C_DRIVE\Windows\Installer -- note: Windows\Installer is a system folder and thus invisible in Windows 8.1. You have to tweak your account to make it visible to use Explorer to make the copy. Google will help you find out how to do that.
-* Make a backup copy of C:\Windows\Installer
-* Type the following commands in a `cmd.exe` window running as Administrator:
-
-```
-rmdir /s /q C:\Windows\Installer
-mklink /D C:\Windows\Installer D:\C_DRIVE\Windows\Installer
-```
-
-------
-
-* 确认在你的电脑上没有正在安装的软件（似乎不会有什么影响）
-* 使用资源管理器把`C:\Windows\Installer`复制到别的硬盘上，例如`D:\C_DRIVE\Windows\Installer`。注意，`Windows\Installer`是一个系统文件夹，你需要在文件夹选项里关闭隐藏关键系统文件的选项。如果不知道怎么做或者总也找不到它，你可以google一下。
-* 为`C:\Windows\Installer`做一个备份
-* 管理员模式运行`cmd`（`win+x` `a`），键入以下命令并运行
-
-```
-rmdir /s /q C:\Windows\Installer
-mklink /D C:\Windows\Installer D:\C_DRIVE\Windows\Installer
-```
-
------
-
-我已经这么做了，希望真的像帖子里说的那样吧。
-
-来自[StackExchange](http://superuser.com/questions/707767/how-can-i-to-free-up-drive-space-from-the-windows-installer-folder-without-killi#)
-以及参考[Kavoir](http://www.kavoir.com/2012/07/how-to-free-up-c-drive-disk-space-in-windows-7-easy.html)
-
 
 ## 含义
 
 ### 快捷方式
+
 仅仅是一个二进制文件或者是文本文件，存储有快捷方式目标的地址(文件地址或者网络地址)
 
 ### 符号连接
@@ -89,8 +56,10 @@ MKLINK [[/D] | [/H] | [/J]] Link Target
                 (相对或绝对)。
 ```
 
+用例[使用MKLINK给系统盘瘦身](/blog/use-mklink-to-save-space-of-C.html)
 
 ### 硬链接
+
 在Windows建立硬链接是只适用于NTFS文件系统的，使用命令` fsutil hardlink`
 
 * 命令语法，例子是把`bar.txt` 硬链接上 `foo.txt`

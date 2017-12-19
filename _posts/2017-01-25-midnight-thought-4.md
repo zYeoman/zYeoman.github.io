@@ -1,7 +1,9 @@
 ---
 layout: post
 title: 【深夜惊奇】关于拖延症
-category: 乱弹
+category: 杂
+tags:
+  - 深夜惊奇
 date: 2017-01-25
 create: 2017-01-25
 ---

@@ -1,7 +1,11 @@
 ---
 layout: post
 title: SimplestNote 开发记录
-category: 知识库
+category: 法
+tags:
+  - 原创
+  - android
+  - 记录
 date: 2017-02-18
 create: 2016-12-15
 ---

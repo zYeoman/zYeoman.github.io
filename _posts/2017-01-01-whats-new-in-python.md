@@ -1,7 +1,10 @@
 ---
 layout: post
 title: 中文版 What's New In Python
-category: 知识库
+category: 理
+tags:
+  - 翻译
+  - python
 date: 2017-01-01
 create: 2017-01-01
 ---

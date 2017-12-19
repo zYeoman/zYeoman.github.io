@@ -1,11 +1,9 @@
 ---
-category: 工具
+category: 器
 create: '2017-12-07 13:34:17'
 date: '2017-12-10T06:38:30.645Z'
 layout: post
 tags:
-  - 工具
-  - 笔记
   - 列表
 title: 记笔记工具试用
 ---

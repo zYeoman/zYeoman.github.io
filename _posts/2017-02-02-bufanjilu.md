@@ -1,7 +1,11 @@
 ---
 layout: post
 title: 补番记录
-category: 杂项
+category: 杂
+tags:
+  - 列表
+  - 动画
+  - 记录
 date: 2017-09-06
 create: 2017-02-02
 ---

@@ -1,7 +1,11 @@
 ---
 layout: post
-title: 看过的番剧列表
-category: 杂项
+title: 看过的番剧
+category: 杂
+tags:
+  - 列表
+  - 动画
+  - 更新中
 date: 2017-03-19 01:34:32
 create: 2016-06-01
 ---

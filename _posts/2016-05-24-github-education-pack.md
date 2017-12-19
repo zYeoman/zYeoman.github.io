@@ -1,7 +1,10 @@
 ---
 layout: post
 title: github education pack
-category: 杂项
+category: 杂
+tags:
+  - 原创
+  - github
 date: 2016-05-24 23:33:29
 create: 2016-05-24
 ---

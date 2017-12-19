@@ -2,11 +2,11 @@
 title: 'Jekyll Editor Hack记录'
 layout: post
 tags:
-  - Jekyll
-  - 编辑器
+  - 原创
+  - jekyll
 date: '2017-12-08T17:02:36.690Z'
 create: '2017-12-08T10:02:36.690Z'
-category: 工具
+category: 器
 ---
 找到一个很好用的Jekyll Blog编辑工具，[Jekyll Editor](https://chrome.google.com/webstore/detail/jekyll-editor/dfdkgbhjmllemfblfoohhehdigokocme)。虽然好用，但是有几点不喜欢的地方，因此试图去Hack一下修改掉不喜欢的部分。:smile:
 
@@ -80,7 +80,7 @@ category: 工具
 3. `new`：新建文件。主要是新建YAML头。
 4. `sync`：从Github中同步`_posts`文件夹所有文件。
 5. `_fetchPost`和`_sortPost`：功能函数，没什么用。
-所以大概修改一下`new`函数和`dump`函数就差不多了。
+  所以大概修改一下`new`函数和`dump`函数就差不多了。
 
 在`new`函数里添加我需要的`create`字段，在`dump`函数里存储时重新生成`date`（修改时间）字段。
 

@@ -1,7 +1,10 @@
 ---
 layout: post
 title: 快捷将英文标点转换成中文标点
-category: 奇技淫巧
+category: 器
+tags:
+  - 原创
+  - autohotkey
 date: 2015-12-18 23:49:12
 create: 2015-12-18
 ---

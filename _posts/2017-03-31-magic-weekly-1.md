@@ -1,7 +1,9 @@
 ---
 layout: post
 title: 周刊魔法道具与咒语：第 I 辑
-category: 知识库
+category: 器
+tags:
+  - 更新中
 date: 2017-03-31
 create: 2017-03-31 16:34:50
 ---

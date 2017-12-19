@@ -1,7 +1,9 @@
 ---
 layout: post
 title: 9.5-9.18
-category: 杂项
+category: 杂
+tags:
+  - 记录
 date: 2016-09-19
 create: 2016-09-19
 ---

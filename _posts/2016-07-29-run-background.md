@@ -2,7 +2,12 @@
 title: "linux与windows后台运行"
 date: 2016-07-29
 modify: 2016-07-29
-category: 知识库
+category: 法
+tags:
+  - 原创
+  - window
+  - linux
+  - 更新中
 create: 2016-07-29
 layout: post
 ---

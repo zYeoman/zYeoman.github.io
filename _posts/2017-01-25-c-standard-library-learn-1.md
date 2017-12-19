@@ -1,7 +1,11 @@
 ---
 layout: post
 title: C 标准库学习·一·assert.h
-category: 知识库
+category: 理
+tags:
+  - 原创
+  - c/c++
+  - 更新中
 date: 2017-01-28
 create: 2017-01-25
 ---

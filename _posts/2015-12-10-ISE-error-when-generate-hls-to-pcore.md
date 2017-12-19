@@ -1,7 +1,11 @@
 ---
 layout: post
 title: A solution of Cannot find ISE in the PATH variable or it's an unsupported version.
-category: 知识库
+category: 用
+tags:
+  - 原创
+  - bug
+  - ise
 date: 2015-12-10 12:48:43
 create: 2015-12-10
 ---

@@ -1,7 +1,10 @@
 ---
 layout: post
 title: 华为手机开机失败修复
-category: 知识库
+category: 法
+tags:
+  - 原创
+  - 记录
 date: 2017-05-25
 create: 2017-05-25 11:54:59
 ---

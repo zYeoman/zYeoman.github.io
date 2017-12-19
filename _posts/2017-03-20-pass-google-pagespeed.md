@@ -1,7 +1,7 @@
 ---
 layout: post
 title: 通过 google pagespeed
-category: 知识库
+category: 器
 date: 2017-03-20
 create: 2017-03-20
 ---

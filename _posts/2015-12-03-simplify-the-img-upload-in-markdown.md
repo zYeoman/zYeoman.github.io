@@ -1,7 +1,11 @@
 ---
 layout: post
 title: 简化 markdown 中的贴图流程
-category: 奇技淫巧
+category: 法
+tags:
+  - 原创
+  - jekyll
+  - markdown
 date: 2017-04-07
 create: 2015-12-03
 ---

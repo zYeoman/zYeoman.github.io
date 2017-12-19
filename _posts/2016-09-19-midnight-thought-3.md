@@ -1,7 +1,10 @@
 ---
 layout: post
-title: 【深夜惊奇】关于推研
-category: 乱弹
+title: 关于推研
+category: 杂
+tags:
+  - 深夜惊奇
+  - 吐槽
 date: 2016-09-19
 create: 2016-09-19
 ---

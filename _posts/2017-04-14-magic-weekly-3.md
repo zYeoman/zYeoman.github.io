@@ -1,7 +1,9 @@
 ---
 layout: post
 title: 周刊魔法道具与咒语：第 III 辑—github
-category: 知识库
+category: 器
+tags:
+  - 更新中
 date: 2017-04-24
 create: 2017-04-14 22:54:08
 ---

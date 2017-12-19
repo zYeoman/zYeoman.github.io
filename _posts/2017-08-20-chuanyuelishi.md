@@ -1,7 +1,10 @@
 ---
 layout: post
 title: 穿越历史类小说的主角
-category: 乱弹
+category: 杂
+tags:
+  - 吐槽
+  - 小说
 date: 2017-08-22
 create: 2017-08-20 14:07:54
 ---

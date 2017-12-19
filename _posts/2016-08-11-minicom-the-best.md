@@ -1,7 +1,9 @@
 ---
 layout: post
 title: Is minicom the **best** friendly serial communication program???
-category: 乱弹
+category: 杂
+tags:
+  - 吐槽
 date: 2016-08-11
 create: 2016-08-11
 ---

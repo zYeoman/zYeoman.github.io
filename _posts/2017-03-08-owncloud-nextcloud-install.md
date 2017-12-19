@@ -1,7 +1,11 @@
 ---
 layout: post
 title: nextcloud 安装
-category: 知识库
+category: 器
+tags:
+  - 原创
+  - nextcloud
+  - 记录
 date: 2017-12-17 16:43 +0800
 create: 2017-03-08
 ---

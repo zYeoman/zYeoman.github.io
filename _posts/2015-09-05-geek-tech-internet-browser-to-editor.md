@@ -1,8 +1,12 @@
 ---
 layout: post
-title: 奇技淫巧之浏览器变身编辑器【转载】
-category: 奇技淫巧
-date: 2015-09-05 11:38:10
+title: 奇技淫巧之浏览器变身编辑器
+category: 法
+tags:
+  - 转载
+  - javascript
+  - 奇技淫巧
+date: 2015-09-05 11:38:10 +0800
 create: 2015-09-05
 ---
 

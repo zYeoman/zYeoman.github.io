@@ -1,7 +1,10 @@
 ---
 layout: post
 title: gem5 tutorials
-category: 知识库
+category: 用
+tags:
+  - 原创
+  - 课程
 date: 2016-04-07 15:08:55
 create: 2016-04-07
 ---
