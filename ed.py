@@ -39,8 +39,8 @@ def add(argv):
     head = '---\nlayout: {}\n' \
         'title: {}\n' \
         'category: {}\n' \
-        'date: %Y-%m-%d\n' \
-        'create: %Y-%m-%d %H:%M:%S\n---\n'
+        'date: %Y-%m-%d %H:%M:%S +0800\n' \
+        'create: %Y-%m-%d %H:%M:%S +0800\n---\n'
 
     now = datetime.datetime.now()
     date = now.strftime('%Y-%m-%d')
@@ -95,7 +95,7 @@ def determ_file(patterns, case=re.I):
 def touch(file_name):
     """Change file edit date to now"""
     now = datetime.datetime.now()
-    date = now.strftime('%Y-%m-%d')
+    date = now.strftime('%Y-%m-%d +0800')
     sed_msg = "sed -b -i 's/^date:.*[0-9]*-[0-9]*-[0-9]*.*/date: %s/' "
     os.system(sed_msg % date + file_name)
 
