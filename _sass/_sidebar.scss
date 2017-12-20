@@ -95,6 +95,7 @@ li.tags {
   border-top: 1px solid #525965;
   border-bottom: 1px solid #3c4149;
   cursor: pointer;
+  text-align: center;
   &.active {
     margin-right: -1px;
     color: #020202;
@@ -106,7 +107,7 @@ li.tags {
     &:hover {
       color: #020202;
       background: #fafafa; }
-    &:before, &:after {
+    &::before, &::after {
       content: "";
       width: 6px;
       height: 6px;
@@ -114,13 +115,13 @@ li.tags {
       position: absolute;
       right: -3px;
     }
-    &:before {
+    &::before {
       top: -6px;
       border-right: 2px solid #fafafa;
       border-bottom: 2px solid #fafafa;
       border-radius: 0 0 6px 0;
     }
-    &:after {
+    &::after {
       bottom: -6px;
       border-right: 2px solid #fafafa;
       border-top: 2px solid #fafafa;
