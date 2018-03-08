@@ -95,7 +95,7 @@ def determ_file(patterns, case=re.I):
 def touch(file_name):
     """Change file edit date to now"""
     now = datetime.datetime.now()
-    date = now.strftime('%Y-%m-%d +0800')
+    date = now.strftime('%Y-%m-%d %H:%M:%S +0800')
     sed_msg = "sed -b -i 's/^date:.*[0-9]*-[0-9]*-[0-9]*.*/date: %s/' "
     os.system(sed_msg % date + file_name)
 
