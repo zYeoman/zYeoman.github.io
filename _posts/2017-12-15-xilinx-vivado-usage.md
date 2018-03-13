@@ -5,7 +5,7 @@ category: 用
 tags:
   - 列表
   - xilinx
-date: 2017-12-15 23:06 +0800
+date: 2018-03-13 19:25:19 +0800
 create: 2017-12-15 16:53:22 +0800
 ---
 
@@ -23,6 +23,4 @@ create: 2017-12-15 16:53:22 +0800
 * [Xilinx FPGA FFT 应用笔记](http://blog.csdn.net/yijingjijng/article/details/48137897)
 * [HLS 设计 tutorial](https://www.so-logic.net/documents/knowledge/tutorial/Basic_HLS_Tutorial/sec2_developing_custom_ip_core_using_hls.html)
 * [互相关设计](https://forums.xilinx.com/t5/DSP-and-Video/cross-correlation-of-two-sine-signals-using-xilinx-blockset/td-p/120650)
-
-
 
