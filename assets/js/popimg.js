@@ -35,11 +35,17 @@ $.fn.popImg = function() {
     $c.css("cursor", "zoom-out").attr("data-b-img", 1);
     var img = new Image();
     img.onload = function(){
+        var width = this.width;
+        var height = this.height
+        if (this.width > dW || this.height > dH) {
+            width = this.width/Math.max(this.width/dW, this.height/dH);
+            height = this.height/Math.max(this.width/dW, this.height/dH);
+        }
       $c.stop().animate({
-        width: this.width,
-        height: this.height,
-        left: (dW - this.width) / 2,
-        top: (dH - this.height) / 2
+        width: width,
+        height: height,
+        left: Math.max((dW - width) / 2, 0),
+        top: Math.max((dH - height) / 2, 0)
       }, 300);
     };
     img.src = $c.attr("src");
