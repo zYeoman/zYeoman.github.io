@@ -6,7 +6,7 @@ tags:
   - 原创
   - mactype
   - bug
-date: 2017-05-05
+date: 2018-04-10 13:16:44 +0800
 create: 2017-05-05 17:20:59
 ---
 
@@ -24,3 +24,8 @@ MacType 是一个 Windows 上字体渲染的工具，渲染效果非常好，然
 
 ### msys2
 需要把 gpg.exe 和 pacman.exe 加入排除列表，不然会出现密钥不匹配的问题。
+
+### Virtual Box
+被MacType注入后启动不了虚拟机，显示错误`The virtual machine 'xxxx' has terminated unexpectedly during startup with exit code -1073741819 (0xc0000005)`
+
+来自[知乎](https://www.zhihu.com/question/27159349)

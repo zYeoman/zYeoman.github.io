@@ -1,7 +1,7 @@
 ---
 category: 器
 create: '2017-12-07 13:34:17'
-date: '2017-12-10T06:38:30.645Z'
+date: 2018-04-10 23:12:51 +0800
 layout: post
 tags:
   - 列表
@@ -11,6 +11,10 @@ title: 记笔记工具试用
 乱七八糟地活了这么多年以后，还是想要有一个记笔记的工具来搞一搞。于是做了一下笔记工具调查，发现——都不太满意。
 
 主要调查测试路径按照[AlternativeTo](https://alternativeto.net/software/evernote/)网站的内容，查询AlternativeToEvernote的方式来的。
+
+![纸小墨](http://www.chole.io/assets/editor.png)
+
+  但是貌似内测几年了就没发布过
 
 * toc
 {: toc}
@@ -37,6 +41,7 @@ title: 记笔记工具试用
 
 * Jekyll-Editor：自动读取`<username>.github.io`repo里的`_posts`文件夹进行编辑的Chrome应用。如果没有1、读取不出之前创建的文件；2、新建文件的YAML无法自定义；这两个问题的话现在应该就是主力工具了。经过一定的[魔改](/blog/jekyll-editor-hack.html)以后解决了这两个问题。
 * Typora：目前正在用的。所见即所得的Markdown编辑器（独一家），而且支持主题定制！只需要修改CSS就行了，真是可喜可贺可喜可贺。
+* MarkText：又一个markdown编辑器，类似Typora，但是功能更不全。。。https://marktext.github.io/website/
 * Sublime Text：编辑器，用来写Markdown但是没有一个很方便的实时预览是很难受的。
 * VScode & Atom：编辑器，用nodejs写的那种，有预览，但是个人对nodejs写的东西有洁癖。
 * vim：编辑器！某些情况很好用，但是很多情况不是很方便，例如插图什么的。
@@ -67,3 +72,5 @@ GoogleKeep类即一堆类似Google Keep的仅仅只能做小笔记整理的工�
 ## 总结
 
 目前用的是Typora作为主要编辑器，vim用作修修补补，使用[魔改](/blog/jekyll-editor-hack.html)后的Jekyll Editor修改Blog，Onenote负责剪辑网页内容等（突发奇想貌似可以用ditto之类的工具来剪辑网页内容）。
+
+- [vimwiki](https://github.com/vimwiki/vimwiki): 基于vim的wiki系统
