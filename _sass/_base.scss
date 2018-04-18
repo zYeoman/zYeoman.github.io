@@ -112,6 +112,25 @@ p {
   margin-bottom: 1.3em;
 }
 
+ul.list {
+  list-style-type: none;
+  counter-reset: counter;
+  padding-left:20px;
+  ul {
+    counter-reset: counter;
+    list-style-type:none;
+    padding-left:20px;
+    li::before {
+      counter-increment: counter;
+      content: counters(counter, '.') ' ';
+    }
+  }
+  li::before {
+    counter-increment: counter;
+    content: counters(counter, '.') '. ';
+  }
+}
+
 /* reduce orphans and widows when printing */
 
 p, pre, blockquote, ul, ol, dl, figure, table, fieldset {
