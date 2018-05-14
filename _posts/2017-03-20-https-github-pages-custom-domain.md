@@ -7,13 +7,26 @@ tags:
   - github
   - https
   - 记录
-date: 2017-03-20
+date: 2018-05-12 14:25:26 +0800
 create: 2017-03-20
 ---
 
-[来源](https://sheharyar.me/blog/free-ssl-for-github-pages-with-custom-domains/)
+## 2018-05-12 更新
+2018年5月1号，GitHub[宣布](https://blog.github.com/2018-05-01-github-pages-custom-domains-https/)支持自定义域名用HTTPS了。
+
+[使用方式](https://help.github.com/articles/setting-up-an-apex-domain/)大概就是更改一下DNS里A record指向的IP，设置为以下四个
+
+> 185.199.108.153
+> 185.199.109.153
+> 185.199.110.153
+> 185.199.111.153
+
+然后在gh-pages的设置页面里把CNAME指向的域名删除，等几分钟后（等待github重新生成静态文件，不然会出问题）重新添加，然后等待github自动生成证书以后，就可以选中`force HTTPS`选项了。
+
+![force-https](https://i.loli.net/2018/05/12/5af68c48ce661.png)
 
 ## 方法
+[来源](https://sheharyar.me/blog/free-ssl-for-github-pages-with-custom-domains/)
 
 1. [注册 Cloudflare](https://support.cloudflare.com/hc/en-us/articles/201720164-Sign-up-planning-guide)，这是一个为网站提供安全管理以及 DNS 解析之类服务的网站。使用免费 Plan 即可。
 2. 添加你的域名，一切都会自动执行。
