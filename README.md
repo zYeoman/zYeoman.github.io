@@ -1,8 +1,9 @@
-Mickir's Blog
-=============
+# Mickir's Blog
 
 使用[这个博客主题](http://liuyanwei.jumppo.com)。
 
 ## TODO
-* 博客页面只拉取md，其他前端渲染？那么用jekyll有意义么？那么还是只生成单独的html吧。
-
+- WebPack 打包压缩 JS 文件
+- 添加 Google Analysis
+- 使用[Ant Design](https://ant.design)
+- 在线编辑、预览
