@@ -7,9 +7,13 @@ tags:
   - github
   - https
   - 记录
-date: 2018-05-12 14:25:26 +0800
+
+date: 2018-05-29 18:45:04 +0800
 create: 2017-03-20
 ---
+
+## 2018-05-29 更新
+使用Github自带的https，比使用CloudFlare少了很多方便的功能，包括自动js、css压缩，自带CDN，自带Google Analysis等等功能。
 
 ## 2018-05-12 更新
 2018年5月1号，GitHub[宣布](https://blog.github.com/2018-05-01-github-pages-custom-domains-https/)支持自定义域名用HTTPS了。
