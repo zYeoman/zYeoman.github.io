@@ -1,7 +1,7 @@
 ---
 category: 器
 create: '2017-12-07 13:34:17'
-date: 2018-04-10 23:12:51 +0800
+date: 2018-06-08 11:31:08 +0800
 layout: post
 tags:
   - 列表
@@ -33,6 +33,7 @@ title: 记笔记工具试用
 * 有道云笔记：有Web端。免费。
 * StandardNotes：插件化的笔记工具（但是插件收费）。中文字体还是有问题。
 * RedNoteBook：Linux风格的工具，所以丑啊。
+* OpenNote: Self-host，以文件夹/文件的方式管理。我还不如直接用资源管理器呢...
 
 ## Markdown类
 所谓Markdown类，其实就是支持或者仅仅支持Markdown的一类笔记记录工具的集合。
@@ -55,6 +56,7 @@ title: 记笔记工具试用
 * BoostNote：说是适合程序员的Note工具，但是可惜的是不能编辑本地文件，或者说只能编辑他文件库里的东西。
 * 小书匠：功能貌似很多，但是其实和上面的差不多。
 * [Madoko](https://www.madoko.net/editor.html)：Microsoft Research出品，能直接导出类似论文排版的PDF，但是对中文支持需要一定的修改。
+* mininote: self-hosted，没有亮点。
 
 ## Wiki类
 * Cherrytree：丑！（Linux软件的特色）
