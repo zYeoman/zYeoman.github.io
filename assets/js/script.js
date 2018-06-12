@@ -145,6 +145,10 @@ function afterPjax() {
 
   MathJax.Hub.Queue(["Typeset",MathJax.Hub]);
 
+  {% if site.analytics.google %}
+      ga('send', 'pageview', window.location.pathname);
+  {% endif %}
+
   valine.init({
       el: "#comment" ,
       notify:false,

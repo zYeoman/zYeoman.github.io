@@ -24,6 +24,9 @@ leancloud:
   app_id: xYnmPhrQu3YUQ28Ywk2qEfIp-gzGzoHsz
   app_key: ijsCplpAyUiEzXD36KkOFwHU
 
+analytics:
+  google: "UA-96052060-1"
+
 exclude: [LICENSE, CNAME, README.md, .gitignore, Rakefile.rb]
 
 avatar: /head.jpg

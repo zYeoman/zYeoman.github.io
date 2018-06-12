@@ -2,6 +2,9 @@
 <html lang="zh-cmn-Hans">
   <head>
     {% include header.html %}
+    {% if site.analytics.google %}
+        {% include ganalytics.html %}
+    {% endif %}
     {% seo %}
   </head>
   <body>
