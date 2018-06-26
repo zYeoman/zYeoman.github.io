@@ -25,7 +25,6 @@ def help_msg():
     optional arguments:
       -h, show this help message and exit
       o, output filename
-      t, touch file change its time
       v, view file without change
       r, remove file with PATTERN in name
       R, rename file with PATTERN in name
@@ -92,14 +91,6 @@ def determ_file(patterns, case=re.I):
         return None
 
 
-def touch(file_name):
-    """Change file edit date to now"""
-    now = datetime.datetime.now()
-    date = now.strftime('%Y-%m-%d %H:%M:%S +0800')
-    sed_msg = "sed -b -i 's/^date:.*[0-9]*-[0-9]*-[0-9]*.*/date: %s/' "
-    os.system(sed_msg % date + file_name)
-
-
 def main(argv):
     """Main function"""
     if not argv or '-h' in argv:
@@ -122,16 +113,12 @@ def main(argv):
     elif argv[0] == 'v':
         file_name = determ_file(argv[1:])
         os.system('vim -M ' + file_name)
-    elif argv[0] == 't':
-        file_name = determ_file(argv[1:])
-        touch(file_name)
     elif argv[0] == 'o':
         file_name = determ_file(argv[1:])
         print(file_name)
     else:
         file_name = determ_file(argv)
         if file_name is not None:
-            touch(file_name)
             os.system('vim ' + file_name)
         else:
             add(argv)
