@@ -18,15 +18,9 @@
     z-index: 97;
     transition: transform 0.5s cubic-bezier(0.77, 0, 0.175, 1);
     -webkit-transform: translateX(0);
-    -moz-transform: translateX(0);
-    -ms-transform: translateX(0);
-    -o-transform: translateX(0);
     transform: translateX(0);
     &.fullscreen {
       -webkit-transform: translateX(-37.5em);
-      -moz-transform: translateX(-37.5em);
-      -ms-transform: translateX(-37.5em);
-      -o-transform: translateX(-37.5em);
       transform: translateX(-37.5em);
     }
   }
@@ -43,12 +37,11 @@ nav.tags {
   width: 10.5em;
   height: 100%;
   background: #474d57;
-  border-right: 1px solid #3c4149;
+  border-right: 1px solid $tags-border-color-dark;
   box-shadow: inset -15px 0 15px -15px #222;
   float: left;
   position: relative;
   -webkit-user-select: none;
-  -moz-user-select: none;
   -ms-user-select: none;
   user-select: none;
   @include breakpoint(nodesktop) {
@@ -74,8 +67,6 @@ nav.tags {
     box-shadow: 0 0 10px 4px #000;
   }
   @media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
-      -webkit-background-size: 100px 100px;
-      -moz-background-size: 100px 100px;
       background-size: 100px 100px;
     }
 }
@@ -84,29 +75,29 @@ ul.tags {
   margin: 0;
   padding: 0;
   font-size: 17px;
-  border-top: 1px solid #3c4149;
-  border-bottom: 1px solid #525965;
+  border-top: 1px solid $tags-border-color-dark;
+  border-bottom: 1px solid $tags-border-color-light;
   list-style: none;
 }
 
 
 li.tags {
   padding: 12px 35px 9px;
-  border-top: 1px solid #525965;
-  border-bottom: 1px solid #3c4149;
+  border-top: 1px solid $tags-border-color-light;
+  border-bottom: 1px solid $tags-border-color-dark;
   cursor: pointer;
   text-align: center;
   &.active {
     margin-right: -1px;
-    color: #020202;
-    background: #fafafa;
-    border-right: 1px solid #fafafa;
+    color: black;
+    background: $list-background-color;
+    border-right: 1px solid $list-background-color;
     border-radius: 5px 0 0 5px;
     position: relative;
     transition: none;
     &:hover {
-      color: #020202;
-      background: #fafafa; }
+      color: black;
+      background: $list-background-color; }
     &::before, &::after {
       content: "";
       width: 6px;
@@ -117,14 +108,14 @@ li.tags {
     }
     &::before {
       top: -6px;
-      border-right: 2px solid #fafafa;
-      border-bottom: 2px solid #fafafa;
+      border-right: 2px solid $list-background-color;
+      border-bottom: 2px solid $list-background-color;
       border-radius: 0 0 6px 0;
     }
     &::after {
       bottom: -6px;
-      border-right: 2px solid #fafafa;
-      border-top: 2px solid #fafafa;
+      border-right: 2px solid $list-background-color;
+      border-top: 2px solid $list-background-color;
       border-radius: 0 6px 0 0;
     }
   }
@@ -133,7 +124,7 @@ li.tags {
 .tags-bottom {
   width: 100%;
   height: 44px;
-  border-top: 1px solid #3c4149;
+  border-top: 1px solid $tags-border-color-dark;
   overflow: hidden;
   position: absolute;
   left: 0;
@@ -143,7 +134,7 @@ li.tags {
     font-size: 18px;
     line-height: 44px;
     text-align: center;
-    border-top: 1px solid #525965;
+    border-top: 1px solid $tags-border-color-light;
     float: left;
   }
 }
@@ -168,9 +159,7 @@ li.tags {
   float: left;
   position: relative;
   -webkit-user-select: none;
-  -moz-user-select: none;
   -ms-user-select: none;
-  -o-user-select: none;
   user-select: none;
   @include breakpoint(nodesktop) {
     width: 17.5em;
@@ -186,7 +175,6 @@ li.tags {
   border-bottom: 1px solid #e5e8ec;
   @include breakpoint(mobileonly) {
       height: 51px;
-      display: -webkit-flex;
       display: flex;
   }
 }
@@ -194,8 +182,6 @@ li.tags {
 #mobile-avatar {
   width: 50px;
   height: 50px;
-  -webkit-background-size: 50px 50px;
-  -moz-background-size: 50px 50px;
   background-size: 50px 50px;
   display: none;
   @include breakpoint(mobileonly) {
@@ -212,27 +198,23 @@ li.tags {
   color: #2eb695;
   font-size: 18px;
   font-family: inherit;
-  background: #f7f7f7;
+  background: $list-background-color;
   border: none;
   outline: none;
   -webkit-appearance: none;
-  -moz-appearance: none;
-  -ms-appearance: none;
-  -o-appearance: none;
   appearance: none;
   cursor: text;
   &::-webkit-input-placeholder {
-    color: #cbcbcb;
+    color: $light-gray;
     font-style: italic; }
   &::-moz-placeholder {
-    color: #cbcbcb;
+    color: $light-gray;
     font-style: italic; }
   &:-ms-input-placeholder {
-    color: #cbcbcb;
+    color: $light-gray;
     font-style: italic; }
   @include breakpoint(mobileonly) {
     padding: 10px 10px 0;
-    -webkit-flex: 1;
     flex: 1;
   }
 }
@@ -279,7 +261,7 @@ li.tags {
     background: rgba(242, 242, 242, 0.5);
   }
   &:visited > .pl-circle {
-    background: #fafafa;
+    background: $list-background-color;
   }
   &:visited:hover > .pl-circle {
     background: rgba(242, 242, 242, 0.5);

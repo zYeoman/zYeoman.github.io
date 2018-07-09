@@ -33,10 +33,7 @@ table {
   }
 
   tr:hover {
-    background: #efefef;
-  }
-  tr:nth-child(2n):hover {
-    background: #efefef;
+    background: $lighter-gray;
   }
 
 }

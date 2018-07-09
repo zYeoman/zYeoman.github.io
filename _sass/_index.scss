@@ -3,7 +3,6 @@
   max-width: 100%;
   margin-top: 1.5em;
   background: white;
-  border-left: 5px solid darkgray;
   display: flex;
   flex-direction: row;
   align-items: stretch;
@@ -11,27 +10,22 @@
   border-radius: 10px;
   overflow: hidden;
   transition: all .3s ease;
-  box-shadow: 0 1px 1px 0 rgba(31, 35, 46, .15);
+  box-shadow: 0 1px 1px 0px $post-border;
   &:hover {
     transform: translate(0px, -2px);
-    box-shadow: 0 15px 45px -10px rgba(10, 16, 34, .2);
+    box-shadow: 0 15px 45px -10px $post-border;
   }
 
   .post-content {
     padding: 1rem;
     width: 100%;
-    .post-date {
-      font-size: 12px;
-      color: #999;
-    }
     .post-title {
       margin: 0 0 10px;
       font-size: 30px;
       font-weight: 400;
       a {
-        font-family: 'PT Serif', serif;
+        font-family: $post-font;
         text-decoration: none;
-        color: $info-color;
       }
     }
     p {
@@ -47,13 +41,13 @@
     color: black;
     float: left;
     padding: 8px 16px;
-    border: 1px solid lightgray;
+    border: 1px solid $lighter-gray;
     text-decoration: none;
     &.active {
-      background: lightgreen;
+      background: $lighter-gray;
     }
     &:hover {
-      background: lightblue;
+      background: $lighter-gray;
     }
   }
 }
@@ -62,14 +56,12 @@
   text-align: center;
 }
 .post-tags {
-    color: #fff;
+    color: white;
     font-size: 13px;
     font-weight: 600;
     display: inline-block;
     margin: 4px 8px 0 0;
     padding: 0 15px;
-    -webkit-transition-duration: .4s;
-    transition-duration: .4s;
     letter-spacing: 0;
     &::before {
       content: "# ";
@@ -96,8 +88,8 @@
     }
     &:hover {
       color: $darker-gray;
-      border: 1px solid gray;
+      border: 1px solid $lighter-gray;
       outline-style: none;
-      background: gray;
+      background: $lighter-gray;
     }
 }

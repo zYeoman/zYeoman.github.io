@@ -53,8 +53,14 @@ $darker-gray                  : mix(#000, $gray, 80%) !default;
 $light-gray                   : mix(#fff, $gray, 50%) !default;
 $lighter-gray                 : mix(#fff, $gray, 80%) !default;
 
+$post-border                  : rgba(0, 0, 0, .2);
+
 $background-color             : #fff !default;
 $code-background-color        : #fafafa !default;
+$list-background-color        : #fafafa !default;
+$tags-background-color        : #474d57 !default;
+$tags-border-color-dark       : mix(#000, $tags-background-color, 15%) !default;
+$tags-border-color-light      : mix(#fff, $tags-background-color, 5%) !default;
 $code-background-color-dark   : $light-gray !default;
 $text-color                   : $dark-gray !default;
 $muted-text-color             : mix(#fff, $text-color, 35%) !default;
@@ -65,14 +71,13 @@ $footer-background-color      : $lighter-gray !default;
 $post-list-color              : #64717f !default;
 
 $primary-color                : #999999 !default;
-$success-color                : #62c462 !default;
-$warning-color                : #f89406 !default;
-$danger-color                 : #ee5f5b !default;
-$info-color                   : #52adc8 !default;
+$success-color                : LimeGreen !default;
+$warning-color                : Orange !default;
+$danger-color                 : Tomato !default;
+$info-color                   : DodgerBlue !default;
 
 /* links */
-$link-color                   : #ff7800 !default;
-$link-color-hover             : #f03 !default;
+$link-color                   : DodgerBlue !default;
 $link-color-active            : $info-color;
 
 /*

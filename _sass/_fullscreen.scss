@@ -23,12 +23,10 @@
   cursor: pointer;
   position: fixed;
   -webkit-transition: box-shadow .35s;
-  -moz-transition: box-shadow .35s;
-  -o-transition: box-shadow .35s;
   transition: box-shadow .35s;
   z-index: 99;
   -webkit-appearance: none;
-  -moz-appearance: none;
+  appearance: none;
 
   &:hover {
     color: $success-color;
