@@ -1,4 +1,3 @@
-
 /*!-------------------------------------
  * Syntax Colours
  * https://gist.github.com/edwardhotchkiss/2005058
@@ -14,10 +13,9 @@
 pre {
   padding: 1em;
   width: 100%;
-  font: .9em/1.5 Consolas, Monaco, 'Andale Mono', monospace;
-  border: 1px solid #e5e8ec;
+  border: 1px solid $lighter-gray;
   border-radius: 3px;
-  background-color: $code-background-color;
+  background-color: $post-bg;
   background-image: -webkit-linear-gradient(transparent 50%, rgba(69, 142, 209, 0.04) 50%);
   background-image: -moz-linear-gradient(transparent 50%, rgba(69, 142, 209, 0.04) 50%);
   background-image: -ms-linear-gradient(transparent 50%, rgba(69, 142, 209, 0.04) 50%);
@@ -40,8 +38,11 @@ pre > code {
   text-align: left;
   white-space: pre;
   word-spacing: normal;
+  -moz-tab-size: 4;
   -o-tab-size: 4;
   tab-size: 4;
+  -webkit-hyphens: none;
+  -moz-hyphens: none;
   -ms-hyphens: none;
   hyphens: none; }
 

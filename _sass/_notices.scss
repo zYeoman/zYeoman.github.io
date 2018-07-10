@@ -11,18 +11,18 @@
  */
 
 @mixin notice($notice-color) {
-  margin: 2em 0 !important;  /* override*/
+  margin: 2em 0;
   padding: 1em;
   color: $dark-gray;
-  font-family: $global-font-family;
-  font-size: $type-size-5 !important;
-  text-indent: initial; /* override*/
+  font-family: $head-font;
+  font-size: $type-size-5;
+  text-indent: initial;
   background-color: mix(#fff, $notice-color, 90%);
   border-radius: $border-radius;
   box-shadow: 0 1px 1px rgba($notice-color, 0.25);
 
   h4 {
-    margin-top: 0 !important; /* override*/
+    margin-top: 0;
     margin-bottom: 0.75em;
   }
 
@@ -34,7 +34,7 @@
 
   p {
     &:last-child {
-      margin-bottom: 0 !important; /* override*/
+      margin-bottom: 0;
     }
   }
 
@@ -58,7 +58,7 @@
 
   ul {
     &:last-child {
-      margin-bottom: 0; /* override*/
+      margin-bottom: 0;
     }
   }
 }
@@ -67,12 +67,6 @@
 
 .notice {
   @include notice($info-color);
-}
-
-/* Primary notice */
-
-.notice--primary {
-  @include notice($primary-color);
 }
 
 /* Info notice */

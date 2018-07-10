@@ -36,7 +36,7 @@
 nav.tags {
   width: 10.5em;
   height: 100%;
-  background: #474d57;
+  background: $tags-background-color;
   border-right: 1px solid $tags-border-color-dark;
   box-shadow: inset -15px 0 15px -15px #222;
   float: left;
@@ -64,7 +64,7 @@ nav.tags {
   display: block;
   transition: all 0.5s;
   &:hover {
-    box-shadow: 0 0 10px 4px #000;
+    box-shadow: 0 0 10px 4px $lighter-gray;
   }
   @media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
       background-size: 100px 100px;
@@ -144,7 +144,7 @@ li.tags {
   transition: color .3s, background .3s;
   &:hover {
     color: $lighter-gray;
-    background: #40464f;
+    background: $tags-border-color-dark;
   }
 }
 
@@ -154,8 +154,8 @@ li.tags {
 #posts-list {
   width: 27em;
   height: 100%;
-  background: rgba(250, 250, 250, 0.95);
-  border-right: 1px solid #e5e8ec;
+  background: $post-bg;
+  border-right: 1px solid $lighter-gray;
   float: left;
   position: relative;
   -webkit-user-select: none;
@@ -172,7 +172,7 @@ li.tags {
 #search-form {
   width: 100%;
   height: 65px;
-  border-bottom: 1px solid #e5e8ec;
+  border-bottom: 1px solid $lighter-gray;
   @include breakpoint(mobileonly) {
       height: 51px;
       display: flex;
@@ -195,7 +195,7 @@ li.tags {
   height: 100%;
   margin: 0;
   padding: 20px 20px 0;
-  color: #2eb695;
+  color: $dark-gray;
   font-size: 18px;
   font-family: inherit;
   background: $list-background-color;
@@ -231,8 +231,7 @@ li.tags {
   right: -1px;
   -webkit-overflow-scrolling: touch;
   a {
-    color: $post-list-color;
-    text-shadow: -1px 1px 0 rgba(125, 139, 153, 0.1);
+    color: $tags-list-color;
     &.active {
       color: $link-color-active;
     }
@@ -244,7 +243,7 @@ li.tags {
     background: transparent;
   }
   &:hover::-webkit-scrollbar-thumb {
-    background: #c8ced6;
+    background: rgba(158,188,226,0.3);
   }
   @include breakpoint(mobileonly) {
     font-size: 15px;
@@ -259,6 +258,9 @@ li.tags {
   display: block;
   &:hover {
     background: rgba(242, 242, 242, 0.5);
+  }
+  &:visited > .pl-title {
+      color: $light-gray;
   }
   &:visited > .pl-circle {
     background: $list-background-color;
@@ -286,8 +288,8 @@ li.tags {
   margin-right: 5px;
   margin-top: 5px;
   float: left;
-  background: #9aa4af;
-  border: 2px solid #9aa4af;
+  background: $gray;
+  border: 2px solid $gray;
   border-radius: 50%;
   display: inline-block;
   transition: border-color .35s;
@@ -299,7 +301,7 @@ li.tags {
 }
 
 .pl-date {
-  color: #9aa4af;
+  color: $light-gray;
   font-size: 14px;
   float: right;
 }

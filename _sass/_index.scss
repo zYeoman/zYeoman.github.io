@@ -10,10 +10,10 @@
   border-radius: 10px;
   overflow: hidden;
   transition: all .3s ease;
-  box-shadow: 0 1px 1px 0px $post-border;
+  box-shadow: 0 1px 1px 0px $post-card-border;
   &:hover {
     transform: translate(0px, -2px);
-    box-shadow: 0 15px 45px -10px $post-border;
+    box-shadow: 0 15px 45px -10px $post-card-border;
   }
 
   .post-content {
@@ -38,7 +38,7 @@
   display: inline-block;
   margin: 20px 0;
   a {
-    color: black;
+    color: $darker-gray;
     float: left;
     padding: 8px 16px;
     border: 1px solid $lighter-gray;
@@ -67,28 +67,27 @@
       content: "# ";
     }
     &:nth-child(1n) {
-      border: 1px solid DodgerBlue;
+      border: 1px solid OliveDrab;
       border-radius: 15px;
-      background: DodgerBlue;
+      background: OliveDrab;
     }
     &:nth-child(2n) {
-      border: 1px solid Orange;
+      border: 1px solid Teal;
       border-radius: 15px;
-      background: Orange;
+      background: Teal;
     }
     &:nth-child(3n) {
-      border: 1px solid LimeGreen;
+      border: 1px solid SteelBlue;
       border-radius: 15px;
-      background: LimeGreen;
+      background: SteelBlue;
     }
     &:nth-child(4n) {
-      border: 1px solid Tomato;
+      border: 1px solid SlateGray;
       border-radius: 15px;
-      background: Tomato;
+      background: SlateGray;
     }
     &:hover {
       color: $darker-gray;
-      border: 1px solid $lighter-gray;
       outline-style: none;
       background: $lighter-gray;
     }

@@ -1,4 +1,3 @@
-
 #markdown-toc {
   position: fixed;
   left: calc(75vw + 12em);
@@ -8,13 +7,13 @@
   max-height: calc(100vh - 100px);
   z-index: 10000;
   box-sizing: border-box;
-  background-color: #fff;
+  background-color: $list-background-color;
   padding: 2em 1.3em 1.3em 1em;
   font-size: calc(12px + 0.1vw);
-  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-family: $head-font;
   line-height: 2;
   font-weight: normal;
-  border: 1px solid rgba(158, 158, 158, 0.22);
+  border: 1px solid $light-gray;
   -webkit-font-smoothing: subpixel-antialiased;
   font-smoothing: subpixel-antialiased;
   overflow-x: hidden;
@@ -31,7 +30,7 @@
   }
   a {
     text-decoration: none;
-    color: gray;
+    color: $gray;
     display: block;
     line-height: 1.3;
     padding-top: 0.2em;

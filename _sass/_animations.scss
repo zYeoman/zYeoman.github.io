@@ -1,7 +1,3 @@
-/* ==========================================================================
-   ANIMATIONS
-   ========================================================================== */
-
 @mixin keyframes($animationName) {
   @-webkit-keyframes #{$animationName} { @content; }
   @-moz-keyframes #{$animationName} { @content; }
@@ -26,14 +22,4 @@
   to {
     -webkit-transform: translateY(-30px);
     opacity: 0; }
-}
-
-@include keyframes(flash) {
-  from, to {
-    color: inherit;
-    -webkit-transform: translateX(0); }
-
-  35% {
-    color: #f8645a;
-    -webkit-transform: translateX(-0.75em); }
 }
