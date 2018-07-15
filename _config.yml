@@ -19,6 +19,17 @@ author:                                     #自定义常量
   weibo: http://weibo.com/mickir
   github: https://github.com/zYeoman
 
+defaults:
+  # _posts
+  - scope:
+      path: ""
+      type: posts
+    values:
+      layout: post
+      comments: true
+
+remote_theme: zYeoman/3-Jekyll
+
 leancloud:
   enable: true
   app_id: xYnmPhrQu3YUQ28Ywk2qEfIp-gzGzoHsz
