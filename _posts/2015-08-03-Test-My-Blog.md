@@ -5,7 +5,7 @@ category: 杂
 tags:
   - 原创
   - 测试
-date: 2018-04-18 16:21:34 +0800
+date: 2018-07-15 21:57 +0800
 create: 2015-08-03
 ---
 
@@ -66,12 +66,13 @@ Notice警告
 
 @zYeoman : jekyll-mentions 测试
 
+gist测试
 
+{% gist 5555251 %}
 
 ## 第二行标题
 
-公式 $$\lambda a_1$$
-$$\delta \times$$
+公式 $$\lambda a_1$$ $$\delta \times$$
 
 $$E = mc^2$$
 
