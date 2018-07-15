@@ -1,9 +1,5 @@
 # Mickir's Blog
 
-使用[这个博客主题](http://liuyanwei.jumppo.com)。
+~~使用[这个博客主题](http://liuyanwei.jumppo.com)。~~
 
-## TODO
-- WebPack 打包压缩 JS 文件
-- 添加 Google Analysis
-- 使用[Ant Design](https://ant.design)
-- 在线编辑、预览
+成功解耦！使用[我自己修改的3-Jekyll](https://github.com/zYeoman/3-Jekyll)。
