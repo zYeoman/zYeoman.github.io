@@ -4,3 +4,7 @@ _drafts/
 tags
 *.swp
 .sass-cache/
+_includes/
+_layouts/
+_sass/
+assets/
