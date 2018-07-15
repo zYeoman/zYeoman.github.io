@@ -44,6 +44,9 @@ avatar: /head.jpg
 
 timezone: Asia/Shanghai
 
+sass:
+  style: compressed
+
 plugins:
     - jekyll-paginate
     - jemoji
@@ -55,4 +58,6 @@ plugins:
 markdown: kramdown
 kramdown:
   hard_wrap:  true
+  syntax_highlighter_opts:
+    wrap: true
   parse_block_html: true
