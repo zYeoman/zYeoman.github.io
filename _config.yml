@@ -5,7 +5,7 @@ email: zyeoman@163.com
 description: 每一个魔法师都要有一本魔法笔记!
 baseurl: "" # the subpath of your site, e.g. /blog/
 url: "https://mickir.me" # the base hostname & protocol for your site
-canonical: "https://mickir.me/" # the base hostname & protocol for your site
+canonical: "https://mickir.me" # the base hostname & protocol for your site
 enforce_ssl: mickir.me
 github_username:  zYeoman
 favicon: "/favicon.ico"
