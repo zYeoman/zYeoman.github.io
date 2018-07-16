@@ -2,7 +2,7 @@
   "scope": "/",
   "name": "mickir的魔法笔记",
   "short_name": "mickir-blog",
-  "start_url": "/?from=homescreen",
+  "start_url": "/index.html",
   "display": "standalone",
   "description": "每一个魔法师都要有一本魔法笔记",
   "dir": "ltr",
