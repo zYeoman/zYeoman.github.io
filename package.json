@@ -1,0 +1,33 @@
+{
+  "name": "yuliang-lee.github.io",
+  "version": "2.3.0",
+  "description": "xlaoyu's blog",
+  "main": "''",
+  "scripts": {
+    "sw": "sw-precache --config=_sw-precache-config.js --verbose",
+    "add-sw": "git add service-worker.js",
+    "install": "npm run sw"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Yuliang-Lee/Yuliang-Lee.github.io.git"
+  },
+  "keywords": [
+    "blog",
+    "jekyll"
+  ],
+  "author": "xlaoyu <frank_yll@163.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/Yuliang-Lee/Yuliang-Lee.github.io/issues"
+  },
+  "homepage": "https://github.com/Yuliang-Lee/Yuliang-Lee.github.io#readme",
+  "devDependencies": {
+    "pre-commit": "^1.2.2",
+    "sw-precache": "^5.2.1"
+  },
+  "pre-commit": [
+    "sw",
+    "add-sw"
+  ]
+}

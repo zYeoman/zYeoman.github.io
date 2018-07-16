@@ -28,6 +28,9 @@ defaults:
       layout: post
       comments: true
 
+# Make sure to put your manifest.json at /
+pwa: true
+
 remote_theme: zYeoman/3-Jekyll
 
 leancloud:
@@ -38,7 +41,7 @@ leancloud:
 analytics:
   google: "UA-96052060-1"
 
-exclude: [LICENSE, CNAME, README.md, .gitignore, Rakefile.rb]
+exclude: [LICENSE, CNAME, README.md, .gitignore, ed, ed.py, node_modules]
 
 avatar: /head.jpg
 
@@ -54,19 +57,6 @@ plugins:
     - jekyll-seo-tag
     - jekyll-relative-links
     - jekyll-sitemap
-
-pwa:
-  sw_src_filepath: service-worker.js # Optional
-  sw_dest_filename: service-worker.js # Optional
-  dest_js_directory: assets/js # Required
-  precache_recent_posts_num: 5 # Optional
-  precache_glob_directory: / # Optional
-  precache_glob_patterns: # Optional
-    - "{js,css,fonts}/**/*.{js,css,eot,svg,ttf,woff}"
-    - index.html
-  precache_glob_ignores: # Optional
-    - sw-register.js
-    - "assets/font/*"
 
 markdown: kramdown
 kramdown:

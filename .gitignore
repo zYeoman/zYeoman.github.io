@@ -8,3 +8,4 @@ _includes/
 _layouts/
 _sass/
 assets/
+node_modules/
