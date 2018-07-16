@@ -5,6 +5,7 @@ email: zyeoman@163.com
 description: 每一个魔法师都要有一本魔法笔记!
 baseurl: "" # the subpath of your site, e.g. /blog/
 url: "https://mickir.me" # the base hostname & protocol for your site
+canonical: "https://mickir.me/" # the base hostname & protocol for your site
 enforce_ssl: mickir.me
 github_username:  zYeoman
 favicon: "/favicon.ico"
@@ -14,7 +15,7 @@ permalink: /blog/:title.html   #博文的固定链接
 paginate: 10
 author:                                     #自定义常量
   name: Mickir
-  email: zhuangyw.thu@gmail.com
+  email: zyeoman@163.com
   link: https://mickir.me/
   weibo: http://weibo.com/mickir
   github: https://github.com/zYeoman
