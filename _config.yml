@@ -32,7 +32,7 @@ defaults:
 # Make sure to put your manifest.json at /
 pwa: true
 
-# remote_theme: zYeoman/3-Jekyll
+remote_theme: zYeoman/3-Jekyll
 
 leancloud:
   enable: true
