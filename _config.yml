@@ -1,7 +1,6 @@
 # highlighter: pygments
 # Site settings
 title: Mickir的魔法笔记
-email: zyeoman@163.com
 description: 每一个魔法师都要有一本魔法笔记!
 baseurl: "" # the subpath of your site, e.g. /blog/
 url: "https://mickir.me" # the base hostname & protocol for your site
@@ -15,7 +14,7 @@ permalink: /blog/:title.html   #博文的固定链接
 paginate: 10
 author:                                     #自定义常量
   name: Mickir
-  email: zyeoman@163.com
+  email: i@mickir.me
   link: https://mickir.me/
   weibo: http://weibo.com/mickir
   github: https://github.com/zYeoman
