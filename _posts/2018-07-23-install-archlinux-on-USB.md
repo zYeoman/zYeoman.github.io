@@ -2,7 +2,7 @@
 layout: post
 title: 在U盘上安装archlinux
 category: 用
-date: 2018-07-23 20:35 +0800
+date: 2018-08-05 21:58 +0800
 create: 2018-07-23 19:25:29 +0800
 ---
 
@@ -11,6 +11,9 @@ create: 2018-07-23 19:25:29 +0800
 [来源2](https://www.jianshu.com/p/44daa17ed60c)
 
 [Archlinux Wiki](https://wiki.archlinux.org/index.php/Installing_Arch_Linux_on_a_USB_key_(%E7%AE%80%E4%BD%93%E4%B8%AD%E6%96%87))
+
+一定要选速度够快的U盘，或者直接上NGFF转USB的固态
+{: .notice}
 
 ## 分区
 看了两篇文章，最后决定还是不去尝试GPT分区了。反正U盘只有64G，GPT没啥优势，还是用MBR（但是我那块酷比魔方平板只支持UEFI启动，因此还是要分EFI分区）
