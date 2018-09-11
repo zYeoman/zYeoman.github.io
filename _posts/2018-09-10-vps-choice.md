@@ -2,7 +2,7 @@
 layout: post
 title: VPS选型
 category: 杂
-date: 2018-09-10 19:16 +0800
+date: 2018-09-11 11:34 +0800
 create: 2018-09-10 19:09:58 +0800
 ---
 
@@ -18,6 +18,11 @@ https://www.alpharacks.com/
 美国洛杉矶每年10刀，2TB流量，768m内存，20g硬盘。
 
 http://my.hostus.us/aff.php?aff=364&amp;amp;amp;amp;amp;amp;pid=103
+
+## Ramnode
+美国西雅图每年13刀，500GB流量，128MB内存，80GB硬盘
+
+https://clientarea.ramnode.com
 
 ## 知乎推荐
 https://www.zhihu.com/question/20800554
