@@ -3,12 +3,21 @@ layout: post
 title: Blog大升级
 category: 用
 tags: jekyll javascript css
-date: 2018-07-16 20:06 +0800
+date: 2018-09-21 00:48 +0800
 create: 2018-07-16 18:49:48 +0800
 ---
 
 ![](https://i.loli.net/2018/07/16/5b4c893d53fff.png)
 
+## 更新记录
+###  2018-09-21
+- 增加置顶功能——通过在markdown文件头添加`stickie:true`实现
+- 增加转载提示——通过在markdown文件头添加`ref:http://origrin_url.com`实现
+
+### 2018-07-16
+- 优化Blog性能等。
+
+## 优化Blog性能
 经过我一个周末的奋斗，Blog升级成果喜人！
 
 目前使用的是我自己修改的[3-Jekyll Theme](https://github.com/zYeoman/3-Jekyll)。
