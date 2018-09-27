@@ -3,8 +3,11 @@ layout: post
 title: Blog大升级
 category: 用
 tags: jekyll javascript css
-date: 2018-09-21 21:39 +0800
+date: 2018-09-27 17:17 +0800
 logs:
+  - 2018-09-27 - 增加代码块复制和高度限制
+  - 2018-09-26 - 使用html5语义化标签
+  - 2018-09-23 - 使用gruvbox主题
   - 2018-09-21 - 增加猜你喜欢和历史记录
   - 2018-09-21 - 增加置顶和转载功能
   - 2018-07-16 - 性能优化
@@ -14,6 +17,16 @@ create: 2018-07-16 18:49:48 +0800
 ![](https://i.loli.net/2018/07/16/5b4c893d53fff.png)
 
 ## 更新记录
+
+### 2018-09-27
+- 增加代码块复制功能：使用[clipboard.js](https://clipboardjs.com/)
+- 增加代码块高度限制、优化滚动条：目前只对webkit有用
+
+### 2018-09-26
+- 使用html5语义化标签：包括`main` `section` `footer` `header`等
+
+### 2018-09-23
+- 代码块使用[gruvbox](https://github.com/daveyarwood/gruvbox-pygments)主题
 
 ### 2018-09-21
 - 增加猜你喜欢功能——通过筛选相同tag文章实现
