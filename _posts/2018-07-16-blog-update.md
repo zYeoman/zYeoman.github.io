@@ -3,9 +3,9 @@ layout: post
 title: Blog大升级
 category: 用
 tags: jekyll javascript css
-date: 2018-09-27 17:17 +0800
+date: 2018-09-27 20:07 +0800
 logs:
-  - 2018-09-27 - 增加代码块复制和高度限制
+  - 2018-09-27 - 增加代码块复制和高度限制、参考资料，优化TOC的css
   - 2018-09-26 - 使用html5语义化标签
   - 2018-09-23 - 使用gruvbox主题
   - 2018-09-21 - 增加猜你喜欢和历史记录
@@ -21,6 +21,8 @@ create: 2018-07-16 18:49:48 +0800
 ### 2018-09-27
 - 增加代码块复制功能：使用[clipboard.js](https://clipboardjs.com/)
 - 增加代码块高度限制、优化滚动条：目前只对webkit有用
+- 增加参考资料功能：通过css`:before`功能添加一栏
+- 优化TOC代码：css更优化，只active`h2`标签
 
 ### 2018-09-26
 - 使用html5语义化标签：包括`main` `section` `footer` `header`等
