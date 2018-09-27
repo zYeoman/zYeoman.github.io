@@ -39,7 +39,12 @@ def add(argv):
         'title: {}\n' \
         'category: {}\n' \
         'date: %Y-%m-%d %H:%M:%S +0800\n' \
-        'create: %Y-%m-%d %H:%M:%S +0800\n---\n'
+        'create: %Y-%m-%d %H:%M:%S +0800\n' \
+        'tags: \n'\
+        '  - \n'  \
+        '---\n\n' \
+        '- TOC\n' \
+        '{{:toc}}'
 
     now = datetime.datetime.now()
     date = now.strftime('%Y-%m-%d')
