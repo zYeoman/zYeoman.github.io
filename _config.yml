@@ -63,4 +63,3 @@ kramdown:
   hard_wrap:  true
   syntax_highlighter_opts:
     wrap: true
-  parse_block_html: true
