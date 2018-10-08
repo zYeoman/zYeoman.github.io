@@ -63,3 +63,4 @@ kramdown:
   hard_wrap:  true
   syntax_highlighter_opts:
     wrap: true
+  toc_levels: 1..3
