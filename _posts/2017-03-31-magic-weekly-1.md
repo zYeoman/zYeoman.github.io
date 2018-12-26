@@ -1,10 +1,12 @@
 ---
 layout: post
-title: 周刊魔法道具与咒语：第 I 辑
+title: 魔法道具与咒语
 category: 器
 tags:
   - 更新中
-date: 2017-03-31
+logs:
+  - 2018-12-26 - 合并1-6
+date: 2018-12-26 20:36 +0800
 create: 2017-03-31 16:34:50
 ---
 
@@ -70,3 +72,100 @@ yaourt -S ttf-mononoki
 ### vim-colorschemes
 [vim-colorschemes](https://github.com/flazz/vim-colorschemes) 是一堆 vim colorscheme。
 
+
+## Python
+
+### 几本书
+* [《Python 最佳实践指南！》](http://pythonguidecn.readthedocs.io/zh/latest/)：主要讲一个合格的工程应该长得什么样，包括结构、代码风格、文档、测试、日志等等，然后是一些模块和部署方面的内容。
+* [《Python Cookbook》](http://python3-cookbook.readthedocs.io/zh_CN/latest/)：Cookbook，就是各种实现方法、小技巧。
+
+### 几个有意思的库
+* [srez](https://github.com/david-gpu/srez)：超分辨率算法。
+* [geoplotlib](https://github.com/andrea-cuttone/geoplotlib)：地图绘制库。
+* [altify](https://github.com/ParhamP/altify)：利用深度神经网络进行图片自动标注。
+* [polyglot](http://polyglot.readthedocs.io/en/latest/)：一个语言库，包括识别语言、单词造句、词法分析等等工具。
+* [SymPy](http://docs.sympy.org/latest/index.htmlhttp://docs.sympy.org/latest/index.html)：一个 Python 符号计算工具。
+
+## Git
+
+### 图形化学习
+[learngitbranching](http://learngitbranching.js.org/)
+
+[![learngitbranching](https://ooo.0o0.ooo/2017/04/07/58e78f27476e4.png)](http://learngitbranching.js.org/)
+使用图形化方式直观体现 git branch 的各种操作以及会产生的后果，建议忘了多回去看看。
+
+
+## GitHub
+
+### ZenHub
+> [ZenHub](https://www.zenhub.io/)
+
+一个浏览器插件，在 GitHub 页面上添加任务面板、TODO、统计和其他小功能。
+
+### TravisCI
+> [TravisCI](https://travis-ci.org/)
+
+持续集成工具。
+
+### Reviewable
+> [Reviewable](https://reviewable.io/)
+
+Review 工具。
+
+### Coveralls
+> [Coveralls](http://coveralls.io/)
+
+代码覆盖率检查工具。
+
+## Python
+* [Eve](http://python-eve.org/)：Python REST 库
+* [Python 编码指南中文版](http://www.elias.cn/Develop/PythonStyleGuide)
+
+## URLs
+* http://apis.io/ 搜索 API 工具
+
+## tmux
+
+[tmux-config](https://github.com/tony/tmux-config)
+
+
+## Python
+* `pandas`: 数据处理
+
+## Blog
+* [人人都会的 35 个 jQuery 小技巧](https://segmentfault.com/a/1190000003902322)
+    * 禁止右键
+    * 隐藏搜索框文字
+    * 新窗口打开链接
+    * 检测浏览器
+    * 预加载图片
+    * 页面样式切换
+    * 列高度相同
+    * 动态控制页面字体大小
+    * 返回顶部
+    * 检查图片是否加载完成
+    * 自动替换加载失败图片
+    * 禁用 input
+    * 等等
+* [学习用 doxygen 生成源码文档](https://www.ibm.com/developerworks/cn/aix/library/au-learningdoxygen/)
+* [Icons for everything：搜索 icon](https://thenounproject.com/)
+
+
+## vim
+
+### 自动安装 vim-plug
+
+```vim
+let vimplug_path=expand('~/.vim/autoload/plug.vim')
+if !filereadable(vimplug_path)
+    echo "Installing vim-plug"
+    echo ""
+    silent !curl -fLo ~/.vim/autoload/plug.vim --create-dirs
+        \ https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
+endif
+```
+
+## Blog/Wiki 工具
+* [Micolog](https://github.com/xuming/micolog): 在 [Google App Engine](https://console.cloud.google.com) 里运行一个 Blog
+* [TiddlyWiki](http://tiddlywiki.com/): 单页面 wiki
+* [nullege](http://nullege.com/): Python 代码搜索
