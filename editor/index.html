@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title>Test</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='editor.css') }}">
+    </head>
+<body>
+
+<div id="editor_area">
+    <div id="toc">
+      {% for file in files %}
+      <div class="toc-item"><a class="" href="{{ file[7:] }}"><span class="">{{ file[7:] }}</span></a></div>
+      {% endfor %}
+    </div>
+    <textarea id="md" style="display:none">{{ text }}</textarea>
+</div>
+
+<div id="test-box">
+    <div class="test-item">
+        <button onclick="HyperMD.switchToNormal(editor)">
+             Normal
+        </button>
+        <div class="test-tooltip">Use default theme provided by CodeMirror, disable HyperMD's visual tricks.</div>
+    </div>
+
+    <div class="test-item">
+        <button onclick="HyperMD.switchToHyperMD(editor)">
+             HyperMD Mode
+        </button>
+        <div class="test-tooltip">Revert previous button's change.</div>
+    </div>
+
+    <div class="right test-item">
+        <button onclick="window.open('https://github.com/laobubu/hypermd/')">
+             <span class="phone-hidden">GitHub</span>
+        </button>
+        <div class="test-tooltip">View HyperMD on GitHub</div>
+    </div>
+
+    <div class="right test-item">
+        <button onclick="post(window.location.href, {data:editor.getValue()})">
+             <span class="phone-hidden">Upload</span>
+        </button>
+        <div class="test-tooltip">Upload Current Change</div>
+    </div>
+
+</div>
+</body>
+
+<!-- ----------------------------------------------------------------------------------- -->
+<!-- CodeMirror -->
+
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/codemirror/lib/codemirror.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/codemirror/addon/fold/foldgutter.css">
+
+<script src="https://cdn.jsdelivr.net/npm/codemirror/lib/codemirror.js"></script>
+
+<script src="https://cdn.jsdelivr.net/npm/codemirror/addon/fold/foldcode.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/codemirror/addon/fold/foldgutter.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/codemirror/addon/fold/markdown-fold.js"></script>
+
+<script src="https://cdn.jsdelivr.net/npm/codemirror/addon/mode/overlay.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/codemirror/mode/meta.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/codemirror/mode/markdown/markdown.js"></script>
+
+<script src="https://cdn.jsdelivr.net/npm/codemirror/mode/xml/xml.js"></script>
+<!-- for embedded HTML -->
+<script src="https://cdn.jsdelivr.net/npm/codemirror/mode/stex/stex.js"></script>
+<!-- for Math TeX Formular -->
+<script src="https://cdn.jsdelivr.net/npm/codemirror/mode/yaml/yaml.js"></script>
+<!-- for Front Matters -->
+
+<script src="https://cdn.jsdelivr.net/npm/codemirror/mode/javascript/javascript.js"></script>
+<!-- load more for code blocks -->
+
+<!-- ----------------------------------------------------------------------------------- -->
+<!-- HyperMD -->
+
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/hypermd/mode/hypermd.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/hypermd/theme/hypermd-light.css">
+
+<script src="https://cdn.jsdelivr.net/npm/hypermd/ai1.js"></script>
+
+<!-- ----------------------------------------------------------------------------------- -->
+<!-- (optional) PowerPacks with 3rd-party libs (Load them before creating editor!) -->
+
+<!-- MathJax and powerpack/fold-math-with-katex -->
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex/dist/katex.min.css" type="text/css">
+<script src="https://cdn.jsdelivr.net/npm/katex/dist/katex.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/hypermd/powerpack/fold-math-with-katex.js"></script>
+
+<!-- marked and powerpack/hover-with-marked -->
+<script src="https://cdn.jsdelivr.net/npm/marked/lib/marked.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/hypermd/powerpack/hover-with-marked.js"></script>
+
+<!-- Turndown and powerpack/paste-with-turndown -->
+<script src="https://cdn.jsdelivr.net/npm/turndown/dist/turndown.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/turndown-plugin-gfm/dist/turndown-plugin-gfm.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/hypermd/powerpack/paste-with-turndown.js"></script>
+
+<!-- Upload Images to https://sm.ms/  -->
+<script src="https://cdn.jsdelivr.net/npm/hypermd/powerpack/insert-file-with-smms.js"></script>
+
+<!-- Use EmojiOne to render emoji  -->
+<script src="https://cdn.jsdelivr.net/npm/emojione"></script>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/emojione/extras/css/emojione.min.css">
+<script src="https://cdn.jsdelivr.net/npm/hypermd/powerpack/fold-emoji-with-emojione.js"></script>
+
+<!-- ----------------------------------------------------------------------------------- -->
+<!-- Let's ROCK -->
+
+<script src="{{ url_for('static', filename='editor.js') }}"></script>
+
+</html>

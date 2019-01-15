@@ -1,21 +1,19 @@
-# 3-Jekyll Theme
+# MyBlog
 
-Fork版本，包含非常多的修改。
+使用我自己修改的[3-Jekyll](https://github.com/zYeoman/3-Jekyll)Fork版本，包含非常多的修改。
 
-（用着用着渐渐学会了前端的那一套，但是我是搞C/C++的啊！）
+## 编辑
+使用[HyperMD](https://laobubu.net/HyperMD)作为编辑器，实际上这里的编辑器就是照着[HyperMD](https://laobubu.net/HyperMD)的DEMO改的。
 
-## 注意事项
-使用时需要手动添加`index.html` `ie.md` `404.md` `tag.md`等文件，内容参考[我自己的博客](https://github.com/zYeoman/zYeoman.github.io)
-
-在`_config.yml`里添加
-
-```yaml
-remote_theme: zYeoman/3-Jekyll
+```bash
+FLASK_APP=ed_serve.py flask run --port=10200 --host=0.0.0.0
 ```
 
-详见 https://help.github.com/articles/adding-a-jekyll-theme-to-your-github-pages-site/
-
 ## TODO
-- WebPack 打包压缩 JS 文件
-- 使用[Ant Design](https://ant.design)
-- 在线编辑、预览
+* 编辑功能升级
+  * 新建文档
+  * 元数据处理
+  * 各种Hover预览
+  * CSS美化
+  * 文件列表/TOC侧栏切换
+* 编辑插件：JekyllEditor
