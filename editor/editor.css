@@ -105,7 +105,7 @@ h2 {
     opacity: .5;
 }
 
-#toc {
+#sidebar {
     float: left;
     margin-right: 10px;
     min-width: 300px;
@@ -114,14 +114,16 @@ h2 {
     height: 100%;
 }
 
-#toc .toc-item {
+#sidebar .post-item,
+#sidebar .toc-item {
     cursor: pointer;
     border-bottom: 1px solid #ccc;
     color: #666;
     padding: .5em;
 }
 
-#toc .toc-item:hover {
+#sidebar .post-item:hover,
+#sidebar .toc-item:hover {
     color: #333;
     background: #FAFAFA;
 }
@@ -176,7 +178,8 @@ h2 {
 }
 
 #test-box .test-sep,
-#test-box .test-item button {
+#test-box .test-item button,
+#test-box .test-item input {
     box-sizing: border-box;
     height: 50px;
     border: 0;

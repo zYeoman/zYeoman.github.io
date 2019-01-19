@@ -26,6 +26,15 @@
 
   // load_and_update_editor(demo_filename)
 
+  document.getElementById("search").oninput = function () {
+    var text = document.getElementById("search").value.toLowerCase()
+    var posts = document.getElementsByClassName("post-item")
+    for (var i = 0, len = posts.length; i < len; i++) {
+      var str = posts[i].innerText
+      posts[i].hidden = !PinyinMatch.match(str, text)
+    }
+  }
+
   // Preview Tex Math formula
   // @see demo/math-preview.js
   // init_math_preview(editor)

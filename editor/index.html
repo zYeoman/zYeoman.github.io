@@ -8,9 +8,9 @@
 <body>
 
 <div id="editor_area">
-    <div id="toc">
+    <div id="sidebar">
       {% for file in files %}
-      <div class="toc-item"><a class="" href="{{ file[7:] }}"><span class="">{{ file[7:] }}</span></a></div>
+      <div class="post-item"><a class="" href="{{ file[7:] }}"><span class="">{{ file[7:] }}</span></a></div>
       {% endfor %}
     </div>
     <textarea id="md" style="display:none">{{ text }}</textarea>
@@ -29,6 +29,10 @@
              HyperMD Mode
         </button>
         <div class="test-tooltip">Revert previous button's change.</div>
+    </div>
+
+    <div class="test-item">
+      <input type="text" value="" name="search" id="search" placeholder="Search..."/>
     </div>
 
     <div class="right test-item">
@@ -106,6 +110,7 @@
 <script src="https://cdn.jsdelivr.net/npm/emojione"></script>
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/emojione/extras/css/emojione.min.css">
 <script src="https://cdn.jsdelivr.net/npm/hypermd/powerpack/fold-emoji-with-emojione.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/pinyin-match"></script>
 
 <!-- ----------------------------------------------------------------------------------- -->
 <!-- Let's ROCK -->
