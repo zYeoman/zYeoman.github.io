@@ -11,6 +11,42 @@
     // for code fence highlighting
     hmdModeLoader: "https://cdn.jsdelivr.net/npm/codemirror/",
   })
+  editor.on("change", debounce(function(cm, change){
+      post(window.location.href, {data:editor.getValue()})
+  }, 2500))
+
+  function post(path, params) {
+    postAjax(path, params, function(responseText){Toastify({text: responseText}).showToast()})
+  }
+
+// https://javascript.ruanyifeng.com/advanced/timer.html
+  function debounce(fn, delay){
+    var timer = null; // 声明计时器
+    return function() {
+      var context = this;
+      var args = arguments;
+      clearTimeout(timer);
+      timer = setTimeout(function () {
+        fn.apply(context, args);
+      }, delay);
+    };
+  }
+// https://plainjs.com/javascript/ajax/send-ajax-get-and-post-requests-47/
+  function postAjax(url, data, success) {
+    var params = typeof data == 'string' ? data : Object.keys(data).map(
+            function(k){ return encodeURIComponent(k) + '=' + encodeURIComponent(data[k]) }
+        ).join('&');
+
+    var xhr = window.XMLHttpRequest ? new XMLHttpRequest() : new ActiveXObject("Microsoft.XMLHTTP");
+    xhr.open('POST', url);
+    xhr.onreadystatechange = function() {
+        if (xhr.readyState>3 && xhr.status==200) { success(xhr.responseText); }
+    };
+    xhr.setRequestHeader('X-Requested-With', 'XMLHttpRequest');
+    xhr.setRequestHeader('Content-Type', 'application/x-www-form-urlencoded');
+    xhr.send(params);
+    return xhr;
+  }
   // and that's all
   // now you get a `editor` and you can do whatever you want
   editor.setSize(null, "100%") // set height
@@ -22,7 +58,6 @@
   window.HyperMD = HyperMD
   window.editor = editor
   window.cm = editor
-  window.post = post
 
   // load_and_update_editor(demo_filename)
 
@@ -45,38 +80,6 @@
 
   // @see demo/lab.js
   // init_lab(editor)
-
-// https://stackoverflow.com/questions/133925/javascript-post-request-like-a-form-submit
-/**
- * sends a request to the specified url from a form. this will change the window location.
- * @param {string} path the path to send the post request to
- * @param {object} params the paramiters to add to the url
- * @param {string} [method=post] the method to use on the form
- */
-
-function post(path, params, method) {
-    method = method || "post"; // Set method to post by default if not specified.
-
-    // The rest of this code assumes you are not using a library.
-    // It can be made less wordy if you use one.
-    var form = document.createElement("form");
-    form.setAttribute("method", method);
-    form.setAttribute("action", path);
-
-    for(var key in params) {
-        if(params.hasOwnProperty(key)) {
-            var hiddenField = document.createElement("input");
-            hiddenField.setAttribute("type", "hidden");
-            hiddenField.setAttribute("name", key);
-            hiddenField.setAttribute("value", params[key]);
-
-            form.appendChild(hiddenField);
-        }
-    }
-
-    document.body.appendChild(form);
-    form.submit();
-}
 
 function clickHandler(info, cm) {
   if (info.type === "link" || info.type === "url") {

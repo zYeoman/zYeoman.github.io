@@ -28,6 +28,8 @@ def serve_file(filename=None):
         with open('_posts/' + filename, 'w') as f:
             if request.form.get('data', None) is not None:
                 f.write(request.form['data'].replace('\r', ''))
+                return "Save Success!"
+        return "Save Failure"
 
     files = glob.glob('_posts/*.md')
     if filename is not None and filename.endswith('.md'):
