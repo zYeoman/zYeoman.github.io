@@ -5,15 +5,4 @@
 ## 编辑
 使用[HyperMD](https://laobubu.net/HyperMD)作为编辑器，实际上这里的编辑器就是照着[HyperMD](https://laobubu.net/HyperMD)的DEMO改的。
 
-```bash
-FLASK_APP=ed_serve.py flask run --port=10200 --host=0.0.0.0
-```
-
-## TODO
-* 编辑功能升级
-  * 新建文档
-  * 元数据处理
-  * 各种Hover预览
-  * CSS美化
-  * 文件列表/TOC侧栏切换
-* 编辑插件：JekyllEditor
+移动到了新repo [BlogEditor](https://github.com/zYeoman/BlogEditor)
