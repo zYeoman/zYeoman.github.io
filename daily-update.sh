@@ -11,13 +11,13 @@
 
 # Push to zYeoman.github.io
 cd "$(dirname "$(readlink -f "$0")")" || exit
-proxychains git pull
+git pull
 git add _posts
 git commit -m ":pencil: daily update at $(date -Idate)"
-proxychains git push
+git push
 
 # Push to articles
 cd _posts/ || exit
 git add .
 git commit -m ":pencil: daily update at $(date -Idate)"
-proxychains git push
+git push
