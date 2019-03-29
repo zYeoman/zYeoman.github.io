@@ -2,7 +2,7 @@
 layout: post
 title: cordova使用教程【1】——开始使用
 category: 器
-date: 2019-03-08 17:16:54 +0800
+date: 2019-03-29 17:30:45 +0800
 create: 2019-03-08 16:32:11 +0800
 tags: 
   - 教程
@@ -79,9 +79,10 @@ Error: Some of requirements check failed
 cordova build
 ```
 即可为所有平台执行构建。
+
 | Option | Description |
-| --- | --- |
-| `<platform> [..]` | 构建目标平台，未指定时为所有平台构建|
+| ------ | ----------- |
+| `<platform> [..]` | 构建目标平台，未指定时为所有平台构建 |
 | \--debug | Debug构建|
 | \--release | Release构建|
 | \--device | Build it for a device |
