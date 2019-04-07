@@ -1,0 +1,19 @@
+.article-copyright {
+  padding: 5px 30px;
+  margin-bottom: 20px;
+  margin-left: auto;
+  margin-right: auto;
+  max-width: 750px;
+  background-color: lightsteelblue;
+  border-radius: 8px;
+  font-weight: bold;
+  color: $dark-gray;
+  font-size: 16px;
+  a {
+    color: inherit;
+  }
+  p {
+    margin: 0;
+    line-height: 1.2;
+  }
+}

@@ -1,0 +1,16 @@
+<h1 class="post__title">{{ site.title  }}</h1>
+{% for post in site.posts %}
+  {% if post.stickie != true %}
+    {% continue %}
+  {% endif %}
+  {% include card.html %}
+{% endfor %}
+
+{% for post in paginator.posts %}
+  {% if post.stickie == true %}
+    {% continue %}
+  {% endif %}
+  {% include card.html %}
+{% endfor %}
+
+{% include pagination.html %}

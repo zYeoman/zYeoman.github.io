@@ -1,0 +1,25 @@
+@mixin keyframes($animationName) {
+  @-webkit-keyframes #{$animationName} { @content; }
+  @-moz-keyframes #{$animationName} { @content; }
+  @-o-keyframes #{$animationName} { @content; }
+  @keyframes #{$animationName} { @content; }
+}
+
+@include keyframes(fadeIn) {
+  from {
+    -webkit-transform: translateY(30px);
+    opacity: 0; }
+
+  to {
+    -webkit-transform: translateY(0);
+    opacity: 1; }
+}
+@include keyframes(fadeOut) {
+  from {
+    -webkit-transform: translateY(0);
+    opacity: 1; }
+
+  to {
+    -webkit-transform: translateY(-30px);
+    opacity: 0; }
+}

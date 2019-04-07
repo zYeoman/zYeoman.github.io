@@ -1,0 +1,51 @@
+<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+<meta name="theme-color" content="#FFF"/>
+<meta name="baidu-site-verification" content="w9Akh6dPe4" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+{% if site.pwa %}
+<link rel="manifest" href="/manifest.json">
+{% endif %}
+<!--[if lte IE 8]><meta http-equiv="refresh" content="0;url=/ie.html"><![endif]-->
+{% if page.keywords %}
+  <meta name="keywords" content="{{ page.keywords }}"/>
+{% endif %}
+<link rel="shortcut icon" href="{{ site.favicon }}" />
+<link href="/rss.xml" rel="alternate" title="{{site.title}}" type="application/atom+xml">
+<link rel="preconnect" href="https://www.google-analytics.com"/>
+<link rel="prefetch" href="/assets/font/3icon.ttf"/>
+{% if site.canonical %}
+<link rel="canonical" href="{{ site.canonical }}{{ page.url | replace:'/index.html',''  }}" />
+{% else %}
+<link rel="canonical" href="{{ site.url }}{{ page.url | replace:'/index.html', '' }}"/>
+{% endif %}
+<script defer src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script defer src="//cdnjs.cloudflare.com/ajax/libs/jquery.pjax/2.0.1/jquery.pjax.min.js"></script>
+<script defer src="//cdnjs.cloudflare.com/ajax/libs/KaTeX/0.9.0/katex.min.js"></script>
+<script defer src="/assets/js/av-min.js"></script>
+<script defer src="/assets/js/pinyin-match.js"></script>
+<script defer src="/assets/js/clipboard.min.js"></script>
+<script defer src="/assets/js/Valine.min.js"></script>
+<script defer src="/assets/js/script.js"></script>
+{% capture styles %}
+{% include base.scss %}
+{% endcapture %}
+<style> {{ styles | scssify  }} </style>
+<link rel="stylesheet" type="text/css" href="/assets/css/style.css">
+<noscript id="deferred-styles">
+  <link rel="stylesheet" href="/assets/css/3icon.css">
+  <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/KaTeX/0.9.0/katex.min.css">
+</noscript>
+
+<script>
+  var loadDeferredStyles = function() {
+    var addStylesNode = document.getElementById("deferred-styles");
+    var replacement = document.createElement("div");
+    replacement.innerHTML = addStylesNode.textContent;
+    document.body.appendChild(replacement)
+    addStylesNode.parentElement.removeChild(addStylesNode);
+  };
+  var raf = window.requestAnimationFrame || window.mozRequestAnimationFrame ||
+    window.webkitRequestAnimationFrame || window.msRequestAnimationFrame;
+  if (raf) raf(function() { window.setTimeout(loadDeferredStyles, 0); });
+  else window.addEventListener('load', loadDeferredStyles);
+</script>

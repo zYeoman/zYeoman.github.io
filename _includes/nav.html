@@ -1,0 +1,45 @@
+<aside id="sidebar" class="sidebar">
+  <nav class="tags" id="posts-tags">
+    <a href="/index.html" id="avatar" class="avatar" aria-hidden="true" style="background-image:url({{ site.avatar }})"></a>
+
+    <ul id="tags-ul" class="tags">
+      <li id="pl-all" class="tags tags-btn active">所有文章</li>
+      {% for category in site.categories %}
+        <li id="{{ category[0] }}" class="tags tags-btn">{{ category[0] }}</li>
+      {% endfor %}
+    </ul>
+
+    <div class="tags-bottom">
+      <a href="{{ site.author.github }}" class="tags-btn fontello" target="_blank"  rel="noopener"><i class="icon-github" aria-hidden="true"></i></a>
+      <a href="/rss.xml" class="tags-btn fontello" target="_blank"><i class="icon-rss" aria-hidden="true"></i></a>
+      <a href="mailto:{{ site.author.email }}" class="tags-btn fontello"><i class="icon-mail" aria-hidden="true"></i></a>
+    </div>
+  </nav> <!-- end .tags -->
+
+  <div id="posts-list">
+    <form action="" id="search-form" aria-label="search">
+      <a href="/index.html" id="mobile-avatar" aria-hidden="true" style="background-image:url({{ site.avatar }}) "></a>
+      <!-- NOTE: input field is disabled by default -->
+      <input id="search-input" type="text" aria-label="search input" placeholder="Search..." >
+    </form>
+
+    <nav id="pl-container">
+    {% for post in site.posts %}
+      {% if post.stickie != true %}
+        {% continue %}
+      {% endif %}
+      <a class="{{ post.categories }} pl-all" href="{{ post.url }}">
+      <span class="pl-circle"></span>
+      <span>[置顶]</span>
+      <span class="pl-title">{{ post.title }}</span>
+      <span class="pl-date">{{ post.date | date: "%b %Y" }}</span></a>
+    {% endfor %}
+    {% for post in site.posts %}
+      {% if post.stickie == true %}
+        {% continue %}
+      {% endif %}
+      <a class="{{ post.categories }} pl-all" href="{{ post.url }}"><span class="pl-circle"></span><span class="pl-title">{{ post.title }}</span><span class="pl-date">{{ post.date | date: "%b %Y" }}</span></a>
+    {% endfor %}
+    </nav>
+  </div> <!-- end #posts-list -->
+</aside> <!-- end #sidebar -->

@@ -1,0 +1,38 @@
+<section class="post-extend">
+  <section class="post-extend-content">
+    <h4 class="post-extend-title">历史记录</h4>
+    <ul class="post-extend-list">
+      {% for log in page.logs %}
+      <li class="post-extend-item">
+        {{ log }}
+      </li>
+      {% endfor %}
+      <li class="post-extend-item">
+        {{ page.create | date: "%Y-%m-%d" }} - 初稿
+      </li>
+    </ul>
+  </section>
+  <section class="post-extend-content">
+    <h4 class="post-extend-title">猜你喜欢</h4>
+    <ul class="post-extend-list">
+      {% assign cnt=0 %}
+      {% for other_post in site.posts %}
+        {% if other_post == page %}
+          {% continue %}
+        {% endif %}
+        {% for tag in page.tags %}
+          {% if other_post.tags contains tag %}
+          <li class="post-extend-item">
+            <a class="post-extend-link" href="{{ other_post.url | prepend: site.baseurl }}" title="{{ other_post.title }}">{{ other_post.title }}</a>
+          </li>
+          {% assign cnt = cnt | plus: 1 %}
+          {% break %}
+          {% endif %}
+        {% endfor %}
+        {% if cnt == 5 %}
+          {% break %}
+        {% endif %}
+      {% endfor %}
+    </ul>
+  </section>
+</section>

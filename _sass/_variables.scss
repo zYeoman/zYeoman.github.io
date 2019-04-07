@@ -1,0 +1,80 @@
+// # Breakpoints
+$small                       : 37.5em;
+$medium                      : 42em;
+$medium-wide                 : 50em;
+$large                       : 64em;
+$x-large                     : 85em;
+$doc-font-size               : 16px;
+$sidebar-width               : 30em;
+$sidebar-width-small         : 25em;
+$tags-width                  : 10em;
+$tags-width-small            : 7.5em;
+// Font
+$eng-font                    : "Roboto", "Segoe UI", "Helvetica Neue", "Lucida Grande", Arial;
+$kaiti                       : Kai, "Kaiti SC", KaiTi, BiauKai, 楷体, 楷体_GB2312;
+$post-font                   : $eng-font, $kaiti, serif;
+$head-font                   : $eng-font, "Microsoft Yahei", serif;
+$code-font                   : Monaco, Consolas, "Lucida Console", $kaiti;
+$type-size-1                 : 2em;      // ~32px
+$type-size-2                 : 1.5em;    // ~24px
+$type-size-3                 : 1.25em;   // ~20px
+$type-size-4                 : 1em;      // ~16px
+$type-size-5                 : 0.75em;   // ~12px
+$type-size-6                 : 0.6875em; // ~11px
+$type-size-7                 : 0.625em;  // ~10px
+$gray                        : #737373;
+$dark-gray                   : darken($gray, 25%);
+$darker-gray                 : darken($gray, 60%);
+$light-gray                  : lighten($gray, 25%);
+$lighter-gray                : lighten($gray, 40%);
+$post-card-border            : rgba(0, 0, 0, .2);
+$code-background-color       : #fafafa;
+$list-background-color       : #fafafa;
+$tags-background-color       : #474d57;
+$tags-border-color-dark      : darken($tags-background-color, 5%);
+$tags-border-color-light     : lighten($tags-background-color, 5%);
+$tags-background-color-light : $tags-border-color-light;
+$tags-list-color             : $tags-background-color-light;
+
+$post-bg                     : rgb(250,250,250);
+
+$code-scrollbar-color        : DodgerBlue;
+$text-color                  : $dark-gray;
+$muted-text-color            : $light-gray;
+$form-background-color       : $lighter-gray;
+$footer-background-color     : $lighter-gray;
+$success-color               : LimeGreen;
+$warning-color               : Orange;
+$danger-color                : Tomato;
+$info-color                  : DodgerBlue;
+/* links */
+$link-color                  : DodgerBlue;
+$link-color-active           : $info-color;
+
+
+@mixin breakpoint($point) {
+   @if $point == desktop {
+     @media (min-width: $x-large) { @content ; }
+   }
+   @else if $point == laptop {
+     @media (min-width: $large) and (max-width: $x-large) { @content ; }
+   }
+    @else if $point == tablet {
+     @media (min-width: $medium-wide) and (max-width: $large) { @content ; }
+   }
+   @else if $point == phablet {
+     @media (min-width: $small) and (max-width: $medium-wide)  { @content ; }
+   }
+   @else if $point == mobileonly {
+     @media (max-width: $small)  { @content ; }
+   }
+   @else if $point == nodesktop {
+     @media (max-width: $x-large) { @content ; }
+   }
+}
+/*
+   Other
+   ========================================================================== */
+
+$border-radius                : 4px;
+$global-transition            : all 0.2s ease-in-out;

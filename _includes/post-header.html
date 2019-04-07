@@ -1,0 +1,44 @@
+<header class="post-header">
+  <h1 class="post-title" data-identifier="{{ page.date | date: "%Y%m%d" }}">{{ page.title }}</h1>
+  <div class="post-meta">
+    {% if post.ref %}
+    <span class="post-reprint">
+      <span class="post-meta-item-icon">
+        <i class="icon-pencil" aria-hidden="true"></i>
+      </span>
+      <span>转载</span>
+    </span>
+    |
+    {% endif %}
+    <span class="post-date">
+      <span class="post-meta-item-icon">
+        <i class="icon-calendar" aria-hidden="true"></i>
+      </span>
+      <span>发表于</span>
+      <time datetime="{{page.create}}">{{ page.create| date: "%Y-%m-%d" }}</time>
+    </span>
+    <span class="post-date">
+      |
+      <span class="post-meta-item-icon">
+        <i class="icon-pencil" aria-hidden="true"></i>
+      </span>
+      <span>修改于</span>
+      <time datetime="{{page.date}}">{{ page.date| date: "%Y-%m-%d" }}</time>
+    </span>
+    <span class="post-category">
+      |
+      <span class="post-meta-item-icon">
+        <i class="icon-folder" aria-hidden="true"></i>
+      </span>
+      <span class="post-meta-item-text">分类于 {{page.category}}</span>
+    </span>
+    <span class="post-read">
+      <span class="leancloud_visitors" id="{{ page.url }}">
+        |
+        <span class="post-meta-item-icon">
+          <i class="icon-eye" aria-hidden="true"></i>
+        </span>阅读次数 <span class="leancloud-visitors-count"><i class="icon-spin animate-spin"></i></span>
+      </span>
+    </span>
+  </div>
+</header>

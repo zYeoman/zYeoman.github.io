@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="zh-cmn-Hans">
+  <head>
+    {% include header.html %}
+    {% if site.analytics.google %}
+        {% include ganalytics.html %}
+    {% endif %}
+    {% seo %}
+  </head>
+  <body>
+    {% include nav.html %}
+    <main id="post">
+      <section id="pjax">
+        {{ content }}
+      </section> <!-- end #pjax -->
+    </main> <!-- end #post -->
+
+    <button id="js-fullscreen">→</button>
+
+    {% include footer.html %}
+
+   </body>
+ </html>

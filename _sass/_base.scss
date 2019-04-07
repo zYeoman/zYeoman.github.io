@@ -1,0 +1,85 @@
+/* ==========================================================================
+   BASE ELEMENTS
+   ========================================================================== */
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: antialiased;
+}
+
+a {
+  color: $link-color;
+  text-decoration: none;
+  word-break: break-all;
+  &:hover {
+    text-decoration: underline;
+  }
+}
+
+img {
+  max-width: 100%;
+  display: block;
+  margin: auto;
+  &.emoji {
+    display: unset;
+  }
+}
+
+img + br + em, img + em {
+  display: block;
+  text-align: center;
+  font-size: 12px;
+}
+
+img + br {
+  display: none;
+}
+
+summary {
+  &:focus {
+    outline: none;
+  }
+}
+
+h1, h2, h3, h4, h5, h6 {
+  /*font-weight: 400;*/
+    /*margin: 10px 0;*/
+    font-family: inherit;
+    font-weight: bold;
+    color: inherit;
+    text-rendering: optimizelegibility;
+}
+
+h1 {
+  font-size: $type-size-1;
+}
+
+h2{
+    font-size: $type-size-2;
+}
+h3 {
+    font-size: $type-size-3;
+    line-height: 1.5;
+}
+
+h4 {
+    font-size: $type-size-4;
+    line-height: 1.5;
+}
+
+strong {
+  font-weight: 600; }
+
+
+
+p {
+  margin-bottom: 1.3em;
+}
+

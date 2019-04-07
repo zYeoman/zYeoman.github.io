@@ -1,0 +1,40 @@
+/* ==========================================================================
+   TABLES
+   ========================================================================== */
+
+/* table */
+
+table {
+  width: 100%;
+  border: 1px solid $lighter-gray;
+  margin: 15px auto;
+  border-collapse: collapse;
+  empty-cells: show;
+  vertical-align: middle;
+
+  th, td {
+    max-width: 15em;
+    padding: 0 10px;
+  }
+
+  th {
+    font-weight: bold;
+    padding: 0.5em;
+    text-align: center !important;
+    background: rgba(158,188,226,0.3);
+  }
+
+  td:nth-child(1) {
+    white-space: nowrap;
+    width: 1px;
+  }
+
+  tr:nth-child(2n) {
+    background: rgba(158,188,226,0.12);
+  }
+
+  tr:hover {
+    background: $lighter-gray;
+  }
+
+}

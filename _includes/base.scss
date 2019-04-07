@@ -1,0 +1,178 @@
+// # Breakpoints
+$small                       : 37.5em;
+$medium                      : 42em;
+$medium-wide                 : 50em;
+$large                       : 64em;
+$x-large                     : 85em;
+$sidebar-width               : 30em;
+$sidebar-width-small         : 25em;
+$tags-width                  : 10em;
+$tags-width-small            : 7.5em;
+// Font
+$eng-font                    : "Roboto", "Segoe UI", "Helvetica Neue", "Lucida Grande", Arial;
+$kaiti                       : Kai, "Kaiti SC", KaiTi, BiauKai, 楷体, 楷体_GB2312;
+$post-font                   : $eng-font, $kaiti, serif;
+$head-font                   : $eng-font, "Microsoft Yahei", serif;
+$code-font                   : Monaco, Consolas, "Lucida Console", monospace, $kaiti;
+$type-size-1                 : 2em;      // ~32px
+$type-size-2                 : 1.5em;    // ~24px
+$type-size-3                 : 1.25em;   // ~20px
+$type-size-4                 : 1em;      // ~16px
+$type-size-5                 : 0.75em;   // ~12px
+$type-size-6                 : 0.6875em; // ~11px
+$type-size-7                 : 0.625em;  // ~10px
+$gray                        : #737373;
+$dark-gray                   : darken($gray, 25%);
+$darker-gray                 : darken($gray, 60%);
+$light-gray                  : lighten($gray, 25%);
+$lighter-gray                : lighten($gray, 40%);
+$post-card-border            : rgba(0, 0, 0, .2);
+$tags-background-color       : #474d57;
+$tags-border-color-dark      : darken($tags-background-color, 5%);
+$tags-border-color-light     : lighten($tags-background-color, 5%);
+$tags-background-color-light : $tags-border-color-light;
+$tags-list-color             : $tags-background-color-light;
+
+$post-bg                     : rgb(250,250,250);
+
+$text-color                  : $dark-gray;
+/* links */
+$link-color                  : DodgerBlue;
+
+
+@mixin breakpoint($point) {
+   @if $point == desktop {
+     @media (min-width: $x-large) { @content ; }
+   }
+   @else if $point == laptop {
+     @media (min-width: $large) and (max-width: $x-large) { @content ; }
+   }
+    @else if $point == tablet {
+     @media (min-width: $medium-wide) and (max-width: $large) { @content ; }
+   }
+   @else if $point == phablet {
+     @media (min-width: $small) and (max-width: $medium-wide)  { @content ; }
+   }
+   @else if $point == mobileonly {
+     @media (max-width: $small)  { @content ; }
+   }
+   @else if $point == nodesktop {
+     @media (max-width: $x-large) { @content ; }
+   }
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html, body {
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  -webkit-font-smoothing: subpixel-antialiased;
+}
+
+a {
+  color: $link-color;
+  text-decoration: none;
+  word-break: break-all;
+  &:hover {
+    text-decoration: underline;
+  }
+}
+
+img {
+  max-width: 100%;
+  display: block;
+  margin: auto;
+  &.emoji {
+    display: unset;
+  }
+}
+
+h1, h2, h3, h4, h5, h6 {
+  /*font-weight: 400;*/
+    /*margin: 10px 0;*/
+    font-family: inherit;
+    font-weight: bold;
+    color: inherit;
+    text-rendering: optimizelegibility;
+}
+
+h1 {
+  font-size: $type-size-1;
+}
+
+h2{
+    font-size: $type-size-2;
+}
+
+p {
+  margin-bottom: 1.3em;
+}
+
+
+#post {
+  height: 100%;
+  background: $post-bg;
+  overflow-x: hidden;
+  overflow-y: auto;
+  font-family: $post-font;
+  color: $darker-gray;
+  font-size: 16px;
+  font-weight: normal;
+  line-height: 1.7;
+}
+
+.post-meta {
+    color: $gray;
+    font-size: $type-size-5;
+}
+
+#sidebar {
+  display: block;
+  height: 100%;
+  float: left;
+  @include breakpoint(desktop) {
+    width: $sidebar-width;
+  }
+  @include breakpoint(nodesktop) {
+    transform: translateX(-100%);
+    width: $sidebar-width-small;
+    position: absolute;
+  }
+  @include breakpoint(mobileonly) {
+    width: 100%;
+  }
+}
+#posts-tags {
+  display: flex;
+  min-width: $tags-width;
+  flex-direction: column;
+  height: 100%;
+  background: $tags-background-color;
+  @include breakpoint(nodesktop) {
+    min-width: $tags-width-small;
+  }
+  @include breakpoint(mobileonly) {
+    display: none;
+  }
+}
+#avatar {
+  display: block;
+  width: 100px;
+  height: 100px;
+  margin: 55px auto 35px;
+  border-radius: 50%;
+  background: $tags-background-color;
+  background-size: 100px 100px;
+}
+#posts-list {
+  background: $post-bg;
+}
+#tags-ul, #search-input, #pl-container {
+  color: $light-gray;
+  visibility: hidden;
+  opacity: 0;
+  transition: opacity 0.3s;
+}
