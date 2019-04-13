@@ -124,25 +124,44 @@ function afterPjax() {
   $("a:external").attr({"rel":"noopener", "target":"_blank"});
   $(document).pjax("[href^='/']", "#pjax", { fragment: "#pjax", timeout: 10000 });
 
+  var toc = $("#markdown-toc");
+
   // Smooth scrolling
-  $("#markdown-toc").on("click", "a", function() {
+  toc && toc.on("click", "a", function() {
     var target = $(this.hash);
     container.animate({scrollTop: target.offset().top + container.scrollTop() - 70}, 500, function() { });
   });
 
-  $("#markdown-toc").find("a").each(function() {
+  toc && toc.find("a").each(function() {
       href = $(this).attr('href');
       $(this).attr('href', decodeURIComponent(href));
   });
 
+  var bord = $("<div class='highlight-title'></div>");
+  toc && bord.appendTo(toc)
+
   // Scrolling highlight
-  $("#post").scroll(function() {
-          $("h2").each(function() {
-          if($(window).scrollTop() + $(window).height()/3 >= $(this).offset().top) {
-              var id = $(this).attr("id");
-              $("a[href='#"+id+"']").parent().addClass("active").siblings().removeClass("active");
+  headers = container.find("h2,h3");
+  toc && container.scroll(function() {
+    var n = $(window).scrollTop();
+    headers.eq(0).offset().top < n + 40 ? (bord.show(),
+      headers.each(function(ind, inner) {
+        if (headers.eq(Math.min(Math.max(0, ind+1), headers.length-1)).offset().top > n) {
+          var id = $(this).attr("id");
+          var cur = $("a[href='#"+id+"']")
+          var top = cur.offset().top - toc.offset().top + toc.scrollTop();
+          bord.css("top", top).height(cur.outerHeight());
+          toc.find("li").removeClass("active");
+          cur.parent().addClass("active");
+          if (top + 40 > $(window).height() / 2) {
+            var hei = cur.parent().offset().top - toc.offset().top + toc.scrollTop();
+            hei > 0 && toc.scrollTop(hei);
+          } else {
+            toc.scrollTop(0);
           }
-      });
+          return !1;
+        }
+      })) : (bord.hide(),toc.find("li").removeClass("active"));
   });
 
   $("script[type='math/tex']").replaceWith(function() {
