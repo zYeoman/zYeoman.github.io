@@ -6,13 +6,30 @@ tags:
   - 原创
   - arch
   - 记录
-date: 2017-03-02
+date: 2019-04-22 17:12:50 +0800
 create: 2016-11-27
+log:
+  - 2019-04-22 17:06:17 - 添加UEFI配置、使用yay（不是yaourt）
 ---
 
 突然想起来 windows 还有一个叫 Hyper-V 的虚拟化工具，然后就决定装一个 Archlinux 试一试。毕竟网上 Archlinux 吹好多的。
 
 据说按照 wiki 就能装好了。看一下吧。
+
+### UEFI配置
+```sh
+## 使用UEFI
+## pacman -S grub efibootmgr
+## mkdir /boot/efi
+## mount /dev/sda1 /boot/efi
+## grub-install /dev/sda --target=x86_64-efi --bootloader-id=<AnyName> --efi-directory=/boot/efi --removable
+## grub-mkconfig -o /boot/grub/grub.cfg
+
+##没什么用貌似
+# vi /boot/efi/startup.nsh
+### bcf boot add 1 fs0:\EFI\GRUB\grubx64.efi "<The name of bootloader>"
+### exit
+```
 
 ## 配置 Hyper-V
 首先要打开 windows 的 Hyper-V 服务，打开控制面板 ->程序 ->启用或关闭 Windows 功能，把 Hyper-V 那一栏打上勾。然后也许要重启一下。
@@ -28,9 +45,14 @@ create: 2016-11-27
 # 建立分区
 ## 查看
 fdisk -l
+## 可以使用cfdisk，有一个朴素的GUI
 ## 建立（例子）
 fdisk /dev/sda
 ### n 新分区，+xG 指定大小 xGB，w 写入磁盘
+## 注意：UEFI这里需要分一个专门的EFI分区
+## n +512M
+## mkfs.fat -F32 /dev/sda1
+## mkswap /dev/sda3
 ## 格式化
 mkfs.ext4 /dev/sda1
 ## 挂载
@@ -43,7 +65,7 @@ vim /etc/pacman.d/mirrorlist
 ### error:signature from * is unknown trust
 pacman -Sy archlinux-keyring
 ## 安装
-pacstrap /mnt
+pacstrap /mnt base base-devel
 
 # 配置
 ## fstab（硬盘 UUID 卷标）
@@ -52,6 +74,8 @@ genfstab -U /mnt >> /mnt/etc/fstab
 arch-chroot /mnt /bin/bash
 ## 时区
 ln -s /usr/share/zoneinfo/Asia/Shanghai /etc/localtime
+## 硬件时钟设置
+hwclock --systohc --utc
 ## Locale
 vi /etc/locale.gen
 ### uncomment en_US,zh_CN
@@ -59,7 +83,9 @@ locale-gen
 echo LANG=en_US.UTF-8 > /etc/locale.conf
 ## 主机名
 echo matrix > /etc/hostname
-## 网络没配置
+## 网络配置
+pacman -S networkmanager
+systemctl enable NetworkManager
 ## Root 密码
 passwd
 
@@ -68,6 +94,8 @@ passwd
 pacman -S grub
 grub-install /dev/sda
 grub-mkconfig -o /boot/grub/grub.cfg
+
+
 
 # 新建用户
 ## 新建 wheel 组用户 mickir
@@ -119,7 +147,7 @@ wifi-menu
 elinks
 ```
 
-### yaourt
+### yay(yaourt)
 ```sh
 # 添加 archlinuxcn 库
 vim /etc/pacman.conf
@@ -127,7 +155,7 @@ vim /etc/pacman.conf
 ## [archlinuxcn]
 ## Server = http://mirrors.tuna.tsinghua.edu.cn/archlinuxcn/$arch
 pacman -Syu archlinuxcn-keyring
-pacman -S yaourt
+pacman -S yay
 ```
 
 ### 安装 shadowsocks
@@ -154,3 +182,6 @@ timedatectl set-ntp 1
 
 ### 无外网连接
 没有外网连接时 Hpyer-V 的虚拟交换机不能正确分配 ip，需要新建一个新的虚拟交换机，新建时选择仅内部网络。这样 Archlinux 就有 ipv6 的地址了。在宿主机配置网络和共享中心那里设置`vEthernet(inner)`的 ipv4 地址，同时在 Archlinux 里使用`sudo ip a add xx.xx.xx.xx/24 dev eth0`的方式设置静态 IP。这样虚拟机和宿主机又可以互连了。
+
+
+[^1]:https://www.youtube.com/watch?v=DfC5hgdtbWY
