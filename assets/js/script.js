@@ -146,9 +146,10 @@ function afterPjax() {
     var n = $(window).scrollTop();
     headers.eq(0).offset().top < n + 40 ? (bord.show(),
       headers.each(function(ind, inner) {
-        if (headers.eq(Math.min(Math.max(0, ind+1), headers.length-1)).offset().top > n) {
+        var o = headers.last().offset().top - n;
+        if (headers.eq(Math.min(Math.max(0, ind+1), headers.length-1)).offset().top > n || o < 0) {
           var id = $(this).attr("id");
-          var cur = $("a[href='#"+id+"']")
+          var cur = o < 0 ? toc.find("a").last() : $("a[href='#"+id+"']")
           var top = cur.offset().top - toc.offset().top + toc.scrollTop();
           bord.css("top", top).height(cur.outerHeight());
           toc.find("li").removeClass("active");
