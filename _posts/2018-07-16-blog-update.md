@@ -3,8 +3,11 @@ layout: post
 title: Blog大升级
 category: 用
 tags: jekyll javascript css
-date: 2018-09-27 20:07 +0800
+date: 2019-04-29 19:01:02 +0800
 logs:
+  - 2019-04-29 - 手机更新不及时，删除了service worker
+  - 2019-04-14 - TOC格式优化，参考segmentfault
+  - 2019-04-10 - Valine添加百度贴吧表情包
   - 2018-09-27 - 增加代码块复制和高度限制、参考资料，优化TOC的css
   - 2018-09-26 - 使用html5语义化标签
   - 2018-09-23 - 使用gruvbox主题
