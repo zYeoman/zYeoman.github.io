@@ -2,11 +2,19 @@
 layout: base
 ---
 
-<script>
-  // 注册 service worker
-  if (navigator.serviceWorker) {
-    navigator.serviceWorker.register('/service-worker.js', {scope: '/'})
-  }
-</script>
+<h1 class="post__title">{{ site.title  }}</h1>
+{% for post in site.posts %}
+  {% if post.stickie != true %}
+    {% continue %}
+  {% endif %}
+  {% include card.html %}
+{% endfor %}
 
-{% include index.html %}
+{% for post in paginator.posts %}
+  {% if post.stickie == true %}
+    {% continue %}
+  {% endif %}
+  {% include card.html %}
+{% endfor %}
+
+{% include pagination.html %}
