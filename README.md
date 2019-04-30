@@ -6,3 +6,6 @@
 使用[HyperMD](https://laobubu.net/HyperMD)作为编辑器，实际上这里的编辑器就是照着[HyperMD](https://laobubu.net/HyperMD)的DEMO改的。
 
 移动到了新repo [BlogEditor](https://github.com/zYeoman/BlogEditor)
+
+## TODO
+- [Jekyll ServiceWorker](https://jamesiv.es/jekyll/amp/2017/05/09/serviceworkers-with-jekyll.html)
