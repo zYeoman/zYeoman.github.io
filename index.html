@@ -1,6 +1,14 @@
 ---
 layout: base
 ---
+{% if site.pwa %}
+<script>
+// 注册 service worker
+if (navigator.serviceWorker) {
+  navigator.serviceWorker.register('/sw.js', {scope: '/'})
+}
+</script>
+{% endif %}
 
 <h1 class="post__title">{{ site.title  }}</h1>
 {% for post in site.posts %}
