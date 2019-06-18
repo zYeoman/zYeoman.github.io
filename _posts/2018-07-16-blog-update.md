@@ -5,6 +5,7 @@ category: 用
 tags: jekyll javascript css
 date: 2019-04-29 19:01:02 +0800
 logs:
+  - 2019-06-18 - 使用WorkBox设置PWA应用
   - 2019-04-29 - 手机更新不及时，删除了service worker
   - 2019-04-14 - TOC格式优化，参考segmentfault
   - 2019-04-10 - Valine添加百度贴吧表情包
@@ -17,9 +18,13 @@ logs:
 create: 2018-07-16 18:49:48 +0800
 ---
 
-![](https://i.loli.net/2018/07/16/5b4c893d53fff.png)
+![](https://i.loli.net/2019/06/18/5d08821db1c3255508.jpg)
 
 ## 更新记录
+
+### 2019-06-18
+- 使用[workbox](https://developers.google.com/web/tools/workbox/)
+  - 没有设置offline fallback，因为没必要。
 
 ### 2018-09-27
 - 增加代码块复制功能：使用[clipboard.js](https://clipboardjs.com/)
@@ -47,6 +52,7 @@ create: 2018-07-16 18:49:48 +0800
 
 ## 优化Blog性能
 经过我一个周末的奋斗，Blog升级成果喜人！
+![](https://i.loli.net/2018/07/16/5b4c893d53fff.png)
 
 目前使用的是我自己修改的[3-Jekyll Theme](https://github.com/zYeoman/3-Jekyll)。
 
