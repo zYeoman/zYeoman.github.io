@@ -173,6 +173,17 @@ function afterPjax() {
     var tex = $(this).html();
     return katex.renderToString(tex.replace(/%.*/g, ''), {displayMode: true});
   });
+  renderMathInElement(
+    document.getElementById("post"),
+    {
+      delimiters: [
+        {left: "$$", right: "$$", display: true},
+        {left: "\\[", right: "\\]", display: true},
+        {left: "$", right: "$", display: false},
+        {left: "\\(", right: "\\)", display: false}
+      ]
+    }
+  );
 
   valine.init({
     el: "#comment" ,
