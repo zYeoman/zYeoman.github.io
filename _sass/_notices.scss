@@ -63,7 +63,13 @@
 .notice {
   @include notice($info-color);
 }
+.info {
+  @include notice($info-color);
+}
 /* Warning notice */
+.warning {
+  @include notice($warning-color);
+}
 .notice--warning {
   @include notice($warning-color);
 }
