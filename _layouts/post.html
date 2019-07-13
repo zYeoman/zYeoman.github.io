@@ -5,15 +5,11 @@ layout: base
 {% include post-header.html %}
 <article class="post-content">
   {{ content }}
-  {% include post-extend.html %}
-  <div class="tag-container">
-    {% for tag in page.tags %}
-    <a class="post-tags" href="/tag.html#{{ tag }}">{{ tag }}</a>
-    {% endfor %}
-  </div>
-  <hr>
-  {% include article-copyright.html %}
 </article> <!-- end #post-content -->
+{% include post-extend.html %}
+{% include post-tags.html %}
+<hr>
+{% include article-copyright.html %}
 
 {% include post-comment.html %}
 {% include post-footer.html %}
