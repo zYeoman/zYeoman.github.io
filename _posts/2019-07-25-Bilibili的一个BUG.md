@@ -2,10 +2,10 @@
 layout: post
 title: B站的一个BUG
 category: 杂
-date: 2019-07-25 23:19:14 +0800
+date: 2019-07-27 15:09:58 +0800
 create: 2019-07-25 23:17:21 +0800
 tags: 
-  - 
+  - BUG
 ---
 
 ![](https://i.loli.net/2019/07/25/5d39c7d9bf60b51031.jpg)
