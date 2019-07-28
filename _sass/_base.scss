@@ -24,11 +24,16 @@ a {
 }
 
 img {
-  max-width: 100%;
+  max-width: 80%;
+  min-width: 80%;
   display: block;
   margin: auto;
+  &.nofixed {
+    min-width: unset;
+  }
   &.emoji {
     display: unset;
+    min-width: unset;
   }
 }
 
