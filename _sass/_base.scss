@@ -1,6 +1,6 @@
 /* ==========================================================================
-   BASE ELEMENTS
-   ========================================================================== */
+BASE ELEMENTS
+========================================================================== */
 
 * {
   box-sizing: border-box;
@@ -51,12 +51,10 @@ summary {
 }
 
 h1, h2, h3, h4, h5, h6 {
-  /*font-weight: 400;*/
-    /*margin: 10px 0;*/
-    font-family: inherit;
-    font-weight: bold;
-    color: inherit;
-    text-rendering: optimizelegibility;
+  font-family: $head-font;
+  font-weight: bold;
+  color: inherit;
+  text-rendering: optimizelegibility;
 }
 
 h1 {
@@ -64,20 +62,20 @@ h1 {
 }
 
 h2{
-    font-size: $type-size-2;
+  font-size: $type-size-2;
 }
 h3 {
-    font-size: $type-size-3;
-    line-height: 1.5;
+  font-size: $type-size-3;
+  line-height: 1.5;
 }
 
 h4 {
-    font-size: $type-size-4;
-    line-height: 1.5;
+  font-size: $type-size-4;
+  line-height: 1.5;
 }
 
 strong {
-  font-weight: 600; }
+font-weight: 600; }
 
 
 
