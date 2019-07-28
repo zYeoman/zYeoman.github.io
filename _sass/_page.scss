@@ -73,6 +73,7 @@ main {
     flex-basis: 50%;
   }
   @include breakpoint(nodesktop) {
+    display: block;
     flex-direction: column;
   }
 }
