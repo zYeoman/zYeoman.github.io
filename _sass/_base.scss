@@ -35,7 +35,9 @@ img {
 img + br + em, img + em {
   display: block;
   text-align: center;
-  font-size: 12px;
+  font-family: $code-font;
+  font-style: normal;
+  font-size: $type-size-5;
 }
 
 img + br {
