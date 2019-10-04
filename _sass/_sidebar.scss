@@ -274,6 +274,9 @@ li.tags {
   padding: 4px 8px 3px;
   border-radius: 4px;
   display: block;
+  &.hide {
+    display: none;
+  }
   &:hover {
     background: rgba(242, 242, 242, 0.5);
   }

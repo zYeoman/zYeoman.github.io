@@ -39,7 +39,7 @@
       {% if post.stickie == true %}
         {% continue %}
       {% endif %}
-      <a class="{{ post.categories }} pl-all" href="{{ post.url }}"><span class="pl-circle"></span><span class="pl-title">{{ post.title }}</span><span class="pl-date">{{ post.date | date: "%b %Y" }}</span></a>
+      <a class="{% if post.hide == true %}hide{% endif %} {{ post.categories }} pl-all" href="{{ post.url }}"><span class="pl-circle"></span><span class="pl-title">{{ post.title }}</span><span class="pl-date">{{ post.date | date: "%b %Y" }}</span></a>
     {% endfor %}
     </nav>
   </div> <!-- end #posts-list -->
