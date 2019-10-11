@@ -3,7 +3,8 @@ layout: post
 title: Blog大升级
 category: 用
 tags: jekyll javascript css
-date: 2019-04-29 19:01:02 +0800
+date: 2019-10-12 00:15:01 +0800
+stickie: true
 logs:
   - 2019-06-18 - 使用WorkBox设置PWA应用
   - 2019-04-29 - 手机更新不及时，删除了service worker
