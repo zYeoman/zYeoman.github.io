@@ -24,7 +24,7 @@ $lighter-gray                : lighten($gray, 40%);
 $post-card-border            : rgba(0, 0, 0, .2);
 $tags-background-color       : #474d57;
 
-$post-bg                     : rgb(250,250,250);
+$post-bg                     : white;
 
 $text-color                  : $dark-gray;
 
@@ -91,7 +91,7 @@ p {
 }
 
 
-#post {
+main {
   height: 100%;
   background: $post-bg;
   overflow-x: hidden;
