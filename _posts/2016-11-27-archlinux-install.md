@@ -6,11 +6,20 @@ tags:
   - 原创
   - arch
   - 记录
-date: 2019-04-22 17:12:50 +0800
+date: 2019-11-23 01:51:49 +0800
 create: 2016-11-27
 log:
-  - 2019-04-22 17:06:17 - 添加UEFI配置、使用yay（不是yaourt）
+  - 2019-04-22 - 添加UEFI配置、使用yay（不是yaourt）
+  - 2019-11-23 - 镜像问题
 ---
+
+### 2019-11-23 镜像问题
+直接`pacstrap /mnt base base-devel`并没有在`/boot`里安装`linux`内核= =，所以启动后会进入`grub>`页面😒
+```sh
+pacman -S linux
+```
+
+## 前言
 
 突然想起来 windows 还有一个叫 Hyper-V 的虚拟化工具，然后就决定装一个 Archlinux 试一试。毕竟网上 Archlinux 吹好多的。
 
