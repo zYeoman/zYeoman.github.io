@@ -33,6 +33,9 @@ img {
   &.nofixed {
     min-width: unset;
   }
+  &.vimg {
+    min-width: unset;
+  }
   &.emoji {
     display: unset;
     min-width: unset;
