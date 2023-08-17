@@ -39,7 +39,7 @@ leancloud:
 analytics:
   google: "UA-96052060-1"
 
-exclude: [LICENSE, CNAME, README.md, .gitignore, ed, ed.py, node_modules]
+exclude: [LICENSE, CNAME, README.md, .gitignore, ed, ed.py, node_modules, vendor]
 
 avatar: /head.jpg
 
