@@ -270,5 +270,3 @@ DEPENDENCIES
   jekyll-feed (~> 0.6)
   tzinfo-data
 
-BUNDLED WITH
-   1.16.2
