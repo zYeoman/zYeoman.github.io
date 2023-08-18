@@ -26,10 +26,7 @@ li {
 }
 
 img {
-  max-width: 80%;
-  min-width: 40%;
   display: block;
-  margin: auto;
   &.nofixed {
     min-width: unset;
   }
@@ -44,6 +41,13 @@ img {
     max-width: 100%;
     min-width: 100%;
     margin: 0;
+  }
+}
+.post-content {
+  img {
+    max-width: 80%;
+    min-width: 40%;
+    margin: auto;
   }
 }
 
