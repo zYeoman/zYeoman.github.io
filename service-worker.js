@@ -45,7 +45,7 @@ if (workbox) {
           '/assets/js/av-min.js',
           '/assets/js/pinyin-match.js',
           '/assets/js/clipboard.min.js',
-          '/assets/js/Valine.min.js',
+          "//cdn.staticfile.org/twikoo/1.6.17/twikoo.all.min.js",
           '/assets/js/script.js',
           '/assets/css/style.css',
           '/assets/css/3icon.css',

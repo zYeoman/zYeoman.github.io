@@ -40,6 +40,11 @@ img {
     display: unset;
     min-width: unset;
   }
+  &.tk-avatar-img {
+    max-width: 100%;
+    min-width: 100%;
+    margin: 0;
+  }
 }
 
 img + br + em, img + em {

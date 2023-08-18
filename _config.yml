@@ -31,10 +31,9 @@ defaults:
 # Make sure to put your manifest.json at /
 pwa: true
 
-leancloud:
+twikoo:
   enable: true
-  app_id: xYnmPhrQu3YUQ28Ywk2qEfIp-gzGzoHsz
-  app_key: ijsCplpAyUiEzXD36KkOFwHU
+  envId: "https:///mickir.zeabur.app"
 
 analytics:
   google: "UA-96052060-1"
