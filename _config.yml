@@ -6,13 +6,13 @@ baseurl: "" # the subpath of your site, e.g. /blog/
 url: "https://mickir.me" # the base hostname & protocol for your site
 canonical: "https://mickir.me" # the base hostname & protocol for your site
 enforce_ssl: mickir.me
-github_username:  zYeoman
+github_username: zYeoman
 favicon: "/favicon.ico"
 
 # Build settings
-permalink: /blog/:title.html   #博文的固定链接
+permalink: /blog/:title.html #博文的固定链接
 paginate: 10
-author:                                     #自定义常量
+author: #自定义常量
   name: Mickir
   email: i@mickir.me
   link: https://mickir.me/
@@ -49,16 +49,16 @@ sass:
   style: compressed
 
 plugins:
-    - jekyll-paginate
-    - jemoji
-    - jekyll-mentions
-    - jekyll-seo-tag
-    - jekyll-relative-links
-    - jekyll-sitemap
+  - jekyll-paginate
+  - jemoji
+  - jekyll-mentions
+  - jekyll-seo-tag
+  - jekyll-relative-links
+  - jekyll-sitemap
 
 markdown: kramdown
 kramdown:
-  hard_wrap:  true
+  hard_wrap: true
   syntax_highlighter_opts:
     wrap: true
   toc_levels: 1..3
