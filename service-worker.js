@@ -42,7 +42,6 @@ if (workbox) {
           '//cdnjs.cloudflare.com/ajax/libs/jquery.pjax/2.0.1/jquery.pjax.min.js',
           '//cdnjs.cloudflare.com/ajax/libs/KaTeX/0.9.0/katex.min.js',
           '//cdnjs.cloudflare.com/ajax/libs/KaTeX/0.9.0/contrib/auto-render.min.js',
-          '/assets/js/av-min.js',
           '/assets/js/pinyin-match.js',
           '/assets/js/clipboard.min.js',
           "//cdn.staticfile.org/twikoo/1.6.17/twikoo.all.min.js",
