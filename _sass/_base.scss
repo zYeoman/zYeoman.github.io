@@ -27,27 +27,32 @@ li {
 
 img {
   display: block;
-  &.nofixed {
-    min-width: unset;
-  }
-  &.vimg {
-    min-width: unset;
-  }
-  &.emoji {
-    display: unset;
-    min-width: unset;
-  }
+
   &.tk-avatar-img {
     max-width: 100%;
     min-width: 100%;
     margin: 0;
   }
 }
+
 .post-content {
   img {
     max-width: 80%;
     min-width: 40%;
     margin: auto;
+
+    &.nofixed {
+      min-width: unset;
+    }
+
+    &.vimg {
+      min-width: unset;
+    }
+
+    &.emoji {
+      display: unset;
+      min-width: unset;
+    }
   }
 }
 
