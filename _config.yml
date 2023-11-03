@@ -33,7 +33,7 @@ pwa: true
 
 twikoo:
   enable: true
-  envId: "https://comment.mickir.me"
+  envId: "https://comment.mickir.me/.netlify/functions/twikoo"
 
 analytics:
   google: "UA-96052060-1"
