@@ -33,7 +33,7 @@ pwa: true
 
 twikoo:
   enable: true
-  envId: "https:///mickir.zeabur.app"
+  envId: "https://comment.mickir.me"
 
 analytics:
   google: "UA-96052060-1"
