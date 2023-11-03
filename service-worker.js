@@ -44,7 +44,7 @@ if (workbox) {
           '//cdnjs.cloudflare.com/ajax/libs/KaTeX/0.9.0/contrib/auto-render.min.js',
           '/assets/js/pinyin-match.js',
           '/assets/js/clipboard.min.js',
-          "//cdn.staticfile.org/twikoo/1.6.17/twikoo.all.min.js",
+          "//cdn.staticfile.org/twikoo/1.6.22/twikoo.all.min.js",
           '/assets/js/script.js',
           '/assets/css/style.css',
           '/assets/css/3icon.css',
