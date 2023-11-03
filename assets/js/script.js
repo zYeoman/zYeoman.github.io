@@ -150,16 +150,18 @@ function afterPjax() {
         if (headers.eq(Math.min(Math.max(0, ind+1), headers.length-1)).offset().top > n || o < 0) {
           var id = $(this).attr("id");
           let toc = $("#markdown-toc");
-          var cur = o < 0 ? toc.find("a").last() : $("a[href='#"+id+"']")
-          var top = cur.offset().top - toc.offset().top + toc.scrollTop();
-          bord.css("top", top).height(cur.outerHeight());
-          toc.find("li").removeClass("active");
-          cur.parent().addClass("active");
-          if (top + 40 > $(window).height() / 2) {
-            var hei = cur.parent().offset().top - toc.offset().top + toc.scrollTop();
-            hei > 0 && toc.scrollTop(hei);
-          } else {
-            toc.scrollTop(0);
+          if (toc.length) {
+            var cur = o < 0 ? toc.find("a").last() : $("a[href='#"+id+"']")
+            var top = cur.offset().top - toc.offset().top + toc.scrollTop();
+            bord.css("top", top).height(cur.outerHeight());
+            toc.find("li").removeClass("active");
+            cur.parent().addClass("active");
+            if (top + 40 > $(window).height() / 2) {
+              var hei = cur.parent().offset().top - toc.offset().top + toc.scrollTop();
+              hei > 0 && toc.scrollTop(hei);
+            } else {
+              toc.scrollTop(0);
+            }
           }
           return !1;
         }
