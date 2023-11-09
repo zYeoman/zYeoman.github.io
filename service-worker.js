@@ -35,7 +35,6 @@ if (workbox) {
     e.waitUntil(
       caches.open('blog')
         .then(cache => cache.addAll([
-          '/index.html',
           '/manifest.json',
           '/assets/font/3icon.ttf',
           '//cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js',
@@ -45,7 +44,6 @@ if (workbox) {
           '/assets/js/pinyin-match.js',
           '/assets/js/clipboard.min.js',
           "//cdn.staticfile.org/twikoo/1.6.22/twikoo.all.min.js",
-          '/assets/js/script.js',
           '/assets/css/style.css',
           '/assets/css/3icon.css',
           '//cdnjs.cloudflare.com/ajax/libs/KaTeX/0.9.0/katex.min.css'
