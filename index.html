@@ -2,17 +2,6 @@
 layout: base
 ---
 
-{% if site.pwa %}
-<script>
-// Check that service workers are registered
-if ('serviceWorker' in navigator) {
-  // Use the window load event to keep the page load performant
-  window.addEventListener('load', () => {
-    navigator.serviceWorker.register('/service-worker.js');
-  });
-}
-</script>
-{% endif %}
 <h1 class="post__title">{{ site.title  }}</h1>
 {% for post in site.posts %}
   {% if post.stickie != true %}
