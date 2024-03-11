@@ -1,4 +1,4 @@
-importScripts('assets/js/workbox-sw')
+importScripts('assets/js/workbox-sw.js')
 
 if (workbox) {
   // ref: https://developers.google.com/web/tools/workbox/guides/get-started
