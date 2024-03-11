@@ -66,10 +66,6 @@ Notice警告
 
 @zYeoman : jekyll-mentions 测试
 
-gist测试
-
-{% gist 5555251 %}
-
 ## 第二行标题
 
 公式 $$\lambda a_1$$ $$\delta \times$$
