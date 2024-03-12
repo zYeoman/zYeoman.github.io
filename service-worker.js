@@ -25,6 +25,11 @@ if (workbox) {
   )
 
   workbox.routing.registerRoute(
+    '/service-worker.js',
+    new workbox.strategies.StaleWhileRevalidate()
+  )
+
+  workbox.routing.registerRoute(
     '/assets/js/script.css',
     new workbox.strategies.StaleWhileRevalidate()
   )
