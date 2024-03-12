@@ -188,31 +188,10 @@ function afterPjax() {
     }
   );
   twikoo.init({
-  envId: '{{site.twikoo.envId}}', // 腾讯云环境填 envId；Vercel 环境填地址（https://xxx.vercel.app）
-  el: '#comment', // 容器元素
-  // region: 'ap-guangzhou', // 环境地域，默认为 ap-shanghai，腾讯云环境填 ap-shanghai 或 ap-guangzhou；Vercel 环境不填
-  // path: location.pathname, // 用于区分不同文章的自定义 js 路径，如果您的文章路径不是 location.pathname，需传此参数
-  // lang: 'zh-CN', // 用于手动设定评论区语言，支持的语言列表 https://github.com/imaegoo/twikoo/blob/main/src/client/utils/i18n/index.js
+    envId: '{{site.twikoo.envId}}', // 腾讯云环境填 envId；Vercel 环境填地址（https://xxx.vercel.app）
+    el: '#comment', // 容器元素
   })
 
-  // valine.init({
-  //   el: "#comment" ,
-  //   notify:false,
-  //   verify:false,
-  //   appId: "{{site.leancloud.app_id}}",
-  //   appKey: "{{site.leancloud.app_key}}",
-  //   placeholder: "LONG MAY THE SUN SHINE!",
-  //   path:window.location.pathname,
-  //   noemoji:true,
-  //   stickers: {
-  //     data: {
-// "啊":"啊.png", "鄙视":"鄙视.png", "不高兴":"不高兴.png", "彩虹":"彩虹.png", "茶杯":"茶杯.png", "大拇指":"大拇指.png", "灯泡":"灯泡.png", "乖":"乖.png", "哈哈":"哈哈.png", "汗":"汗.png", "呵呵":"呵呵.png", "黑线":"黑线.png", "呼":"呼.png", "花心":"花心.png", "滑稽":"滑稽.png", "惊哭":"惊哭.png", "惊讶":"惊讶.png", "开心":"开心.png", "酷":"酷.png", "狂汗":"狂汗.png", "泪":"泪.png", "冷":"冷.png", "礼物":"礼物.png", "玫瑰":"玫瑰.png", "勉强":"勉强.png", "怒":"怒.png", "喷":"喷.png", "钱币":"钱币.png", "钱":"钱.png", "弱":"弱.png", "生气":"生气.png", "胜利":"胜利.png", "睡觉":"睡觉.png", "太开心":"太开心.png", "吐舌":"吐舌.png", "吐":"吐.png", "委屈":"委屈.png", "笑眼":"笑眼.png", "咦":"咦.png", "疑问":"疑问.png", "阴险":"阴险.png", "音乐":"音乐.png", "真棒":"真棒.png", "haha":"haha.png"
-  //     },
-  //     pre: "/assets/sm/paopao/"
-  //   },
-  //   visitor:true,
-  //   avatar:"retro"
-  // });
   var url = window.location.toString();
   var id = decodeURIComponent(url).split('#');
   if (id.length>1) {
