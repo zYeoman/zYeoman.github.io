@@ -21,12 +21,12 @@ if (workbox) {
 
   workbox.routing.registerRoute(
     '/assets/js/script.js',
-    new workbox.strategies.NetworkFirst()
+    new workbox.strategies.StaleWhileRevalidate()
   )
 
   workbox.routing.registerRoute(
     '/assets/js/script.css',
-    new workbox.strategies.NetworkFirst()
+    new workbox.strategies.StaleWhileRevalidate()
   )
 
   workbox.routing.registerRoute(
