@@ -50,7 +50,7 @@
         <span class="post-meta-item-text">总字数 {{post.content | strip_html | strip_newlines | size}}</span>
       </span>
     </div>
-    <p>{{ post.excerpt }}</p>
+    <p>{{ post.excerpt | strip_html | strip_newlines | truncate: 156 }}</p>
     <div class="tag-container">
       {% for tag in post.tags %}
         <a class="post-tags" href="/tag.html#{{ tag }}">{{ tag }}</a>
