@@ -27,7 +27,7 @@ create: 2018-07-16 18:49:48 +0800
 ### 2023-08-18
 
 - 弃用 Valine，改用 [Twikoo](https://twikoo.js.org/)
-  - 在 [Zeabur](zeabur.com) 上托管
+  - 在 [Zeabur](https://zeabur.com/) 上托管
 
 ### 2019-06-18
 
