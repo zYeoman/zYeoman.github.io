@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Shell 启动欢迎辞
-category: 用
+category: 折腾记录
 tags:
   - 原创
   - shell

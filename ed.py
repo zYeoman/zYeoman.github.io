@@ -34,7 +34,7 @@ def help_msg():
 
 def add(argv):
     """Add new file"""
-    categories = ['法', '理', '器', '用', '杂']
+    categories = ['乱七八糟', '知识技巧', '折腾记录', '数学研究', '学习笔记']
     head = '---\nlayout: {}\n' \
         'title: {}\n' \
         'category: {}\n' \

@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Github Pages 自定义域名启用 https
-category: 器
+category: 折腾记录
 tags:
   - 原创
   - github

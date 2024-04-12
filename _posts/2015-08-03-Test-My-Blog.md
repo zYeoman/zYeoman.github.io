@@ -1,7 +1,7 @@
 ---
 layout: post
 title: 测试
-category: 杂
+category: 乱七八糟
 tags:
   - 原创
   - 测试

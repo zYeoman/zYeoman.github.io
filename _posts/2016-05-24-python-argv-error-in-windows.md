@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Python sys.argv 数目不对
-category: 用
+category: 知识技巧
 tags:
   - 原创
   - bug

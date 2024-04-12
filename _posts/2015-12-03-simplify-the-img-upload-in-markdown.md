@@ -1,7 +1,7 @@
 ---
 layout: post
 title: 简化 markdown 中的贴图流程
-category: 法
+category: 折腾记录
 tags:
   - 原创
   - jekyll

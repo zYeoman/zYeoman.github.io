@@ -1,7 +1,7 @@
 ---
 layout: post
 title: 快捷方式、符号链接、硬链接与软链接——win/linux
-category: 理
+category: 知识技巧
 tags:
   - 原创
   - windows

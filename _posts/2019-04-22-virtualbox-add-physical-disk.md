@@ -1,7 +1,7 @@
 ---
 layout: post
 title: VirtualBox添加物理硬盘并安装Linux
-category: 器
+category: 折腾记录
 date: 2019-04-22 14:05:56 +0800
 create: 2019-04-22 13:21:52 +0800
 tags: 

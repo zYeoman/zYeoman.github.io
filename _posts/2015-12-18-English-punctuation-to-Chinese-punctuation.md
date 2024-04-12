@@ -1,7 +1,7 @@
 ---
 layout: post
 title: 快捷将英文标点转换成中文标点
-category: 器
+category: 折腾记录
 tags:
   - 原创
   - autohotkey
