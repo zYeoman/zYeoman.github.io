@@ -1,7 +1,7 @@
 ---
 layout: post
 title: 在U盘上安装archlinux
-category: 用
+category: 折腾记录
 date: 2018-08-05 21:58 +0800
 create: 2018-07-23 19:25:29 +0800
 ---

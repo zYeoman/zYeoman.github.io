@@ -1,7 +1,7 @@
 ---
 layout: post
 title: 使用MKLINK为系统盘瘦身
-category: 用
+category: 折腾记录
 tags:
   - 转载
   - windows

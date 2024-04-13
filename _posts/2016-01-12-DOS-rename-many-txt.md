@@ -1,7 +1,7 @@
 ---
 layout: post
 title: DOS 重命名
-category: 法
+category: 知识技巧
 tags:
   - 原创
   - 奇技淫巧

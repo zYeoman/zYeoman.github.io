@@ -1,7 +1,7 @@
 ---
 layout: post
 title: C++一个神奇的bug
-category: 法
+category: 知识技巧
 date: 2020-08-05 21:35:02 +0800
 create: 2020-08-05 21:26:29 +0800
 tags: 

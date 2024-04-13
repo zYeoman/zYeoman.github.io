@@ -1,7 +1,7 @@
 ---
 layout: post
 title: 双十一装机
-category: 杂
+category: 乱七八糟
 date: 2019-11-16 03:49:09 +0800
 create: 2019-11-16 03:40:35 +0800
 tags: 

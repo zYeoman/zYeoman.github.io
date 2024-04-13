@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Win10启动引导修复tips
-category: 用
+category: 折腾记录
 date: 2018-11-30 23:37 +0800
 create: 2018-11-30 23:09:03 +0800
 tags:

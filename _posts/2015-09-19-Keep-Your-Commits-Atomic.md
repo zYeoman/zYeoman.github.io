@@ -1,7 +1,7 @@
 ---
 layout: post
 title: 原子化你的commits
-category: 用
+category: 知识技巧
 tags:
   - 翻译
   - git

@@ -140,6 +140,13 @@ function afterPjax() {
   var bord = $("<div class='highlight-title'></div>");
   toc && bord.appendTo(toc)
 
+  $(document).ready(function () {
+    mermaid.initialize({
+      startOnLoad:true,
+      theme: "default",
+    });
+    window.mermaid.init(undefined, document.querySelectorAll('.language-mermaid'));
+  });
   // Scrolling highlight
   headers = container.find("h2,h3");
   toc && container.scroll(function() {

@@ -1,7 +1,7 @@
 ---
 layout: post
 title: 小狼毫RIME输入法配置
-category: 用
+category: 折腾记录
 date: 2019-11-06 23:02:12 +0800
 create: 2019-07-07 11:29:57 +0800
 tags: 

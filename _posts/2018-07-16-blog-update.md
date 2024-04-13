@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Blog 大升级
-category: 用
+category: 折腾记录
 tags: jekyll javascript css
 date: 2019-10-12 00:15:01 +0800
 stickie: true

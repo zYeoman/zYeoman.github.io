@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Archlinux on real PC
-category: 器
+category: 折腾记录
 tags:
   - 原创
   - arch

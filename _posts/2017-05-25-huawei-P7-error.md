@@ -1,7 +1,7 @@
 ---
 layout: post
 title: 华为手机开机失败修复
-category: 法
+category: 折腾记录
 tags:
   - 原创
   - 记录

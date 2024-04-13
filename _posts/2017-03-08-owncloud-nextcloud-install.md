@@ -1,7 +1,7 @@
 ---
 layout: post
 title: nextcloud 安装
-category: 器
+category: 折腾记录
 tags:
   - 原创
   - nextcloud
