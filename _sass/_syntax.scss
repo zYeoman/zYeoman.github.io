@@ -123,6 +123,10 @@ pre > code {
   -o-tab-size: 4;
   tab-size: 4;
 }
+.language-mermaid > svg {
+  display: block;
+  margin: auto;
+}
 
 /* Inline code */
 :not(pre) > code {
