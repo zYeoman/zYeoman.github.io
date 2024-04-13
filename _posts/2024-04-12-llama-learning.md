@@ -14,7 +14,7 @@ tags:
 
 只看了 llama2，想来别的模型也差不太多。
 所谓不本质学习，其实就是只关注具体计算，不去研究啥原理之类的本质问题；大概目标是看完了能用喜欢的语言实现一个自己的 [llama.cpp](https://github.com/ggerganov/llama.cpp)。
-Transformer 的 [参考blog](https://jiajiewu.gitee.io/post/tech/attention/att_intro/)
+Transformer 的 [参考 blog](https://jiajiewu.gitee.io/post/tech/attention/att_intro/)
 ## 整体原理
 **模型的功能**是输入一句话转换成的 $n$ 个 token 数组 $t_0, t_1, ..., t_{n-1}$，输出预测的 $n$ 个 token $t_1,t_2,...,t_n$。模型的一个特点是它有记忆，所谓记忆即通过缓存部分中间输出，后续模型运行就不需要重复输入了——即预测好 $n$ 个 token 后，可以在模型里输入新得到的 $t_n$，输出 $t_{n+1}$。
 因此实际计算分成两步，第一步姑且叫 *fill*，第二步叫 *generate*，实际是同一个模型。在 *fill* 的时候，输入是 prompt 包括用户输入的 $n$ 个 token，得到第 $n+1$ 个 token $t_{n}$，并把相关记忆缓存住。在 *generate* 的时候，就是一个自回归的操作，输入之前得到的 token $t_n$，输出新的预测 $t_{n+1}$。这样就能不断输出新的 token，就像模型在说话一样，直到输出代表结束的 token。
@@ -24,10 +24,9 @@ $$ t_1, t_2,...,t_n = predict(t_0, t_1, ..., t_{n-1})$$
 $$t_{n+1}=predict(t_n)$$
 其实有了 _generate_ 的递推了，第一步 _fill_ 是可有可无的；但是 _fill_ 的计算访存比更高，可以更充分利用算力，所以要有 *fill* 这步。
 
-
-> [!hint] 名词解释
 > token: 单词转换成的无符号数表示
 > prompt: 提示词，包括系统 prompt 和用户给的 prompt
+{: .notice}
 
 ## 配置参数
 
@@ -39,6 +38,7 @@ $$t_{n+1}=predict(t_n)$$
 | $l$      | 32    | num_hidden_layers   | 隐含层层数                                  |
 | $h_{kv}$ | 32    | num_key_value_heads | 多头注意力 KV 的头数（GHA 的时候与 $h$ 不同）          |
 | $V$      | 32000 | vocab_size          | 词表长度                                   |
+
 每个隐含层的参数量大约是 $4\frac{h_{kv}}{h}d^2+3Hd+2d$，输入输出的 token embed 矩阵大小都是 $Vd$。所以一个大模型整体的参数量大概是 $(4\frac{h_{kv}}{h}d^2+3Hd+2d)l+2Vd$。
 ## 具体计算
 输入是 `N` 个 token。
@@ -155,8 +155,9 @@ f(x_m,m)=
 \otimes
 \begin{pmatrix}\sin m\theta_0\\\sin m\theta_0\\\sin m\theta_1\\\sin m\theta_1\\\vdots\\\sin m\theta_{d_k/2-1}\\\sin m\theta_{d_k/2-1}\end{pmatrix}
 $$
-> [!caution] 实际计算
+
 > 在实际计算中，输出 $Q$ $K$ 的 `Linear` 操作已经重排了输出结果的顺序，所以在实际计算中，并不是 $x_0\cos m\theta_0 - x_1\sin m\theta_0$，而是 $x_0\cos m\theta_0 - x_{d_k/2}\sin m\theta_0$
+{: .warning}
 
 所以实际计算是这样的
 ```python
@@ -165,7 +166,7 @@ y[..., dk//2:] = x[..., dk//2:] * cos_param + x[..., :dk//2] * sin_param
 ```
 #### KV-Cache
 在多头注意力的地方，$\mathbf{KV}$ 的输入都有一步 `K-cache` 和 `V-cache` 的操作，这实际上就是大模型所谓『记忆』的地方，不管是 _fill_ 还是 _generate_ 环节，中间 `Linear` 得到的 $\mathbf{KV}$ 都会缓存到一个地方，然后继续计算的时候是和之前缓存的 $\mathbf{KV}$ 进行 `Concat` 之后做的。这里的 `N'` 其实就是 `N+lastN`，`lastN` 是已经处理的 `token` 总数。
-因为 `KV-cache` 的存在，随着模型处理的总 `token` 数增长，cache 需要的空间也是线性增长的，同时这部分计算量是 $2NN'd$ 也是线性增长的，实际上计算访存比是 $1$。这也是大模型优化的一个比较关键的节点吧。
+因为 `KV-cache` 的存在，随着模型处理的总 `token` 数增长，cache 需要的空间也是线性增长的，同时这部分计算量是 $2NN\'d$ 也是线性增长的，实际上计算访存比是 $1$。这也是大模型优化的一个比较关键的节点吧。
 #### Mask
 Mask 的功能是帮助模型了解 token 的时间先后关系，所以实际上只在 $N\ne1$ 即 _fill_ 的时候有用。Mask 矩阵是一个左下角包括对角线都是 $1$ 的矩阵，含义就是后一个 token 知道它自己和之前的 token 的信息，不知道它之后的 token 的信息。
 $$
@@ -179,11 +180,11 @@ $$
 #### Softmax
 功能是把一个向量映射成和为 $1$ 的类似概率密度分布的形式。
 $$
-Softmax(x)=\frac{{e}^{x_i}}{\sum{e^{x_i}}}
+Softmax(x)=\frac{ {e}^{x_i}}{\sum{e^{x_i}}}
 $$
 在实际操作中，会使用更加数值稳定的计算方法
 $$
-Softmax(x)=\frac{{e}^{x_i-x_{max}}}{\sum{e^{x_i-x_{max}}}}
+Softmax(x)=\frac{ {e}^{x_i-x_{max}}}{\sum{e^{x_i-x_{max}}}}
 $$
 ### post
 后处理有三步：
@@ -196,6 +197,7 @@ input["hidden_state[N, d]"] -->|"RMSNorm"| t0["hidden_state[N, d]"]
 t0 -->|"FC, dxV"| t1["hidden_state[N, V]"]
 t1 -->|"Softmax"| t2["prob[N, V]"]
 ```
+
 ### token generate
 概率密度有了，实际上就直接根据概率随机得到一个 token 值就可以了。为了输出的稳定性、计算效率等等因素，还有一些后处理方式：
 1. **topK**，典型值 `20`。只取概率最高的 $k$ 个概率，然后重新归一化进行随机
