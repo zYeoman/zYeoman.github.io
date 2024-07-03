@@ -15,7 +15,7 @@ main {
   line-height: 1.7;
   > footer, > section {
     @include breakpoint(desktop) {
-        max-width: 78%;
+        max-width: min(78%, 75em);
     }
     @include breakpoint(nodesktop) {
         max-width: 750px;
