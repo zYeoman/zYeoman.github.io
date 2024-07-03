@@ -9,9 +9,6 @@ tags:
   - 不本质笔记
 ---
 
-- TOC
-  {:toc}
-
 只看了 llama2，想来别的模型也差不太多。
 所谓不本质学习，其实就是只关注具体计算，不去研究啥原理之类的本质问题；大概目标是看完了能用喜欢的语言实现一个自己的 [llama.cpp](https://github.com/ggerganov/llama.cpp)。
 Transformer 的 [参考 blog](https://jiajiewu.gitee.io/post/tech/attention/att_intro/)
