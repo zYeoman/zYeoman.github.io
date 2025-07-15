@@ -141,11 +141,23 @@ function afterPjax() {
   toc && bord.appendTo(toc)
 
   $(document).ready(function () {
-    mermaid.initialize({
-      startOnLoad:true,
-      theme: "default",
-    });
-    window.mermaid.init(undefined, document.querySelectorAll('.language-mermaid'));
+    /* 1. 判断是否需要加载 */
+    if (!document.querySelector('code.language-mermaid')) return;
+
+    /* 2. 动态插入 <script> */
+    const script = document.createElement('script');
+    script.src = '//cdnjs.cloudflare.com/ajax/libs/mermaid/11.8.1/mermaid.min.js';
+    script.onload = initMermaid;
+    document.head.appendChild(script);
+
+    /* 3. 初始化并渲染 */
+    function initMermaid() {
+      mermaid.initialize({
+        startOnLoad:false,
+        theme: "default",
+      });
+      window.mermaid.init(undefined, document.querySelectorAll('.language-mermaid'));
+    }
   });
   // Scrolling highlight
   headers = container.find("h2,h3");
