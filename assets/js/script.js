@@ -140,25 +140,6 @@ function afterPjax() {
   var bord = $("<div class='highlight-title'></div>");
   toc && bord.appendTo(toc)
 
-  $(document).ready(function () {
-    /* 1. 判断是否需要加载 */
-    if (!document.querySelector('code.language-mermaid')) return;
-
-    /* 2. 动态插入 <script> */
-    const script = document.createElement('script');
-    script.src = '//cdnjs.cloudflare.com/ajax/libs/mermaid/11.8.1/mermaid.min.js';
-    script.onload = initMermaid;
-    document.head.appendChild(script);
-
-    /* 3. 初始化并渲染 */
-    function initMermaid() {
-      mermaid.initialize({
-        startOnLoad:false,
-        theme: "default",
-      });
-      window.mermaid.init(undefined, document.querySelectorAll('.language-mermaid'));
-    }
-  });
   // Scrolling highlight
   headers = container.find("h2,h3");
   toc && container.scroll(function() {
@@ -187,6 +168,41 @@ function afterPjax() {
       })) : (bord.hide(),toc.find("li").removeClass("active"));
   });
 
+  $(document).ready(function () {
+    if (!document.querySelector('code.language-mermaid')) return;
+    if (!!window.mermaid) return;
+
+    const script = document.createElement('script');
+    script.src = '//cdnjs.cloudflare.com/ajax/libs/mermaid/11.8.1/mermaid.min.js';
+    script.onload = initMermaid;
+    document.head.appendChild(script);
+
+    function initMermaid() {
+      mermaid.initialize({
+        startOnLoad:false,
+        theme: "default",
+      });
+      window.mermaid.init(undefined, document.querySelectorAll('.language-mermaid'));
+    }
+  });
+
+  $(document).ready(function () {
+    if (!document.querySelector('#comment')) return;
+    if (!!window.twikoo) return;
+
+    const script = document.createElement('script');
+    script.src = '//cdnjs.cloudflare.com/ajax/libs/twikoo/1.6.22/twikoo.all.min.js';
+    script.onload = initTwikoo;
+    document.head.appendChild(script);
+
+    function initTwikoo() {
+      twikoo.init({
+        envId: '{{site.twikoo.envId}}', // 腾讯云环境填 envId；Vercel 环境填地址（https://xxx.vercel.app）
+        el: '#comment', // 容器元素
+      })
+    }
+  });
+
   $("script[type='math/tex']").replaceWith(function() {
     var tex = $(this).html();
     return katex.renderToString(tex.replace(/%.*/g, ''), {displayMode: false});
@@ -206,10 +222,6 @@ function afterPjax() {
       ]
     }
   );
-  twikoo.init({
-    envId: '{{site.twikoo.envId}}', // 腾讯云环境填 envId；Vercel 环境填地址（https://xxx.vercel.app）
-    el: '#comment', // 容器元素
-  })
 
   var url = window.location.toString();
   var id = decodeURIComponent(url).split('#');
